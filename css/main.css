@@ -11,3 +11,68 @@
 /* 팀 공동 press release */
 
 /* 정이원 footer */
+.footer {
+    height: 313px;
+    background-color: #F0F0F0;
+}
+.footer_box {
+    padding: 48px 0;
+}
+.footer_address{
+    width: 393px;
+    height: 72px;
+    margin-top: 48px;
+}
+.footer_address span{
+    font-weight: 700;
+}
+.footer_link li{
+    margin-right: 20px;
+    font-weight: 500;
+}
+.footer_link .footer_support{
+    color: var(--BC-LGRed);
+    font-weight: 700;
+}
+.footer_copyright{
+    margin-top: 48px;
+    font-size: 12px;
+}
+
+
+.footer_sns a{
+    color: var(--MC-DGray);
+}
+.footer_sns .facebook{
+    font-size: calc(var(--font-size)*1.875);
+    margin-right: 26px;
+}
+.footer_sns .youtube{
+    font-size: calc(var(--font-size)*2.0625);
+}
+.footer_sns .facebook:hover,.youtube:hover{
+    color: var(--BC-LGRed);
+}
+
+
+.footer_recruit{
+    width: 144px;
+    height: 48px;
+    border: 1px solid var(--MC-DGray);
+    border-radius: 10px; 
+    text-align: center;
+
+}
+.footer_recruit a{
+    font-size: calc(var(--font-size)*1.375);
+    font-weight: 400;
+    color: var(--MC-DGray);
+    line-height: 48px;
+}
+.footer_recruit:hover{
+    border: none;
+    background: var(--BC-LGRed);
+}
+.footer_recruit:hover a{
+    color: var(--MC-LGWhite);
+}
