@@ -41,7 +41,7 @@
 /* Reset */
 a {
   text-decoration: none;
-  color:#000;
+  color:#fff;
 }
 
 /* layout */
@@ -64,6 +64,7 @@ a {
 .hidden{display: none;}
 
 .d-flex{display: flex;}
+.fd-column{flex-direction: column;}
 .jcsb{justify-content: space-between;}
 .jscs{justify-content: start;}
 .jsce{justify-content: end;}
@@ -116,6 +117,7 @@ body{
   line-height: calc(var(--font-size)*1.8125);
   }/*h5*/
 
+.b-m-20{font-size: calc(var(--font-size)*1.25); line-height: calc(var(--base-unit)*1.25);} /*medium*/
 .b-b-16{font-size: var(--font-size); font-weight: 600; line-height: var(--base-unit);} /*bold*/
 .b-m-16{font-size: var(--font-size); font-weight: 500; line-height: var(--base-unit);} /*medium*/
 .b-r-16{font-size: var(--font-size); font-weight: 400; line-height: var(--base-unit);} /*regular*/

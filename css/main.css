@@ -1,4 +1,184 @@
 /* 이은서 navigation bar */
+body{
+  background-color: silver;
+}
+header{
+  position:relative;
+  background-color: transparent;
+  transition:0.3s ease-out;
+  z-index: 10;
+  padding: 62px 0;
+  box-sizing: border-box;
+  height: 150px;
+  color: #fff;
+  overflow:hidden;
+}
+header:after{
+  content:'';
+  opacity: 1;
+  border-top: 1px solid var(--MC-LGWhite);
+  width: 100%;
+  position:absolute;
+  top:150px;
+}
+header.sticky{
+  padding: calc(var(--base-unit)*2) 0;
+  position: fixed;
+  top:0;
+  width: 100%;
+  height: 120px;
+  color: var(--MC-DGray);
+  /* background-color: var(--MC-LGWhite); */
+}
+header.sticky a{
+  color: var(--MC-DGray);
+}
+header.sticky .logo a{
+  background: url('../image/main/nav/logo_black.png') no-repeat;
+}
+header.sticky:after{
+  border-top: 1px solid var(--MC-LGBlack);
+  top:120px;
+  opacity:1;
+}
+.logo a{
+  display: block;
+  background: url('../image/main/nav/logo_white.png') no-repeat;
+  width: 135px;
+  height: 25px;
+  text-indent: -9999rem;
+}
+nav > ul > li{
+  font-size: calc(var(--font-size)*1.25);
+  text-align: center;
+  position:relative;
+}
+.main_menu li ul > li{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 350;
+  /* opacity: 0; */
+}
+.main_menu li ul > li:hover > a{
+  color: var(--BC-LGRed);
+  transition: 0.3s ease-in;
+}
+.about_list li:hover a{
+  color: var(--BC-LGRed);
+  transition: 0.3s ease-in;
+}
+.main_menu > li > ul{
+  padding-top: 120px;
+  /* margin-top: 120px; */
+}
+.about_list{
+  padding: 44px 0 14px 0;
+  position: relative;
+}
+.about_list:before{
+  position:absolute;
+  top:22px;
+  left: 50%;
+  transform: translateX(-50%);
+  content:'';
+  display:block;
+  border-top: 1px solid var(--MC-LGWhite);
+  border-bottom: 1px solid var(--MC-LGWhite);
+  width: 25px;
+  height: 162px;
+}
+.main_menu li ul li ul > li{
+  font-size: var(--font-size); font-weight: 100; line-height: var(--base-unit);
+}
+.main_menu{
+  width: 720px;
+}
+.search_bar{
+  position: relative;
+  transition: 0.3s ease-in;
+}
+.search_bar:hover label+#search_bar{
+  display:block;
+}
+.search_bar:hover label{
+  position:absolute;
+  right: 20px;
+}
+#search_bar{
+  right: 0;
+  top:-9px;
+  padding: 0 20px;
+  display:flex;
+  position:absolute;
+  display:none;
+  width: 276px;
+  height: 37px;
+  border-radius: 18.5px;
+  background-color: transparent;
+  border: 1px solid var(--MC-LGWhite);
+}
+#search_bar::placeholder{
+  font-size: 14px;
+  color: var(--MC-LGWhite);
+  font-weight: 300;
+}
+.icon_menu{
+  gap:25px;
+}
+.icon_menu span{
+  display:block;
+  text-indent: -9999rem;
+}
+.search_bar form label{
+  background: url('../image/main/nav/search_icon.svg') no-repeat;
+  width: 20px;
+  height: 20px;
+  display: block;
+  transition: 0.3s ease-out;
+}
+.family_mall{
+  background: url('../image/main/nav/family_mall_icon.svg') no-repeat;
+  width: 22px;
+  height: 20px;
+}
+.css{
+  background: url('../image/main/nav/css_icon.svg') no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.lang{
+  background: url('../image/main/nav/language_icon.svg') no-repeat;
+  width: 20px;
+  height: 20px;
+  position:relative;
+  text-align: center;
+}
+.lang_list{
+  opacity:0;
+  background-color: var(--MC-LGWhite);
+  margin-top: 10px;
+  left:-50%;
+  transform: translateX(-25%);
+  color: var(--MC-LGGray);
+  position:absolute;
+  width: 80px;
+  height: 68px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 350;
+  transition: 0.3s ease-out;
+}
+.lang_list li:hover{
+  color: var(--BC-LGRed);
+}
+.lang:hover .lang_list{
+  opacity: 1;
+}
+.user{
+  background: url('../image/main/nav/login_icon.svg') no-repeat;
+  width: 20px;
+  height: 20px;
+}
 
 /* 한수연 mainslide */
 
@@ -11,3 +191,5 @@
 /* 팀 공동 press release */
 
 /* 정이원 footer */
+
+/* responsive  */
