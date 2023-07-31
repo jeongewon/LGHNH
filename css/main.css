@@ -9,8 +9,8 @@ header{
   z-index: 10;
   padding: 62px 0;
   box-sizing: border-box;
-  height: 150px;
   color: #fff;
+  vertical-align: top;
 }
 .line{
   position: absolute;
@@ -23,25 +23,35 @@ header{
   content: '';
   transition: 0.3s 0.1s ease-out;
 }
-header.sticky{
-  padding: calc(var(--base-unit)*2) 0;
+.header-clone.visible {
+  top: 0;
+}
+.header-clone{
+  padding: 47px 0;
   position: fixed;
-  top:0;
+  top:-9999em;
   width: 100%;
-  height: 120px;
   color: var(--MC-DGray);
-  /* background-color: var(--MC-LGWhite); */
+  background-color: var(--MC-LGWhite);
+  border-bottom:1px solid var(--MC-LGBlack);
+  transition: top 0.3s ease-out;
 }
-header.sticky a{
-  color: var(--MC-DGray);
-}
-header.sticky .logo a{
-  background: url('../image/main/nav/logo_black.png') no-repeat;
-}
-header.sticky:after{
-  border-top: 1px solid var(--MC-LGBlack);
+.header-clone .line{
+  position: absolute;
+  pointer-events: none;
   top:120px;
-  opacity:1;
+  display: block;
+  opacity: 0;
+  border-top: 1px solid var(--MC-LGBlack);
+  width: 100%;
+  content: '';
+  transition: 0.3s 0.1s ease-out;
+}
+.header-clone a{
+  color: var(--MC-DGray);
+}
+.header-clone .logo a{
+  background: url('../image/main/nav/logo_black.png') no-repeat;
 }
 .logo a{
   display: block;
@@ -62,6 +72,33 @@ nav > ul > li{
 .main_menu > li{
   width: 150px;
 }
+.main_menu li a:hover{
+  color:var(--BC-LGRed);
+}
+.header-clone .main_menu > li > a > span{
+  position: relative;
+}
+.header-clone .main_menu > li > a > span:after{
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  border-bottom: 4px solid var(--BC-LGRed);
+  left: 0;
+  width: 0%;
+  transition: width 300ms cubic-bezier(0.86, 0, 0.07, 1);
+  display: block;
+  z-index: 10;
+}
+.header-clone .main_menu > li > a > span:after{
+  content: '';
+  position: absolute;
+  border-bottom: 4px solid var(--BC-LGRed);
+  bottom: -47px;
+  left: 0;
+  width: 0%;
+  transition: width 300ms cubic-bezier(0.86, 0, 0.07, 1);
+  display: block;
+}
 .main_menu > li > a > span{
   position: relative;
 }
@@ -80,6 +117,9 @@ nav > ul > li{
 }
 .main_menu > li > ul{
   margin-top:130px;
+}
+.header-clone .main_menu > li > ul{
+  margin-top:100px;
 }
 .main_menu li ul{
   text-align: center;
@@ -104,6 +144,19 @@ nav > ul > li{
   width: 25px;
   height: 162px;
 }
+.header-clone .about_list:before{
+  pointer-events: none;
+  position:absolute;
+  top:22px;
+  left: 50%;
+  transform: translateX(-50%);
+  content:'';
+  display:block;
+  border-top: 1px solid var(--MC-LGBlack);
+  border-bottom: 1px solid var(--MC-LGBlack);
+  width: 25px;
+  height: 162px;
+}
 .main_menu li ul li ul > li{
   font-size: var(--font-size); font-weight: 100; line-height: var(--base-unit);
 }
@@ -124,6 +177,20 @@ form:hover #search_bar{
 }
 .search_bar:hover label svg *{
   fill: var(--BC-LGRed);
+}
+.header-clone #search_bar{
+  right: 0;
+  top:-9px;
+  padding: 0px 20px;
+  display:none;
+  position:absolute;
+  opacity: 1;
+  width: 276px;
+  height: 37px;
+  border-radius: 18.5px;
+  background-color: transparent;
+  border: 1px solid var(--MC-DGray);
+  transition: 0.3s ease-out;
 }
 #search_bar{
   right: 0;
@@ -147,17 +214,25 @@ form:hover #search_bar{
   color: var(--MC-LGWhite);
   font-weight: 300;
 }
+.header-clone #search_bar::placeholder{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--MC-LGGray);
+  font-weight: 300;
+}
 .icon_menu{
   gap:25px;
 }
 .icon_menu span{
-  display:block;
+  display:none;
   text-indent: -9999rem;
 }
 .icon_menu svg *{
   transition: 0.3s ease-out;
 }
-header.shrink svg *{
+.header-clone svg *{
   fill: var(--MC-DGray);
 }
 header.shrink .search_bar label svg *{
@@ -174,13 +249,20 @@ svg:hover *{
   position:relative;
   text-align: center;
 }
+.header-clone .lang_list{
+  background-color: var(--MC-LGGray);
+  color: var(--MC-LGWhite);
+}
 .lang_list{
-  opacity:0;
+  display:none;
   background-color: var(--MC-LGWhite);
   left:-50%;
+  padding:10px;
+  box-sizing: border-box;
   transform: translateX(-25%);
   color: var(--MC-LGGray);
   position:absolute;
+  top:30px;
   width: 80px;
   height: 68px;
   text-align: center;
@@ -191,8 +273,13 @@ svg:hover *{
 .lang_list li:hover{
   color: var(--BC-LGRed);
 }
-.lang:hover .lang_list{
+/* .lang:hover .lang_list{
   opacity: 1;
+  display:block;
+} */
+
+.test{
+  height: 6000px;
 }
 
 /* 한수연 mainslide */

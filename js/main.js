@@ -1,15 +1,50 @@
 let mainMenu = $('.main_menu > li'),
 	twodebth = $('.main_menu li ul'),
-	header = $('header'),
 	formLabel = $('.search_bar label'),
-	link = $('.main_menu li a');
+  header = $('header'),
+  headerClone = header.contents().clone(),
+  headerCloneContainer = $('<div class="header-clone"></div>');
+  
+  headerClone.appendTo(headerCloneContainer);
+  $('body').append(headerCloneContainer);
 
-link.hover(function () {
-	$(this).css({ color: 'var(--BC-LGRed)' })
-	},	
-	function () {
-	$(this).css({ color:'var(--MC-LGWhite)'})
- });
+$(window).scroll(function(){
+  if($(this).scrollTop() > 0){
+    headerCloneContainer.addClass('visible');
+    header.hide();
+  }else{
+    headerCloneContainer.removeClass('visible');
+    header.show();
+  }
+});
+
+let clone = $('.header-clone'),
+    c_mainmenu = clone.find('.main_menu > li'),
+    c_twodebth = clone.find('.main_menu li ul');
+    console.log(c_twodebth);
+
+c_mainmenu.hover(function(){
+  clone.css({
+    paddingBottom: '54px'
+  }),
+  c_twodebth.css({
+    display: 'flex'
+  }),
+  $('.line').css({
+    opacity: 1
+  })
+},function(){
+  clone.css({
+    paddingBottom: '47px'
+  }),
+  c_twodebth.css({
+    display: 'none'
+  }),
+  $('.line').css({
+    opacity: 0
+  })
+})
+
 mainMenu.hover(
 	function () {
 		header.css({
@@ -22,7 +57,6 @@ mainMenu.hover(
 			$('.line').css({
 			opacity: 1
 		})
-		// header.html('<span></span>');
 	},
 	function () {
 		header.css({
@@ -38,21 +72,39 @@ mainMenu.hover(
 	}
 );
 
-formLabel.mouseenter(function () {
-	header.css({
-		height: '150px',
-		backgroundColor: 'transparent'
-	}),
-	twodebth.css({
-		display: 'none'
-	}),
-	$('.main_menu').css({
-		display: 'none'
-	});
+console.log(clone.find('.main_menu'));
+
+$('label').mouseenter(function () {
+  if(clone.hasClass('visible')){
+    clone.find('.main_menu').css({
+      display: 'none'
+    })
+  }else{
+    $('.main_menu').css({
+      display: 'none'
+    });
+  }
 });
 
 $('form').mouseleave(function () {
-	$('.main_menu').css({
-		display: 'flex'
-	});
+  if(clone.hasClass('visible')){
+    clone.find('.main_menu').css({
+      display: 'flex'
+    })
+  }else{
+    $('.main_menu').css({
+      display: 'flex'
+    });
+  }
+})
+
+$('.lang').mouseenter(function(){
+  $('.lang_list').css({
+    display: 'block'
+  })
+});
+$('.lang_list').mouseleave(function(){
+  $('.lang_list').css({
+    display: 'none'
+  })
 })
