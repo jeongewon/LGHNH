@@ -351,9 +351,6 @@ body{
     gap:37.66px;
     padding: 45px 35px 60px 45px;
   }
-  .arc_card.active .card_title{
-    
-  }
   .arc_card.active > p:last-child{
     width: 370px;
     font-size: 14px;
