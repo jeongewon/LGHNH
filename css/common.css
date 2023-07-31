@@ -285,7 +285,6 @@ body{
   height: 72px;
   border: 1px solid var(--MC-LGGray);
   border-radius: 20px;
-  
 }
 .policyLink a{
   color: var(--MC-DGray);
@@ -331,18 +330,17 @@ body{
   border: 1px solid var(--MC-DGray);
   border-radius: 10px; 
   text-align: center;
-  transition: 0.1s;
 }
 .footer_recruit a{
   font-size: calc(var(--font-size)*1.375);
   font-weight: 400;
   color: var(--MC-DGray);
   line-height: 48px;
-  transition: 0.1s;
 }
 .footer_recruit:hover{
   border: none;
   background: var(--BC-LGRed);
+  border: 1px solid var(--BC-LGRed);
 }
 .footer_recruit:hover a{
   color: var(--MC-LGWhite);
