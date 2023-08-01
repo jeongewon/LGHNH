@@ -123,6 +123,10 @@ $('.lang').mouseenter(function(){
     $('.lang_list').css({
       display: 'block'
       })
+  }else{
+    $('.lang_list').css({
+      display: 'flex'
+      })
   }
 });
 $('.lang_list').mouseleave(function(){

@@ -338,6 +338,10 @@ svg:hover *{
     position: absolute;
     right:30px;
     padding: 0;
+    transition: 0.3s ease-out;
+  }
+  .close_btn:hover svg *{
+    stroke: var(--BC-LGRed);
   }
   .menu{
     box-sizing: border-box;
