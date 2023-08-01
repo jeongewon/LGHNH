@@ -9,83 +9,118 @@
 /* 팀 공동 new arrivals */
 
 /* 팀 공동 press release */
+.m5 h2{
+    line-height: 48px;
+}
 
 .news_box{
-    width: 1440px;
-    height: 768px;
-    border-radius: 10px;
-    border: 1px solid var(--MC-LGLGray);
-    margin: 96px 0 190px 0;
+    /* width: 1272px;
+    height: 624px;
+    border-radius: 20px;
+    border: 1px solid var(--MC-LGLGray); */
+    margin-top: 96px;
 }
 
 .news_header{
-    margin: 48px 60px 0 60px;
+    margin: 48px 78px 0 78px;
+    
+}
+.news_header .news_tt:after{
+    width: 1104px;
+    content: '';
+    display: block;
+    border-bottom: 1px dashed var(--MC-DGray);
+    margin-top: 18px;
+}
+
+.news_accordion {
+    margin: 0 78px;
 }
 
 .news_content{
-    font-weight: 400;
-    line-height: 48px;
-    margin: 48px 0 0 60px;
+    margin: 44px 0 0 0;
     position: relative;
+    flex-wrap:wrap;
 }
-
 .news_content p{
-    width: 818px;
-    margin-left: 41px;
+    font-weight: 400;
+    line-height: 28.8px;
     text-align: justify;
 }
 
 
 .news_header{
     position: relative;
+    
 }
 
 .news_header button{
     position: absolute;
     right: 0;
-    width: 47px;
-    height: 47px;
-    border: none;
+    /* width: 38px;
+    height: 38px;
     border-radius: 50%;
-    border: 2px solid #363636;
-    /* margin-left: 70px; */
+    border: 1px solid #363636;*/
+    background-color: var(--MC-LGWhite);
+    border: none;
+    transition: 0.2s;  
 }
 .news_header button i{
-    font-size: calc(var(--font-size)*1.875);
+    font-size: calc(var(--font-size)*1.375);
     color: #363636;
+    transform:rotate(0deg);
+    font-weight: 500;
 }
-.news_header button:active{
+/* .news_header button:active{
     background: #363636;
-}
-
+} */
 .news_header button:active i{
-    font-size: calc(var(--font-size)*1.875);
-    color: var(--MC-LGWhite);
+    font-size: calc(var(--font-size)*1.375);
+    /* color: var(--MC-LGWhite); */
     transform: rotate(45deg);
 }
 
+.news_text{
+    width: 674px;
+    margin-left: 64px;
+    flex-direction:column;
+}
+
+.news_text p:nth-child(2){
+    margin-top: 16px;
+}
 
 .news_content .viewmore{
-    position: absolute;
-    left: 425px;
-    top: 335px;
+    margin-top: 63px;
 }
+
+.news_content .viewmore a{
+    font-size: 16px;
+    font-weight: 400;
+}
+
 /* 정이원 aside */
 
 
 /* 정이원 footer */
 .footer {
+    margin-top: 240px;
     height: 313px;
     background-color: #F0F0F0;
 }
-.footer_box {
-    padding: 48px 0;
+.footer_box{
+    padding: 48px 0 0 0;
 }
 
 .footer_link li{
+    font-size: calc(var(--font-size)*1.25);
     margin-right: 20px;
     font-weight: 500;
 }
+.footer_link li a{
+    color: var(--MC-DGray);
+}
+
 .footer_link .footer_support{
     color: var(--BC-LGRed);
     font-weight: 700;
@@ -102,6 +137,7 @@
     margin-right: 5px;
 }
 
+
 .footer_sns a{
     color: var(--MC-DGray);
 }
@@ -116,32 +152,29 @@
     color: var(--BC-LGRed);
 }
 
-.copyright{
+.footer_end .copyright{
     margin-top: 48px;
-    font-size: 12px;
+    font-size: 14px;
 }
-.footer_recruit{
+.footer_end .footer_recruit{
     width: 144px;
     height: 48px;
+    font-weight: 400;
     border: 1px solid var(--MC-DGray);
     border-radius: 10px; 
     text-align: center;
     margin-top: 23px;
-}
-.footer_recruit a{
-    font-size: calc(var(--font-size)*1.375);
-    font-weight: 400;
     color: var(--MC-DGray);
-    line-height: 48px;
+    font-size: calc(var(--font-size)*1.375);
+    line-height: 45px;
 }
 .footer_recruit:hover{
     border: none;
     background: var(--BC-LGRed);
     border: 1px solid var(--BC-LGRed);
-}
-.footer_recruit:hover a{
     color: var(--MC-LGWhite);
 }
+
 
 @media screen and (max-width: 768px){
     .footer {

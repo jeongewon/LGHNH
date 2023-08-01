@@ -1,21 +1,43 @@
 .esg_m1{
-    width:1920px;
-    height: 1080px;
+    background-image: url("../images/esg_vision_bg.jpg");
     background-size: cover;
-    background: url(../images/esg_vision_bg.jpg) no-repeat;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-.vision_bg{
+
+.vision{
     text-align: center;
     color: var(--MC-LGWhite);
     width: 457px;
     height: 457px;
     border: 2px solid rgba(255,255,255,.45);
     border-radius: 50%;
-   justify-content: center;
-
 }
-.visionbg h1{
+
+
+.vision h1{
     font-size: 150px;
     font-weight: 700;
     letter-spacing: 15px;
+}
+
+.vision p{
+    width: 531px;
+    font-size: calc(var(--font-size)*1.5);
+    line-height: 140%;
+    font-weight: 400;
+}
+
+
+.scrolldown{
+    color: var(--MC-LGWhite);
+}
+
+.scrolldown p{
+    font-size: 14px;
+    font-weight: 350;
 }

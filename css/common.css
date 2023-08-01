@@ -46,13 +46,13 @@
 /* Reset */
 a {
   text-decoration: none;
-  color:#000;
+  color:#fff;
 }
 
 /* layout */
 
 .container{
-  width: 1440px;
+  width: 1272px;
   margin: 0 auto;
 }
 
@@ -69,9 +69,10 @@ a {
 .hidden{display: none;}
 
 .d-flex{display: flex;}
+.fd-column{flex-direction: column;}
 .jcsb{justify-content: space-between;}
-.jscs{justify-content: flex-start;}
-.jsce{justify-content: flex-end;}
+.jscs{justify-content: start;}
+.jsce{justify-content: end;}
 .jcc{justify-content: center;}
 .aic{align-items: center;}
 .ais{align-items: flex-start;}
@@ -96,31 +97,27 @@ body{
 .serif{font-family: 'DM Serif Display', serif;}
 
 .main-tt{
-  font-size: calc(var(--font-size)*3.375);
+  font-size: calc(var(--font-size)*2.5);
   font-weight: 700;
-  line-height: 78.2px;
 }/*h1*/
 .sub-tt{
-  font-size: calc(var(--font-size)*2.25);
-  font-weight: 700;
-  line-height: calc(var(--font-size)*3.25625);
-}/*h2*/
-.cont-tt{
   font-size: calc(var(--font-size)*1.875);
   font-weight: 700;
-  line-height: calc(var(--font-size)*2.7125);
-}/*h3*/
-.sub-cont-tt{
+}/*h2*/
+.cont-tt{
   font-size: calc(var(--font-size)*1.5);
   font-weight: 700;
-  line-height: calc(var(--font-size)*2.175);
+}/*h3*/
+.sub-cont-tt{
+  font-size: calc(var(--font-size));
+  font-weight: 700;
 }/*h4*/
 .sm-tt{
-  font-size: calc(var(--font-size)*1.25);
+  font-size: calc(var(--font-size)*0.875);
   font-weight: 700;
-  line-height: calc(var(--font-size)*1.8125);
   }/*h5*/
 
+.b-m-20{font-size: calc(var(--font-size)*1.25); line-height: calc(var(--base-unit)*1.25);} /*medium*/
 .b-b-16{font-size: var(--font-size); font-weight: 600; line-height: var(--base-unit);} /*bold*/
 .b-m-16{font-size: var(--font-size); font-weight: 500; line-height: var(--base-unit);} /*medium*/
 .b-r-16{font-size: var(--font-size); font-weight: 400; line-height: var(--base-unit);} /*regular*/
@@ -366,6 +363,8 @@ body{
   color: var(--MC-LGWhite);
 }
 
+
+
 /* form */
 
 /* responsive */
@@ -438,9 +437,6 @@ body{
     width: 440px;
     gap:37.66px;
     padding: 45px 35px 60px 45px;
-  }
-  .arc_card.active .card_title{
-    
   }
   .arc_card.active > p:last-child{
     width: 370px;
