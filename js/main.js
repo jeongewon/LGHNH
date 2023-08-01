@@ -3,13 +3,17 @@ let mainMenu = $('.main_menu > li'),
 	formLabel = $('.search_bar label'),
   header = $('header'),
   headerClone = header.contents().clone(),
-  headerCloneContainer = $('<div class="header-clone"></div>');
-  
+  headerCloneContainer = $('<div class="header-clone"></div>'),
+  width = $(window).width(),
+  // window = $(window),
+  close_aside = $('.close_btn'),
+  open_aside = $('.aside_btn');
+  console.log(width);
+headerClone.appendTo(headerCloneContainer);
+$('body').append(headerCloneContainer);
 
-if ($(window).width() > 768) {
-  headerClone.appendTo(headerCloneContainer);
-  $('body').append(headerCloneContainer);
-  $(window).scroll(function(){
+$(window).scroll(function(){
+  if ($(window).width() > 768) {
     if($(this).scrollTop() > 0){
       headerCloneContainer.addClass('visible');
       header.hide();
@@ -17,59 +21,75 @@ if ($(window).width() > 768) {
       headerCloneContainer.removeClass('visible');
       header.show();
     }
-  });
+  }else{
+    if($(this).scrollTop() > 0){
+      header.addClass('white');
+    }else{
+      header.removeClass('white');
+    }
+  }
+});
   
 let clone = $('.header-clone'),
 c_mainmenu = clone.find('.main_menu > li'),
 c_twodebth = clone.find('.main_menu li ul');
-console.log(c_twodebth);
 
 c_mainmenu.hover(function(){
-  clone.css({
-  paddingBottom: '54px'
-  }),
-  c_twodebth.css({
-  display: 'flex'
-  }),
-  $('.line').css({
-  opacity: 1
-  })
+  let width = $(window).width();
+  if (width  > 768) {
+    clone.css({
+      paddingBottom: '54px'
+      }),
+      c_twodebth.css({
+      display: 'flex'
+      }),
+      $('.line').css({
+      opacity: 1
+      })
+  }
   },function(){
-  clone.css({
-  paddingBottom: '47px'
-  }),
-  c_twodebth.css({
-  display: 'none'
-  }),
-  $('.line').css({
-  opacity: 0
-  })
+    let width = $(window).width();
+    if (width > 768) {
+      clone.css({
+        paddingBottom: '47px'
+        }),
+        c_twodebth.css({
+        display: 'none'
+        }),
+        $('.line').css({
+        opacity: 0
+        })
+    }
 })
 
-mainMenu.hover(
-function () {
-header.css({
-  height: '600px',
-  backgroundColor: 'rgba(0,0,0,.7)'
-}),
-twodebth.css({
-  display: 'flex'
-}),
-  $('.line').css({
-  opacity: 1
-})
-},
-function () {
-header.css({
-  height: '150px',
-  backgroundColor: 'transparent'
-}),
-twodebth.css({
-  display: 'none'
-}),
-$('.line').css({
-  opacity: 0
-})
+mainMenu.hover(function () {
+  let width = $(window).width();
+  if (width  > 768) {
+    header.css({
+      height: '600px',
+      backgroundColor: 'rgba(0,0,0,.7)'
+    }),
+    twodebth.css({
+      display: 'flex'
+    }),
+      $('.line').css({
+      opacity: 1
+    })
+  }
+}, function () {
+  let width = $(window).width();
+  if (width  > 768) {
+    header.css({
+      height: '150px',
+      backgroundColor: 'transparent'
+    }),
+    twodebth.css({
+      display: 'none'
+    }),
+    $('.line').css({
+      opacity: 0
+    })
+  }
 }
 );
 
@@ -98,16 +118,27 @@ $('.main_menu').css({
 })
 
 $('.lang').mouseenter(function(){
-$('.lang_list').css({
-display: 'block'
-})
+  let width = $(window).width();
+  if (width  > 768) {
+    $('.lang_list').css({
+      display: 'block'
+      })
+  }
 });
 $('.lang_list').mouseleave(function(){
-$('.lang_list').css({
-display: 'none'
+  let width = $(window).width();
+  if (width  > 768) {
+    $('.lang_list').css({
+      display: 'none'
+      })
+  }else{
+    $('.lang_list').css({
+      display: 'flex'
+      })
+  }
 })
-})
-}//desktop
+
+
 // if ($(window).width() > 480) { //tablet
 
 // } else { //mobile
@@ -121,4 +152,26 @@ title.on('click', function (e) {
   e.preventDefault();
   $(this).parent().siblings('li').find('> ul').slideUp();
   $(this).parent().find('> ul').slideToggle();
+  $(this).toggleClass('active');
+  // $(this).parent().siblings('li').find('> a').removeClass('active');
+  // $(this).find('span').toggleClass('active');
   })
+
+open_aside.click(function(){
+  $('.menu').show();
+})
+close_aside.click(function(){
+  $('.menu').hide();
+    open_aside.show();
+});
+$(window).resize(function(){
+  width = $(window).width();
+  console.log(width);
+  if (width  > 768) {
+    $('.menu').css({
+      display: 'flex'
+    })
+  }else{
+    $('.menu').hide();
+  }
+})

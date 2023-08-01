@@ -60,6 +60,9 @@ header{
   height: 25px;
   text-indent: -9999rem;
 }
+header.white .logo a{
+  background: url('../image/main/nav/logo_black.png') no-repeat;
+}
 .menu{
   width: 78%;
   justify-content: space-between;
@@ -96,7 +99,7 @@ nav .menu > ul > li{
   width: 0%;
   transition: width 0.3s 0.3s cubic-bezier(0.86, 0, 0.07, 1);
   display: block;
-  z-index: 10;
+  /* z-index: 10; */
 }
 .header-clone .main_menu > li > a > span:after{
   content: '';
@@ -135,6 +138,9 @@ nav .menu > ul > li{
   font-size: 18px;
   font-weight: 350;
   display: none;
+}
+.company_list, .brand_list{
+  gap: 30px;
 }
 .about_list{
   padding: 44px 0 14px 0;
@@ -301,9 +307,17 @@ svg:hover *{
 /* responsive  */
 
 @media screen and (max-width: 768px){ /*tablet*/
-  .container{width:100%;}
+  .container{width:688px;}
   header{
     color: var(--MC-DGray);
+    padding: 40px 0;
+  }
+  header.white{
+    background-color: var(--MC-LGWhite);
+    border-bottom: 1px solid var(--MC-LGGray);
+  }
+  header.white .menu{
+    border-left: 1px solid var(--MC-LGGray);
   }
   /* 이은서 nav */
   a{
@@ -314,40 +328,45 @@ svg:hover *{
     border: none;
     background: none;
   }
-  /* .aside_btn svg *{
-    fill: var(--MC-LGWhite);
-  } */
+  header.white .aside_btn svg *{
+    stroke: var(--MC-DGray);
+  }
   .close_btn{
-    width: 15px;
-    height: 15px;
     border:none;
     background: none;
     display: block;
-    align-self: end;
+    position: absolute;
+    right:30px;
+    padding: 0;
   }
   .menu{
+    box-sizing: border-box;
     position:fixed;
     background-color: var(--MC-LGWhite);
     right:0;
     top:0;
     bottom:0;
     width: 286px;
-    /* gap:24px; */
     flex-direction: column;
     justify-content: flex-start;
     gap:24px;
-    padding: 54px 24px;
+    padding: 48px 0;
+    display:none;
   }
   .main_menu{
     flex-direction: column;
     width: 100%;
     position:absolute;
     top:192px;
+    gap:24px;
   }
   nav .menu > ul > li{
     text-align: left;
     font-size: 18px;
     font-weight: 400;
+  }
+  .main_menu > li > a{
+    margin-left: 30px;
   }
   .main_menu li{
     width: 100%;
@@ -367,28 +386,40 @@ svg:hover *{
   .main_menu > li > a > span:after{
     bottom: -24px;
   }
+  .main_menu > li > a > span:hover:after{
+    width: 0%;
+  }
   .a_close_btn{
     display: inline-block;
     width: 9px;
     height: 6px;
+    margin-right: 30px;
     background-image: url('../image/main/nav/expand_more_btn.svg');
   }
   .search_bar{
     position:absolute;
     top:110px;
-    right: 24px;
-    margin-bottom: 48px;
+    right: 15px;
   }
   #search_bar{
-    right: 0;
+    right: 15px;
     top:-9px;
     padding: 0px 20px;
     width: 225.5px;
     height: 50px;
     border-radius: 25px;
     border: 1px solid var(--MC-LGGray);
+    box-sizing: border-box;
     opacity: 1;
     visibility: visible;
+  }
+  .search_bar label{
+    position: absolute;
+    right: 35px;
+    top:5px;
+  }
+  .search_bar:hover label{
+    right: 35px;
   }
   #search_bar::placeholder{
     color: var(--MC-DGray);
@@ -410,12 +441,15 @@ svg:hover *{
     background-color: #F0F0F0;
     padding: 24px 54px;
     box-sizing: border-box;
-    margin: 24px 0;
+    margin-top: 24px;
     gap:24px;
   }
   .main_menu li ul ul{
     display:block;
     padding: 24px 24px;
+  }
+  .title a.active div{
+    transform: rotate(180deg);
   }
   .info li{
     font-size: 13px;
@@ -437,7 +471,7 @@ svg:hover *{
     top:48px;
   }
   .user{
-    left:24px;
+    left:30px;
   }
   .user:after{
     content:'';
@@ -451,27 +485,32 @@ svg:hover *{
     transform: translateY(-50%);
   }
   .family_mall{
-    left: 93px;
+    left: 100px;
   }
-  .css, .lang{
-    position:fixed;
+  .css{
+    position:absolute;
     bottom:48px;
-    right:24px;
+    right:30px;
   }
   .lang{
-    right:254px;
+    position:absolute;
+    bottom:100px;
+    left:30px;
   }
   .lang_list{
+    transform: translateX(0);
+    width: 134px;
+    height: 14px;
     display:flex;
     gap: 20px;
-    top:0;
+    top:36px;
     background:none;
     padding:0;
     color: var(--MC-DGray);
-    text-align: center;
     font-size: 14px;
     font-weight: 350;
-    transition: 0.3s ease-out;
+    position:absolute;
+    line-height: 14px;
   }
   .kor{
     position: relative;
@@ -483,15 +522,31 @@ svg:hover *{
     height: 13px;
     background-color: var(--MC-LGGray);
     position:absolute;
-    right:-10px;
-    top:6px;
+    right:-9px;
+    top:1px;
   }
 }
 
 @media screen and (max-width: 480px){ /*mobile*/
   .container{width:100%;}
-
   /* 이은서 nav */
+  header{
+    color: var(--MC-DGray);
+    padding: 22px 0;
+  }
+  .logo a{
+    display: block;
+    background: url('../image/main/nav/logo_white.png') no-repeat;
+    background-size: 100% 100%;
+    width: 108px;
+    height: 20px;
+    text-indent: -9999rem;
+  }
+  header.white .logo a{
+    background-size: 100% 100%;
+    width: 108px;
+    height: 20px;
+  }
 
 
 
