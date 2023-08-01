@@ -76,25 +76,25 @@ console.log(clone.find('.main_menu'));
 
 $('label').mouseenter(function () {
   if(clone.hasClass('visible')){
-    clone.find('.main_menu').css({
-      display: 'none'
+    clone.find('.menu .main_menu').css({
+      visibility: 'hidden'
     })
   }else{
-    $('.main_menu').css({
-      display: 'none'
-    });
+    $('.menu .main_menu').css({
+      visibility: 'hidden'
+    })
   }
 });
 
 $('form').mouseleave(function () {
   if(clone.hasClass('visible')){
     clone.find('.main_menu').css({
-      display: 'flex'
+      visibility: 'visible'
     })
-  }else{
+  } else {
     $('.main_menu').css({
-      display: 'flex'
-    });
+      visibility: 'visible',
+    })
   }
 })
 
