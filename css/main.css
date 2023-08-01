@@ -250,8 +250,7 @@ svg:hover *{
   text-align: center;
 }
 .header-clone .lang_list{
-  background-color: var(--MC-LGGray);
-  color: var(--MC-LGWhite);
+  border: 1px solid var(--MC-DGray);
 }
 .lang_list{
   display:none;
@@ -260,7 +259,7 @@ svg:hover *{
   padding:10px;
   box-sizing: border-box;
   transform: translateX(-25%);
-  color: var(--MC-LGGray);
+  color: var(--MC-DGray);
   position:absolute;
   top:30px;
   width: 80px;
