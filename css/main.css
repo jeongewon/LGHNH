@@ -99,6 +99,47 @@
     font-weight: 400;
 }
 
+.viewmore {
+    width: 138px;
+    height: 37px;
+    border: 1px solid var(--MC-LGGray);
+    border-radius: 30px;
+    text-align: center;
+    color: var(--BC-LGRed);
+}
+.viewmore a {
+    color:var(--MC-LGGray);
+}
+.viewmore i {
+    margin-left: 9px;
+}
+.viewmore a, i{
+    margin-top: 10px;
+}
+.viewmore:hover{
+    color: var(--BC-LGRed);
+    border-color: var(--BC-LGRed);
+}
+.viewmore:hover .b_btn{
+    color: var(--BC-LGRed);
+}
+
+/* .b_btn{
+    line-height: 35px;
+    border: 1px solid var(--MC-LGGray);
+    color:var(--MC-LGGray);
+    border-radius: 30px;
+    margin: 0 auto 96px;
+    padding: 6px 16px;
+    transition: 0.3s ease-out; 
+ }
+.b_btn i{
+    padding-left: 5px;
+  }
+.b_btn:hover{
+    border-color:var(--BC-LGRed);
+    color:var(--BC-LGRed);
+  } */
 /* 정이원 aside */
 
 
@@ -108,8 +149,12 @@
     height: 313px;
     background-color: #F0F0F0;
 }
-.footer_box{
+/* .footer_box{
     padding: 48px 0 0 0;
+} */
+
+.footer_link li, .footer_link .footer_sns{
+    margin-top: 48px;
 }
 
 .footer_link li{
@@ -127,7 +172,7 @@
 }
 
 .footer_address{
-    margin-top: 48px;
+    margin-top: 47px;
 }
 .footer_address .lghnh span:first-child{
     margin-right: 20px;
@@ -153,7 +198,7 @@
 }
 
 .footer_end .copyright{
-    margin-top: 48px;
+    margin-top: 47px;
     font-size: 14px;
 }
 .footer_end .footer_recruit{
@@ -177,20 +222,31 @@
 
 
 @media screen and (max-width: 768px){
+    .container{width:688px; margin: 0 40px;}
+
     .footer {
-        height: 312px;
-        padding: 55px 40px 0px 40px;
-
+        margin-top: 120px;
+        height: 288px;
     }
-
-    .footer_box {
+    .footer_box{
         padding: 0;
+    }
+    
+
+
+
+
+    .footer_link ul, .footer_sns{
+        margin-top: 48px;
     }
 
     .footer_link li{
         font-size: var(--font-size);
     }
 
+    .footer_link .privacy{
+        display: none;
+    }
     .footer_sns .facebook{
         font-size: calc(var(--font-size)*1.5);
         margin-right: 26px;
@@ -218,47 +274,43 @@
     }
 }
 @media screen and (max-width: 480px){
+    .container{width:480px; margin: 0 20px;}
+
     .footer{
         height: 192px;
-        flex-direction:column;
-        position: relative;
-        padding: 0;    
+        padding: 0;
+    }
+    .footer_link li, .footer_link .footer_sns{
+        margin-top: 24px;
     }
     .footer_link{
-        display: flex;
-        flex-wrap:wrap;
-        justify-content: center;
+        flex-direction:column;
     }
-    .footer_link .privacy{
-        display: none;
+    .footer_link li{
+        font-size: var(--font-size);
+        font-weight: 400;
     }
-    
-    .footer_sns{
-        position: absolute;
-        top: 118px;
+    .footer_sns .facebook{
+        font-size: calc(var(--font-size)*1.1875);
+        margin-right: 19px;
     }
-
+    .footer_sns .youtube{
+        font-size: calc(var(--font-size)*1.375);
+    }
     .footer_address{
         display: none;
     }
-    .footer_recruit{
-        width: 80px;
+    .footer_end .footer_recruit{
+        width: 73px;
         height: 30px;
         border-radius: 5px;
-    }
-    .footer_recruit a{
         font-size: 14px;
-    }
-
-    .copyright{
-        font-size: 12px;
-        top: 152px;
-
-        position :absolute;
+        font-weight: 400;
     }
     .footer_end{
-        display:flex;
         flex-direction:column-reverse;
-        align-items: center;
+    }
+    .footer_end .copyright{
+        font-size: 12px;
     }
 }

@@ -277,25 +277,9 @@ body{
   transform: translate(-25%,-25%) rotate(45deg);
 }
 
-.b_btn{
-  text-align: center;
-  line-height: 35px;
-  border: 1px solid var(--MC-LGGray);
-  color:var(--MC-LGGray);
-  border-radius: 30px;
-  margin: 0 auto 96px;
-  padding: 6px 16px;
-  transition: 0.3s ease-out;
-}
 
-.b_btn i{
-  padding-left: 5px;
-}
 
-.b_btn:hover{
-  border-color:var(--BC-LGRed);
-  color:var(--BC-LGRed);
-}
+
 
 .policyLink{
   width: 240px;
