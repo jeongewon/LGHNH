@@ -62,6 +62,8 @@ header{
 }
 .menu{
   width: 78%;
+  justify-content: space-between;
+  display: flex;
 }
 nav{
   display: flex;
@@ -92,7 +94,7 @@ nav .menu > ul > li{
   border-bottom: 4px solid var(--BC-LGRed);
   left: 0;
   width: 0%;
-  transition: width 300ms cubic-bezier(0.86, 0, 0.07, 1);
+  transition: width 0.3s 0.3s cubic-bezier(0.86, 0, 0.07, 1);
   display: block;
   z-index: 10;
 }
@@ -176,12 +178,13 @@ form:hover #search_bar{
   visibility: visible;
 }
 .search_bar label{
-  position:absolute;
+  position:relative;
   right: 0px;
   transition: 0.3s ease-out;
 }
 .search_bar:hover label{
   right: 20px;
+  position: absolute;
 }
 .search_bar:hover label svg *{
   fill: var(--BC-LGRed);
@@ -279,6 +282,9 @@ svg:hover *{
 .aside_btn{
   display:none;
 }
+.close_btn{
+  display: none;
+}
 
 /* 한수연 mainslide */
 
@@ -296,19 +302,196 @@ svg:hover *{
 
 @media screen and (max-width: 768px){ /*tablet*/
   .container{width:100%;}
-/* 이은서 nav */
-.aside_btn{
-  display:block;
-  border: none;
-  background: none;
-}
-
+  header{
+    color: var(--MC-DGray);
+  }
+  /* 이은서 nav */
+  a{
+    color: var(--MC-DGray);
+  }
+  .aside_btn{
+    display:block;
+    border: none;
+    background: none;
+  }
+  /* .aside_btn svg *{
+    fill: var(--MC-LGWhite);
+  } */
+  .close_btn{
+    width: 15px;
+    height: 15px;
+    border:none;
+    background: none;
+    display: block;
+    align-self: end;
+  }
+  .menu{
+    position:fixed;
+    background-color: var(--MC-LGWhite);
+    right:0;
+    top:0;
+    bottom:0;
+    width: 286px;
+    /* gap:24px; */
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:24px;
+    padding: 54px 24px;
+  }
+  .main_menu{
+    flex-direction: column;
+    width: 100%;
+    position:absolute;
+    top:192px;
+  }
+  nav .menu > ul > li{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .main_menu li{
+    width: 100%;
+  }
+  .main_menu li ul{
+    text-align: left;
+    margin-top: 0;
+  }
+  .about_list:before{
+    display: none;
+  }
+  .main_menu > li > a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main_menu > li > a > span:after{
+    bottom: -24px;
+  }
+  .a_close_btn{
+    display: inline-block;
+    width: 9px;
+    height: 6px;
+    background-image: url('../image/main/nav/expand_more_btn.svg');
+  }
+  .search_bar{
+    position:absolute;
+    top:110px;
+    right: 24px;
+    margin-bottom: 48px;
+  }
+  #search_bar{
+    right: 0;
+    top:-9px;
+    padding: 0px 20px;
+    width: 225.5px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid var(--MC-LGGray);
+    opacity: 1;
+    visibility: visible;
+  }
+  #search_bar::placeholder{
+    color: var(--MC-DGray);
+  }
+  .icon_menu svg:not(.search_icon){
+    display:none;
+  }
+  svg *{
+    fill: var(--MC-LGGray);
+  }
+  .icon_menu span:not(.lang_span){
+    display:block;
+    text-indent: 0;
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .main_menu > li > ul{
+    display:none;
+    background-color: #F0F0F0;
+    padding: 24px 54px;
+    box-sizing: border-box;
+    margin: 24px 0;
+    gap:24px;
+  }
+  .main_menu li ul ul{
+    display:block;
+    padding: 24px 24px;
+  }
+  .info li{
+    font-size: 13px;
+    font-weight: 350;
+    line-height: var(--base-unit);
+  }
+  .main_menu li ul li ul > li{
+    font-size: 13px;
+  }
+  .main_menu li ul{
+    font-size: 18px;
+    font-weight: 350;
+  }
+  .icon_menu {
+    gap: 0;
+  }
+  .family_mall, .user{
+    position:absolute;
+    top:48px;
+  }
+  .user{
+    left:24px;
+  }
+  .user:after{
+    content:'';
+    display: block;
+    width: 1px;
+    height: 13px;
+    background-color: var(--MC-LGGray);
+    position:absolute;
+    right:-15px;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  .family_mall{
+    left: 93px;
+  }
+  .css, .lang{
+    position:fixed;
+    bottom:48px;
+    right:24px;
+  }
+  .lang{
+    right:254px;
+  }
+  .lang_list{
+    display:flex;
+    gap: 20px;
+    top:0;
+    background:none;
+    padding:0;
+    color: var(--MC-DGray);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 350;
+    transition: 0.3s ease-out;
+  }
+  .kor{
+    position: relative;
+  }
+  .kor:after{
+    content:'';
+    display: block;
+    width: 1px;
+    height: 13px;
+    background-color: var(--MC-LGGray);
+    position:absolute;
+    right:-10px;
+    top:6px;
+  }
 }
 
 @media screen and (max-width: 480px){ /*mobile*/
   .container{width:100%;}
 
-/* 이은서 nav */
+  /* 이은서 nav */
 
 
 
