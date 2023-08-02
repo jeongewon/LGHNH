@@ -158,7 +158,34 @@ body{
 .bg-default{background-color:var(--BG);}
 
 /* link button */
-
+button.more_btn{
+  width: 40px;
+  height: 40px;
+  border: 2px var(--MC-Gray3) solid;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.3s ease-out;
+  background-color: transparent;
+}
+button.more_btn::after{
+  content: '';display: block;
+  width: 2px;height: 20px; position:absolute;
+  background-color: var(--MC-Gray3);
+  top:50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+button.more_btn::before{
+  content: '';display: block;
+  width: 20px;height: 2px; position:absolute;
+  background-color: var(--MC-Gray3);
+  top:50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(calc(-50% + 1px));
+}
+button.more_btn:hover{border-color: var(--BC-LGRed);}
+button.more_btn:hover::after, button.more_btn:hover::before{background-color: var(--BC-LGRed);}
+button.more_btn.close{transform: rotate(45deg);}
 .more_btn{
   width: 40px;
   height: 40px;
@@ -177,21 +204,26 @@ body{
   border-bottom: 2px var(--MC-Gray3) solid;
   left:50%;
   transform: translateX(-50%) translateY(-1px);
-}
+} 
 .more_btn:hover{border-color: var(--BC-LGRed);}
 .more_btn:hover .line{border-color: var(--BC-LGRed);}
 .more_btn.close{transform: rotate(45deg);}
 
+
 .year_btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  line-height: 35px;
   width: 142px;
   height: 35px;
   border: 1px solid var(--MC-DGray);
+  padding:0;
   border-radius: 17.5px;
   transition: 0.3s ease-out;
+  background-color: transparent;
 }
-.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray);}
+button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); margin-bottom: 2px;}
 .year_btn:hover{border-color: var(--BC-LGRed);}
 .year_btn:hover span{color:var(--BC-LGRed);}
 .year_btn.active{background-color: var(--BC-LGRed);border: none;}
@@ -254,7 +286,7 @@ body{
   width: 100px;
   border-top: 4px solid var(--BC-LGRed);
 }
-.arc_card.active > p:last-child{
+.arc_card.active > .card_info{
   width: 810px;
   text-align: center;
   font-size: 23px;
@@ -284,6 +316,15 @@ body{
     width: 30px;
     height: 30px;
     border-width: 1px;
+  }
+  .more_btn .line{width: 15px;height: 15px;}
+  .more_btn .line:first-child{
+    border-right-width: 1px;
+    transform: translateY(-50%) translateX(-0.5px);
+  }
+  .more_btn .line:last-child{
+    border-bottom-width: 1px;
+    transform: translateX(-50%) translateY(-0.5px);
   }
   .more_btn .line{width: 15px;height: 15px;}
   .more_btn .line:first-child{
