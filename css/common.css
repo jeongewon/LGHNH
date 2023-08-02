@@ -60,11 +60,11 @@ a {
 .web_ct{padding-top: calc(var(--base-unit)*4);}
 .web_ft{padding-top: calc(var(--base-unit)*8);}
 
-.tm_sec{padding-top: calc(var(--base-unit)*4);}
+/* .tm_sec{padding-top: calc(var(--base-unit)*4);}
 .tm_ct{padding-top: calc(var(--base-unit)*3);}
 .tab_ft{padding-top: calc(var(--base-unit)*5);}
 
-.mob_ft{padding-top: calc(var(--base-unit)*2);}
+.mob_ft{padding-top: calc(var(--base-unit)*2);} */
 
 .hidden{display: none;}
 
@@ -277,10 +277,6 @@ body{
   transform: translate(-25%,-25%) rotate(45deg);
 }
 
-
-
-
-
 .policyLink{
   width: 240px;
   height: 72px;
@@ -348,12 +344,12 @@ body{
 }
 
 
-
 /* form */
 
 /* responsive */
 
 @media screen and (max-width: 768px){ /*tablet*/
+  .font
   .container{width:100%;}
   .more_btn{
     width: 30px;
@@ -390,6 +386,30 @@ body{
     font-size: var(--font-size);
     font-weight: 350;
   }
+  .web_sec{padding-top: calc(var(--base-unit)*4);}
+  .web_ct{padding-top: calc(var(--base-unit)*3);}
+  .web_ft{padding-top: calc(var(--base-unit)*5);}
+
+  .main-tt{
+    font-size: calc(var(--font-size)*2.25);
+    font-weight: 700;
+  }/*h1*/
+  .sub-tt{
+    font-size: calc(var(--font-size)*1.875);
+    font-weight: 700;
+  }/*h2*/
+  .cont-tt{
+    font-size: calc(var(--font-size)*1.25);
+    font-weight: 700;
+  }/*h3*/
+  .sub-cont-tt{
+    font-size: calc(var(--font-size));
+    font-weight: 700;
+  }/*h4*/
+  .sm-tt{
+    font-size: calc(var(--font-size)*0.875);
+    font-weight: 700;
+    }/*h5*/
 }
 
 @media screen and (max-width: 480px){ /*mobile*/
@@ -399,6 +419,7 @@ body{
     height: 20px;
     border-width: 1px;
   }
+
   .more_btn .line{width: 10px;height: 10px;}
   .more_btn .line:first-child{
     border-right-width: 1px;
@@ -428,4 +449,29 @@ body{
     font-weight: 350;
     text-align: center;
   }
+  .web_sec{padding-top: calc(var(--base-unit)*4);}
+  .web_ct{padding-top: calc(var(--base-unit)*3);}
+  .web_ft{padding-top: calc(var(--base-unit)*2);}
+
+  .main-tt{
+    font-size: calc(var(--font-size)*2.25);
+    font-weight: 700;
+  }/*h1*/
+  .sub-tt{
+    font-size: calc(var(--font-size)*1.875);
+    font-weight: 700;
+  }/*h2*/
+  .cont-tt{
+    font-size: calc(var(--font-size)*1.25);
+    font-weight: 700;
+  }/*h3*/
+  .sub-cont-tt{
+    font-size: calc(var(--font-size));
+    font-weight: 700;
+  }/*h4*/
+  .sm-tt{
+    font-size: calc(var(--font-size)*0.875);
+    font-weight: 700;
+    }/*h5*/
+
 }
