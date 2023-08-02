@@ -1,4 +1,4 @@
-let mainMenu = $('.main_menu > li'),
+let mainMenu = $('.origin .main_menu > li'),
 	twodebth = $('.main_menu li ul'),
 	formLabel = $('.search_bar label'),
   header = $('header'),
