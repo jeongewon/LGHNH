@@ -1,36 +1,10 @@
 let mainMenu = $('.origin .main_menu > li'),
 	twodebth = $('.main_menu li ul'),
 	formLabel = $('.search_bar label'),
-  header = $('header'),
-  headerClone = $('.origin').contents().clone(),
-  headerCloneContainer = $('<div class="header-clone"></div>'),
+  header = $('.origin'),
   width = $(window).width(),
-  // window = $(window),
   close_aside = $('.close_btn'),
   open_aside = $('.aside_btn');
-  console.log(width);
-headerClone.appendTo(headerCloneContainer);
-$('body').append(headerCloneContainer);
-
-$(window).scroll(function () {
-  width = $(window).width();
-  if (width > 768) {
-    if ($(this).scrollTop() > 0) {
-      $('.origin').hide();
-      headerCloneContainer.addClass('visible');
-      // $('.header-clone.visible .desktop_menu').show();
-    } else {
-      headerCloneContainer.removeClass('visible');
-      $('.origin').show();
-    }
-  } else {
-    if ($(this).scrollTop() > 0) {
-      header.addClass('white');
-    } else {
-      header.removeClass('white');
-    }
-  }
-})
   
 let clone = $('.header-clone'),
 c_mainmenu = clone.find('.main_menu > li'),
@@ -63,31 +37,6 @@ c_mainmenu.hover(function(){
         })
     }
 })
-
-mainMenu.hover(function () {
-    $('.origin').css({
-      height: '600px',
-      backgroundColor: 'rgba(0,0,0,.7)'
-    }),
-    twodebth.css({
-      display: 'flex'
-    }),
-      $('.line').css({
-      opacity: 1
-    })
-  }, function () {
-    $('.origin').css({
-      height: '150px',
-      backgroundColor: 'transparent'
-    }),
-    twodebth.css({
-      display: 'none'
-    }),
-    $('.line').css({
-      opacity: 0
-    })
-  }
-);
 
 $('label').mouseenter(function () {
 if(clone.hasClass('visible')){
@@ -170,14 +119,11 @@ $(window).resize(function(){
   width = $(window).width();
   console.log(width);
   if (width > 768) {
-    if ($(window).scrollTop() > 0) {
-      headerCloneContainer.addClass('visible')
-    } else {
-      $('.origin').show();
-    }
+    header.show();
+    // $('.aside').hide();
   } else {
-    if (headerCloneContainer.hasClass('visible')) {
-      headerCloneContainer.removeClass('visible');
-    }
+    header.hide();
+    $('.aside_menu_side').css({right: '-286px'})
+    // $('.aside').show();
   }
 })
