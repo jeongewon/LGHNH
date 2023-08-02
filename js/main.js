@@ -3,10 +3,10 @@ $(function() {
       heightStyle: "content"
     });
 
-    let newsBtn = $('.news_box').find('button');
-    newsBtn.click(function(){
-      
-    })
+    let newstt = $('.news_tt');
 
-    
-  });
+    newstt.click(function(){
+      $(this).toggleClass('active');
+      $(this).next().find('.news_content').slideUp();
+  })
+});

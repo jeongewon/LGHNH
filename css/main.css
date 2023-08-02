@@ -9,58 +9,26 @@
 /* 팀 공동 new arrivals */
 
 /* 팀 공동 press release */
+
 .m5 h2{
     line-height: 48px;
+    margin-bottom: 96px;
 }
-
 .news_box{
-    /* width: 1272px;
-    height: 624px;
-    border-radius: 20px;
-    border: 1px solid var(--MC-LGLGray); */
-    margin-top: 96px;
-}
-
-.news_header{
-    margin: 48px 78px 0 78px;
-    
-}
-.news_header .news_tt:after{
     width: 1104px;
-    content: '';
-    display: block;
-    border-bottom: 1px dashed var(--MC-DGray);
-    margin-top: 18px;
+    margin: 0 auto;
 }
-
-.news_accordion {
-    margin: 0 78px;
+.ui-accordion-header-icon{
+    display:none;
 }
-
-.news_content{
-    margin: 44px 0 0 0;
-    position: relative;
-    flex-wrap:wrap;
-}
-.news_content p{
-    font-weight: 400;
-    line-height: 28.8px;
-    text-align: justify;
-}
-
 
 .news_header{
-    position: relative;
-    
+    width: 1104px;
+    border-bottom: 1px dashed var(--MC-DGray);
+    padding-bottom: 20px;
+    margin-top:48px;
 }
-
 .news_header button{
-    position: absolute;
-    right: 0;
-    /* width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    border: 1px solid #363636;*/
     background-color: var(--MC-LGWhite);
     border: none;
     transition: 0.2s;  
@@ -71,34 +39,38 @@
     transform:rotate(0deg);
     font-weight: 500;
 }
-/* .news_header button:active{
-    background: #363636;
-} */
-.news_header button:active i{
+.news_header.ui-state-active button i{
     font-size: calc(var(--font-size)*1.375);
-    /* color: var(--MC-LGWhite); */
+    transform: rotate(45deg);
+}
+.news_header button.active i{
+    font-size: calc(var(--font-size)*1.375);
     transform: rotate(45deg);
 }
 
-.news_text{
-    width: 674px;
-    margin-left: 64px;
-    flex-direction:column;
+.news_content{
+    margin: 52px 41px 0 41px;
+    position: relative;
 }
-
+.news_content p{
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: justify;
+}
+.news_content .news_text{
+    margin-left: 60px;
+    flex-direction: column;
+}
 .news_text p:nth-child(2){
     margin-top: 16px;
 }
-
 .news_content .viewmore{
     margin-top: 63px;
 }
-
 .news_content .viewmore a{
     font-size: 16px;
     font-weight: 400;
 }
-
 .viewmore {
     width: 138px;
     height: 37px;
@@ -113,7 +85,7 @@
 .viewmore i {
     margin-left: 9px;
 }
-.viewmore a, i{
+.viewmore a, .viewmore i{
     margin-top: 10px;
 }
 .viewmore:hover{
@@ -124,38 +96,17 @@
     color: var(--BC-LGRed);
 }
 
-/* .b_btn{
-    line-height: 35px;
-    border: 1px solid var(--MC-LGGray);
-    color:var(--MC-LGGray);
-    border-radius: 30px;
-    margin: 0 auto 96px;
-    padding: 6px 16px;
-    transition: 0.3s ease-out; 
- }
-.b_btn i{
-    padding-left: 5px;
-  }
-.b_btn:hover{
-    border-color:var(--BC-LGRed);
-    color:var(--BC-LGRed);
-  } */
+
 /* 정이원 aside */
 
 
 /* 정이원 footer */
 .footer {
-    margin-top: 240px;
-    height: 313px;
+    margin-top: 216px;
+    padding: 48px 0;
     background-color: #F0F0F0;
 }
-/* .footer_box{
-    padding: 48px 0 0 0;
-} */
 
-.footer_link li, .footer_link .footer_sns{
-    margin-top: 48px;
-}
 
 .footer_link li{
     font-size: calc(var(--font-size)*1.25);
@@ -222,7 +173,44 @@
 
 
 @media screen and (max-width: 768px){
-    .container{width:688px; margin: 0 40px;}
+    .container{
+        width:100%; 
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+    .m5 h2{
+        font-size: calc(var(--font-size)*2.25);
+        margin-bottom: 65px;
+    }
+    .news_box{
+        width: 100%;
+    }
+    .news_header{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .news_header .news_tt{
+        font-size: calc(var(--font-size)*1.25);
+        width: 70%;
+        line-height: 140%;
+    }
+    
+
+    .news_content img{
+        width: 240px;
+        height: 240px;
+    }
+    .news_text p:nth-child(2){
+        display: none;
+    }
+    .news_content .news_text{
+        margin-left: 40px;
+    }
+
+    
+
+
+
 
     .footer {
         margin-top: 120px;
@@ -232,9 +220,6 @@
         padding: 0;
     }
     
-
-
-
 
     .footer_link ul, .footer_sns{
         margin-top: 48px;
