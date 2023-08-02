@@ -76,15 +76,15 @@ c_mainmenu.hover(function () {
 }, function () {
   let width = $(window).width();
   if (width > 768) {
+    $('.line').css({
+      opacity: 0
+    }),
     clone.css({
       paddingBottom: '47px'
     }),
-      c_twodebth.css({
-        display: 'none'
-      }),
-      $('.line').css({
-        opacity: 0
-      })
+    c_twodebth.css({
+      display: 'none'
+    })
   }
 });
 

@@ -164,7 +164,7 @@ svg:hover > *{fill: var(--BC-LGRed);}
   color: var(--MC-DGray);
   background-color: var(--MC-LGWhite);
   border-bottom:1px solid var(--MC-LGBlack);
-  transition: top 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .header-clone.visible {top: 0;}
 .header-clone .line{
