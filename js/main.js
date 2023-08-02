@@ -12,23 +12,25 @@ let mainMenu = $('.main_menu > li'),
 headerClone.appendTo(headerCloneContainer);
 $('body').append(headerCloneContainer);
 
-$(window).scroll(function(){
-  if ($(window).width() > 768) {
-    if($(this).scrollTop() > 0){
+$(window).scroll(function () {
+  width = $(window).width();
+  if (width > 768) {
+    if ($(this).scrollTop() > 0) {
+      $('.origin').hide();
       headerCloneContainer.addClass('visible');
-      header.hide();
-    }else{
+      // $('.header-clone.visible .desktop_menu').show();
+    } else {
       headerCloneContainer.removeClass('visible');
-      header.show();
+      $('.origin').show();
     }
-  }else{
-    if($(this).scrollTop() > 0){
+  } else {
+    if ($(this).scrollTop() > 0) {
       header.addClass('white');
-    }else{
+    } else {
       header.removeClass('white');
     }
   }
-});
+})
   
 let clone = $('.header-clone'),
 c_mainmenu = clone.find('.main_menu > li'),
@@ -63,9 +65,7 @@ c_mainmenu.hover(function(){
 })
 
 mainMenu.hover(function () {
-  let width = $(window).width();
-  if (width  > 768) {
-    header.css({
+    $('.origin').css({
       height: '600px',
       backgroundColor: 'rgba(0,0,0,.7)'
     }),
@@ -75,11 +75,8 @@ mainMenu.hover(function () {
       $('.line').css({
       opacity: 1
     })
-  }
-}, function () {
-  let width = $(window).width();
-  if (width  > 768) {
-    header.css({
+  }, function () {
+    $('.origin').css({
       height: '150px',
       backgroundColor: 'transparent'
     }),
@@ -90,7 +87,6 @@ mainMenu.hover(function () {
       opacity: 0
     })
   }
-}
 );
 
 $('label').mouseenter(function () {
@@ -162,20 +158,26 @@ title.on('click', function (e) {
   })
 
 open_aside.click(function(){
-  $('.menu').show();
+  $('.aside_menu_side').css({right: '0'})
 })
 close_aside.click(function(){
-  $('.menu').hide();
+  $('.aside_menu_side').css({right: '-286px'})
     open_aside.show();
 });
+
+
 $(window).resize(function(){
   width = $(window).width();
   console.log(width);
-  if (width  > 768) {
-    $('.menu').css({
-      display: 'flex'
-    })
-  }else{
-    $('.menu').hide();
+  if (width > 768) {
+    if ($(window).scrollTop() > 0) {
+      headerCloneContainer.addClass('visible')
+    } else {
+      $('.origin').show();
+    }
+  } else {
+    if (headerCloneContainer.hasClass('visible')) {
+      headerCloneContainer.removeClass('visible');
+    }
   }
 })

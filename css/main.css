@@ -12,6 +12,9 @@ header{
   color: #fff;
   vertical-align: top;
 }
+.aside_menu{
+  display: none;
+}
 .line{
   position: absolute;
   pointer-events: none;
@@ -60,9 +63,6 @@ header{
   height: 25px;
   text-indent: -9999rem;
 }
-header.white .logo a{
-  background: url('../image/main/nav/logo_black.png') no-repeat;
-}
 .menu{
   width: 78%;
   justify-content: space-between;
@@ -110,6 +110,9 @@ nav .menu > ul > li{
   width: 0%;
   transition: width 300ms cubic-bezier(0.86, 0, 0.07, 1);
   display: block;
+}
+.main_menu li a{
+  transition: color 0.3s ease-in;
 }
 .main_menu > li > a > span{
   position: relative;
@@ -308,6 +311,151 @@ svg:hover *{
 
 @media screen and (max-width: 768px){ /*tablet*/
   .container{width:688px;}
+  .origin{
+    display: none;
+  }
+  .header-clone{
+    display: none;
+  }
+  .aside_menu{
+    display: block;
+  }
+  .aside_menu li{
+    list-style: none;
+  }
+  .aside_menu .aside_menu_top{
+    display: flex;
+    justify-content: space-between;
+  }
+  header.white .aside_menu_side{
+    border-left: 1px solid var(--MC-DGray);
+  }
+  header.white .logo a{
+    display: block;
+    background-size: 100% 100%;
+    width: 135px;
+    height: 25px;
+    text-indent: -9999rem;
+    background-image: url(../image/main/nav/logo_black@2x.png);
+  }
+  .aside_menu_side{
+    box-sizing: border-box;
+    position:fixed;
+    background-color: var(--MC-LGWhite);
+    right:-286px;
+    top:0;
+    bottom:0;
+    width: 286px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px 0px;
+    display: flex;
+    transition: right 0.5s ease-out;
+  }
+  .aside_top{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .login_family li span{
+    transition:0.3s ease-out;
+  }
+  .login_family li:hover span{
+    color: var(--BC-LGRed);
+  }
+  .aside_sec1{
+    width: 226px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+  }
+  .aside_sec1 .login_family{
+    display: flex;
+    gap:20px;
+    line-height: 15px;
+  }
+  .aside_sec1 .user{
+    position: relative;
+  }
+  .aside_sec1 .user:after{
+    content:'';
+    display: block;
+    width: 1px;
+    height: 14px;
+    background-color: var(--MC-LGGray);
+    position:absolute;
+    right:-10px;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  .aside1{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+  }
+  .aside_sec2.aside_search_bar{
+    width: 226px;
+    align-self: center;
+  }
+  #aside_search_bar{
+    padding: 0px 20px;
+    width: 225.5px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid var(--MC-LGGray);
+    box-sizing: border-box;
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+  }
+  .search_form{
+    position: relative;
+  }
+  .aside_search_bar label{
+    position:absolute;
+    top:50%;
+    transform: translateY(-45%);
+    right:15px;
+    transition: fill 0.3s ease-in;
+  }
+  #aside_search_bar::placeholder{
+    color: var(--MC-LGGray);
+  }
+
+  .aside_sec4{
+    width: 226px;
+    display: flex;
+    justify-content: space-between;
+    justify-self: flex-end;
+  }
+  .aside_lang_list{
+    display: flex;
+    font-size: 14px;
+    color: var(--MC-LGGray);
+    font-weight: 300;
+    gap:20px;
+  }
+  .aside_lang_list li{
+    transition: color 0.3s ease-in;
+  }
+  .aside_lang_list li:hover{
+    color: var(--BC-LGRed);
+  }
+  .aside_lang_list .kor{
+    position: relative;
+  }
+  .kor:after{
+    content:'';
+    display: block;
+    width: 1px;
+    height: 13px;
+    background-color: var(--MC-LGGray);
+    position:absolute;
+    right:-9px;
+    top:50%;
+    transform: translateY(-50%);
+  }
   header{
     color: var(--MC-DGray);
     padding: 40px 0;
@@ -319,7 +467,6 @@ svg:hover *{
   header.white .menu{
     border-left: 1px solid var(--MC-LGGray);
   }
-  /* 이은서 nav */
   a{
     color: var(--MC-DGray);
   }
@@ -328,6 +475,12 @@ svg:hover *{
     border: none;
     background: none;
   }
+  .aside_btn svg *{
+    transition: 0.3s ease-in;
+  }
+  .aside_btn:hover svg *{
+    stroke: var(--BC-LGRed);
+  }
   header.white .aside_btn svg *{
     stroke: var(--MC-DGray);
   }
@@ -335,46 +488,30 @@ svg:hover *{
     border:none;
     background: none;
     display: block;
-    position: absolute;
-    right:30px;
     padding: 0;
     transition: 0.3s ease-out;
   }
   .close_btn:hover svg *{
     stroke: var(--BC-LGRed);
   }
-  .menu{
-    box-sizing: border-box;
-    position:fixed;
-    background-color: var(--MC-LGWhite);
-    right:0;
-    top:0;
-    bottom:0;
-    width: 286px;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap:24px;
-    padding: 48px 0;
-    display:none;
-  }
-  .main_menu{
-    flex-direction: column;
-    width: 100%;
-    position:absolute;
-    top:192px;
-    gap:24px;
-  }
   nav .menu > ul > li{
     text-align: left;
     font-size: 18px;
     font-weight: 400;
   }
-  .main_menu > li > a{
-    margin-left: 30px;
+  .main_menu{
+    display: flex;
+    gap:24px;
+    flex-direction: column;
+    width: 286px;
+    align-items: center;
   }
   .main_menu li{
     width: 100%;
   }
+  /* .main_menu > li > a{
+    margin-left: 30px;
+  } */
   .main_menu li ul{
     text-align: left;
     margin-top: 0;
@@ -386,6 +523,9 @@ svg:hover *{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-self: center;
+    width: 226px;
+    margin-left:30px;
   }
   .main_menu > li > a > span:after{
     bottom: -24px;
@@ -397,48 +537,15 @@ svg:hover *{
     display: inline-block;
     width: 9px;
     height: 6px;
-    margin-right: 30px;
+    /* margin-right: 30px; */
     background-image: url('../image/main/nav/expand_more_btn.svg');
   }
-  .search_bar{
-    position:absolute;
-    top:110px;
-    right: 15px;
-  }
-  #search_bar{
-    right: 15px;
-    top:-9px;
-    padding: 0px 20px;
-    width: 225.5px;
-    height: 50px;
-    border-radius: 25px;
-    border: 1px solid var(--MC-LGGray);
-    box-sizing: border-box;
-    opacity: 1;
-    visibility: visible;
-  }
-  .search_bar label{
-    position: absolute;
-    right: 35px;
-    top:5px;
-  }
-  .search_bar:hover label{
-    right: 35px;
-  }
-  #search_bar::placeholder{
-    color: var(--MC-DGray);
-  }
+
   .icon_menu svg:not(.search_icon){
     display:none;
   }
   svg *{
     fill: var(--MC-LGGray);
-  }
-  .icon_menu span:not(.lang_span){
-    display:block;
-    text-indent: 0;
-    font-size: 15px;
-    line-height: 15px;
   }
   .main_menu > li > ul{
     display:none;
@@ -470,64 +577,11 @@ svg:hover *{
   .icon_menu {
     gap: 0;
   }
-  .family_mall, .user{
-    position:absolute;
-    top:48px;
+  .aside_menu span{
+    transition: color 0.3s ease-in;
   }
-  .user{
-    left:30px;
-  }
-  .user:after{
-    content:'';
-    display: block;
-    width: 1px;
-    height: 13px;
-    background-color: var(--MC-LGGray);
-    position:absolute;
-    right:-15px;
-    top:50%;
-    transform: translateY(-50%);
-  }
-  .family_mall{
-    left: 100px;
-  }
-  .css{
-    position:absolute;
-    bottom:48px;
-    right:30px;
-  }
-  .lang{
-    position:absolute;
-    bottom:100px;
-    left:30px;
-  }
-  .lang_list{
-    transform: translateX(0);
-    width: 134px;
-    height: 14px;
-    display:flex;
-    gap: 20px;
-    top:36px;
-    background:none;
-    padding:0;
-    color: var(--MC-DGray);
-    font-size: 14px;
-    font-weight: 350;
-    position:absolute;
-    line-height: 14px;
-  }
-  .kor{
-    position: relative;
-  }
-  .kor:after{
-    content:'';
-    display: block;
-    width: 1px;
-    height: 13px;
-    background-color: var(--MC-LGGray);
-    position:absolute;
-    right:-9px;
-    top:1px;
+  .aside_menu span:hover{
+    color:var(--BC-LGRed);
   }
 }
 
@@ -538,20 +592,36 @@ svg:hover *{
     color: var(--MC-DGray);
     padding: 22px 0;
   }
-  .logo a{
+  .aside_menu .logo a{
     display: block;
-    background: url('../image/main/nav/logo_white.png') no-repeat;
+    background: url('../image/main/nav/logo_white@2x.png') no-repeat;
     background-size: 100% 100%;
     width: 108px;
     height: 20px;
     text-indent: -9999rem;
   }
   header.white .logo a{
+    display: block;
     background-size: 100% 100%;
     width: 108px;
     height: 20px;
+    text-indent: -9999rem;
+    background-image: url('../image/main/nav/logo_black@2x.png');
   }
-
+  .aside_menu_side{
+    box-sizing: border-box;
+    position:fixed;
+    background-color: var(--MC-LGWhite);
+    right:0;
+    top:0;
+    bottom:0;
+    width: 286px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0px;
+    display: flex;
+  }
 
 
 }
