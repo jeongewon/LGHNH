@@ -130,12 +130,14 @@ form:hover #search_bar{
 /* icon menu */
 .icon_menu{gap:25px;}
 .icon_menu span{display:none;text-indent: -9999rem;}
+svg{cursor: pointer;}
 .icon_menu svg *{transition: 0.3s ease-out;}
 svg:hover > *{fill: var(--BC-LGRed);}
 .search_bar form label{display: block;transition: 0.3s 0.2s ease-out;}
 /* lang list */
 .lang{position:relative;text-align: center;}
 .lang_list{
+  cursor: pointer;
   display:none;
   background-color: var(--MC-LGWhite);
   left:-50%;
@@ -309,6 +311,7 @@ body{background-color: silver;}
   }
   .login_family li span{
     transition:0.3s ease-out;
+    cursor: pointer;
   }
   .login_family li:hover span{
     color: var(--BC-LGRed);
@@ -418,7 +421,7 @@ body{background-color: silver;}
     font-weight: 300;
     gap:20px;
   }
-  .aside_lang_list li{transition: color 0.3s ease-in;}
+  .aside_lang_list li{transition: color 0.3s ease-in;cursor: pointer;}
   .aside_lang_list li:hover{color: var(--BC-LGRed);}
   .aside_lang_list .kor{position: relative;}
   .kor:after{
@@ -431,6 +434,9 @@ body{background-color: silver;}
     right:-9px;
     top:50%;
     transform: translateY(-50%);
+  }
+  .css{
+    cursor: pointer;
   }
   /* header white */
   header.white .aside_menu_side{
