@@ -65,15 +65,20 @@ title.on('click', function (e) {
   e.preventDefault();
   $(this).parent().siblings('li').find('> ul').slideUp();
   $(this).parent().find('> ul').slideToggle();
-  $(this).parent().find('> ul > ul').slideToggle();
+  
   $(this).toggleClass('active');
-})
+  if ($(this).hasClass('active')) {
+    $(this).parent().find('> ul > ul').slideDown();
+  }
+});
+
 open_aside.click(function(){
   $('.aside_menu_side').css({right: '0'})
 })
 close_aside.click(function(){
   $('.aside_menu_side').css({right: '-286px'})
   open_aside.show();
+  $(this).removeClass('active');
   title.parent().find('> ul').slideUp();
 });
 /* resize */
