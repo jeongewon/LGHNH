@@ -170,10 +170,10 @@ const multipleSwiper = new Swiper(".multiple-slide", {
     0: {
       slidesPerView: 2,
     },
-    481: {
+    480: {
       slidesPerView: 3,
     },
-    769: {
+    768: {
       slidesPerView: 4,
     },
   },
