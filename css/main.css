@@ -892,7 +892,7 @@ body{height:100%;}
     margin-top: 16px;
 }
 
-.viewmore {
+.vmBtn {
     width: 138px;
     height: 37px;
     border: 1px solid var(--MC-LGGray);
@@ -901,22 +901,22 @@ body{height:100%;}
     text-align: center;
     color: var(--BC-LGRed);
 }
-.viewmore a{
+.vmBtn a{
     font-size: var(--font-size);
     font-weight: 400;
     color:var(--MC-LGGray);
 }
-.viewmore i {
+.vmBtn i {
     margin-left: 9px;
 }
-.viewmore a, .viewmore i{
+.vmBtn a, .vmBtn i{
     margin-top: 10px;
 }
-.viewmore:hover{
+.vmBtn:hover{
     color: var(--BC-LGRed);
     border-color: var(--BC-LGRed);
 }
-.viewmore:hover .b_btn{
+.vmBtn:hover .vmBtn2{
     color: var(--BC-LGRed);
 }
 
@@ -1048,20 +1048,20 @@ body{height:100%;}
     .news_text p:nth-child(2){
         display: none;
     }
-    .viewmore {
+    .vmBtn {
         font-size: calc(var(--font-size)*0.625);
         width: 87px;
         height: 24px;
         border-radius: 50px;
         margin-top: 0;
     }
-    .viewmore a{
+    .vmBtn a{
         font-size: calc(var(--font-size)*0.625);
     }
     .viewmore i {
         margin-left: 9px;
     }
-    .viewmore a, .viewmore i{
+    .vmBtn a, .vmBtn i{
         margin-top: 5px;
     }
     .footer {
@@ -1143,7 +1143,7 @@ body{height:100%;}
     .news_header button.active i{
         font-size: calc(var(--font-size)*1.125);
     }
-    .viewmore {
+    .vmBtn {
         margin-top: 13px;
     }
 

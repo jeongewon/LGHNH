@@ -191,29 +191,44 @@ bMenuSwiper.on("realIndexChange", function (a) {
   $("#business-" + idx).show();
 });
 
-$(".new_slides").slick({
-  centerMode: true,
-  centerPadding: 60,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  arrows: true,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-});
+// $(".new_slides").slick({
+//   centerMode: true,
+//   centerPadding: 60,
+//   slidesToShow: 3,
+//   slidesToScroll: 3,
+//   arrows: true,
+//   responsive: [
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 1,
+//       },
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//       },
+//     },
+//   ],
+
+// });
+
+  /*정이원*/
+  $( ".news_box" ).accordion({
+    heightStyle: "content"
+  });
+
+  let newstt = $('.news_tt');
+
+  newstt.click(function(){
+    $(this).toggleClass('active');
+    $(this).next().find('.news_content').slideUp();
+})
+
+
 /* 한수연 mainslide */
 // $(function(){
 //   let container = $('.swiper-slide');  
@@ -271,15 +286,5 @@ $(".new_slides").slick({
 // });
 
 
-/*정이원*/
-    $( ".news_box" ).accordion({
-      heightStyle: "content"
-    });
 
-    let newstt = $('.news_tt');
-
-    newstt.click(function(){
-      $(this).toggleClass('active');
-      $(this).next().find('.news_content').slideUp();
-  })
 
