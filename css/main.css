@@ -492,15 +492,16 @@ body{height:100%;}
   background-repeat: no-repeat;
 }
 
-.new_slides .slick-prev {
+/* .new_slides .slick-prev {
   background-image: url("/images/left-arrow.png");
   left: -80px;
 }
 
 .new_slides .slick-next {
   background-image: url("/images/right-arrow.png");
-  right: -80px;
+  right: -80px; 
 }
+*/
 
 .new_slides .slick-prev:before,
 .new_slides .slick-next:before {

@@ -170,24 +170,24 @@ const multipleSwiper = new Swiper(".multiple-slide", {
     0: {
       slidesPerView: 2,
     },
-    481: {
+    480: {
       slidesPerView: 3,
     },
-    769: {
+    768: {
       slidesPerView: 4,
     },
   },
 });
 
-const bMenuSwiper = new Swiper(".b-menu-slide", {
-  slidesPerView: 3,
-  slidesToScroll: 1,
-  loop: true,
-  navigation: {
-    nextEl: ".control-next",
-    prevEl: ".control-prev",
-  },
-});
+// const bMenuSwiper = new Swiper(".b-menu-slide", {
+//   slidesPerView: 3,
+//   slidesToScroll: 1,
+//   loop: true,
+//   navigation: {
+//     nextEl: ".control-next",
+//     prevEl: ".control-prev",
+//   },
+// });
 
 bMenuSwiper.on("realIndexChange", function (a) {
   let idx = (a.realIndex % 3) + 1;
