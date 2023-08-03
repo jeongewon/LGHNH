@@ -1,4 +1,4 @@
-/* 이은서 nav */
+// HEADER
 let mainMenu = $('.origin .main_menu > li'),
 	twodebth = $('.main_menu li ul'),
 	formLabel = $('.search_bar label'),
@@ -10,9 +10,16 @@ let mainMenu = $('.origin .main_menu > li'),
   clone = $('.header-clone'),
   c_mainmenu = clone.find('.main_menu > li'),
   c_twodebth = clone.find('.main_menu li ul'),
-  title = $('.title > a'),
+  title = $('.title a'),
   info = $('.info');
 
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 0) {
+    aside_header.addClass('white');
+  } else {
+    aside_header.removeClass('white');
+  }
+});
 c_mainmenu.hover(function(){
     clone.css({
       paddingBottom: '54px'
@@ -65,21 +72,14 @@ title.on('click', function (e) {
   e.preventDefault();
   $(this).parent().siblings('li').find('> ul').slideUp();
   $(this).parent().find('> ul').slideToggle();
-  
   $(this).toggleClass('active');
-  if ($(this).hasClass('active')) {
-    $(this).parent().find('> ul > ul').slideDown();
-  }
-});
-
+})
 open_aside.click(function(){
   $('.aside_menu_side').css({right: '0'})
 })
 close_aside.click(function(){
   $('.aside_menu_side').css({right: '-286px'})
-  open_aside.show();
-  $(this).removeClass('active');
-  title.parent().find('> ul').slideUp();
+    open_aside.show();
 });
 /* resize */
 $(window).resize(function(){

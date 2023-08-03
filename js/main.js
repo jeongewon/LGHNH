@@ -142,10 +142,10 @@ close_aside.click(function(){
   $(this).removeClass('active');
   title.parent().find('> ul').slideUp();
 });
+
 /* resize */
 $(window).resize(function(){
   width = $(window).width();
-  console.log(width);
   if (width > 768) {
     if ($(window).scrollTop() > 0) {
       headerCloneContainer.addClass('visible')
@@ -158,3 +158,138 @@ $(window).resize(function(){
     }
   }
 })
+/* 박혜인 nav */
+const multipleSwiper = new Swiper(".multiple-slide", {
+  slidesPerView: 4,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+    },
+    481: {
+      slidesPerView: 3,
+    },
+    769: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+const bMenuSwiper = new Swiper(".b-menu-slide", {
+  slidesPerView: 3,
+  slidesToScroll: 1,
+  loop: true,
+  navigation: {
+    nextEl: ".control-next",
+    prevEl: ".control-prev",
+  },
+});
+
+bMenuSwiper.on("realIndexChange", function (a) {
+  let idx = (a.realIndex % 3) + 1;
+  console.log(idx);
+  $(".slidetext-wrapper").hide();
+  $("#business-" + idx).show();
+});
+
+$(".new_slides").slick({
+  centerMode: true,
+  centerPadding: 60,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+
+});
+
+  /*정이원*/
+  $( ".news_box" ).accordion({
+    heightStyle: "content"
+  });
+
+  let newstt = $('.news_tt');
+
+  newstt.click(function(){
+    $(this).toggleClass('active');
+    $(this).next().find('.news_content').slideUp();
+})
+
+
+/* 한수연 mainslide */
+// $(function(){
+//   let container = $('.swiper-slide');  
+//   let imgRatio = 1920/1080;  
+
+//   $(window).resize(function(){
+//     let winWidth = $(window).width();
+//     let winHeight = $(window).height();
+//     let browserRatio = winWidth/winHeight;  
+
+//     if(browserRatio < imgRatio){
+//       container.css({
+//         height: '100%',
+//         width: winHeight * imgRatio,
+//         top: 0,
+//         left: (winWidth - (winHeight * imgRatio))/2
+//       });
+//     }else{
+//       container.css({
+//         width: '100%',
+//         height: winWidth / imgRatio,
+//         left: 0,
+//         top: (winHeight - winWidth / imgRatio)/2
+//       });
+//     }
+//   });
+  
+//   $(window).trigger('resize');
+// });
+
+// const movieSwiper = new Swiper('.m1_slide', {
+//   direction: 'horizontal',
+//   loop: true,
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
+//   on: {
+//     init: function () {
+//       let time = $('.m1_slide .swiper-slide-active').find('video').get(0).duration;
+//       setTimeout(function(){
+//         movieSwiper.slideNext();
+//       },time*1000);
+//     },
+//   },
+// });
+// movieSwiper.on('slideChange', function(){  
+//   console.log(movieSwiper.activeIndex);
+//   $('.m1_slide .swiper-slide').find('video').get(0).pause();
+//   $('.m1_slide .swiper-slide').find('video').get(0).currentTime = 0;
+//   $('.m1_slide .swiper-slide').eq(movieSwiper.activeIndex).find('video').get(0).play();
+// });
+
+
+
+

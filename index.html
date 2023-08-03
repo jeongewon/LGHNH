@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- style load -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />	
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
   <title>LG생활건강</title>
 </head>
+
 <body>
   <!-- 이은서 navigation bar-->
   <header class="origin">
@@ -173,23 +178,444 @@
       </div>
     </nav>
   </header>
-  <img src="image/about_us/main_image.png" alt="">
-  <p class="test"></p>
   <!-- 한수연 mainslide-->
   <section class="m1">
+    <h2 class="hidden">메인 동영상 슬라이드</h2>
+    <div class="swiper m1_slide">  
+      <div class="swiper-wrapper">   
+        <figure class="swiper-slide">   
+          <video src="https://res.cloudinary.com/dfdasu5ws/video/upload/v1690917159/beauty_whoo_dstgji.mp4" preload="auto" muted autoplay loop></video>
+          <div class="m1_videodesc t-LGWhite container">
+            <h3 class="main-tt">[Beauty] 더 나은, 더 특별한</h3>
+            <p>Global Lifebeauty Innovator</p>
+            <button type="button"><a href="">자세히 보기</a></button>
+          </div>
+        </figure>
+        <figure class="swiper-slide">  
+          <video src="https://res.cloudinary.com/dfdasu5ws/video/upload/v1690917289/home_aura_kwztys.mp4" preload="auto" muted autoplay loop></video>
+          <div class="m1_videodesc t-LGWhite container">
+            <h3 class="main-tt">[Healthy] 더 나은, 더 특별한</h3>
+            <p>Global Lifestyle Creating Company</p>
+            <button type="button"><a href="">자세히 보기</a></button>
+          </div>
+        </figure>
+        <figure class="swiper-slide">  
+          <video src="https://res.cloudinary.com/dfdasu5ws/video/upload/v1690917177/drink_coca_xuiheh.mp4" preload="auto" muted autoplay loop></video>
+          <div class="m1_videodesc t-LGWhite container">
+            <h3 class="main-tt">[Refresh] 더 나은, 더 특별한</h3>
+            <p>Feel Refresh, Lively Every moments</p>
+            <button type="button"><a href="" class="sub-cont-tt">자세히 보기</a></button>
+          </div>
+        </figure>
+      </div>
+      <div class="m1_controls">  
+        <div class="swiper-button-prev t-LGWhite m1_btn"></div>
+        <div class="swiper-button-next t-LGWhite m1_btn"></div>
+        <div class="swiper-scrollbar bg-LGGray"></div>
+      </div>
+    </div>
   </section>
-  <!-- 박혜인 business-->
-  <section class="m2"></section>
-  <!-- 박혜인 esg-->
-  <section class="m3"></section>
-  <!-- 팀 공동 new arrivals-->
-  <section class="m4"></section>
-  <!-- 팀 공동 press release-->
-  <section class="m5"></section>
-  <!-- 정이원 footer-->
-  <footer class="footer"></footer>
-  <!-- script load -->
+  <section class="m1_stock">
+    <h2>IR</h2>
+    <h3>LG생활건강(051900)</h3>
+    <p>464,500</p>
+    <p>3,500</p>
+    <p>0.76%</p>
+  </section>
+    </section>
+    <!-- 박혜인 business-->
+    <section class="m2">
+      <div class="container">
+        <div class="main-tt web_sec">
+          <h1>Business</h1>
+        </div>
+        <div class="swiper b-menu-slide web_ct">
+          <div class="swiper-wrapper sub-tt">
+            <div class="swiper-slide b-menuli">HOME CARE</div>
+            <div class="swiper-slide b-menuli">BEAUTY</div>
+            <div class="swiper-slide b-menuli">BEVERAGE</div>
+            <div class="swiper-slide b-menuli">HOME CARE</div>
+            <div class="swiper-slide b-menuli">BEAUTY</div>
+            <div class="swiper-slide b-menuli">BEVERAGE</div>
+          </div>
+          <div class="control-prev">
+            <img src="images/left-arrow.png" alt="" />
+          </div>
+          <div class="control-next">
+            <img src="images/right-arrow.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="slidetext-wrapper" id="business-3">
+        <div class="slidetext web_ct">
+          <p class="slidetext1 cont-tt">고객에게 새로운 가치를 제공합니다.</p>
+          <p class="slidetext2 sub-cont-tt">
+            생활용품 사업은 세제, 치약, 샴푸, 섬유유연제, 주방세제 등
+            <br />다양한 제품으로소비자들의 일상에서 항상 함께 하고 있습니다.
+          </p>
+          <div class="viewmore">
+            <a href="" class="b_btn"
+              >VIEW MORE<i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="swiper multiple-slide" id="swiper-slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/homecare1.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/homecare2.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/homecare3.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/homecare4.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/homecare5.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/homecare6.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/homecare7.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/homecare8.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slidetext-wrapper" id="business-1">
+        <div class="slidetext web_ct">
+          <p class="slidetext1 cont-tt">건강한 아름다움의 꿈을 실현합니다.</p>
+          <p class="slidetext2 sub-cont-tt">
+            화장품 사업은 오휘, 후, 숨과 빌리프 등 프레스티지 화장품의<br />
+            브랜드 컨셉을 더욱 명확히하여 세계 최고의 브랜드로 거듭나고
+            있습니다.
+          </p>
+
+          <div class="viewmore">
+            <a href="" class="b_btn"
+              >VIEW MORE<i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="swiper multiple-slide" id="swiper-slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/beauty1.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beauty2.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beauty3.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beauty4.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beauty5.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beauty6.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beauty7.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beauty8.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slidetext-wrapper" id="business-2">
+        <div class="slidetext web_ct">
+          <p class="slidetext1 cont-tt">도전과 변화를 통해 매년 성장합니다.</p>
+          <p class="slidetext2 sub-cont-tt">
+            음료사업은 스파클링, 주스, 스포츠 음료 제품 등을 통해<br />
+            건강과 맛과 최고의 제품을 공급하고 있습니다.
+          </p>
+          <div class="viewmore">
+            <a href="" class="b_btn"
+              >VIEW MORE<i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="swiper multiple-slide" id="swiper-slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/beverage1.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beverage2.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beverage3.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beverage4.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beverage5.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beverage6.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beverage7.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/beverage8.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 박혜인 esg-->
+    <section class="m3">
+      <div class="container">
+        <div class="main-tt web_sec">
+          <h1>ESG</h1>
+        </div>
+      </div>
+      <div class="esg_bg">
+        <div class="e_des d-flex">
+          <div class="e_circle">
+            <div class="circle">
+              <img src="images/esg_icon1.png" alt="" />
+            </div>
+              <div class="e_title">
+                <h4 class="sub-tt mob_ft">Enviroment</h4>
+                <p class="sub-cont-tt">기후 위기를 극복하기 위한 노력에 동참</p>
+              </div>
+          </div>
+          <div class="e_circle">
+            <div class="circle">
+              <img src="images/esg_icon2.png" alt="" />
+            </div>
+            <div class="e_title">
+              <h4 class="sub-tt mob_ft">Social</h4>
+              <p class="sub-cont-tt">존중, 상생을 위한 기업활동의 책임 강화</p>
+            </div>
+          </div>
+          <div class="e_circle">
+            <div class="circle">
+              <img src="images/esg_icon3.png" alt="" />
+            </div>
+            <div class="e_title">
+              <h4 class="sub-tt mob_ft">Governance</h4>
+              <p class="sub-cont-tt">소통 기반의 이사회 및 감사위원회 구성</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--박혜인 new arrivals-->
+    <section class="m4">
+      <div class="container">
+        <div class="new_item main-tt web_sec">
+          <h1>New Arrivals</h1>
+        </div>   
+        <div class="newrapper">
+          <ul class="new_slides">
+            <li>
+              <img src="images/newitem1.png" alt="" />
+              <div class="new_hover">
+                <div class="new_h_tt">
+                  <h1 class="sub-tt">피지오겔</h1>
+                  <p class="sub-cont-tt">피지오겔 DMT UV 선크림</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <img src="images/newitem2.png" alt="" />
+              <div class="new_hover">
+                <div class="new_h_tt">
+                  <h1 class="sub-tt">벨먼</h1>
+                  <p class="sub-cont-tt">퍼퓸드리추얼 니치향수 바디워시</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <img src="images/newitem3.png" alt="" />
+              <div class="new_hover">
+                <div class="new_h_tt">
+                  <h1 class="sub-tt">페리오</h1>
+                  <p class="sub-cont-tt">클라이덴 인텐시브 화이트닝 치약</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <img src="images/newitem4.png" alt="" />
+              <div class="new_hover">
+                <div class="new_h_tt">
+                  <h1 class="sub-tt">닥터그루트</h1>
+                  <p class="sub-cont-tt">
+                    스칼프솔루션 민감성두피용 비듬케어 샴푸
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <img src="images/newitem5.png" alt="" />
+              <div class="new_hover">
+                <div class="new_h_tt">
+                  <h1 class="sub-tt">벨먼</h1>
+                  <p class="sub-cont-tt">
+                    세꼼마 핸드워시 파우더향 캐리와 친구들
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <img src="images/newitem6.png" alt="" />
+              <div class="new_hover">
+                <div class="new_h_tt">
+                  <h1 class="sub-tt">베비언스</h1>
+                  <p class="sub-cont-tt">BOSCP: 보습 베이비 로션</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>   
+
+    </section>
+    
+       <!-- 정이원 press release -->
+    <section class="m5 container press_release web_sec">
+      <h2 class="main-tt">Press Release</h2>
+
+      <div class="news_box">
+
+        <div class="news_header d-flex jcsb">
+          <h3 class="news_tt cont-tt">LG생활건강 미니 타투 프린터 '임프린투', 아시아 최대 아트 페스티벌 '어반브레이크 2023'에 간다</h3>
+          <button><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="news_accordion">
+          <div class="news_content d-flex ais">
+            <picture>
+              <source srcset="images/pr_responsive_img.jpg" media="(max-width: 480px)">
+              <img src="images/pr_img.jpg" alt="기사사진">
+            </picture>
+            <div class="news_text d-flex">
+                <p>
+                  LG생활건강(대표 이정애)은 미니 타투 프린터 ‘임프린투’(IMPRINTU)를 오는 13일부터 16일까지 열리는 ‘어반브레이크 2023’에서 선보인다. 어반브레이크 2023은 새로운 예술과
+                  기술을 지향하는 전 세계의 다양한 사람들이 모이는 아시아 최대 규모의 어반&스트리트 아트
+                  페어다.
+                </p> 
+                <p>
+                  서울 코엑스 B홀에 위치한 임프린투 부스를 방문하면 누구나 임프린투 기기를 활용해 타투 체험, 에코백 꾸미기를 해볼 수 있다. 또 방탄소년단(BTS)
+                  멤버 정국의 타투를 작업한 폴릭을 비롯한 유명 타투이스트 6명이 바로 옆 ‘타투이스트 존’에 상주하면서 임프린투로 자신들이...
+                </p> 
+                <div class="vmBtn">
+                  <a href="#" class="vmBtn2">VIEW MORE<i class="fa-solid fa-angle-right"></i></a>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="news_header d-flex jcsb">
+          <h3 class="news_tt cont-tt">LG생활건강, 코드 글로컬러(by Glint) 브랜드 앰배서더로 더보이즈 주연 선정</h3>
+          <button><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="news_accordion">
+          <div class="news_content d-flex ais">
+            <picture>
+              <source srcset="images/pr_responsive_img2.jpg" media="(max-width: 480px)">
+              <img src="images/pr_img2.jpg" alt="기사사진">
+            </picture>
+            <div class="news_text d-flex">
+              <p>
+                LG생활건강(대표 이정애)은 메이크업 브랜드 ‘코드 글로컬러(by Glint)’의 새로운 앰배서더로 아이돌그룹 더보이즈(THE BOYZ) 멤버
+                주연을 발탁했다.
+              </p>
+              <p>
+                피부에 부담을 주지 않으면서도 확실한 매력을 돋보이게 해주는 “Effortless Beauty(최소한의 노력, 확실한 매력)” 제품들로
+                순수한 에너지를 추구하는 코드 글로컬러의 브랜드 철학과, 더보이즈의 메인 댄서로서 뛰어난 춤 실력과 비주얼로 밝고 건강한 에너지를 뿜어내는
+                주연의 이미지가 잘 부합한다는 판단에서다. 장르와 스타일을 가리지 않고 소화해내는...
+              </p>
+              <div class="vmBtn">
+                <a href="#" class="vmBtn2">VIEW MORE<i class="fa-solid fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_header d-flex jcsb">
+          <h3 class="news_tt cont-tt">LG생활건강 임직원, 글로벌에코리더 YOUTH가 동해에서 뭉쳤다</h3>
+          <button><i class="fa-solid fa-plus acitve"></i></button>
+        </div>
+        <div class="news_accordion">
+          <div class="news_content d-flex ais">
+            <picture>
+              <source srcset="images/pr_responsive_img3.jpg" media="(max-width: 480px)">
+              <img src="images/pr_img3.jpg" alt="기사사진">
+            </picture>
+            <div class="news_text d-flex">
+              <p>
+                LG생활건강(대표 이정애)은 지난 1일 강원 동해시 망상해변에서 청년 기후환경 활동가 ‘글로벌에코리더 YOUTH’ 103명과 함께 해변 정화 봉사활동인 ‘비치코밍(Beach combing)’
+                캠페인을 전개했다. 이번 활동은 지난해에 이어 두번째로 진행됐다.
+              </p>
+              <p> 
+                비치코밍은 해변을 의미하는 ‘Beach’와 빗질을 의미하는 ‘Combing’의 합성어다. 빗질하듯이 세심하게 해변에 떠밀려온 플라스틱, 유리 조각 등 쓰레기를 수거하는 환경 정화 활동을
+                뜻한다.
+                이번 비치코밍은 유엔환경계획(UNEP)이 플라스틱으로 인한 해양오염을 줄이기 위해...
+              </p>
+              <div class="vmBtn">
+                <a href="#" class="vmBtn2">VIEW MORE<i class="fa-solid fa-angle-right"></i></a>
+              </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 정이원 aisde -->
+
+
+    <!-- 정이원 footer-->
+    <footer class="footer">
+      <div class="footer_box container">
+
+        <div class="footer_link d-flex jcsb">
+          <ul class="d-flex sm-tt">
+            <li><a href="">이용약관</a></li>
+            <li><a href="">윤리경영</a></li>
+            <li><a href="">개인정보처리방침</a></li>
+            <li class="privacy"><a href="">이메일무단수집거부</a></li>
+            <li><a href="" class="footer_support">고객지원</a></li>
+          </ul>
+          <div class="footer_sns d-flex">
+            <a class="facebook" href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="youtube" href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+      
+          <address class="footer_address">
+            <p class="lghnh"><span>(주) LG생활건강</span><span>대표이사</span>이정애</p>
+            <p><span>주소</span>서울시 종로구 새문한로 59 LG광화문 빌딩 LG생활건강</p>
+            <p><span>사업자등록번호</span>107-81-98143</p>
+          </address>
+
+
+        <div class="footer_end d-flex jcsb">
+          <p class="copyright">Copyright © LG H&H Co. Ltd. All Rights Reserved.</p>
+            <a href="" class="footer_recruit">RECRUIT</a>
+        </div>
+
+      </div>
+    </footer>
+    <!-- script load -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>   
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
