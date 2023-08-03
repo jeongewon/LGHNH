@@ -158,6 +158,19 @@ $(window).resize(function(){
     }
   }
 })
+
+  /*정이원*/
+  $( ".news_box" ).accordion({
+    heightStyle: "content"
+  });
+
+  let newstt = $('.news_tt');
+
+  newstt.click(function(){
+    $(this).toggleClass('active');
+    $(this).next().find('.news_content').slideUp();
+})
+
 /* 박혜인 nav */
 const multipleSwiper = new Swiper(".multiple-slide", {
   slidesPerView: 4,
@@ -221,17 +234,7 @@ $(".new_slides").slick({
 
 });
 
-  /*정이원*/
-  $( ".news_box" ).accordion({
-    heightStyle: "content"
-  });
 
-  let newstt = $('.news_tt');
-
-  newstt.click(function(){
-    $(this).toggleClass('active');
-    $(this).next().find('.news_content').slideUp();
-})
 
 
 /* 한수연 mainslide */
