@@ -3,77 +3,253 @@
 /* 한수연 mainslide */
 
 /* 박혜인 business */
-.b_menu {
-  width: 1052px;
-  height: 48px;
-  margin: 0 auto;
-}
-
-.b_menu li {
-  width: 351px;
-  height: 100%;
-}
-
-.b_menu li:nth-child(2) {
+.b-menu-slide {
+  height: 35px;
+  text-align: center;
   position: relative;
 }
 
-.fa-solid {
-  position: absolute;
+.b-menu-slide > div .b-menuli{
+  width: 350px;
 }
 
-.b_des {
+.control-prev img,
+.control-next img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 75%;
+  z-index: 1;
+}
+
+.control-prev img {
+  left: 30%
+}
+.control-next img {
+  right: 30%
+}
+
+.slidetext {
   text-align: center;
 }
 
-.b_des2 {
-  margin-top: var(--base-unit);
+.slidetext1 {
+  line-height: 1.5em;
+}
+.slidetext2 {
+  padding-top: 20px;
   color: #6b6b6b;
   font-weight: 400;
 }
 
-.b_btn a {
-  color: #6b6b6b;
-  width: 137px;
-  height: 37px;
-  border: 1px solid #6b6b6b;
-  border-radius: 50px;
-  padding: 0 35px 0 30px;
+.swiper{
+  width: 100%;
+  margin: 0 auto;
 }
 
-.b_btn a i {
-  margin: 4px 0 0 5px;
+#swiper-slide{
+  width: 100%;
+  height: 455px;
+  object-fit: cover;
+}
+
+.viewmore {
+  margin: 48px 0 96px 0;
+}
+
+.b_btn {
+  text-align: center;
+  line-height: 35px;
+  border: 1px solid var(--MC-LGGray);
+  color: var(--MC-LGGray);
+  border-radius: 30px;
+  margin: 0 auto 96px;
+  padding: 6px 16px;
+  transition: 0.3s ease-out;
+}
+
+.b_btn i {
+  padding-left: 5px;
+}
+
+.b_btn:hover {
+  border-color: var(--BC-LGRed);
+  color: var(--BC-LGRed);
+}
+
+#business-1 {
+  display: block;
+}
+
+.slidetext-wrapper {
+  display: none;
 }
 
 /* 박혜인 esg */
 
-.e_des {
-  width: 1276px;
-  gap: 179px;
-  margin: 0 auto;
+.esg_bg {
+  background: url("/images/esg_bg.png") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 96px;
+  position: relative;
 }
 
-.abd {
-  text-align: center;
+.esg_bg::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.e_des {
+  height: 100%;
+  justify-content: center;
   align-items: center;
 }
 
+.e_circle {
+  color: #fff;
+  z-index: 1;
+  padding: 0 100px;
+}
+
+.e_title{
+  width: 100%;
+  text-align: center;
+}
+
+.e_circle .sub-cont-tt {
+  font-weight: 400;
+  margin-top: 24px;
+}
+
 .circle {
-  width: 260px;
-  height: 260px;
-  border: 1px solid #fff;
+  width: 200px;
+  height: 200px;
+  border: 3px solid #fff;
   border-radius: 50%;
+  margin-right: 0;
+  margin: 0 auto;
 }
 
 .circle img {
-  width: 147px;
-  height: 147px;
-  display: block;
-  padding: 55px;
+  width: 100px;
+  height: 100px;
+  padding: 50px;
 }
 
-/* 팀 공동 new arrivals */
+/* 박혜인 new arrivals */
+.new_item {
+  width: 100%;
+}
 
+.newrapper {
+  width: 100%;
+  padding: 96px 0;
+  margin: 0 auto;
+}
+
+.new_slides li{
+  width: 400px;
+  height: 540px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 15px;
+}
+
+.new_slides li img {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.new_hover {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(transparent, #000);
+  bottom: -100%;
+  transition: 1s;
+  padding-left: 40px;
+}
+
+.new_hover .new_h_tt {
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  bottom: 20%;
+  line-height: 35px;
+}
+
+.new_h_tt p {
+  font-weight: 400;
+}
+
+.new_slides li:hover .new_hover {
+  bottom: 0;
+}
+
+.new_slides .slick-prev,
+.new_slides .slick-next {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.new_slides .slick-prev {
+  background-image: url("/images/left-arrow.png");
+  left: -80px;
+}
+
+.new_slides .slick-next {
+  background-image: url("/images/right-arrow.png");
+  right: -80px;
+}
+
+.new_slides .slick-prev:before,
+.new_slides .slick-next:before {
+  color: transparent;
+}
+
+@media screen and (max-width: 768px) {	
+  .esg_bg{
+    height: 1194px;
+  }
+  .e_des{
+    flex-direction: column;
+  }
+  .e_circle{
+    margin: 20px 0;
+  }
+  .b-menu-slide > div div{
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 480px) {	
+  .esg_bg{
+    height: 884px;
+  }
+  .circle{
+    display: none;
+  }
+  .e_circle{
+    margin-top: 0;
+  }
+
+  .e_circle:nth-child(2){
+    margin: 100px 0;
+  }
+
+}
 /* 팀 공동 press release */
 
 /* 정이원 footer */
