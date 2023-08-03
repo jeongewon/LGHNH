@@ -299,6 +299,10 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
 
 /* responsive */
 
+@media screen and (max-width: 1272px){ /* desktop */
+
+}
+
 @media screen and (max-width: 768px){ /*tablet*/
   .container{
     width:688px;
