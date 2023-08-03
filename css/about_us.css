@@ -8,7 +8,7 @@ header{
   z-index: 10;
   padding: 62px 0;
   box-sizing: border-box;
-  color: #fff;
+  color: var(--MC-LGWhite)
 }
 .line{
   position: absolute;
@@ -64,7 +64,7 @@ nav .menu > ul > li{
 .main_menu > li > ul{margin-top:130px;}
 .main_menu li ul{
   text-align: center;
-  font-size: 18px;
+  font-size: calc(var(--font-size)*1.125);
   font-weight: 350;
   display: none;
 }
@@ -85,9 +85,6 @@ nav .menu > ul > li{
   border-bottom: 1px solid var(--MC-LGWhite);
   width: 25px;
   height: 162px;
-}
-.main_menu li ul li ul > li{
-  font-size: var(--font-size); font-weight: 100; line-height: var(--base-unit);
 }
 /* search bar */
 .search_bar{
@@ -123,7 +120,7 @@ form:hover #search_bar{
   position: absolute;
   top:50%;
   transform: translateY(-50%);
-  font-size: 14px;
+  font-size: calc(var(--font-size)*0.875);
   color: var(--MC-LGWhite);
   font-weight: 300;
 }
@@ -150,7 +147,7 @@ svg:hover > *{fill: var(--BC-LGRed);}
   width: 80px;
   height: 68px;
   text-align: center;
-  font-size: 14px;
+  font-size: calc(var(--font-size)*0.875);
   font-weight: 350;
   transition: 0.3s ease-out;
 }
@@ -164,7 +161,7 @@ svg:hover > *{fill: var(--BC-LGRed);}
   color: var(--MC-DGray);
   background-color: var(--MC-LGWhite);
   border-bottom:1px solid var(--MC-LGBlack);
-  transition: top 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .header-clone.visible {top: 0;}
 .header-clone .line{
@@ -213,7 +210,7 @@ svg:hover > *{fill: var(--BC-LGRed);}
   position: absolute;
   top:50%;
   transform: translateY(-50%);
-  font-size: 14px;
+  font-size: calc(var(--font-size)*0.875);
   color: var(--MC-LGGray);
   font-weight: 300;
 }
@@ -292,7 +289,7 @@ body{background-color: silver;}
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 48px 0px;
+    padding: calc(var(--base-unit)*2) 0px;
     display: flex;
     transition: right 0.5s ease-out;
   }
@@ -358,12 +355,12 @@ body{background-color: silver;}
   /* aside sec3 */
   nav .menu > ul > li{
     text-align: left;
-    font-size: 18px;
+    font-size: calc(var(--font-size)*1.125);
     font-weight: 400;
   }
   .main_menu{
     display: flex;
-    gap:24px;
+    gap: var(--base-unit);
     flex-direction: column;
     width: 286px;
     align-items: center;
@@ -393,20 +390,20 @@ body{background-color: silver;}
   .main_menu > li > ul{
     display:none;
     background-color: #F0F0F0;
-    padding: 24px 54px;
+    padding: var(--base-unit) 54px;
     box-sizing: border-box;
-    margin-top: 24px;
-    gap:24px;
+    margin-top: var(--base-unit);
+    gap: var(--base-unit);
   }
-  .main_menu li ul ul{display:block;padding: 24px 24px;}
+  .main_menu li ul ul{display:block;padding: var(--base-unit);}
   .title a.active div{transform: rotate(180deg);}
   .info li{
-    font-size: 13px;
+    font-size: calc(var(--font-size)*0.8125);
     font-weight: 350;
     line-height: var(--base-unit);
   }
-  .main_menu li ul li ul > li{font-size: 13px;}
-  .main_menu li ul{font-size: 18px;font-weight: 350;}
+  .main_menu li ul li ul > li{font-size: calc(var(--font-size)*0.8125); font-weight: 100;}
+  .main_menu li ul{font-size: calc(var(--font-size)*1.125);font-weight: 350;}
   /* asdie sec4 */
   .aside_sec4{
     width: 226px;
@@ -416,7 +413,7 @@ body{background-color: silver;}
   }
   .aside_lang_list{
     display: flex;
-    font-size: 14px;
+    font-size: calc(var(--font-size)*0.875);
     color: var(--MC-LGGray);
     font-weight: 300;
     gap:20px;
@@ -450,16 +447,12 @@ body{background-color: silver;}
     text-indent: -9999rem;
     background-image: url(../image/main/nav/logo_black@2x.png);
   }
-  header.white .aside_btn svg *{
-    stroke: var(--MC-DGray);
-  }
+  header.white .aside_btn svg *{stroke: var(--MC-DGray);}
   header.white{
     background-color: var(--MC-LGWhite);
     border-bottom: 1px solid var(--MC-LGGray);
   }
-  header.white .menu{
-    border-left: 1px solid var(--MC-LGGray);
-  }
+  header.white .menu{border-left: 1px solid var(--MC-LGGray);}
 } /* tablet end */
 
 @media screen and (max-width: 480px){ /* mobile */
@@ -494,13 +487,13 @@ body{background-color: silver;}
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 24px 0px;
+    padding: var(--base-unit) 0px;
     display: flex;
   }
   .aside_top {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--base-unit);
   }
   .main_menu {
     display: flex;
