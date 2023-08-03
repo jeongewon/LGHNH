@@ -2,7 +2,10 @@
 /* 이은서 navigation bar */
 .aside{display: none;}
 header{
-  position:relative;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
   background-color: transparent;
   transition:0.2s ease-out;
   z-index: 10;
@@ -35,6 +38,7 @@ nav{display: flex; justify-content: space-between;}
   width: 78%;
   justify-content: space-between;
   display: flex;
+  /* align-items: center; */
 }
 /* main menu */
 nav .menu > ul > li{
@@ -163,7 +167,7 @@ svg:hover > *{fill: var(--BC-LGRed);}
   border-bottom:1px solid var(--MC-LGBlack);
   transition: 0.3s ease-out;
 }
-.header-clone.visible {top: 0;}
+.header-clone.visible {top: 0;z-index: 10;}
 .header-clone .line{
   position: absolute;
   pointer-events: none;
@@ -220,11 +224,9 @@ svg:hover > *{fill: var(--BC-LGRed);}
   border: 1px solid var(--MC-DGray);
 }
 .header-clone svg:hover > *{fill: var(--BC-LGRed);}
-/* test */
-body{background-color: silver;}
-.test{ height: 6000px;}
 
 /* 한수연 mainslide */
+
 html{height:100%;}
 body{height:100%;}
 .m1{
