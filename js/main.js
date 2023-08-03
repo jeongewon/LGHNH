@@ -269,3 +269,17 @@ $(".new_slides").slick({
 //   $('.m1_slide .swiper-slide').find('video').get(0).currentTime = 0;
 //   $('.m1_slide .swiper-slide').eq(movieSwiper.activeIndex).find('video').get(0).play();
 // });
+
+
+/*정이원*/
+    $( ".news_box" ).accordion({
+      heightStyle: "content"
+    });
+
+    let newstt = $('.news_tt');
+
+    newstt.click(function(){
+      $(this).toggleClass('active');
+      $(this).next().find('.news_content').slideUp();
+  })
+
