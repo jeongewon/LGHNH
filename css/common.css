@@ -398,7 +398,6 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
 
 @media screen and (max-width: 768px){ /*tablet*/
   .container{width:100%; margin: 0px auto;}
-  .font
   .container{width:100%;}
   .more_btn{
     width: 30px;
@@ -552,5 +551,4 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
     font-size: calc(var(--font-size)*0.875);
     font-weight: 700;
     }/*h5*/
-
 }
