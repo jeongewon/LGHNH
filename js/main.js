@@ -179,15 +179,15 @@ const multipleSwiper = new Swiper(".multiple-slide", {
   },
 });
 
-const bMenuSwiper = new Swiper(".b-menu-slide", {
-  slidesPerView: 3,
-  slidesToScroll: 1,
-  loop: true,
-  navigation: {
-    nextEl: ".control-next",
-    prevEl: ".control-prev",
-  },
-});
+// const bMenuSwiper = new Swiper(".b-menu-slide", {
+//   slidesPerView: 3,
+//   slidesToScroll: 1,
+//   loop: true,
+//   navigation: {
+//     nextEl: ".control-next",
+//     prevEl: ".control-prev",
+//   },
+// });
 
 bMenuSwiper.on("realIndexChange", function (a) {
   let idx = (a.realIndex % 3) + 1;
