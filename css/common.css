@@ -300,14 +300,11 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
 /* responsive */
 
 @media screen and (max-width: 1272px){ /* desktop */
-
+  .container{width:100%; margin: 0px auto;}
 }
 
 @media screen and (max-width: 768px){ /*tablet*/
-  .container{
-    width:688px;
-    margin:0 auto;
-  }
+  .container{width:100%; margin: 0px auto;}
   .font
   .container{width:100%;}
   .more_btn{
@@ -382,10 +379,7 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
 }
 
 @media screen and (max-width: 480px){ /*mobile*/
-  .container{
-    width:440px;
-    margin:0 auto;
-  }
+  .container{width:100%; margin: 0px auto;}
   .more_btn{
     width: 20px;
     height: 20px;

@@ -238,8 +238,12 @@ body{background-color: silver;}
 
 /* responsive  */
 
+@media screen and (max-width: 1272px){ /* desktop */
+  .container{width:100%; margin: 0px auto;}
+}
+
 @media screen and (max-width: 768px){ /*tablet*/
-  .container{width:100%;}
+  .container{width:100%; margin: 0px auto;}
   /* 이은서 navigation bar */
   header{color: var(--MC-DGray);padding: 40px 0;}
   a{color: var(--MC-DGray);}
@@ -468,7 +472,7 @@ body{background-color: silver;}
 } /* tablet end */
 
 @media screen and (max-width: 480px){ /* mobile */
-  .container{width:440px;}
+  .container{width:100%; margin: 0px auto;}
   /* 이은서 nav */
   header{color: var(--MC-DGray);padding: 22px 0;}
   header.white .aside_menu_top{
