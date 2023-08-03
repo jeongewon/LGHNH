@@ -10,7 +10,7 @@ let mainMenu = $('.origin .main_menu > li'),
   clone = $('.header-clone'),
   c_mainmenu = clone.find('.main_menu > li'),
   c_twodebth = clone.find('.main_menu li ul'),
-  title = $('.title a'),
+  title = $('.title > a'),
   info = $('.info');
 
 c_mainmenu.hover(function(){
@@ -65,6 +65,7 @@ title.on('click', function (e) {
   e.preventDefault();
   $(this).parent().siblings('li').find('> ul').slideUp();
   $(this).parent().find('> ul').slideToggle();
+  $(this).parent().find('> ul > ul').slideToggle();
   $(this).toggleClass('active');
 })
 open_aside.click(function(){

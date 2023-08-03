@@ -8,7 +8,7 @@ let mainMenu = $('.origin .main_menu > li'),
     width = $(window).width(),
     close_aside = $('.close_btn'),
     open_aside = $('.aside_btn'),
-    title = $('.title a');
+    title = $('.title > a');
 
 headerClone.appendTo(headerCloneContainer);
 $('body').append(headerCloneContainer);
@@ -126,6 +126,7 @@ title.on('click', function (e) {
   e.preventDefault();
   $(this).parent().siblings('li').find('> ul').slideUp();
   $(this).parent().find('> ul').slideToggle();
+  $(this).parent().find('> ul > ul').slideToggle();
   $(this).toggleClass('active');
   })
 open_aside.click(function(){
