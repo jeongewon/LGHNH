@@ -13,13 +13,6 @@ let mainMenu = $('.origin .main_menu > li'),
   title = $('.title a'),
   info = $('.info');
 
-$(window).scroll(function () {
-  if ($(this).scrollTop() > 0) {
-    aside_header.addClass('white');
-  } else {
-    aside_header.removeClass('white');
-  }
-});
 c_mainmenu.hover(function(){
     clone.css({
       paddingBottom: '54px'
@@ -79,7 +72,8 @@ open_aside.click(function(){
 })
 close_aside.click(function(){
   $('.aside_menu_side').css({right: '-286px'})
-    open_aside.show();
+  open_aside.show();
+  title.parent().find('> ul').slideUp();
 });
 /* resize */
 $(window).resize(function(){

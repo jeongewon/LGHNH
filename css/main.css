@@ -239,7 +239,7 @@ body{background-color: silver;}
 /* responsive  */
 
 @media screen and (max-width: 768px){ /*tablet*/
-  .container{width:688px;}
+  .container{width:100%;}
   /* 이은서 navigation bar */
   header{color: var(--MC-DGray);padding: 40px 0;}
   a{color: var(--MC-DGray);}
@@ -436,8 +436,17 @@ body{background-color: silver;}
     cursor: pointer;
   }
   /* header white */
-  header.white .aside_menu_side{
-    border-left: 1px solid var(--MC-DGray);
+  header.white{padding:0;}
+  header.white .aside_menu_side:after{
+    content:'';
+    display:block;
+    position:absolute;
+    width: 1px;
+    height: 100%;
+    background-color: var(--MC-DGray);
+    top:0;
+    z-index: 10;
+    left:0;
   }
   header.white .logo a{
     display: block;
@@ -448,17 +457,27 @@ body{background-color: silver;}
     background-image: url(../image/main/nav/logo_black@2x.png);
   }
   header.white .aside_btn svg *{stroke: var(--MC-DGray);}
-  header.white{
+  header.white .aside_menu_top{
     background-color: var(--MC-LGWhite);
     border-bottom: 1px solid var(--MC-LGGray);
+    position:fixed;
+    padding: 40px 0;
+    box-sizing: border-box;
   }
-  header.white .menu{border-left: 1px solid var(--MC-LGGray);}
+  header.white .menu:after{border-left: 1px solid var(--MC-LGGray);}
 } /* tablet end */
 
 @media screen and (max-width: 480px){ /* mobile */
   .container{width:440px;}
   /* 이은서 nav */
   header{color: var(--MC-DGray);padding: 22px 0;}
+  header.white .aside_menu_top{
+    background-color: var(--MC-LGWhite);
+    border-bottom: 1px solid var(--MC-LGGray);
+    position:fixed;
+    padding: 22px 0;
+    box-sizing: border-box;
+  }
   /* logo */
   .aside_menu .logo a{
     display: block;

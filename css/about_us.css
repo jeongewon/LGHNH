@@ -224,22 +224,45 @@ svg:hover > *{fill: var(--BC-LGRed);}
 body{background-color: silver;}
 .test{ height: 6000px;}
 
-/* 한수연 mainslide */
+/* about us */
 
-/* 박혜인 business */
-
-/* 박혜인 esg */
-
-/* 팀 공동 new arrivals */
-
-/* 팀 공동 press release */
-
-/* 정이원 footer */
-
-/* responsive  */
+/* history */
+.years{
+  position: relative;
+  width: calc(var(--base-unit)*5);
+  height: calc(var(--base-unit)*5);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-left: 1px solid  var(--MC-Gray3);
+  margin:0 auto;
+}
+.years:after{
+  content:'';
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--MC-Gray3);
+  background-color: var(--MC-LGWhite);
+  transition: 0.3s ease-out;
+  position:absolute;
+  top:0;
+  left:-12px;
+}
+.years:hover:after{border-color: var(--BC-LGRed);}
+.years.active:after{background-color: var(--BC-LGRed);border: none;}
+.years:before{
+  content: attr(data-year);
+  font-size: calc(var(--font-size));
+  font-weight: 700;
+  color: var(--MC-LGGray);
+  position:absolute;
+  top:0;
+  left:-90px;
+}
 
 @media screen and (max-width: 768px){ /*tablet*/
-  .container{width:688px;}
+  .container{width:100%;}
   /* 이은서 navigation bar */
   header{color: var(--MC-DGray);padding: 40px 0;}
   a{color: var(--MC-DGray);}
@@ -436,8 +459,17 @@ body{background-color: silver;}
     cursor: pointer;
   }
   /* header white */
-  header.white .aside_menu_side{
-    border-left: 1px solid var(--MC-DGray);
+  header.white{padding:0;}
+  header.white .aside_menu_side:after{
+    content:'';
+    display:block;
+    position:absolute;
+    width: 1px;
+    height: 100%;
+    background-color: var(--MC-DGray);
+    top:0;
+    z-index: 10;
+    left:0;
   }
   header.white .logo a{
     display: block;
@@ -448,17 +480,27 @@ body{background-color: silver;}
     background-image: url(../image/main/nav/logo_black@2x.png);
   }
   header.white .aside_btn svg *{stroke: var(--MC-DGray);}
-  header.white{
+  header.white .aside_menu_top{
     background-color: var(--MC-LGWhite);
     border-bottom: 1px solid var(--MC-LGGray);
+    position:fixed;
+    padding: 40px 0;
+    box-sizing: border-box;
   }
-  header.white .menu{border-left: 1px solid var(--MC-LGGray);}
+  header.white .menu:after{border-left: 1px solid var(--MC-LGGray);}
 } /* tablet end */
 
 @media screen and (max-width: 480px){ /* mobile */
-  .container{width:440px;}
+  .container{width:100%px;}
   /* 이은서 nav */
   header{color: var(--MC-DGray);padding: 22px 0;}
+  header.white .aside_menu_top{
+    background-color: var(--MC-LGWhite);
+    border-bottom: 1px solid var(--MC-LGGray);
+    position:fixed;
+    padding: 22px 0;
+    box-sizing: border-box;
+  }
   /* logo */
   .aside_menu .logo a{
     display: block;

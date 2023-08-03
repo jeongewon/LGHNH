@@ -133,7 +133,8 @@ open_aside.click(function(){
 })
 close_aside.click(function(){
   $('.aside_menu_side').css({right: '-286px'})
-    open_aside.show();
+  open_aside.show();
+  title.parent().find('> ul').slideUp();
 });
 /* resize */
 $(window).resize(function(){

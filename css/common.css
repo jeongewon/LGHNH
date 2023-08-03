@@ -228,16 +228,6 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
 .year_btn:hover span{color:var(--BC-LGRed);}
 .year_btn.active{background-color: var(--BC-LGRed);border: none;}
 .year_btn.active span{color:var(--MC-LGWhite);font-weight: 300;}
-.year_select_btn{
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: 1px solid var(--MC-Gray3);
-  background-color: var(--MC-LGWhite);
-  transition: 0.3s ease-out;
-}
-.year_select_btn:hover{border-color: var(--BC-LGRed);}
-.year_select_btn.active{background-color: var(--BC-LGRed);border: none;}
 
 .partition_single{
   width: 20px;
