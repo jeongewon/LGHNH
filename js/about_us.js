@@ -92,3 +92,11 @@ $(window).resize(function(){
     $('.aside_menu_side').css({right: '-286px'})
   }
 })
+
+let card = $('.arc_card'),
+    moreBtn = card.find('.more_btn');
+    
+moreBtn.click(function () {
+  $(this).toggleClass('close');
+  $(this).parent('.arc_card').toggleClass('active');
+})

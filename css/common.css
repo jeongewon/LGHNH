@@ -325,7 +325,7 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
   height: 20px;
   background-color: var(--BC-LGRed);
   border-radius: 50%;
-  display: block;
+  display: inline-block;
 }
 .partition_multiple {
   width: 16px;
@@ -347,51 +347,6 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
   margin-top: 16px;
 }
 
-.arc_card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 1050px;
-  padding: 34px 94px;
-  border-radius: 60px;
-  background: #fff;
-  box-shadow: var(--box-shadow);
-  box-sizing: border-box;
-  transition: 0.3s ease-out;
-}
-.arc_card .card_title {
-  font-size: calc(var(--font-size) * 2.25);
-  font-weight: 700;
-  line-height: calc(var(--font-size) * 3.25625);
-}
-.arc_card.active {
-  border-radius: 40px;
-  flex-direction: column;
-  gap: 44px;
-  position: relative;
-  padding: 71px 120px 86px 120px;
-}
-.arc_card.active > .sep_line {
-  width: 100px;
-  border-top: 4px solid var(--BC-LGRed);
-}
-.arc_card.active > .card_info{
-  width: 810px;
-  text-align: center;
-  font-size: 23px;
-  font-weight: 300;
-  line-height: normal;
-}
-.arc_card.active > .more_btn {
-  position: absolute;
-  bottom: 14px;
-  right: 14px;
-  transform: translate(-25%, -25%);
-}
-
-.arc_card.active > .more_btn.close {
-  transform: translate(-25%, -25%) rotate(45deg);
-}
 /* 이원추가 */
 .policyLink{
   width: 240px;
