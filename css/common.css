@@ -30,7 +30,8 @@
   --BG: #fafafa;
 
   /* shadow & gradient*/
-  --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  --box-shadow-light: 5px 5px 10px rgba(0, 0, 0, 0.02);
   --GD1: linear-gradient(rgba(255, 49, 48, 0), rgba(255, 49, 48, 0.1));
 
   /* font */
@@ -245,43 +246,14 @@ body {
 }
 
 /* link button */
-button.more_btn{
+
+.more_btn{
   width: 40px;
   height: 40px;
   border: 2px var(--MC-Gray3) solid;
   border-radius: 50%;
   position: relative;
-  transition: 0.5s 0.5s ease-out;
-  background-color: transparent;
-}
-button.more_btn::after{
-  content: '';display: block;
-  width: 2px;height: 20px; position:absolute;
-  background-color: var(--MC-Gray3);
-  top:50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-}
-button.more_btn::before{
-  content: '';display: block;
-  width: 20px;height: 2px; position:absolute;
-  background-color: var(--MC-Gray3);
-  top:50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(calc(-50% + 1px));
-}
-button.more_btn:hover{border-color: var(--BC-LGRed);}
-button.more_btn:hover::after, button.more_btn:hover::before{background-color: var(--BC-LGRed);}
-button.more_btn.close{
-  transform: rotate(45deg);
-}
-/* .more_btn{
-  width: 40px;
-  height: 40px;
-  border: 2px var(--MC-Gray3) solid;
-  border-radius: 50%;
-  position: relative;
-  transition: 0.3s ease-out;
+  transition: 0.6s 0.4s ease-out;
 }
 .more_btn .line {
   width: 20px;
@@ -300,7 +272,7 @@ button.more_btn.close{
 } 
 .more_btn:hover{border-color: var(--BC-LGRed);}
 .more_btn:hover .line{border-color: var(--BC-LGRed);}
-.more_btn.close{transform: rotate(45deg); transform-origin: 50% 50%;} */
+.more_btn.close{transform: rotate(45deg);}
 
 
 .year_btn{
@@ -357,9 +329,12 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
   padding: 34px 94px;
   border-radius: 60px;
   background: #fff;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow-light);
   box-sizing: border-box;
-  transition: padding 1s ease-out;
+  transition: 1s ease-out;
+}
+.arc_card:hover{
+  box-shadow: var(--box-shadow);
 }
 .arc_card .card_title {
   font-size: calc(var(--font-size) * 2.25);
@@ -387,12 +362,10 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
   font-weight: 300;
   line-height: normal;
 }
-.arc_card.active > button.more_btn {
+.arc_card.active > .more_btn {
   position: absolute;
   bottom: 30px;
   right: 30px;
-  /* transform: translate(-25%, -25%) rotate(45deg); */
-  transform-origin: 50% 50%;
 }
 
 /* 이원추가 */
@@ -478,6 +451,7 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
     height: 30px;
     border-width: 1px;
     transform-origin: 50% 50%;
+    transition: 0.6s;
   }
   .more_btn .line {
     width: 15px;
