@@ -93,10 +93,20 @@ $(window).resize(function(){
   }
 })
 
+/*about us*/
+
 let card = $('.arc_card'),
-    moreBtn = card.find('.more_btn');
+    moreBtn = card.find('.more_btn'),
+    colorChip = $('.color_chip');
     
 moreBtn.click(function () {
   $(this).toggleClass('close');
   $(this).parent('.arc_card').toggleClass('active');
+})
+
+let clickMe = $('.clickme'),
+  color = $('.color');
+
+clickMe.click(function () {
+  $(this).parent('.color').addClass('active');
 })

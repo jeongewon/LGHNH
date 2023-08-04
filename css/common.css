@@ -251,7 +251,7 @@ button.more_btn{
   border: 2px var(--MC-Gray3) solid;
   border-radius: 50%;
   position: relative;
-  transition: 0.3s ease-out;
+  transition: 0.5s 0.5s ease-out;
   background-color: transparent;
 }
 button.more_btn::after{
@@ -272,8 +272,10 @@ button.more_btn::before{
 }
 button.more_btn:hover{border-color: var(--BC-LGRed);}
 button.more_btn:hover::after, button.more_btn:hover::before{background-color: var(--BC-LGRed);}
-button.more_btn.close{transform: rotate(45deg);}
-.more_btn{
+button.more_btn.close{
+  transform: rotate(45deg);
+}
+/* .more_btn{
   width: 40px;
   height: 40px;
   border: 2px var(--MC-Gray3) solid;
@@ -298,7 +300,7 @@ button.more_btn.close{transform: rotate(45deg);}
 } 
 .more_btn:hover{border-color: var(--BC-LGRed);}
 .more_btn:hover .line{border-color: var(--BC-LGRed);}
-.more_btn.close{transform: rotate(45deg);}
+.more_btn.close{transform: rotate(45deg); transform-origin: 50% 50%;} */
 
 
 .year_btn{
@@ -345,6 +347,52 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
 }
 .partition_multiple + .partition_multiple {
   margin-top: 16px;
+}
+.arc_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1052px;
+  padding: 34px 94px;
+  border-radius: 60px;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  box-sizing: border-box;
+  transition: padding 1s ease-out;
+}
+.arc_card .card_title {
+  font-size: calc(var(--font-size) * 2.25);
+  font-weight: 700;
+  line-height: calc(var(--font-size) * 3.25625);
+}
+.arc_card.active {
+  width: 80%;
+  max-width: 1052px;
+  border-radius: 40px;
+  flex-direction: column;
+  gap: 44px;
+  position: relative;
+  padding: 71px 120px 86px 120px;
+  box-sizing: border-box;
+}
+.arc_card.active > .sep_line {
+  width: 100px;
+  border-top: 4px solid var(--BC-LGRed);
+}
+.arc_card.active > .card_info{
+  width: 100%;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 300;
+  line-height: normal;
+}
+.arc_card.active > button.more_btn {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  /* transform: translate(-25%, -25%) rotate(45deg); */
+  transform-origin: 50% 50%;
 }
 
 /* 이원추가 */
@@ -429,6 +477,7 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
     width: 30px;
     height: 30px;
     border-width: 1px;
+    transform-origin: 50% 50%;
   }
   .more_btn .line {
     width: 15px;
