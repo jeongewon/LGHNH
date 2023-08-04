@@ -437,7 +437,7 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
 .footer_sns .facebook:hover,.youtube:hover{
   color: var(--BC-LGRed);
 }
-.footer_recruit{
+/* .footer_recruit{
   width: 144px;
   height: 48px;
   border: 1px solid var(--MC-DGray);
@@ -457,7 +457,7 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
 }
 .footer_recruit:hover a{
   color: var(--MC-LGWhite);
-}
+} */
 
 /* form */
 
