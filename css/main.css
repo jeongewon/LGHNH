@@ -325,6 +325,8 @@ body{height:100%;}
   line-height: 1.5em;
 }
 .slidetext2 {
+  width: 457px;
+  margin: 0 auto;
   padding-top: 20px;
   color: #6b6b6b;
   font-weight: 400;
@@ -335,10 +337,11 @@ body{height:100%;}
   margin: 0 auto;
 }
 
-#swiper-slide{
-  width: 100%;
+.swiper-slide img{
+  /* width: 240px; */
   height: 455px;
   object-fit: cover;
+  margin:0;
 }
 
 .viewmore {
@@ -434,15 +437,16 @@ body{height:100%;}
 /* 박혜인 new arrivals */
 .new_item {
   width: 100%;
+  height: 36px;
 }
 
-.newrapper {
+.new-wrapper {
   width: 100%;
-  padding: 96px 0;
+  /* height: 540px; */
   margin: 0 auto;
 }
 
-.new_slides li{
+.new_slides .slick-slide{
   width: 400px;
   height: 540px;
   border-radius: 20px;
@@ -451,7 +455,7 @@ body{height:100%;}
   margin: 0 15px;
 }
 
-.new_slides li img {
+.new_slides .slick-slide img {
   object-fit: cover;
   position: absolute;
   width: 100%;
@@ -480,7 +484,7 @@ body{height:100%;}
   font-weight: 400;
 }
 
-.new_slides li:hover .new_hover {
+.new_slides .slick-slide:hover .new_hover {
   bottom: 0;
 }
 
@@ -492,7 +496,7 @@ body{height:100%;}
   background-repeat: no-repeat;
 }
 
-/* .new_slides .slick-prev {
+.new_slides .slick-prev {
   background-image: url("/images/left-arrow.png");
   left: -80px;
 }
@@ -501,7 +505,7 @@ body{height:100%;}
   background-image: url("/images/right-arrow.png");
   right: -80px; 
 }
-*/
+
 
 .new_slides .slick-prev:before,
 .new_slides .slick-next:before {
@@ -519,8 +523,49 @@ body{height:100%;}
     margin: 20px 0;
   }
   .b-menu-slide > div div{
-    font-size: 26px;
+    font-size: 24px;
   }
+  .b-menu-slide .control-prev img,
+  .b-menu-slide .control-next img{
+    width:18px;
+    height:18px;
+    top:72%;
+  }
+  .b-menu-slide .control-prev img{
+    left:32%;
+  }
+  .b-menu-slide .control-next img{
+    right:32%;
+  }
+  .slidetext2{
+    width:444px;
+    margin: 0 auto;
+  }
+
+  .new_slides .slick-slide{
+    width: 340px;
+    height: 494px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 5px;
+  }
+
+  .swiper-slide img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin:0;
+  }
+
+  .new_hover {
+    padding-left: 20px;
+  }
+
+  .slick-dots li button {
+    padding: -200px;
+  }
+
 }
 
 @media screen and (max-width: 480px) {	
@@ -533,9 +578,27 @@ body{height:100%;}
   .e_circle{
     margin-top: 0;
   }
-
   .e_circle:nth-child(2){
     margin: 100px 0;
+  }
+  .b-menu-slide > div div{
+    font-size: 18px;
+  }
+  .b-menu-slide .control-prev img,
+  .b-menu-slide .control-next img{
+    width:18px;
+    height:18px;
+    top:72%;
+  }
+  .b-menu-slide .control-prev img{
+    left:32%;
+  }
+  .b-menu-slide .control-next img{
+    right:32%;
+  }
+  .slidetext2{
+    width:400px;
+    margin: 0 auto;
   }
 
 }

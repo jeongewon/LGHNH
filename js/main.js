@@ -158,6 +158,19 @@ $(window).resize(function(){
     }
   }
 })
+
+/*정이원*/
+  $( ".news_box" ).accordion({
+    heightStyle: "content"
+  });
+
+  let newstt = $('.news_tt');
+
+  newstt.click(function(){
+    $(this).toggleClass('active');
+    $(this).next().find('.news_content').slideUp();
+})
+
 /* 박혜인 nav */
 const multipleSwiper = new Swiper(".multiple-slide", {
   slidesPerView: 4,
@@ -179,60 +192,100 @@ const multipleSwiper = new Swiper(".multiple-slide", {
   },
 });
 
-// const bMenuSwiper = new Swiper(".b-menu-slide", {
-//   slidesPerView: 3,
-//   slidesToScroll: 1,
-//   loop: true,
-//   navigation: {
-//     nextEl: ".control-next",
-//     prevEl: ".control-prev",
-//   },
-// });
+const bMenuSwiper = new Swiper(".b-menu-slide", {
+  slidesPerView: 3,
+  slidesToScroll: 1,
+  loop: true,
+  navigation: {
+    nextEl: ".control-next",
+    prevEl: ".control-prev",
+  },
+});
 
 bMenuSwiper.on("realIndexChange", function (a) {
   let idx = (a.realIndex % 3) + 1;
-  console.log(idx);
   $(".slidetext-wrapper").hide();
   $("#business-" + idx).show();
 });
 
-$(".new_slides").slick({
-  centerMode: true,
-  centerPadding: 60,
+
+
+// $(".new_slides").slick({
+//   centerMode: true,
+//   centerPadding: 60,
+//   slidesToShow: 3,
+//   slidesToScroll: 3,
+//   arrows: true,
+//   responsive: [
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 2,
+//         arrows: false,
+//         autoplay: true,
+//         autoplaySpeed: 2000,
+//         dots:true
+//       },
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//         arrows: false,
+//         centerMode: true,
+//         autoplay: true,
+//         autoplaySpeed: 2000,
+//         fade: true,
+//         cssEase: 'linear',
+//       },
+//     },
+//   ],
+// });
+$('.new_slides').slick({
+  // dots: true,
+  speed: 300,
   slidesToShow: 3,
   slidesToScroll: 3,
-  arrows: true,
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 1024,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      }
     },
     {
-      breakpoint: 480,
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots:true,
+      }
+    },
+    {
+      breakpoint: 481,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-      },
-    },
-  ],
-
+        arrows: false,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots:true,
+      }
+    }
+  ]
 });
-
-  /*정이원*/
-  $( ".news_box" ).accordion({
-    heightStyle: "content"
-  });
-
-  let newstt = $('.news_tt');
-
-  newstt.click(function(){
-    $(this).toggleClass('active');
-    $(this).next().find('.news_content').slideUp();
-})
-
 
 /* 한수연 mainslide */
 // $(function(){
