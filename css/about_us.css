@@ -225,6 +225,72 @@ svg:hover > *{fill: var(--BC-LGRed);}
 }
 .header-clone svg:hover > *{fill: var(--BC-LGRed);}
 
+/* history */
+.list_card{
+  background-color: var(--MC-LGWhite);
+  padding: calc(var(--base-unit)*4);
+  box-shadow: var(--box-shadow);
+}
+.year_list{
+  margin-left: 108px;
+}
+.years{
+  position: relative;
+  width: calc(var(--base-unit)*5);
+  height: calc(var(--base-unit)*5);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-left: 1px solid  var(--MC-Gray3);
+}
+.years:last-child{
+  border:none;
+}
+.years:after{
+  content:'';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--MC-Gray3);
+  background-color: var(--MC-LGWhite);
+  transition: 0.3s ease-out;
+  position:absolute;
+  top:0;
+  transform: translateX(-50%);
+}
+.years:hover:after{border-color: var(--BC-LGRed);}
+.years.active:after{background-color: var(--BC-LGRed);border: none;}
+.years:before{
+  content: attr(data-year);
+  font-size: calc(var(--font-size));
+  font-weight: 700;
+  color: var(--MC-LGGray);
+  position:absolute;
+  top:0;
+  left:-80px;
+}
+.history_title{color:var(--MC-Gray3);}
+.history_list{flex-direction: column; gap:66px;}
+.year_list.award li{
+  width: 80px;
+}
+.award_list{
+  flex-direction: column;
+  gap:48px;
+  width: 100%;
+}
+.award_list li{
+  width: 100%;
+  display: flex;
+  gap:10px;
+}
+.award_list li h5{
+  flex-basis: 30%;
+  white-space: nowrap;
+}
+.award_content,.award_ins{
+  color:var(--MC-Gray3);
+}
 @media screen and (max-width: 768px){ /*tablet*/
   /* 이은서 navigation bar */
   header{color: var(--MC-DGray);padding: 40px 0px;}
