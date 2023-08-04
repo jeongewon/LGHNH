@@ -401,6 +401,7 @@ svg{cursor: pointer;}
   padding: calc(var(--base-unit)*4);
   box-shadow: var(--box-shadow);
   border-radius: var(--big-rd);
+  max-width: 1272px;
   width: 80%;
   margin:0;
 }
@@ -473,6 +474,7 @@ svg{cursor: pointer;}
 }
 
 /* ci */
+
 .ci.sec5{
   flex-direction: column;
   gap:calc(var(--base-unit)*4);
@@ -498,10 +500,43 @@ svg{cursor: pointer;}
   width: 100%;
   gap:calc(var(--base-unit)*3);
 }
-.sec5.arc_card.active{
+.sec5 .arc_card.active{
   display: flex;
   flex-direction: column;
   gap:65px;
+  height: 100%;
+  transition: 0.6s;
+}
+.download{
+  padding: 15px 20px;
+  flex-shrink: 0;
+  border-radius: 27.5px;
+  border: 1px solid var(--MC-DGray);
+  color: var(--MC-DGray);
+  background:none;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+.sec5 .arc_card.active .sep_line{
+  opacity: 0;
+}
+.sec5 .arc_card.active .card_info{
+  opacity: 0;
+}
+.sec5 .arc_card.information img{
+  opacity: 0;
+}
+.sec5 .arc_card.information .color{
+  opacity: 0;
+}
+.sec5 .arc_card.information .sep_line{
+  opacity: 1;
+}
+.sec5 .arc_card.information .card_info{
+  opacity: 1;
 }
 .color{
   width: 663px;
@@ -606,6 +641,7 @@ svg{cursor: pointer;}
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .award.sec6 h2{
   line-height: 100%;
@@ -614,6 +650,7 @@ svg{cursor: pointer;}
   font-size: 150px;
   line-height: 100%;
 }
+
 @media screen and (max-width: 768px){ /*tablet*/
   /* 이은서 navigation bar */
   header{color: var(--MC-DGray);padding: 40px 0px;}

@@ -95,17 +95,23 @@ $(window).resize(function(){
 
 /*about us*/
 
-let card = $('.arc_card'),
-    moreBtn = card.find('.more_btn'),
-    colorChip = $('.color_chip');
+let summaryCard = $('.sec3 .arc_card'),
+  summayMoreBtn = summaryCard.find('.more_btn');
     
-moreBtn.click(function () {
+summayMoreBtn.click(function () {
   $(this).toggleClass('close');
   $(this).parent('.arc_card').toggleClass('active');
 })
 
-let clickMe = $('.clickme'),
-  color = $('.color');
+let ciMoreBtn = $('.sec5 .more_btn'),
+    clickMe = $('.clickme'),
+    color = $('.color'),
+    colorChip = $('.color_chip');
+
+ciMoreBtn.click(function () {
+  $(this).toggleClass('close');
+  $(this).parent('.arc_card').toggleClass('information');
+})
 
 clickMe.click(function () {
   $(this).parent('.color').addClass('active');
