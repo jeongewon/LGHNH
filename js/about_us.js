@@ -84,7 +84,6 @@ close_aside.click(function(){
 /* resize */
 $(window).resize(function(){
   width = $(window).width();
-  console.log(width);
   if (width > 768) {
     header.show();
   } else {
@@ -94,6 +93,41 @@ $(window).resize(function(){
 })
 
 /*about us*/
+
+/*counting animation */
+
+let bigNum = $('.big365'),
+    bigdata = bigNum.attr('data-num');
+
+var step = $.animateNumber.numberStepFactories.append('')
+bigNum.animateNumber(
+  {
+    number: bigdata,
+    numberStep: step
+  },
+  {
+    easing: 'swing',
+    duration: 1500
+  }
+);
+
+let smallNumcontainer = $('.small365_contents');
+console.log(smallNumcontainer);
+
+smallNumcontainer.each(function () {
+  let smallNum = $(this).find('.small_num');
+  let smallData = smallNum.attr('data-num');
+  console.log(smallNum);
+  console.log(smallData);
+  $({ num: 0 }).animate({ num: smallData }, {
+    duration: 1500,
+    progress: function () {
+      smallNum.text(smallData);
+      console.log(smallNum);
+      console.log(smallData);
+    }
+  })
+});
 
 let summaryCard = $('.sec3 .arc_card'),
   summayMoreBtn = summaryCard.find('.more_btn');
