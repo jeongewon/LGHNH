@@ -222,15 +222,15 @@ svg:hover > *{fill: var(--BC-LGRed);}
   border: 1px solid var(--MC-DGray);
 }
 .header-clone svg:hover > *{fill: var(--BC-LGRed);}
-/* test */
+/* test
 body{background-color: silver;}
 .test{ height: 6000px;}
+ */
 
 
 
 /* ESG */
 .esg_m1{
-
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -254,11 +254,7 @@ body{background-color: silver;}
     100%{transform: scale(1);}
 }
 
-
 .vision_tt{
-    position: absolute;
-    left: 731px;
-    top: 312px;
     text-align: center;
     color: var(--MC-LGWhite);
     width: 457px;
@@ -304,11 +300,109 @@ body{background-color: silver;}
   bottom: calc(var(--base-unit)*2);
 } 
 
-/* .scrolldown{
-    color: var(--MC-LGWhite);
+
+
+.esg_tab ul{
+  margin-top: 144px;
+
+}
+.esg_tab ul li a{
+  font-size: calc(var(--font-size)*1.875);
+  font-weight: 500;
+  color: var(--MC-DGray);
+  margin-right: 132px;
 }
 
-.scrolldown p{
-    font-size: 14px;
-    font-weight: 350;
-} */
+.esg_tab ul li a:active{
+  color: var(--BC-Green2);
+}
+
+.esg_tab svg{
+  margin-top: 20px;
+}
+
+.esg_declaration {
+  margin-top: 145px;
+  flex-direction:column;
+  text-align: center;
+  font-weight: 400;
+  line-height: calc(var(--base-unit)*1.375);
+}
+.esg_declaration p:nth-child(2){
+  margin-top: 24px;
+}
+
+.esg_goals{
+  margin-top: 144px;
+  flex-direction:column;
+}
+.esg_goals h2{
+  margin-bottom: 33px;
+}
+.esg_goals .goals_tt p{
+  width: 750px;
+  height: 144px;
+  background-color: var(--BC-Green1);
+  border-radius: 40px;
+  border: 1px solid var(--BC-Green1);
+  font-size: calc(var(--font-size)*1.5);
+  font-weight: 400;
+  line-height: calc(var(--base-unit)*6);
+  box-shadow: var(--box-shadow);
+  color: var(--MC-LGWhite);
+  text-align: center;
+}
+.esg_goals .goals_tt p:last-of-type{
+  margin-top: 24px;
+}
+
+.esg_propulsion{
+  margin-top: 144px;
+  flex-direction:column;
+}
+
+.esg_propulsion img{
+  margin-top: 25px;
+}
+
+.propulsion_card .propulsion_card{
+  margin: 22px 75px;
+  width: 430px;
+  height: 361px;
+  border-radius: 0px 40px;
+  border: 2px solid var(--BC-Green2);
+  box-shadow: var(--box-shadow);
+  transition: 0.15s ease-in-out;
+  text-align: center;
+}
+.propulsion_card .propulsion_card h3{
+  font-size: calc(var(--font-size)*1.625);
+  color: var(--BC-Green2);
+  font-weight: 700;
+  margin: 42px 0;
+  line-height: calc(var(--base-unit)*1.25);
+}
+.propulsion_card .propulsion_card p{
+  color: var(--MC-DGray2, #363636);
+  font-size: calc(var(--font-size)*1.5);
+  line-height: calc(var(--base-unit)*1.25);
+}
+.propulsion_card .propulsion_card p:first-of-type{
+  margin-top: 49px;
+}
+.propulsion_card .propulsion_card p:last-of-type{
+  margin-bottom: 49px;
+}
+.propulsion_card .propulsion_card:hover{
+  border: 2px solid var(--BC-Green1);
+  background-color: var(--BC-Green1);
+  width: 430px;
+  height: 361px;
+  border-radius: 0px 40px;
+}
+.propulsion_card .propulsion_card:hover h3{
+  color: var(--MC-LGWhite);
+}
+.propulsion_card .propulsion_card:hover p{
+  color: #ffdfe9;
+}
