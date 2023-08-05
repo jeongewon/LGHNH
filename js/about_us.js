@@ -154,15 +154,6 @@ function initPeriod(pdata){
   loadPeriod(2010);
 }
 
-// periodBtn.click(function(){
-//   let period = $(this).attr('data-period');
-//   loadPeriod(period);
-
-//   periodBtn.removeClass('active');
-//   $(this).addClass('active');
-//   yearBtnList.attr('data-period', period)
-// })
-
 function loadPeriod(period){
   let periodHTML = '';
   filterPData = perAllData.filter(pl => pl.period == period);
