@@ -112,22 +112,19 @@ bigNum.animateNumber(
 );
 
 let smallNumcontainer = $('.small365_contents');
-console.log(smallNumcontainer);
 
 smallNumcontainer.each(function () {
   let smallNum = $(this).find('.small_num');
   let smallData = smallNum.attr('data-num');
-  console.log(smallNum);
-  console.log(smallData);
   $({ num: 0 }).animate({ num: smallData }, {
     duration: 1500,
     progress: function () {
       smallNum.text(smallData);
-      console.log(smallNum);
-      console.log(smallData);
     }
   })
 });
+
+/* summary */
 
 let summaryCard = $('.sec3 .arc_card'),
   summayMoreBtn = summaryCard.find('.more_btn');
@@ -136,6 +133,60 @@ summayMoreBtn.click(function () {
   $(this).toggleClass('close');
   $(this).parent('.arc_card').toggleClass('active');
 })
+
+/* history */
+
+let allData = [],
+    filteredData = [],
+    yearBtnList = $('.year_list'),
+    yearBtn = yearBtnList.find('li'),
+    container = $('.history_list'),
+    historys = container.find('li'),
+    yearContainer = $('.year_list_container'),
+    periodBtn = $('.year_btn'),
+    perAllData = [],
+    filterPData = [];
+
+$.getJSON("./data/period.json", initPeriod);
+
+function initPeriod(pdata){
+  perAllData = pdata;
+  console.log(pdata);
+}
+
+$.getJSON("./data/history.json", initHistory);
+
+function initHistory(data){
+  allData = data;
+  loadHistory(2021);
+}
+
+yearBtn.click(function(){
+  let val = $(this).attr('data-year');
+  loadHistory(val);
+  yearBtn.removeClass('active');
+  $(this).addClass('active');
+  container.find('li').css({transform: 'translateY(150%)'});
+  container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
+
+})
+
+function loadHistory(val){
+  let listHTML = '';
+  //해야할일 빈배열에 year과 일치하는 값을 가진 히스토리만 저장
+  // 버튼을 누를 때마다 해당 부분만 html로 보여주기
+  filteredData = allData.filter(hl => hl.year == val);
+  $.each(filteredData,(i, item)=>{
+    listHTML += `
+    <li data-year="${val}">
+      <h5 class="history_title sm-tt">${item.history.title}</h5>
+      <h5 class="history_contents sm-tt">${item.history.contents}</h5>
+  </li>`
+  });
+  container.html(listHTML);
+}
+
+/* ci */
 
 let ciMoreBtn = $('.sec5 .more_btn'),
     clickMe = $('.clickme'),

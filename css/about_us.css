@@ -454,6 +454,11 @@ body{
 .history_list{
   flex-direction: column;
   gap:66px;
+  animation: movetop 1.3s ease forwards 1;
+}
+@keyframes movetop {
+  0% {  transform: translateY(10%); opacity: 0;}
+  100% {  transform: translateY(0%); opacity: 1;}
 }
 .year_list.award li{
   width: 80px;
