@@ -255,23 +255,23 @@ body {
   position: relative;
   transition: 0.6s 0.4s ease-out;
 }
-.more_btn .line {
+.more_btn .more_line {
   width: 20px;
   height: 20px;
   position: absolute;
 }
-.more_btn .line:first-child {
+.more_btn .more_line:first-child {
   border-right: 2px var(--MC-Gray3) solid;
   top: 50%;
   transform: translateY(-50%) translateX(-1px);
 }
-.more_btn .line:last-child {
+.more_btn .more_line:last-child {
   border-bottom: 2px var(--MC-Gray3) solid;
   left: 50%;
   transform: translateX(-50%) translateY(-1px);
 } 
 .more_btn:hover{border-color: var(--BC-LGRed);}
-.more_btn:hover .line{border-color: var(--BC-LGRed);}
+.more_btn:hover .more_line{border-color: var(--BC-LGRed);}
 .more_btn.close{transform: rotate(45deg);}
 
 
