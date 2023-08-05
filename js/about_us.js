@@ -151,7 +151,6 @@ $.getJSON("./data/period.json", initPeriod);
 
 function initPeriod(pdata){
   perAllData = pdata;
-  console.log(pdata);
   loadPeriod(2010);
 }
 
@@ -167,13 +166,11 @@ function initPeriod(pdata){
 function loadPeriod(period){
   let periodHTML = '';
   filterPData = perAllData.filter(pl => pl.period == period);
-  console.log(filterPData);
   $.each(filterPData,(i, item)=>{
     periodHTML += `
     <li class="years" data-year="${item.year}"></li>
     `
   })
-  console.log(periodHTML);
   yearBtnList.html(periodHTML);
 }
 
@@ -214,13 +211,11 @@ function under2010(val){
     <h5 class="history_contents sm-tt">${item.history.contents}</h5>
     </li>`
   });
-  console.log(underHTML);
   container.html(underHTML);
 }
 
 $(document).on('click', '.versionh .years', function() {
   let val = $(this).attr('data-year');
-  console.log(val);
   loadHistory(val);
   $(this).siblings().removeClass('active');
   $(this).addClass('active');
@@ -241,7 +236,6 @@ function loadHistory(val){
       <h5 class="history_contents sm-tt">${item.history.contents}</h5>
     </li>`
   });
-  console.log(listHTML);
   container.html(listHTML);
 }
 
@@ -254,7 +248,21 @@ let ciMoreBtn = $('.sec5 .more_btn'),
 
 ciMoreBtn.click(function () {
   $(this).toggleClass('close');
-  $(this).parent('.arc_card').toggleClass('information');
+  $(this).parent('.arc_card').toggleClass('hide');
+  if($(this).parent('.arc_card').hasClass('hide')){
+    $(this).parent('.arc_card').find('.show').stop().animate({opacity: 0},200,'swing')
+    $(this).parent('.arc_card').find('.card_info').css({
+      position: 'absolute',
+      width: '70%',
+      top: 'calc(50% + 40px)',
+      left: '50%',
+      transform: 'translate(-50%, -50%)'
+    })
+    $(this).parent('.arc_card').find('.card_info').css({opacity:0, display: 'block'})
+    $(this).parent('.arc_card').find('.card_info').stop().animate({opacity: 1},2000,'swing')
+  }else{
+    $(this).parent('.arc_card').find('.card_info').fadeOut();
+    $(this).parent('.arc_card').find('.show').stop().animate({opacity: 1},2200,'swing')}
 })
 
 clickMe.click(function () {
@@ -292,7 +300,6 @@ aYearBtn.click(function(){
 function loadAward(val3){
   let awardHTML = '';
   filteredAA = AAData.filter(al => al.year == val3);
-  console.log(filteredAA);
   $.each(filteredAA,(i, item)=>{
     awardHTML += `
     <li data-year="${item.year}">

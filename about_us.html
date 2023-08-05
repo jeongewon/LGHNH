@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- style load -->
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />	
@@ -278,24 +279,22 @@
       <img src="image/about_us/logo play.png" alt="">
       <h3 class="main-tt"><span class="text_red">세계최고</span>를 향해 <span class="text_red">끊임없이 도전</span>하는<br>
         힘찬 젊은이의 얼굴이 곧 <sapn class="text_red">LG의 얼굴</sapn>입니다</h3>
-      <div class="sec5 contents d-flex">
-        <div class="arc_card active">
+      <div class="sec5 contents d-flex" id="test">
+        
+        <div class="arc_card active default">
           <p class="card_title">심볼 마크 ‘미래의 얼굴’</p>
-          <span class="sep_line"></span>
-          <img src="image/about_us/LG SYMBOL LOGO.png" alt="">
+          <img src="image/about_us/LG SYMBOL LOGO.png" alt="" class="show">
           <p class="card_info">LG의 심벌마크는세계, 미래, 젊음, 인간, 기술 등의5가지 개념과 정서를 형상화시켰습니다.기본적으로는 L과 G를 둥근 원 속에 형상화시켜 인간이 우리 LG경영의 중심에 있음을 상징하고 있으며 세계 어디서나 고객과의 친밀한 유대관계를 가지고 고객 만족을 위해 최선을 다하는 LG인의 결의를 나타내고 있습니다.</p>
-          <span class="sep_line"></span>
           <div class="more_btn">
             <span class="more_line"></span>
             <span class="more_line"></span>
           </div>
         </div>
-        <div class="arc_card active">
+        <div class="arc_card active default">
           <p class="card_title">로고 타입</p>
-          <span class="sep_line"></span>
-          <img src="image/about_us/LG LOGO.png" alt="">
+          <img src="image/about_us/LG LOGO.png" alt="" class="show">
           <p class="card_info">LOGO는 LG생활건강의 공식적인 명칭을 표시하기 위해 디자인된 CI로 심벌마크와 로고 타이프가 조합된 형태입니다.어떠한 경우에도 심벌마크 단독 사용과 조합을 임의로 변형하거나 재조합 하여 사용할 수 없습니다.</p>
-          <button class="download">download logotype</button>
+          <button class="download show">download logotype</button>
           <div class="more_btn">
             <span class="more_line"></span>
             <span class="more_line"></span>
@@ -303,41 +302,41 @@
         </div>
         <div class="arc_card active">
           <p class="card_title">컬러 시스템</p>
-          <span class="sep_line"></span>
-          <div class="color LG_RED">
-            <span class="color_chip LG_RED"></span>
-            <div class="color_text">
-              <p class="color_name">LG RED</p>
-              <p class="color_info">R196 G4 B82 C0 M100 Y40 K20</p>
+          <div class="color_list d-flex fd-column g-3 show">
+            <div class="color LG_RED">
+              <span class="color_chip LG_RED" data-color="var(--BC-LGRed)"></span>
+              <div class="color_text">
+                <p class="color_name">LG RED</p>
+                <p class="color_info">R196 G4 B82 C0 M100 Y40 K20</p>
+              </div>
+              <button class="clickme">click me</button>
             </div>
-            <button class="clickme">click me</button>
-          </div>
-          <div class="color LG_GRAY">
-            <span class="color_chip LG_GRAY"></span>
-            <div class="color_text">
-              <p class="color_name">LG Gray</p>
-              <p class="color_info">R107 G107 B107 C0 M0 Y0 K70</p>
+            <div class="color LG_GRAY">
+              <span class="color_chip LG_GRAY"></span>
+              <div class="color_text">
+                <p class="color_name">LG Gray</p>
+                <p class="color_info">R107 G107 B107 C0 M0 Y0 K70</p>
+              </div>
+              <button class="clickme">click me</button>
             </div>
-            <button class="clickme">click me</button>
-          </div>
-          <div class="color LG_SILVER">
-            <span class="color_chip LG_SILVER"></span>
-            <div class="color_text">
-              <p class="color_name">LG Silver</p>
-              <p class="color_info">R167 G169 B172 C0 M0 Y0 K100</p>
+            <div class="color LG_SILVER">
+              <span class="color_chip LG_SILVER"></span>
+              <div class="color_text">
+                <p class="color_name">LG Silver</p>
+                <p class="color_info">R167 G169 B172 C0 M0 Y0 K100</p>
+              </div>
+              <button class="clickme">click me</button>
             </div>
-            <button class="clickme">click me</button>
-          </div>
-          <div class="color LG_BLACK">
-            <span class="color_chip LG_BLACK"></span>
-            <div class="color_text">
-              <p class="color_name">LG Black</p>
-              <p class="color_info">R196 G4 B82 C0 M100 Y40 K 20</p>
+            <div class="color LG_BLACK">
+              <span class="color_chip LG_BLACK"></span>
+              <div class="color_text">
+                <p class="color_name">LG Black</p>
+                <p class="color_info">R196 G4 B82 C0 M100 Y40 K 20</p>
+              </div>
+              <button class="clickme">click me</button>
             </div>
-            <button class="clickme">click me</button>
           </div>
           <p class="card_info">로고타입은 시각 요소로 가장 우선되는 대표 색상은 LG Red, LG Gray 이며, 지정된 Pantone 207C / 431C 로 적용합니다LG Red 이외의 색상은 특수한 매체나 환경일 경우 LG Gold 나 LG Silver로 선택하여 사용할수 있으며 기타 다른 색상은 사용하실 수 없습니다.</p>
-          <span class="sep_line"></span>
           <div class="more_btn">
             <span class="more_line"></span>
             <span class="more_line"></span>
