@@ -222,3 +222,43 @@ ciMoreBtn.click(function () {
 clickMe.click(function () {
   $(this).parent('.color').addClass('active');
 })
+
+/* award */
+
+let AAData = [],
+    filteredAA = [],
+    aYearBtn = $('.versiona li'),
+    awardList = $('.award_list');
+
+
+$.getJSON("./data/award.json", initAward);
+
+function initAward(adata){
+  AAData = adata;
+  loadAward(2020);
+};
+
+aYearBtn.click(function(){
+  let val3 = $(this).attr('data-year');
+  console.log(val3);
+  loadAward(val3);
+  $(this).siblings().removeClass('active');
+  $(this).addClass('active');
+  awardList.css({transform: 'translateY(10%)'});
+  awardList.animate({transform: 'translateY(0%)'},1000,'linear');
+})
+
+function loadAward(val3){
+  let awardHTML = '';
+  filteredAA = AAData.filter(al => al.year == val3);
+  console.log(filteredAA);
+  $.each(filteredAA,(i, item)=>{
+    awardHTML += `
+    <li data-year="${item.year}">
+      <h5 class="award_title sm-tt">${item.award.title}</h5>
+      <h5 class="award_content sm-tt">${item.award.content}</h5>
+      <h5 class="award_ins sm-tt">${item.award.ins}</h5>
+    </li>`
+  });
+  awardList.html(awardHTML);
+}

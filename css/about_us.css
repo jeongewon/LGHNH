@@ -472,11 +472,10 @@ body{
 .award_list li{
   width: 100%;
   display: flex;
-  gap:10px;
+  gap:60px;
 }
 .award_list li h5{
   flex-basis: 30%;
-  white-space: nowrap;
 }
 .award_content,.award_ins{
   color:var(--MC-Gray3);
