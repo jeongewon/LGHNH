@@ -254,6 +254,7 @@ body {
   border-radius: 50%;
   position: relative;
   transition: 0.6s 0.4s ease-out;
+  cursor: pointer;
 }
 .more_btn .more_line {
   width: 20px;

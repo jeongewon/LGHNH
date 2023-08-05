@@ -138,10 +138,10 @@ summayMoreBtn.click(function () {
 
 let allData = [],
     filteredData = [],
-    yearBtnList = $('.year_list'),
-    yearBtn = yearBtnList.find('li'),
+    yearBtnList = $('.versionh'),
     container = $('.history_list'),
     historys = container.find('li'),
+    yearBtn = yearBtnList.find('li'),
     yearContainer = $('.year_list_container'),
     periodBtn = $('.year_btn'),
     perAllData = [],
@@ -181,12 +181,13 @@ $.getJSON("./data/history.json", initHistory);
 function initHistory(data){
   allData = data;
   loadHistory(2021);
-}
+};
 
-yearBtn.click(function(){
+$(document).on('click', '.versionh .years', function() {
   let val = $(this).attr('data-year');
+  console.log(val);
   loadHistory(val);
-  yearBtn.removeClass('active');
+  $(this).siblings().removeClass('active');
   $(this).addClass('active');
   container.find('li').css({transform: 'translateY(150%)'});
   container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
@@ -202,6 +203,7 @@ function loadHistory(val){
       <h5 class="history_contents sm-tt">${item.history.contents}</h5>
   </li>`
   });
+  console.log(listHTML);
   container.html(listHTML);
 }
 
