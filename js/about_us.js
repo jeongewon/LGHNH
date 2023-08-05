@@ -152,6 +152,28 @@ $.getJSON("./data/period.json", initPeriod);
 function initPeriod(pdata){
   perAllData = pdata;
   console.log(pdata);
+  loadPeriod(2010);
+}
+
+periodBtn.click(function(){
+  let period = $(this).attr('data-period');
+  loadPeriod(period);
+  periodBtn.removeClass('active');
+  $(this).addClass('active');
+  yearBtnList.attr('data-period', period)
+})
+
+function loadPeriod(period){
+  let periodHTML = '';
+  filterPData = perAllData.filter(pl => pl.period == period);
+  console.log(filterPData);
+  $.each(filterPData,(i, item)=>{
+    periodHTML += `
+    <li class="years" data-year="${item.year}"></li>
+    `
+  })
+  console.log(periodHTML);
+  yearBtnList.html(periodHTML);
 }
 
 $.getJSON("./data/history.json", initHistory);
@@ -168,13 +190,10 @@ yearBtn.click(function(){
   $(this).addClass('active');
   container.find('li').css({transform: 'translateY(150%)'});
   container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
-
 })
 
 function loadHistory(val){
   let listHTML = '';
-  //해야할일 빈배열에 year과 일치하는 값을 가진 히스토리만 저장
-  // 버튼을 누를 때마다 해당 부분만 html로 보여주기
   filteredData = allData.filter(hl => hl.year == val);
   $.each(filteredData,(i, item)=>{
     listHTML += `
