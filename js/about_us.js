@@ -226,6 +226,9 @@ $(document).on('click', '.versionh .years', function() {
   $(this).addClass('active');
   container.find('li').css({transform: 'translateY(150%)'});
   container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
+
+  let historyTop = $('.history .list_card').offset().top;
+  $('html,body').stop().animate({scrollTop: historyTop - 400},1000,'linear');
 })
 
 function loadHistory(val){
@@ -281,6 +284,9 @@ aYearBtn.click(function(){
   $(this).addClass('active');
   awardList.css({transform: 'translateY(10%)'});
   awardList.animate({transform: 'translateY(0%)'},1000,'linear');
+
+  let awardTop = $('.award .list_card').offset().top;
+  $('html,body').stop().animate({scrollTop: awardTop - 200},1000,'linear');
 })
 
 function loadAward(val3){
