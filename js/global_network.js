@@ -94,3 +94,10 @@ $(window).resize(function(){
 })
 
 /* global network */
+
+let $count = $('.count');
+    // counting = $('.counting'),
+    // dataNum = counting.attr('data-num');
+
+let btn = $('.contry_btn_list');
+console.log(btn);
