@@ -155,13 +155,14 @@ function initPeriod(pdata){
   loadPeriod(2010);
 }
 
-periodBtn.click(function(){
-  let period = $(this).attr('data-period');
-  loadPeriod(period);
-  periodBtn.removeClass('active');
-  $(this).addClass('active');
-  yearBtnList.attr('data-period', period)
-})
+// periodBtn.click(function(){
+//   let period = $(this).attr('data-period');
+//   loadPeriod(period);
+
+//   periodBtn.removeClass('active');
+//   $(this).addClass('active');
+//   yearBtnList.attr('data-period', period)
+// })
 
 function loadPeriod(period){
   let periodHTML = '';
@@ -183,6 +184,40 @@ function initHistory(data){
   loadHistory(2021);
 };
 
+periodBtn.click(function(){
+  let period = $(this).attr('data-period');
+  loadPeriod(period);
+  periodBtn.removeClass('active');
+  $(this).addClass('active');
+  yearBtnList.attr('data-period', period)
+  if(period < 2010){
+    under2010(period);
+    container.find('li').css({transform: 'translateY(150%)'});
+    container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
+  } else{
+    let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>';
+    container.html(clickcircle);
+    container.find('li').css({transform: 'translateY(150%)'});
+    container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
+  }
+});
+
+let filteredUnder = [];
+
+function under2010(val){
+  let underHTML = '';
+  filteredUnder = allData.filter(ul => ul.period == val);
+  $.each(filteredUnder,(i, item)=>{
+    underHTML += `
+    <li data-year="${item.year}">
+    <h5 class="history_title sm-tt">${item.history.title}</h5>
+    <h5 class="history_contents sm-tt">${item.history.contents}</h5>
+    </li>`
+  });
+  console.log(underHTML);
+  container.html(underHTML);
+}
+
 $(document).on('click', '.versionh .years', function() {
   let val = $(this).attr('data-year');
   console.log(val);
@@ -201,7 +236,7 @@ function loadHistory(val){
     <li data-year="${val}">
       <h5 class="history_title sm-tt">${item.history.title}</h5>
       <h5 class="history_contents sm-tt">${item.history.contents}</h5>
-  </li>`
+    </li>`
   });
   console.log(listHTML);
   container.html(listHTML);
