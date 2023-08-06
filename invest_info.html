@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />	
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/invest.css">
   <title>투자정보</title>
@@ -174,74 +176,543 @@
   </header>
   <!-- 박혜인 투자정보 -->
   <main>
-    <div class="container">
-      <div class="web_sec main-tt">
+    <div class="invest_page container">
+      <div class="inve_title web_sec main-tt">
         <h1>투자정보</h1>
       </div>
       <section class="inve_1">
-        <div class="web_sec cont-tt ">
-          <h1>주가현황</h1>
+        <div class="web_sec">
+          <div class="inve_subtitle cont-tt ">
+            <h1>주가현황</h1>
+          </div>
         </div>
-        <ul class="inve_tab d-flex jcc cont-tt web_ct">
-          <li>주가그래프</li>
-          <li>공시정보</li>
-          <li>외국인지분</li>
-        </ul>
+        <div class="tab_line">
+          <ul class="inve_tab d-flex jcc cont-tt web_ct">
+            <li>주가그래프</li>
+            <li>공시정보</li>
+            <li>외국인지분</li>
+          </ul>
+          <svg width="1272" height="14" viewBox="0 0 1437 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 1L705 1L717.5 13L730 1H1437" stroke="#2C2C2C"/>
+            </svg>
+        </div>
         <div>
           주가그래프
         </div>
       </section>
       <section class="inve_2">
-        <div class="web_sec cont-tt">
-          <h1>요약재무재표</h1>
+        <div class="web_sec">
+          <div class="inve_subtitle cont-tt ">
+            <h1>요약재무재표</h1>
+          </div>
         </div>
-        <ul class="inve_tab d-flex jcc cont-tt web_ct">
-          <li>연도별</li>
-          <li>분기별</li>
-        </ul>
+        <div class="tab_line">
+          <ul class="financial inve_tab d-flex jcc cont-tt web_ct">
+            <li class="active">연도별</li>
+            <li>분기별</li>
+          </ul>
+          <svg width="1272" height="14" viewBox="0 0 1437 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 1L705 1L717.5 13L730 1H1437" stroke="#2C2C2C"/>
+            </svg>
+        </div>
+        <div class="inve_table_1" id="in0">
+          <table>
+            <tr>
+              <td></td>
+              <td>2022년</td>
+              <td>2021년</td>
+              <td>2020년</td>
+              <td>2019년</td>
+              <td>2018년</td>
+            </tr>
+            <tr>            
+              <td>유동자산</td>
+              <td>22844</td>
+              <td>24729</td>
+              <td>19828</td>
+              <td>21631</td>
+              <td>16912</td>              
+            </tr>
+            <tr>
+              <td>고정자산</td>
+              <td>50185</td>
+              <td>50824</td>
+              <td>48186</td>
+              <td>43306</td>
+              <td>35847</td>
+            </tr>
+            <tr>
+              <td>자산총계</td>
+              <td>73029</td>
+              <td>75552</td>
+              <td>68014</td>
+              <td>64937</td>
+              <td>52759</td>           
+            </tr>
+            <tr>
+              <td>유동부채</td>
+              <td>11628</td>
+              <td>15258</td>
+              <td>14797</td>
+              <td>17712</td>
+              <td>13589</td> 
+            </tr>
+            <tr>
+              <td>고정부채</td>
+              <td>6713</td>
+              <td>5316</td>
+              <td>4725</td>
+              <td>4854</td>
+              <td>3230</td>
+            </tr>
+            <tr>
+              <td>부채총계</td>
+              <td>18341</td>
+              <td>20574</td>
+              <td>19522</td>
+              <td>22566</td>
+              <td>16819</td> 
+            </tr>
+            <tr>
+              <td>자본금</td>
+              <td>886</td>
+              <td>886</td>
+              <td>886</td>
+              <td>886</td>
+              <td>886</td> 
+            </tr>
+            <tr>
+              <td>자본잉여금</td>
+              <td>973</td>
+              <td>973</td>
+              <td>973</td>
+              <td>973</td>
+              <td>973</td>
+            </tr>
+            <tr>
+              <td>이익잉여금</td>
+              <td>5424</td>
+              <td>4840</td>
+              <td>8054</td>
+              <td>1749</td>
+              <td>5634</td>
+            </tr>
+            <tr>
+              <td>기타자본</td>
+              <td>-3059</td>
+              <td>-2174</td>
+              <td>-1112</td>
+              <td>-1174</td>
+              <td>-1156</td>
+            </tr>
+            <tr>
+              <td>자본총계</td>
+              <td>54688</td>
+              <td>54978</td>
+              <td>48492</td>
+              <td>42371</td>
+              <td>35940</td>
+            </tr>
+          </table>
+        </div>
+        <div class="inve_table_1" id="in1">
+          <table>
+            <tr>
+              <td></td>
+              <td>2023년 1분기</td>
+              <td>2022년 4분기</td>
+              <td>2022년 3분기</td>
+              <td>2022년 2분기</td>
+              <td>2022년 1분기</td>
+            </tr>
+            <tr>            
+              <td>유동자산</td>
+              <td>24760</td>
+              <td>22844</td>
+              <td>24942</td>
+              <td>23582</td>
+              <td>23917</td>
+            </tr>
+            <tr>
+              <td>고정자산</td>
+              <td>50124</td>
+              <td>50185</td>
+              <td>52559</td>
+              <td>51561</td>
+              <td>50499</td>
+            </tr>
+            <tr>
+              <td>자산총계</td>
+              <td>74884</td>
+              <td>73029</td>
+              <td>77501</td>
+              <td>75143</td>
+              <td>74416</td>
+            </tr>
+            <tr>
+              <td>유동부채</td>
+              <td>12912</td>
+              <td>11628</td>
+              <td>14015</td>
+              <td>14265</td>
+              <td>14692</td>
+            </tr>
+            <tr>
+              <td>고정부채</td>
+              <td>6902</td>
+              <td>6713</td>
+              <td>7515</td>
+              <td>6990</td>
+              <td>5668</td>
+            </tr>
+            <tr>
+              <td>부채총계</td>
+              <td>19814</td>
+              <td>18341</td>
+              <td>21530</td>
+              <td>21255</td>
+              <td>20360</td>
+            </tr>
+            <tr>
+              <td>자본금</td>
+              <td>886</td>
+              <td>886</td>
+              <td>886</td>
+              <td>886</td>
+              <td>886</td>
+            </tr>
+            <tr>
+              <td>자본잉여금</td>
+              <td>973</td>
+              <td>973</td>
+              <td>973</td>
+              <td>973</td>
+              <td>973</td>
+            </tr>
+            <tr>
+              <td>이익잉여금</td>
+              <td>55627</td>
+              <td>55424</td>
+              <td>56308</td>
+              <td>55108</td>
+              <td>53919</td>
+            </tr>
+            <tr>
+              <td>기타자본</td>
+              <td>-3,122</td>
+              <td>-3,059</td>
+              <td>-3,936</td>
+              <td>-3,661</td>
+              <td>-2,167</td>
+            </tr>
+            <tr>
+              <td>자본총계</td>
+              <td>55070</td>
+              <td>54688</td>
+              <td>55971</td>
+              <td>53887</td>
+              <td>54056</td>
+            </tr>
+          </table>
+        </div>
       </section>
       <section class="inve_3">
-        <div class="web_sec cont-tt">
-          <h1>배당현황</h1>
+        <div class="web_sec">
+          <div class="inve_subtitle cont-tt ">
+            <h1>배당현황</h1>
+          </div>
         </div>
-        <ul class="inve_tab d-flex jcc cont-tt web_ct">
-          <li>연도별</li>
-          <li>분기별</li>
-        </ul>
+        <div class="tab_line">
+          <ul class="allo inve_tab d-flex jcc cont-tt web_ct">
+            <li class="active">2022~2018</li>
+            <li>2017~2013</li>
+          </ul>
+          <svg width="1272" height="14" viewBox="0 0 1437 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 1L705 1L717.5 13L730 1H1437" stroke="#2C2C2C"/>
+            </svg>
+        </div>
+        <div class="inve_table_2" id="al0">
+          <table>
+            <tr>
+              <td colspan="2">구분</td>
+              <td>2022년</td>
+              <td>2021년</td>
+              <td>2020년</td>
+              <td>2019년</td>
+              <td>2018년</td>
+            </tr>
+            <tr>            
+              <td colspan="2">연결당기순이익</td>
+              <td>2,366</td>
+              <td>8,445</td>
+              <td>7,976</td>
+              <td>7,781</td>
+              <td>6,827</td>              
+            </tr>
+            <tr>
+              <td colspan="2">별도당기순이익</td>
+              <td>770</td>
+              <td>6,072</td>
+              <td>6,184</td>
+              <td>6,229</td>
+              <td>6,058</td>
+            </tr>
+            <tr>
+              <td colspan="2">배당금 총액</td>
+              <td>671</td>
+              <td>2,012</td>
+              <td>1,844</td>
+              <td>1,844</td>
+              <td>1,551</td>           
+            </tr>
+            <tr>
+              <td colspan="2">(연결)배당성향(%)</td>
+              <td>28%</td>
+              <td>24%</td>
+              <td>23%</td>
+              <td>24%</td>
+              <td>23%</td> 
+            </tr>
+            <tr>
+              <td colspan="2">(별도)배당성향(%)</td>
+              <td>87%</td>
+              <td>33%</td>
+              <td>30%</td>
+              <td>30%</td>
+              <td>26%</td>
+            </tr>
+            <tr>
+              <td rowspan="2">주당배당금(원)</td>
+              <td class="t_border">보통주</td>
+              <td>4,000</td>
+              <td>12,000</td>
+              <td>11,000</td>
+              <td>11,000</td>
+              <td>9,250</td> 
+            </tr>
+            <tr>
+              <td class="t_border">우선주</td>
+              <td>4,050</td>
+              <td>12,050</td>
+              <td>11,050</td>
+              <td>11,050</td>
+              <td>9,300</td> 
+            </tr>
+            <tr>
+              <td rowspan="2">액면배당률(%)</td>
+              <td class="t_border">보통주</td>
+              <td>80%</td>
+              <td>240%</td>
+              <td>220%</td>
+              <td>220%</td>
+              <td>185%</td>
+            </tr>
+            <tr>
+              <td class="t_border">우선주</td>
+              <td>81%</td>
+              <td>241%</td>
+              <td>221%</td>
+              <td>221%</td>
+              <td>186%</td>
+            </tr>
+            <tr>
+              <td rowspan="2">시가배당률(%)</td>
+              <td class="t_border">보통주</td>
+              <td>0.6%</td>
+              <td>1.1%</td>
+              <td>0.7%</td>
+              <td>0.9%</td>
+              <td>0.8%</td>
+            </tr>
+            <tr>
+              <td class="t_border">우선주</td>
+              <td>1.3%</td>
+              <td>2.0%</td>
+              <td>1.6%</td>
+              <td>1.4%</td>
+              <td>1.4%</td>
+            </tr>
+          </table>
+        </div>
+        <div class="inve_table_2" id="al1">
+          <table>
+            <tr>
+              <td colspan="2">구분</td>
+              <td>2017년</td>
+              <td>2016년</td>
+              <td>2015년</td>
+              <td>2014년</td>
+              <td>2013년</td>
+            </tr>
+            <tr>            
+              <td colspan="2">연결당기순이익</td>
+              <td>6,064</td>
+              <td>5,682</td>
+              <td>4,604</td>
+              <td>3,494</td>
+              <td>3,573</td>              
+            </tr>
+            <tr>
+              <td colspan="2">별도당기순이익</td>
+              <td>5,957</td>
+              <td>5,092</td>
+              <td>3,060</td>
+              <td>2,493</td>
+              <td>1,770</td>
+            </tr>
+            <tr>
+              <td colspan="2">배당금 총액</td>
+              <td>1,509</td>
+              <td>1,258</td>
+              <td>923</td>
+              <td>671</td>
+              <td>629</td>           
+            </tr>
+            <tr>
+              <td colspan="2">(연결)배당성향(%)</td>
+              <td>25%</td>
+              <td>22%</td>
+              <td>20%</td>
+              <td>19%</td>
+              <td>18%</td> 
+            </tr>
+            <tr>
+              <td colspan="2">(별도)배당성향(%)</td>
+              <td>25%</td>
+              <td>25%</td>
+              <td>30%</td>
+              <td>27%</td>
+              <td>36%</td>
+            </tr>
+            <tr>
+              <td rowspan="2">주당배당금(원)</td>
+              <td class="t_border">보통주</td>
+              <td>9,000</td>
+              <td>7,500</td>
+              <td>5,500</td>
+              <td>4,000</td>
+              <td>3,750</td> 
+            </tr>
+            <tr>
+              <td class="t_border">우선주</td>
+              <td>9,050</td>
+              <td>7,550</td>
+              <td>5,550</td>
+              <td>4,050</td>
+              <td>3,800</td> 
+            </tr>
+            <tr>
+              <td rowspan="2">액면배당률(%)</td>
+              <td class="t_border">보통주</td>
+              <td>180%</td>
+              <td>150%</td>
+              <td>110%</td>
+              <td>80%</td>
+              <td>75%</td>
+            </tr>
+            <tr>
+              <td class="t_border">우선주</td>
+              <td>181%</td>
+              <td>151%</td>
+              <td>111%</td>
+              <td>81%</td>
+              <td>76%</td>
+            </tr>
+            <tr>
+              <td rowspan="2">시가배당률(%)</td>
+              <td class="t_border">보통주</td>
+              <td>0.8%</td>
+              <td>0.9%</td>
+              <td>0.5%</td>
+              <td>0.7%</td>
+              <td>0.7%</td>
+            </tr>
+            <tr>
+              <td class="t_border">우선주</td>
+              <td>1.3%</td>
+              <td>1.4%</td>
+              <td>1.0%</td>
+              <td>1.4%</td>
+              <td>1.7%</td>
+            </tr>
+          </table>
+        </div>
       </section>
     </div>
+    <section class="inve_4 web_sec">
+      <div class="inve_4_bg">
+        <div class="contents d-flex aic jcsb sub-tt">
+          <a href="" class="b_btn">
+            <div class="d-flex aic jcsb">
+              <h3>IR실적자료</h3>
+              <i class="fa-solid fa-angle-right"></i>
+              <i class="fa-solid fa-download"></i>
+            </div>
+          </a>
+          <a href="" class="b_btn">
+            <div class="d-flex aic jcsb">
+              <h3>감사보고서</h3>
+              <i class="fa-solid fa-angle-right"></i>
+              <i class="fa-solid fa-download"></i>
+            </div>
+          </a>
+          <a href="" class="b_btn">
+            <div class="d-flex aic jcsb">
+              <h3>사업보고서</h3>
+              <i class="fa-solid fa-angle-right"></i>
+              <i class="fa-solid fa-download"></i>
+            </div>
+          </a>
+          <div class="cont2 d-flex">
+            <a href="" class="b_btn">
+              <div class="d-flex aic jcsb">
+                <h3>전자공고</h3>
+                <i class="fa-solid fa-angle-right"></i>
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+            </a>
+            <a href="" class="b_btn">
+              <div class="d-flex aic jcsb">
+                <h3>행사일정</h3>
+                <i class="fa-solid fa-angle-right"></i>
+                <i class="fa-regular fa-calendar-check"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>  
+    </section>
   </main>
-
 
   <!-- 정이원 footer-->
   <footer class="footer">
-    <div class="footer_box container">
-      <div class="footer_link d-flex jcsb">
-        <ul class="d-flex sm-tt">
-          <li><a href="">이용약관</a></li>
-          <li><a href="">윤리경영</a></li>
-          <li><a href="">개인정보처리방침</a></li>
-          <li class="privacy"><a href="">이메일무단수집거부</a></li>
-          <li><a href="" class="footer_support">고객지원</a></li>
-        </ul>
-        <div class="footer_sns d-flex">
-          <a class="facebook" href=""><i class="fa-brands fa-facebook-f"></i></a>
-          <a class="youtube" href=""><i class="fa-brands fa-youtube"></i></a>
-        </div>
-      </div>
-        <address class="footer_address">
-          <p class="lghnh"><span>(주) LG생활건강</span><span>대표이사</span>이정애</p>
-          <p><span>주소</span>서울시 종로구 새문한로 59 LG광화문 빌딩 LG생활건강</p>
-          <p><span>사업자등록번호</span>107-81-98143</p>
-        </address>
-      <div class="footer_end d-flex jcsb">
-        <p class="copyright">Copyright © LG H&H Co. Ltd. All Rights Reserved.</p>
-          <a href="" class="footer_recruit">RECRUIT</a>
+  <div class="footer_box container">
+    <div class="footer_link d-flex jcsb">
+      <ul class="d-flex sm-tt">
+        <li><a href="">이용약관</a></li>
+        <li><a href="">윤리경영</a></li>
+        <li><a href="">개인정보처리방침</a></li>
+        <li class="privacy"><a href="">이메일무단수집거부</a></li>
+        <li><a href="" class="footer_support">고객지원</a></li>
+      </ul>
+      <div class="footer_sns d-flex">
+        <a class="facebook" href=""><i class="fa-brands fa-facebook-f"></i></a>
+        <a class="youtube" href=""><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
-  </footer>
+      <address class="footer_address">
+        <p class="lghnh"><span>(주) LG생활건강</span><span>대표이사</span>이정애</p>
+        <p><span>주소</span>서울시 종로구 새문한로 59 LG광화문 빌딩 LG생활건강</p>
+        <p><span>사업자등록번호</span>107-81-98143</p>
+      </address>
+    <div class="footer_end d-flex jcsb">
+      <p class="copyright">Copyright © LG H&H Co. Ltd. All Rights Reserved.</p>
+        <a href="" class="footer_recruit">RECRUIT</a>
+    </div>
+  </div>
+</footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/about_us.js"></script>
+  <script src="js/invest_info.js"></script>
 </body>
 </html>
