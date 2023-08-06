@@ -649,6 +649,127 @@ svg:hover > * {
   }
 } /*mobile end */
 
+/* 박혜인 */
+.rdn_title {
+  text-align: center;
+  width: 986px;
+  margin-top: 120px;
+}
+.rdn_title > div > p {
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.inno_bg {
+  width: 100%;
+  height: 300px;
+  background: url("/images/rnd/innovation_bg.png") no-repeat;
+  margin-top: 96px;
+}
+
+.inno_content {
+  text-align: center;
+}
+.inno_content div > h1 {
+  color: var(--MC-Gray3);
+}
+.inno_content div > p {
+  font-weight: 400;
+  padding-top: 48px;
+  width: 230px;
+  margin: 0 auto;
+  position: relative;
+}
+.inno_content div > p::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--MC-Gray3);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+.rnd_tab_list {
+  gap: 84px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.sec_title > p {
+  margin: 48px 0 96px 0;
+  font-weight: 500;
+}
+
+.sec_1_slide {
+  gap: 10px;
+}
+
+.sec_1_slide > div {
+  width: 339px;
+  height: 334px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.sec_1_slide > div:hover {
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.sec_1_slide > div > p {
+  width: 300px;
+  position: absolute;
+  text-align: center;
+  left: calc(50% - 150px);
+  top: calc(50% - 30px);
+  font-weight: 500;
+}
+
+.sec2_bg {
+  width: 100%;
+  height: 840px;
+  background: url("/images/rnd/materials_bg_1.png") no-repeat;
+  background-size: cover;
+}
+
+.sec_2_contt {
+  display: none;
+}
+
+.sec_2_contt.active {
+  display: block;
+}
+
+.sec2-list {
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 0;
+}
+
+.viewmore {
+  margin: 48px 0 96px 0;
+}
+
+.b_btn {
+  text-align: center;
+  line-height: 35px;
+  border: 1px solid var(--MC-LGGray);
+  color: var(--MC-LGGray);
+  border-radius: 30px;
+  margin: 0 auto 96px;
+  padding: 6px 16px;
+  transition: 0.3s ease-out;
+}
+
+.b_btn i {
+  padding-left: 5px;
+}
+
+.b_btn:hover {
+  border-color: var(--BC-LGRed);
+  color: var(--BC-LGRed);
+}
+
 /* 정이원 footer - web */
 .footer {
   margin-top: 216px;

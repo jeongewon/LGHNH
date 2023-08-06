@@ -442,7 +442,7 @@ body{height:100%;}
 /* 박혜인 esg */
 
 .esg_bg {
-  background: url("/images/esg_bg.png") no-repeat;
+  background: url("/images/main/esg_bg.png") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   height: 600px;
@@ -560,12 +560,12 @@ body{height:100%;}
 }
 
 .new_slides .slick-prev {
-  background-image: url("/images/left-arrow.png");
+  background-image: url("/images/main/left-arrow.png");
   left: -80px;
 }
 
 .new_slides .slick-next {
-  background-image: url("/images/right-arrow.png");
+  background-image: url("/images/main/right-arrow.png");
   right: -80px;
 }
 

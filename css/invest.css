@@ -689,6 +689,27 @@ svg {
   border-top: 1px solid #2c2c2c;
 } */
 
+/* section1 */
+.inve_table_0 table {
+  width: 100%;
+  font-size: 20px;
+  margin-top: 48px;
+}
+.inve_table_0 tr {
+  border-bottom: 1px solid #2c2c2c;
+  border-top: 1px solid #2c2c2c;
+}
+.inve0_line {
+  border-left: 1px solid #2c2c2c;
+  border-right: 1px solid #2c2c2c;
+}
+.inve_table_0 td {
+  width: 485px;
+  height: 73px;
+  padding: 10px;
+  vertical-align: middle;
+}
+
 /* section2 */
 .inve_table_1 table {
   width: 100%;
@@ -794,7 +815,7 @@ svg {
   gap: 79px;
 }
 
-.b_btn {
+.r_btn {
   width: 315px;
   height: 86px;
   border: 2px solid #fff;
@@ -805,7 +826,7 @@ svg {
   z-index: 1;
 }
 
-.b_btn:hover {
+.r_btn:hover {
   background-color: var(--MC-LGWhite);
   color: var(--BC-LGRed);
   font-weight: 700;
