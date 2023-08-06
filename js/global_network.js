@@ -142,10 +142,13 @@ function loadFlag(val2){
 function loadCountry(val3){
   let corporateHTML = '';
   filteredData = allData.filter(cl => cl.country == val3);
-  console.log(filteredData);
+  let first = filteredData[0];
+  loadWeather(first.city);
+  wcontainer.css({transform: 'translateY(10%)'});
+  wcontainer.animate({transform: 'translateY(0%)'},800,'linear');
   $.each(filteredData,(i, item)=>{
     corporateHTML += `
-    <li data-contry="${item.country}">
+    <li data-contry="${item.country}" data-city="${item.city}" class="city">
       <h4 class="sub-cont-tt">${item.corporate.title}</h4>
       <div class="corporate_info">
         <p class="b-l-16">${item.corporate.address}</p>
@@ -156,6 +159,34 @@ function loadCountry(val3){
   })
   container.html(corporateHTML);
 }
+
+/* weather api */
+
+let wcontainer = $('.weather_icon');
+
+$(document).on('click', '.city', function() {
+  let city = $(this).attr('data-city');
+  wcontainer.css({transform: 'translateY(10%)'});
+  wcontainer.animate({transform: 'translateY(0%)'},800,'linear');
+  loadWeather(city);
+})
+
+loadWeather('New York');
+
+function loadWeather(val4){
+  $.getJSON(`https://api.openweathermap.org/data/2.5/weather?q=${val4}&appid=eaa34fc695456c14f8e7f8b0000a79c9`, function(data){
+  console.log(data);
+
+  //<img src="https://openweathermap.org/img/wn/04d@2x.png" alt="">
+  let icon = data.weather[0].icon;
+  let alt = data.weather[0].main;
+  wcontainer.html(`<img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${alt}">`);
+  $('.weather_api p').text(alt);
+});
+}
+
+
+
 
 
 

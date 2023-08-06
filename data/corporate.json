@@ -1,6 +1,7 @@
 [
     {
         "country": "china",
+        "city": "Shanghai",
         "corporate": {
             "title": "중국통합법인(상해법인)",
             "address": "LG HOUSEHOLD & HEALTH CARE TRADING(Shanghai) CO.,LTD.5~7F Yong Feng Plaza No.98 South Wan Ping Road Shanghai, CHINA",
@@ -9,6 +10,7 @@
     },
     {
         "country": "china",
+        "city": "Guangzhou",
         "corporate": {
             "title": "광주공장",
             "address": "AVON Manufacturing (Guangzhou) LTDNo. 11 Industry Road, Conghua Economic Development Zone, Guangdong, CHINA",
@@ -17,6 +19,7 @@
     },
     {
         "country": "china",
+        "city": "Beijing",
         "corporate": {
             "title": "북경J/V",
             "address": "BEIJING LG HOUSEHOLD CHEMICAL CO., LTD. No.6 kechuangdong St.Tongzhou light Mechatronics Industrial Park. Tongzhou District,Beijing,CHINA",
@@ -25,6 +28,7 @@
     },
     {
         "country": "usa",
+        "city": "New York",
         "corporate": {
             "title": "LG H&H USA, Inc.",
             "address": "One Liberty Plaza 165 Broadway, 25th FL, New York, NY 10006",
@@ -33,6 +37,7 @@
     },
     {
         "country": "usa",
+        "city": "New York",
         "corporate": {
             "title": "The Avon Company",
             "address": "165 Broadway, New York, NY 10006",
@@ -41,6 +46,7 @@
     },
     {
         "country": "viet",
+        "city": "Thanh pho Ho Chi Minh",
         "corporate": {
             "title": "LG VINA COSMETICS CO., LTD. (Head office)",
             "address": "LG VINA COSMETICS CO., LTD - HCM City Branch 138 Hai Ba Trung, district 1, Ho Chi Minh City, Viet Nam",
@@ -49,6 +55,7 @@
     },
     {
         "country": "viet",
+        "city": "Thanh pho Ho Chi Minh",
         "corporate": {
             "title": "LG VINA COSMETICS CO., LTD.(Factory)",
             "address": "LG VINA COSMETICS CO., LTD. Nhon Trach Ⅱ Industrial Zone, Hiep Phuoc town, NhTrach district, Dong Nai Province, Viet Nam",
@@ -57,6 +64,7 @@
     },
     {
         "country": "japan",
+        "city": "Tokyo",
         "corporate": {
             "title": "GINZA STEFANY INC.",
             "address": "1-5-1, Shimbashi, Minatoku, Tokyo 105-0004, Japan",
@@ -65,6 +73,7 @@
     },
     {
         "country": "japan",
+        "city": "Tokyo",
         "corporate": {
             "title": "FMG & MISSION CO.,LTD",
             "address": "1-5-1, Shimbashi, Minatoku, Tokyo 105-0004, Japan",
@@ -73,6 +82,7 @@
     },
     {
         "country": "japan",
+        "city": "Fukuoka",
         "corporate": {
             "title": "EVERLIFE CO.,LTD",
             "address": "9F, Urbannet Tenjin Bldg 2-5-55, Tenjin Chuo-ku, Fukuoka 810-0001, Japan",
@@ -81,6 +91,7 @@
     },
     {
         "country": "cing",
+        "city": "Singapore",
         "corporate": {
             "title": "LG H&H Singapore Private Limited",
             "address": "10 Anson Road, #06-03 International Plaza, Singapore 079903",
@@ -89,6 +100,7 @@
     },
     {
         "country": "cnd",
+        "city": "Pointe-Claire",
         "corporate": {
             "title": "The Avon Company Canada Limited",
             "address": "5500, route Transcanadienne, Pointe-Claire, QC, H9R 1B6",
@@ -97,6 +109,7 @@
     },
     {
         "country": "tai",
+        "city": "Bangkok",
         "corporate": {
             "title": "LG Household & Health Care(Thailand) Ltd.",
             "address": "Unit5,28th floor,CRC Tower, All Seasons Place, 87/2, Wireless Road, Lumpini, Pathumwan, Bangkok 10330",
@@ -105,6 +118,7 @@
     },
     {
         "country": "mal",
+        "city": "Kuala Lumpur",
         "corporate": {
             "title": "LG Household & Health Care Malaysia Sdn. Bhd.",
             "address": "Lot 468-7B & 7C, 1st Floor, Block D, Rivercity, Jalan Sultan Azlan Shah, 51200, Kuala Lumpur, Malaysia",
@@ -113,6 +127,7 @@
     },
     {
         "country": "brit",
+        "city": "Weybridge",
         "corporate": {
             "title": "H&H UK LTD",
             "address": "LG H&H UK LTD Velocity 2, Brooklands Drive, Weybridge, Surrey KT13 0SL",
