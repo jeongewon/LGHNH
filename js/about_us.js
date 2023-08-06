@@ -250,18 +250,13 @@ ciMoreBtn.click(function () {
   $(this).toggleClass('close');
   $(this).parent('.arc_card').toggleClass('hide');
   if($(this).parent('.arc_card').hasClass('hide')){
-    $(this).parent('.arc_card').find('.show').stop().animate({opacity: 0},200,'swing')
-    $(this).parent('.arc_card').find('.card_info').css({
-      position: 'absolute',
-      width: '70%',
-      top: 'calc(50% + 40px)',
-      left: '50%',
-      transform: 'translate(-50%, -50%)'
-    })
+    $(this).parent('.arc_card').find('.card_info').fadeIn();
+    $(this).parent('.arc_card').find('.sep_line').fadeIn();
     $(this).parent('.arc_card').find('.card_info').css({opacity:0, display: 'block'})
     $(this).parent('.arc_card').find('.card_info').stop().animate({opacity: 1},2000,'swing')
   }else{
     $(this).parent('.arc_card').find('.card_info').fadeOut();
+    $(this).parent('.arc_card').find('.sep_line').fadeOut();
     $(this).parent('.arc_card').find('.show').stop().animate({opacity: 1},2200,'swing')}
 })
 
@@ -312,3 +307,7 @@ function loadAward(val3){
   });
   awardList.html(awardHTML);
 }
+console.log($(window).width());
+if($(window).width < 768){
+  $(".slider").bxSlider();
+  }
