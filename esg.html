@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/esg.css">
@@ -22,29 +24,29 @@
 
 <body>
   <!-- header -->
-  <header class="origin header-clone visible">
+  <header class="origin">
     <nav class="container uc desktop_menu">
       <h1 class="logo"><a href="index.html"><span>LG생활건강</span></a></h1>
       <div class="menu">
         <ul class="main_menu d-flex jcsb">
-          <li class="title"><a href=""><span>company</span>
+          <li><a href=""><span>company</span>
               <div class="a_close_btn"></div>
             </a>
             <ul class="company_list d-flex fd-column info">
               <li><a href="about_us.html">about us</a></li>
               <li>사업분야
                 <ul class="about_list b-t-16 d-flex fd-column">
-                  <li><a href="beauty.html">beauty</a></li>
-                  <li><a href="">home care</a></li>
-                  <li><a href="">berverage</a></li>
-                  <li><a href="rnd.html">r&d</a></li>
-                  <li><a href="global_network.html">global network</a></li>
+                  <li class="b-t-16"><a href="beauty.html">beauty</a></li>
+                  <li class="b-t-16"><a href="">home care</a></li>
+                  <li class="b-t-16"><a href="">berverage</a></li>
+                  <li class="b-t-16"><a href="rnd.html">r&d</a></li>
+                  <li class="b-t-16"><a href="global_network.html">global network</a></li>
                 </ul>
               </li>
               <li><a href="invest_info.html">투자정보</a></li>
             </ul>
           </li>
-          <li class="title"><a href=""><span>brand</span>
+          <li><a href=""><span>brand</span>
               <div class="a_close_btn"></div>
             </a>
             <ul class="brand_list d-flex fd-column b-t-16 info">
@@ -118,7 +120,7 @@
     </nav>
     <span class="line"></span>
   </header>
-  <header class="aside white">
+  <header class="aside">
     <nav class="container uc aside_menu">
       <div class="aside_menu_top">
         <h1 class="logo"><a href="index.html"><span>LG생활건강</span></a></h1>
@@ -204,7 +206,6 @@
             <span>고객센터</span>
           </div>
         </div>
-        </ul>
       </div>
     </nav>
   </header>
@@ -213,32 +214,35 @@
   <section class="esg_m1">
     <div class="vision container">
       <div class="vision_tt">
-        <h1>ESG</h1>
-        <p>지속가능한 FMCG 기업으로<br> 아름답고 건강한 지구를 위해 환경을 지키며<br> 고객에 대한 사회적 책임을 다하겠습니다</p>
+        <div class="esg_main_tt">
+          <h1>ESG</h1>
+          <p>지속가능한 FMCG 기업으로<br>아름답고 건강한 지구를 위해 환경을 지키며<br>고객에 대한 사회적 책임을 다하겠습니다</p>
+        </div>
       </div>
       <div class="scrolldown">
         <button class="scrolldown_btn uc b-r-14">scroll down</button>
-        <svg class="down_arrow" width="12" height="15" viewBox="0 0 12 15" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 0.5L6 8.5" stroke="white" stroke-width="2" />
-          <path d="M11 7.5L6.00026 14.1667L1.00003 7.5L11 7.5Z" fill="white" stroke="white" />
-        </svg>
+        <svg class=down_arrow xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
+          <path d="M7 0L7 10" stroke="white" stroke-width="2"/>
+          <path d="M12.9777 8.5L7.0003 16.1856L1.02235 8.5L12.9777 8.5Z" fill="white" stroke="white"/>
+          </svg>
       </div>
     </div>
   </section>
 
   <section class="esg_tabmenu">
       <div class="esg_tab container">
-        <ul class="d-flex jcc">
+        <ul class="d-flex jcsb">
           <li><a href="#tab1">ESG전략</a></li>
           <li><a href="#tab2">환경안전경영</a></li>
           <li><a href="#tab3">사회환경가치제품</a></li>
           <li><a href="#tab4">사회공헌</a></li>
         </ul>
-        <svg xmlns="http://www.w3.org/2000/svg" width="1437" height="14" viewBox="0 0 1437 14" fill="none">
-          <path d="M0 1L705 1L717.5 13L730 1H1437" stroke="#2C2C2C"/>
-        </svg>
       </div>
+        <div class="esg_tabline d-flex jcc aic">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1437" height="14" viewBox="0 0 1437 14" fill="none">
+            <path d="M0 1L705 1L717.5 13L730 1H1437" stroke="#2C2C2C"/>
+          </svg>
+        </div>
   </section>
 
   <div id="tab1">
@@ -287,8 +291,8 @@
 
     <section class="esg_m3">
       <div class="esg_mission container">
-        <img id="mission_tt" src="image/esg/title.png" alt="">
-        <div class="mission d-flex aie">
+        <img id="mission_tt" src="image/esg/mission_tt.png" alt="mission">
+        <div class="mission d-flex jcc aic">
 
           <div class="mission_ct d-flex aic">
             <img src="image/esg/mission_icon1.png" alt="icon">
@@ -297,10 +301,13 @@
               <p>공정 온실가스 감축</p>
             </div>
           </div>
+          <div class="mission_svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="81" viewBox="0 0 52 81" fill="none">
+              <path d="M1.00019 1.00003L26.0001 40.5001L51 80.0002" stroke="#3F994D" stroke-dasharray="4 4"/>
+              </svg>
+          </div>
+
           
-          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="81" viewBox="0 0 52 81" fill="none">
-            <path d="M1.00019 1.00003L26.0001 40.5001L51 80.0002" stroke="#3F994D" stroke-dasharray="4 4"/>
-            </svg>
 
           <div class="mission_ct d-flex aic">
             <img src="image/esg/mission_icon2.png" alt="icon">
@@ -309,10 +316,11 @@
               <p>신재생 에너지 도입</p>
             </div>
           </div>
-
-          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="81" viewBox="0 0 52 81" fill="none">
-            <path d="M1.00005 80L25.9999 40.4999L50.9997 0.999839" stroke="#3F994D" stroke-dasharray="4 4"/>
-            </svg>
+          <div class="mission_svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="81" viewBox="0 0 52 81" fill="none">
+              <path d="M1.00005 80L25.9999 40.4999L50.9997 0.999839" stroke="#3F994D" stroke-dasharray="4 4"/>
+              </svg>
+          </div>
 
           <div class="mission_ct d-flex aic">
             <img src="image/esg/mission_icon3.png" alt="icon">
@@ -322,9 +330,11 @@
             </div>
           </div>
 
-          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="81" viewBox="0 0 52 81" fill="none">
-            <path d="M1.00019 1.00003L26.0001 40.5001L51 80.0002" stroke="#3F994D" stroke-dasharray="4 4"/>
-            </svg>
+          <div class="mission_svg aic">
+            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="81" viewBox="0 0 52 81" fill="none">
+              <path d="M1.00019 1.00003L26.0001 40.5001L51 80.0002" stroke="#3F994D" stroke-dasharray="4 4"/>
+              </svg>
+          </div>
 
           <div class="mission_ct d-flex aic">
             <img src="image/esg/mission_icon4.png" alt="icon">
@@ -336,45 +346,47 @@
         </div>
       </div>
 
-      <div class="esg_direction">
-        <h2>direction</h2>
+      <div class="esg_direction d-flex aic">
+        <div class="container d-flex jcc">
+          <img src="image/esg/direction_tt.png" alt="direction">
+        </div>
         <div class="direction_wrapper">
-          <ul class="direction_slide">
+          <ul class="direction_slide d-flex">
             <li>
-              <h3>친환경 제품 확대<h3>
-              <p>그린 제품 용수 절감 제품 확대<br>화학 물질 대체</p>
+              <h2>친환경 제품 확대<h3>
+              <h3>그린 제품 용수 절감 제품 확대<br>화학 물질 대체</h3>
             </li>
             <li>
-              <h3>기후 변화 대응 선도<h3>
-              <p>RE100 & 탄소 중립 & 에너지 효율 개선<br>공급망 온실가스 최소화</p>
+              <h2>기후 변화 대응 선도<h3>
+              <h3>RE100 & 탄소 중립 & 에너지 효율 개선<br>공급망 온실가스 최소화</h3>
             </li>
             <li>
-              <h3>제품 안정성 & RISK 관리<h3>
-              <p>안심 품질 체계 고도화<br>이머징 리스크 관리</p>
+              <h2>제품 안정성 & RISK 관리<h3>
+              <h3>안심 품질 체계 고도화<br>이머징 리스크 관리</h3>
             </li>
             <li>
-              <h3>지속 가능한 공급망 구축<h3>
-              <p>국내외 협력회사 ESG역량 강화<br>RSPO 확대</p>
+              <h2>지속 가능한 공급망 구축<h3>
+              <h3>국내외 협력회사 ESG역량 강화<br>RSPO 확대</h3>
             </li>
             <li>
-              <h3>사회 공헌 활동 강화<h3>
-              <p>여성 & 청소년 & 아동대상<br>사회 공헌 활동 강화</p>
+              <h2>사회 공헌 활동 강화<h3>
+              <h3>여성 & 청소년 & 아동대상<br>사회 공헌 활동 강화</h3>
             </li>
             <li>
-              <h3>포트폴리오 다각화<h3>
-              <p>해외 및 신규 사업 확대</p>
+              <h2>포트폴리오 다각화<h3>
+              <h3>해외 및 신규 사업 확대</h3>
             </li>
             <li>
-              <h3>일하기 좋은 환경 조성<h3>
-              <p>임직원 몰입도 향상<br>인권 영향 평가</p>
+              <h2>일하기 좋은 환경 조성<h3>
+              <h3>임직원 몰입도 향상<br>인권 영향 평가</h3>
             </li>
             <li>
-              <h3>사회 및 환경적 효익 제품 확대<h3>
-              <p>오픈 이노베이션 확대<br>환경영향감소를 위한 중장기 과제</p>
+              <h2>사회 및 환경적 효익 제품 확대<h3>
+              <h3>오픈 이노베이션 확대<br>환경영향감소를 위한 중장기 과제</h3>
             </li>
             <li>
-              <h3>자원 순환 촉진</h3>
-              <p>친환경 소재 패키징 전환<br>용기 역회수</p>
+              <h2>자원 순환 촉진</h2>
+              <h3>친환경 소재 패키징 전환<br>용기 역회수</h3>
             </li>
           </ul>
         </div>
@@ -383,61 +395,200 @@
 
     <section class="esg_m4">
       <div class="esg_result container">
-        <h2>주요성과</h2>
-        <div class="result_sales">
-          <h3>매출</h3>
-          <img src="" alt="매출 아이콘">
-          <h3><span data-num="8">0</span>조 <span data-num="915">0</span>억원</h3>
-        </div>
-        <div class="result_sales">
-          <h3>영업이익</h3>
-          <img src="" alt="영업이익 아이콘">
-          <h3><span data-num="1">0</span>조 <span data-num="2896">0</span>억원</h3>
-        </div>
-        <div class="result_sales">
-          <h3>환경 가치 제품 매출</h3>
-          <img src="" alt="환경 가치 제품 매출 아이콘">
-          <h3><span data-num="">0</span>조 <span data-num="4994">0</span>억원</h3>
-        </div>
-        <div class="result_sales">
-          <h3>산업재해율</h3>
-          <img src="" alt="산업재해율 아이콘">
-          <h3><span data-num="0.09">0</span>%</h3>
+        <h2 class="sub-tt d-flex aic jcc">주요성과</h2>
+        <div class="result_box d-flex aic jcsb">
+          <div class="result_sales d-flex aic">
+            <h3>매출</h3>
+            <img src="image/esg/result_sales_icon1.png" alt="매출 아이콘">
+            <h3><span data-num="8">0</span>조 <span data-num="915">0</span>억원</h3>
+          </div>
+          <div class="result_sales d-flex aic">
+            <h3>영업이익</h3>
+            <img src="image/esg/result_sales_icon2.png" alt="영업이익 아이콘">
+            <h3><span data-num="1">0</span>조 <span data-num="2896">0</span>억원</h3>
+          </div>
+          <div class="result_sales d-flex aic">
+            <h3>환경 가치 제품 매출</h3>
+            <img src="image/esg/result_sales_icon3.png" alt="환경 가치 제품 매출 아이콘">
+            <h3><span data-num="">0</span>조 <span data-num="4994">0</span>억원</h3>
+          </div>
+          <div class="result_sales d-flex aic">
+            <h3>산업재해율</h3>
+            <img src="image/esg/result_sales_icon4.png" alt="산업재해율 아이콘">
+            <h3><span data-num="0.09">0</span>%</h3>
+          </div>
         </div>
 
-        <div class="result_rating">
+        <div class="result_rating d-flex jcc aic">
           <h2>2022년 한국 ESG기준원 평가</h2>
-          <div class="rating">
-            <div class="rating1">
+          <div class="rating_level d-flex">
+            <div class="rating d-flex jcc aic">
               <h3>A</h3>
               <p>환경</p>
             </div>
-            <div class="rating2">
+            <div class="rating d-flex jcc aic">
               <h3>A+</h3>
               <p>사회</p>
             </div>
-            <div class="rating3">
+            <div class="rating d-flex jcc aic">
               <h3>A</h3>
               <p>지배구조</p>
             </div>
-            <div class="rating4">
-              <h3>A</h3>
-              <p>통합등급</p>
-            </div>
+          </div>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="65" viewBox="0 0 16 65" fill="none">
+            <path d="M7.64644 64.3536C7.84171 64.5488 8.15829 64.5488 8.35355 64.3536L11.5355 61.1716C11.7308 60.9763 11.7308 60.6597 11.5355 60.4645C11.3403 60.2692 11.0237 60.2692 10.8284 60.4645L8 63.2929L5.17157 60.4645C4.97631 60.2692 4.65973 60.2692 4.46446 60.4645C4.2692 60.6597 4.2692 60.9763 4.46446 61.1716L7.64644 64.3536ZM7.5 -2.18557e-08L7.5 2L8.5 2L8.5 2.18557e-08L7.5 -2.18557e-08ZM7.5 6L7.5 10L8.5 10L8.5 6L7.5 6ZM7.5 14L7.5 18L8.5 18L8.5 14L7.5 14ZM7.5 22L7.5 26L8.5 26L8.5 22L7.5 22ZM7.5 30L7.5 34L8.5 34L8.5 30L7.5 30ZM7.5 38L7.5 42L8.5 42L8.5 38L7.5 38ZM7.5 46L7.5 50L8.5 50L8.5 46L7.5 46ZM7.5 54L7.5 58L8.5 58L8.5 54L7.5 54ZM7.5 62L7.5 64L8.5 64L8.5 62L7.5 62ZM7.29289 64.7071C7.68341 65.0976 8.31658 65.0976 8.7071 64.7071L15.0711 58.3431C15.4616 57.9526 15.4616 57.3195 15.0711 56.9289C14.6805 56.5384 14.0474 56.5384 13.6569 56.9289L8 62.5858L2.34314 56.9289C1.95262 56.5384 1.31945 56.5384 0.92893 56.9289C0.538405 57.3195 0.538405 57.9526 0.92893 58.3431L7.29289 64.7071ZM7 -4.37114e-08L7 2L9 2L9 4.37114e-08L7 -4.37114e-08ZM7 6L7 10L9 10L9 6L7 6ZM7 14L7 18L9 18L9 14L7 14ZM7 22L7 26L9 26L9 22L7 22ZM7 30L7 34L9 34L9 30L7 30ZM7 38L7 42L9 42L9 38L7 38ZM7 46L7 50L9 50L9 46L7 46ZM7 54L7 58L9 58L9 54L7 54ZM7 62L7 64L9 64L9 62L7 62Z" fill="#363636"/>
+            </svg>
+
+          <div class="rating_all d-flex jcc aic">
+            <h3>A</h3>
+            <p>통합등급</p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="esg_m5">
-      <div class="lisk_management"></div>
-        <h2>통합 리스크 관리</h2>
-        <p>외부의 충격에 대비한 내진설계라는 CEO의 확고한 의지를 바탕으로 전사적 통합 리스크 관리 체계를 구축하여 운영하고 있습니다.<br>
-          사업부별 리스크를 정기적으로 모니터링하고 비재무 리스크를 내부 전문가를 통해 진단함으로써 관리를 강화해 나가고 있습니다.<br>
-          환경 및 사회 분야의 운영 및 위험 리스크를 각각의 기능조직에서 식별하고 유기적인 보고체계를 통해 효과적으로 관리하고 있습니다.
-        </p>
+      <div class="lisk_management container">
+        <div class="lisk_tt d-flex jcc aic">
+          <h2 class="sub-tt">통합 리스크 관리</h2>
+          <p>- 외부의 충격에 대비한 내진설계라는 CEO의 확고한 의지를 바탕으로 전사적 통합 리스크 관리 체계를 구축하여 운영<br>
+            -  사업부별 리스크를 정기적으로 모니터링하고 비재무 리스크를 내부 전문가를 통해 진단함으로써 관리를 강화<br>
+            -  환경 및 사회 분야의 운영 및 위험 리스크를 각각의 기능조직에서 식별하고 유기적인 보고체계를 통해 효과적으로 관리
+          </p>
+        </div>
+
+        <div class="lisk_accordion">
+
+
+            <div class="liskBox d-flex jcc aic">
+              <div class="lisk_ad_header d-flex jcsb aic">
+                <div class="lisk_contt d-flex">
+                  <h3>전략 리스크</h3>
+                  <h4>Operational Risks</h4>
+                </div>
+                <button><i class="fa-solid fa-plus"></i></button>
+              </div>
+              <div class="lisk_content d-flex jcc">
+                    <div class="lisk_box d-flex jcsb aic">
+                      <p>글로벌 경기 침체</p>
+                      <p>내수 경기 위축</p>
+                      <p>소미 양극화</p>
+                      <p>가치 소비 확대</p>
+                    </div>
+              </div>
+            </div>
+
+
+          <div class="liskBox d-flex jcc aic">
+            <div class="lisk_ad_header d-flex jcsb aic">
+              <div class="lisk_contt d-flex">
+                <h3>재무 리스크</h3>
+                <h4>Financial Ricks</h4>
+              </div>
+              <button><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="lisk_content d-flex jcc">
+                  <div class="lisk_box d-flex jcsb aic">
+                    <p>환 리스크</p>
+                    <p>유동성 위험</p>
+                    <p>이자율 위험</p>
+                    <p>공시 강화</p>
+                  </div>
+            </div>
+          </div>
+
+          <div class="liskBox d-flex jcc aic">
+            <div class="lisk_ad_header d-flex jcsb aic">
+              <div class="lisk_contt d-flex">
+                <h3>운영 리스크</h3>
+                <h4>Operational Risks</h4>
+              </div>
+              <button><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="lisk_content d-flex jcc">
+                  <div class="lisk_box d-flex jcsb aic">
+                    <p>정부 정책 및 규제</p>
+                    <p>제품 품질 관리</p>
+                    <p>특허 및 상표권 보호</p>
+                    <p>개인정보 보호 강화</p>
+                  </div>
+            </div>
+          </div>
+
+          <div class="liskBox d-flex jcc aic">
+            <div class="lisk_ad_header d-flex jcsb aic">
+              <div class="lisk_contt d-flex">
+                <h3>위험 리스크</h3>
+                <h4>HAZARDOUS RISKS</h4>
+              </div>
+              <button><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="lisk_content d-flex jcc">
+                  <div class="lisk_box d-flex jcsb aic">
+                    <p>화재 예방</p>
+                    <p>안전과 건강</p>
+                    <p>자연 재해</p>
+                    <p>윤리 의식</p>
+                  </div>
+            </div>
+          </div>
+
+          <div class="downloadLink d-flex jcc">
+            <div class="policyLink d-flex aic">
+              <span class="policy sub-cont-tt">정책</span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" fill="none">
+                <path d="M1.47368 5.36442e-07L12 12L1.47368 24L-8.9407e-08 22.29L9.02632 12L-8.9407e-08 1.71L1.47368 5.36442e-07Z" fill="#585858"/>
+                </svg>
+              </span>
+              <span class="material-symbols-outlined"><a href="">task</a></span>
+          </div>
+          <div class="policyLink reportLink d-flex aic">
+              <span class="report sub-cont-tt">보고서</span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" fill="none">
+                <path d="M1.47368 5.36442e-07L12 12L1.47368 24L-8.9407e-08 22.29L9.02632 12L-8.9407e-08 1.71L1.47368 5.36442e-07Z" fill="#585858"/>
+                </svg>
+              </span>
+              <span class="material-symbols-outlined"><a href="">sim_card_download</a></span>
+          </div>
+          </div>
+
+
+
+
+        </div>
+
+      </div>
     </section>
-  </div>
+
+    <footer class="footer">
+      <div class="footer_box container">
+        <div class="footer_link d-flex jcsb">
+          <ul class="d-flex sm-tt">
+            <li><a href="">이용약관</a></li>
+            <li><a href="">윤리경영</a></li>
+            <li><a href="">개인정보처리방침</a></li>
+            <li class="privacy"><a href="">이메일무단수집거부</a></li>
+            <li><a href="" class="footer_support">고객지원</a></li>
+          </ul>
+          <div class="footer_sns d-flex">
+            <a class="facebook" href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="youtube" href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+          <address class="footer_address">
+            <p class="lghnh"><span>(주) LG생활건강</span><span>대표이사</span>이정애</p>
+            <p><span>주소</span>서울시 종로구 새문한로 59 LG광화문 빌딩 LG생활건강</p>
+            <p><span>사업자등록번호</span>107-81-98143</p>
+          </address>
+        <div class="footer_end d-flex jcsb">
+          <p class="copyright">Copyright © LG H&H Co. Ltd. All Rights Reserved.</p>
+            <a href="" class="footer_recruit">RECRUIT</a>
+        </div>
+      </div>
+    </footer>
 
   <div id="tab2"></div>
   <div id="tab3"></div>
@@ -452,6 +603,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
     integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
   <script src="js/esg.js"></script>
 </body>
 

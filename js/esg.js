@@ -92,3 +92,21 @@ $(window).resize(function(){
     $('.aside_menu_side').css({right: '-286px'})
   }
 })
+
+/* ESG */
+let question = $('.liskBox').find('button'),
+answer = $('.lisk_content'),
+ac_header = $('.lisk_ad_header');
+/*
+question을 클릭하면 할일
+모든 question에서 active 제거
+클릭한 그 요소에 active 추가
+*/
+
+question.click(function(){
+    $(this).toggleClass('active');
+    // $(this).next().slideToggle();
+    answer.css({display:'flex'});
+    ac_header.css({background: '#409778'});
+})
+

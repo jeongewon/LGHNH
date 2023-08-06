@@ -398,6 +398,7 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
   height: 72px;
   border: 1px solid var(--MC-LGGray);
   border-radius: 20px;
+  transition: all 0.2s ease;
 }
 .policyLink a{
   color: var(--MC-DGray);
@@ -405,24 +406,41 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
 .policyLink .policy{
   font-weight: 500;
   font-size: 24px;
-  margin-left: 34px;
+  margin: 0 50px 0 34px;
 }
-.policyLink img{
-  margin-left: 50px;
+.policyLink svg{
+  margin: 5px 30px 0 0;
 }
 .policyLink .material-symbols-outlined{
-  font-family: 'Material Symbols Outlined';
   font-size: 40px;
-  font-weight: 400;
-  margin-left: 30px;
+  font-weight: 300;
 }
 .policyLink:hover{
   background: var(--BC-Green1);
   border: none;
+  border: 1px solid var(--BC-Green1);
+  box-shadow:
+  -7px -7px 20px 0px #fff9,
+  -4px -4px 5px 0px #fff9,
+  7px 7px 20px 0px #0002,
+  4px 4px 5px 0px #0001;
 }
 .policyLink:hover span, .policyLink:hover a{
   color: var(--MC-LGWhite);
 }
+.policyLink:hover path{
+  fill: var(--MC-LGWhite);
+}
+
+.policyLink .report{
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0 28px 0 34px;
+}
+
+
+
+
 
 .footer_sns a{
   color: var(--MC-DGray);
@@ -437,27 +455,7 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
 .footer_sns .facebook:hover,.youtube:hover{
   color: var(--BC-LGRed);
 }
-/* .footer_recruit{
-  width: 144px;
-  height: 48px;
-  border: 1px solid var(--MC-DGray);
-  border-radius: 10px; 
-  text-align: center;
-}
-.footer_recruit a{
-  font-size: calc(var(--font-size)*1.375);
-  font-weight: 400;
-  color: var(--MC-DGray);
-  line-height: 48px;
-}
-.footer_recruit:hover{
-  border: none;
-  background: var(--BC-LGRed);
-  border: 1px solid var(--BC-LGRed);
-}
-.footer_recruit:hover a{
-  color: var(--MC-LGWhite);
-} */
+
 
 /* form */
 
