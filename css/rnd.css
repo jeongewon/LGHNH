@@ -734,6 +734,15 @@ svg:hover > * {
 
 .sec_2_contt {
   display: none;
+  width: 500px;
+  height: 500px;
+  padding: 30px 0;
+  line-height: 36px;
+}
+
+.sec_2_contt p {
+  line-height: 24px;
+  padding-top: var(--base-unit);
 }
 
 .sec_2_contt.active {
@@ -743,7 +752,26 @@ svg:hover > * {
 .sec2-list {
   flex-direction: column;
   gap: 30px;
-  padding: 30px 0;
+  padding: 60px 0;
+  font-weight: 500;
+}
+
+#sec3_0 {
+  height: 504px;
+  width: 925px;
+  background: url("/images/rnd/example.png") no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  position: relative;
+}
+
+.aura {
+  height: 60%;
+  width: 48%;
+  padding: 100px 50px 0 0;
+  text-align: end;
+  position: absolute;
+  right: 0;
 }
 
 .viewmore {
