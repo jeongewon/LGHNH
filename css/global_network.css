@@ -308,6 +308,10 @@ body{
   color:var(--BC-LGRed);
   border-color: var(--BC-LGRed);
 }
+.contry_btn.active{
+  background: var(--BC-LGRed);
+  color: var(--MC-LGWhite);
+}
 .contry_corporate_card{
   width: 100%;
   max-width: 1272px;

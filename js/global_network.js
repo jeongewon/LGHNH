@@ -84,7 +84,6 @@ close_aside.click(function(){
 /* resize */
 $(window).resize(function(){
   width = $(window).width();
-  console.log(width);
   if (width > 768) {
     header.show();
   } else {
@@ -95,9 +94,69 @@ $(window).resize(function(){
 
 /* global network */
 
-let $count = $('.count');
+let $count = $('.count'),
+    btn = $('.contry_btn'),
+    allData = [],
+    allFlag = [],
+    filteredData = [],
+    filteredFlag = [],
+    container = $('.corporate_list'),
+    flagcont = $('.contry_flag');
     // counting = $('.counting'),
     // dataNum = counting.attr('data-num');
 
-let btn = $('.contry_btn_list');
-console.log(btn);
+$.getJSON("./data/corporate.json", initCountry);
+$.getJSON("./data/flag.json", initFlag);
+
+function initCountry(data){
+  allData = data;
+  loadCountry('usa');
+}
+function initFlag(data){
+  allFlag = data;
+  loadFlag('usa');
+}
+
+
+btn.click(function(){
+  btn.removeClass('active');
+  $(this).addClass('active');
+  let val = $(this).attr('data-contry');
+  console.log(val);
+  loadCountry(val);
+  loadFlag(val);
+  container.find('li').css({transform: 'translateY(30%)'});
+  container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
+  flagcont.css({transform: 'translateY(10%)'});
+  flagcont.animate({transform: 'translateY(0%)'},800,'linear');
+})
+
+function loadFlag(val2){
+  filteredFlag = allFlag.filter(fl => fl.country == val2);
+  console.log(filteredFlag);
+  $.each(filteredFlag,(i,item)=>{
+    flagcont.attr('src',`${item.img}`)
+  })
+}
+
+function loadCountry(val3){
+  let corporateHTML = '';
+  filteredData = allData.filter(cl => cl.country == val3);
+  console.log(filteredData);
+  $.each(filteredData,(i, item)=>{
+    corporateHTML += `
+    <li data-contry="${item.country}">
+      <h4 class="sub-cont-tt">${item.corporate.title}</h4>
+      <div class="corporate_info">
+        <p class="b-l-16">${item.corporate.address}</p>
+        <p class="b-l-16">${item.corporate.tell}</p>
+      </div>
+    </li>
+    `
+  })
+  container.html(corporateHTML);
+}
+
+
+
+

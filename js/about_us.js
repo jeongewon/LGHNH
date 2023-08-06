@@ -256,6 +256,7 @@ ciMoreBtn.click(function () {
     $(this).parent('.arc_card').find('.show').stop().animate({opacity: 1},2200,'swing')}
 })
 
+
 clickMe.click(function () {
   $(this).parent('.color').addClass('active');
 })
