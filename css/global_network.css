@@ -391,7 +391,7 @@ body{
   display: flex;
   flex-direction: column;
   gap: var(--base-unit);
-  height: 144px;
+  height: 164px;
   border-bottom: 1px solid var(--MC-LGLGray);
 }
 .corporate_info p{

@@ -455,32 +455,30 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
     transform-origin: 50% 50%;
     transition: 0.6s;
   }
-  .more_btn .line {
+  .more_btn .more_line {
     width: 15px;
     height: 15px;
   }
-  .more_btn .line:first-child {
+  .more_btn .more_line:first-child {
     border-right-width: 1px;
     transform: translateY(-50%) translateX(-0.5px);
   }
-  .more_btn .line:last-child {
+  .more_btn .more_line:last-child {
     border-bottom-width: 1px;
     transform: translateX(-50%) translateY(-0.5px);
   }
-  .more_btn .line{width: 15px;height: 15px;}
-  .more_btn .line:first-child{
+  .more_btn .more_line{width: 15px;height: 15px;}
+  .more_btn .more_line:first-child{
     border-right-width: 1px;
     transform: translateY(-50%) translateX(-0.5px);
   }
-  .more_btn .line:last-child{
+  .more_btn .more_line:last-child{
     border-bottom-width: 1px;
     transform: translateX(-50%) translateY(-0.5px);
   }
-  .year_btn{width: 116px;}
-  .year_btn span{width: 116px;font-size: var(--font-size);}
+  button.year_btn{width: 116px;}
+  button.year_btn span{width: 116px;font-size: var(--font-size);}
   .partition_single{width: 16px;height: 16px;}
-
-  .arc_card{width: 685px;}
   .arc_card .card_title{
     font-size: calc(var(--font-size)*1.5);
     font-weight: 700;
@@ -494,21 +492,16 @@ button.year_btn span{font-size: 20px;font-weight: 400;color:var(--MC-DGray); mar
     width: 16px;
     height: 16px;
   }
-
-  .arc_card {
-    width: 685px;
-  }
   .arc_card .card_title {
     font-size: calc(var(--font-size) * 1.5);
     font-weight: 700;
     line-height: calc(var(--font-size) * 2.175);
   }
   .arc_card.active {
-    width: 685px;
     gap: 37.66px;
     padding: 45px 55px 60px 55px;
   }
-  .arc_card.active > p {
+  .arc_card.active > .card_info {
     width: 576px;
     text-align: center;
     font-size: var(--font-size);

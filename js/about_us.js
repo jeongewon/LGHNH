@@ -183,10 +183,17 @@ periodBtn.click(function(){
     container.find('li').css({transform: 'translateY(150%)'});
     container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
   } else{
-    let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>';
-    container.html(clickcircle);
-    container.find('li').css({transform: 'translateY(150%)'});
-    container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
+    if($(window).width > 480){
+      let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>';
+      container.html(clickcircle);
+      container.find('li').css({transform: 'translateY(150%)'});
+      container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
+    }else{
+      let clickyear = '<li class="clickyear d-flex g-2 aic"><i class="fa-solid fa-arrow-up"></i><h5>상단의 년도를 클릭해보세요</h5></li>'
+      container.html(clickyear);
+      container.find('li').css({transform: 'translateY(150%)'});
+      container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
+    }
   }
 });
 
@@ -211,10 +218,12 @@ $(document).on('click', '.versionh .years', function() {
   $(this).siblings().removeClass('active');
   $(this).addClass('active');
   container.find('li').css({transform: 'translateY(150%)'});
-  container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
+  container.find('li').stop().animate({transform: 'translateY(0%)'},800,'linear');
 
-  let historyTop = $('.history .list_card').offset().top;
-  $('html,body').stop().animate({scrollTop: historyTop - 400},1000,'linear');
+  if($(window).width > 748){
+    let historyTop = $('.history .list_card').offset().top;
+    $('html,body').stop().animate({scrollTop: historyTop - 400},1000,'linear');
+  }
 })
 
 function loadHistory(val){
@@ -284,9 +293,10 @@ aYearBtn.click(function(){
   $(this).addClass('active');
   awardList.css({transform: 'translateY(10%)'});
   awardList.animate({transform: 'translateY(0%)'},1000,'linear');
-
-  let awardTop = $('.award .list_card').offset().top;
-  $('html,body').stop().animate({scrollTop: awardTop - 200},1000,'linear');
+  if($(window).width > 748){
+    let awardTop = $('.award .list_card').offset().top;
+    $('html,body').stop().animate({scrollTop: awardTop - 200},1000,'linear');
+  }
 })
 
 function loadAward(val3){
