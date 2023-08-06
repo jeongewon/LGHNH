@@ -329,6 +329,11 @@ body{
 .weather_api{
   align-items: center;
 }
+@keyframes movedown {
+  0%{top:-5%}
+  50%{top:-4%};
+  100%{top:-4%};
+}
 .weather_api:hover p{
   opacity: 1;
 }
@@ -364,8 +369,10 @@ body{
   display: block;
   width: 82px;
   height: 82px;
-  border-radius: var(--sm-rd);
-  border: 1px solid var(--MC-LGGray);
+}
+.weather_icon img{
+  width: 100%;
+  height: 100%;
 }
 .corporate_list{
   padding: var(--base-unit);
