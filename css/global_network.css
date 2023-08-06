@@ -252,7 +252,7 @@ body{
   flex-direction: column;
   gap: calc(var(--base-unit) * 4);
 }
-.title{
+.global_network .title{
   text-align: center;
   display: flex;
   flex-direction: column;

@@ -94,6 +94,7 @@ $(window).resize(function(){
 
 /* global network */
 
+
 let $count = $('.count'),
     btn = $('.contry_btn'),
     allData = [],
