@@ -93,7 +93,47 @@ $(window).resize(function(){
   }
 })
 
+
+
 /* ESG */
+
+/* ESG 숫자 카운팅 */
+let result = $('.result_sales');
+let resultOST = result.offset().top;
+let isActive = false;
+
+$(window).scroll(function(){
+    if($(this).scrollTop() > resultOST){
+        if(!isActive){
+            resultAnimation();
+            isActive = ture;
+        }
+    }
+});
+
+function resultAnimation(){
+
+  result.each(function(){
+        let $this = $(this);
+        let title = $this.find('h3 > span');
+        let targetNum = title.attr('data-num');
+        // let targetSVG = $this.find('circle');
+
+        $({num:0}).animate({num:targetNum},{
+            duration: 1500,
+            progress: function(){
+                let now = Math.ceil(this.num);
+                title.text(now);
+                // let value = 628 - (628*now/100);
+                // targetSVG.css({strokeDashoffset: value});
+            }
+        });
+    })
+}
+
+
+
+/* ESG 아코디언 */
 let question = $('.liskBox').find('button'),
 answer = $('.lisk_content'),
 ac_header = $('.lisk_ad_header');

@@ -860,8 +860,8 @@ body{height:100%;}
 .esg_m1 .vision_tt{
     text-align: center;
     color: var(--MC-LGWhite);
-    width: 425px;
-    height: 425px;
+    /* width: 425px;
+    height: 425px; */
     /* 
     border: 2px solid rgba(255,255,255,.45);
     border-radius: 50%; */
@@ -870,23 +870,24 @@ body{height:100%;}
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.esg_m1 .esg_main_tt{
+/* .esg_m1 .esg_main_tt{
   position: absolute;
   top:50%;
   transform: translateY(-50%);
-}
+} */
 .esg_main_tt h1{
     display: inline-block;
     font-size: calc(var(--font-size)*8.125);
     font-weight: 600;
     letter-spacing: 7.5px;
+
 }
 
 .esg_main_tt p{
-    padding-top: 16px;
+    padding-top: 20px;
     font-size: calc(var(--font-size)*1.5);
     line-height: calc(var(--base-unit)*1.375);
-    font-weight: 300;
+    font-weight: 400;
 }
 
 
@@ -1281,6 +1282,7 @@ body{height:100%;}
 width: 45px;
 height: 45px;
 background: var(--BC-Green1);
+border: 1px solid var(--BC-Green1);
 border-radius: 50%;
 color: #fff;
 font-size: calc(var(--font-size)*1.375);
@@ -1291,7 +1293,13 @@ margin-right: 83px;
   transform: rotate(0deg);
 }
 
+.lisk_ad_header button.active{
+  background: var(--MC-DGray2);
+  border: 1px solid var(--MC-DGray2);
+}
+
 .lisk_ad_header button.active i {
+  
   transform: rotate(45deg);
 }
 
