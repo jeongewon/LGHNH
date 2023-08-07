@@ -179,16 +179,15 @@ form:hover #search_bar {
 }
 
 /* icon menu */
-.icon_menu {
-  gap: 25px;
-}
-
-.icon_menu span {
-  display: none;
-  text-indent: -9999rem;
-}
-
-svg {
+.icon_menu{gap:25px;}
+.icon_menu span{display:none;text-indent: -9999rem;}
+header svg{cursor: pointer;}
+.icon_menu svg *{transition: 0.3s ease-out;}
+header svg:hover > *{fill: var(--BC-LGRed);}
+.search_bar form label{display: block;transition: 0.3s 0.2s ease-out;}
+/* lang list */
+.lang{position:relative;text-align: center;}
+.lang_list{
   cursor: pointer;
 }
 
