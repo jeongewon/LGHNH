@@ -161,13 +161,13 @@ form:hover #search_bar {
   display: none;
   text-indent: -9999rem;
 }
-svg {
+header svg {
   cursor: pointer;
 }
-.icon_menu svg * {
+header .icon_menu svg * {
   transition: 0.3s ease-out;
 }
-svg:hover > * {
+header svg:hover > * {
   fill: var(--BC-LGRed);
 }
 .search_bar form label {
@@ -696,28 +696,25 @@ svg:hover > * {
   margin-bottom: 24px;
   font-weight: 500;
 }
-.sec_title > p {
-  margin: 48px 0 96px 0;
-  font-weight: 500;
+
+.slide5 {
+  width: 1272px;
+  height: 500px;
 }
 
-.sec_1_slide {
-  gap: 10px;
-  overflow-y: hidden;
-}
-
-.sec_1_slide > div {
+.slider5 .slide {
   width: 339px;
   height: 334px;
   border-radius: 20px;
+  margin-right: 0;
   position: relative;
 }
 
-.sec_1_slide > div:hover {
+.slider5 .slide:hover {
   box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
-.sec_1_slide > div > p {
+.slider5 .slide > p {
   width: 300px;
   position: absolute;
   text-align: center;
@@ -726,11 +723,21 @@ svg:hover > * {
   font-weight: 500;
 }
 
+.section2 {
+  margin-top: 96px;
+}
+
 .sec2_bg {
   width: 100%;
   height: 840px;
   background: url("/image/rnd/materials_bg_1.png") no-repeat;
   background-size: cover;
+}
+
+.sec2-list li.active,
+.sec3-list li.active {
+  color: var(--BC-LGRed);
+  font-weight: 700;
 }
 
 .sec_2_contt {
@@ -746,7 +753,7 @@ svg:hover > * {
   padding-top: var(--base-unit);
 }
 
-.sec_2_contt.active {
+#sec2_0.active {
   display: block;
 }
 
@@ -757,16 +764,37 @@ svg:hover > * {
   font-weight: 500;
 }
 
-#sec3_0 {
+/* section3 */
+
+.sec3-list {
+  flex-direction: column;
+  gap: 30px;
+  padding: 60px 0;
+  font-weight: 500;
+}
+
+.sec_3_contt {
   height: 504px;
   width: 925px;
-  background: url("/image/rnd/example.png") no-repeat;
   background-size: cover;
   border-radius: 20px;
   position: relative;
 }
 
-.aura {
+#sec3_0 {
+  background: url("/image/rnd/example.png") no-repeat;
+}
+#sec3_1 {
+  background: url("/image/rnd/example.png") no-repeat;
+}
+#sec3_2 {
+  background: url("/image/rnd/example.png") no-repeat;
+}
+#sec3_3 {
+  background: url("/image/rnd/example.png") no-repeat;
+}
+
+.sec3_text {
   height: 60%;
   width: 48%;
   padding: 100px 50px 0 0;
@@ -775,22 +803,46 @@ svg:hover > * {
   right: 0;
 }
 
-.sec4_bg{
-  background: url('/image/rnd/package_bg.png') no-repeat;
+/* section4 */
+.sec4_bg {
+  background: url("/image/rnd/package_bg.png") no-repeat;
 }
 
-.sec_4_cont{
+.sec_4_cont {
   text-align: center;
   font-weight: 400;
 }
 
-.sec_4_cont > div p{
+.sec_4_cont > div p {
   padding-top: 24px;
   line-height: 30px;
 }
 
-.viewmore {
-  margin: 48px 0 96px 0;
+.sec4_img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.sec4_img img {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.sec4_img:hover img {
+  transform: scale(1.2);
+}
+
+.sec4_img:hover {
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* section5 */
+
+.button {
+  gap: 30px;
 }
 
 .b_btn {
@@ -799,7 +851,7 @@ svg:hover > * {
   border: 1px solid var(--MC-LGGray);
   color: var(--MC-LGGray);
   border-radius: 30px;
-  margin: 0 auto 96px;
+  /* margin: 0 auto 96px; */
   padding: 6px 16px;
   transition: 0.3s ease-out;
 }
@@ -811,6 +863,63 @@ svg:hover > * {
 .b_btn:hover {
   border-color: var(--BC-LGRed);
   color: var(--BC-LGRed);
+}
+
+.d_contents {
+  position: relative;
+}
+
+.slick-slide {
+  margin: 0 10px;
+}
+
+.d_content {
+  width: 250px;
+  height: 180px;
+  border: 1px solid var(--MC-LGGray);
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.d_content h1 {
+  color: var(--BC-LGRed);
+  font-weight: 500;
+}
+
+.d_content p {
+  padding-top: 10px;
+}
+
+.d_content img {
+  position: absolute;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.d_contents .slick-prev {
+  background-image: url("/image/main/left-arrow.png");
+  left: -60px;
+}
+
+.d_contents .slick-next {
+  background-image: url("/image/main/right-arrow.png");
+  right: -60px;
+}
+
+.slick-arrow {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: transparent;
+  background-color: transparent;
+  border: none;
+  top: calc(50% - 25px);
 }
 
 /* 정이원 footer - web */
