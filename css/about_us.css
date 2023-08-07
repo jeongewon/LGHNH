@@ -787,7 +787,6 @@ box-sizing: border-box;
   text-align: left;
   gap:var(--base-unit);}
   .sec2 .contents {
-    background-color: transparent;
     box-shadow: var(--box-shadow);
     border-radius: var(--mid-rd);
 }
@@ -797,6 +796,7 @@ box-sizing: border-box;
   min-width: 90%;
   flex-wrap: wrap;
   gap: 24px;
+  width: 100%;
 }
 .award .main-tt {
     padding: 0 40px;
@@ -965,6 +965,10 @@ box-sizing: border-box;
   width: 76px;
   border-top: 3px solid var(--BC-LGRed);
 }
+.color_list{
+  width: 100%;
+  align-items: center;
+}
 
 }/*tablet end*/
 
@@ -1032,9 +1036,8 @@ box-sizing: border-box;
 }
 .arc_card.active {
   border-radius: var(--sm-rd);
-  width: 80%;
+  padding:48px;
   gap: 24px;
-  padding: 24px 24px 50px 24px;
 }
 .arc_card.active > .sep_line {
   width: 24px;

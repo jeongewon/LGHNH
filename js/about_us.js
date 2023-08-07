@@ -118,7 +118,7 @@ smallNumcontainer.each(function () {
   let smallData = smallNum.attr('data-num');
   console.log(smallData);
   $({ num: 0 }).animate({ num: smallData }, {
-    duration: 1500,
+    duration: 500,
     progress: function () {
       smallNum.text(Math.ceil(this.num));
     }
@@ -133,6 +133,13 @@ let summaryCard = $('.sec3 .arc_card'),
 summayMoreBtn.click(function () {
   $(this).toggleClass('close');
   $(this).parent('.arc_card').toggleClass('active');
+})
+$(window).resize(function () {
+  if ($(this).width() < 480) {
+    let target = $('.summary .arc_card');
+    target.addClass('active');
+    target.find('.more_btn').hide();
+  }
 })
 
 /* history */
@@ -179,15 +186,12 @@ periodBtn.click(function () {
   periodBtn.removeClass('active');
   $(this).addClass('active');
   yearBtnList.attr('data-period', period)
-  if ($(window).width() < 768) {
-    $('.slider').reInit();
-  }
   if(period < 2010){
     under2010(period);
     container.find('li').css({transform: 'translateY(150%)'});
     container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
   } else{
-    if($(window).width > 480){
+    if($(window).width() > 480){
       let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>';
       container.html(clickcircle);
       container.find('li').css({transform: 'translateY(150%)'});
@@ -224,7 +228,7 @@ $(document).on('click', '.versionh .years', function() {
   container.find('li').css({transform: 'translateY(150%)'});
   container.find('li').stop().animate({transform: 'translateY(0%)'},800,'linear');
 
-  if($(window).width > 748){
+  if($(window).width() > 748){
     let historyTop = $('.history .list_card').offset().top;
     $('html,body').stop().animate({scrollTop: historyTop - 400},1000,'linear');
   }
@@ -292,7 +296,7 @@ aYearBtn.click(function(){
   $(this).addClass('active');
   awardList.css({transform: 'translateY(10%)'});
   awardList.animate({transform: 'translateY(0%)'},1000,'linear');
-  if($(window).width > 748){
+  if($(window).width() > 748){
     let awardTop = $('.award .list_card').offset().top;
     $('html,body').stop().animate({scrollTop: awardTop - 200},1000,'linear');
   }
