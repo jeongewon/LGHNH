@@ -201,6 +201,19 @@ function loadWeather(val4){
 });
 }
 
+/* scroll events */
+
+
+$(window).scroll(function(){
+  let sct = $(this).scrollTop();
+  console.log(sct);
+  let oft = $('.fade_up').offset().top - 600;
+  console.log(oft);
+  if(sct > oft){
+    AOS.init();
+  }
+})
+
 
 
 

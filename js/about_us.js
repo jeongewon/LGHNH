@@ -97,33 +97,41 @@ $(window).resize(function(){
 /*counting animation */
 
 let bigNum = $('.big365'),
-    bigdata = bigNum.attr('data-num');
+    bigdata = bigNum.attr('data-num'),
+    smallNumcontainer = $('.small365_contents'),
+    countingSwitch = false;
 
-var step = $.animateNumber.numberStepFactories.append('')
-bigNum.animateNumber(
-  {
-    number: bigdata,
-    numberStep: step
-  },
-  {
-    easing: 'swing',
-    duration: 1500
+$(window).scroll(function(){
+  let sct2 = $(this).scrollTop();
+  let ost = $('.sec2.contents').offset().top - 500;
+  if(sct2 > ost){
+      var step = $.animateNumber.numberStepFactories.append('')
+      bigNum.animateNumber(
+        {
+          number: bigdata,
+          numberStep: step
+        },
+        {
+          easing: 'swing',
+          duration: 1500
+        }
+      );
+    if(!countingSwitch){
+      smallNumcontainer.each(function () {
+        let smallNum = $(this).find('.small_num');
+        let smallData = smallNum.attr('data-num');
+        console.log(smallData);
+        $({ num: 0 }).stop().animate({ num: smallData }, {
+          duration: 500,
+          progress: function () {
+            smallNum.text(Math.ceil(this.num));
+          }
+        })
+        countingSwitch = true;
+      });
+    }   
   }
-);
-
-let smallNumcontainer = $('.small365_contents');
-
-smallNumcontainer.each(function () {
-  let smallNum = $(this).find('.small_num');
-  let smallData = smallNum.attr('data-num');
-  console.log(smallData);
-  $({ num: 0 }).animate({ num: smallData }, {
-    duration: 500,
-    progress: function () {
-      smallNum.text(Math.ceil(this.num));
-    }
-  })
-});
+})
 
 /* summary */
 
@@ -249,6 +257,31 @@ function loadHistory(val){
   container.html(listHTML);
 }
 
+
+$(window).resize(function () {
+  if ($(this).width() < 768) {
+    $('.slider1').slick({
+      arrows: false,
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 3
+    });
+    let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-up"></i><h5>상단의 년도를 클릭해보세요</h5></li>';
+    container.html(clickcircle);
+    $('.slider2').slick({
+      arrows: false,
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 2
+    });
+  }else{
+    $('.slider1').slick('unslick');
+    let clickyear = '<li class="clickyear d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>'
+    container.html(clickyear);
+    $('.slider2').slick('unslick');
+  }
+})
+
 /* ci */
 
 let ciMoreBtn = $('.sec5 .more_btn'),
@@ -317,28 +350,16 @@ function loadAward(val3){
   });
   awardList.html(awardHTML);
 }
-console.log($(window).width());
 
-$(window).resize(function () {
-  if ($(this).width() < 768) {
-    $('.slider1').slick({
-      arrows: false,
-      infinite: true,
-      slidesToShow: 5,
-      slidesToScroll: 3
-    });
-    let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-up"></i><h5>상단의 년도를 클릭해보세요</h5></li>';
-    container.html(clickcircle);
-    $('.slider2').slick({
-      arrows: false,
-      infinite: true,
-      slidesToShow: 5,
-      slidesToScroll: 2
-    });
-  }else{
-    $('.slider1').slick('unslick');
-    let clickyear = '<li class="clickyear d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>'
-    container.html(clickyear);
-    $('.slider2').slick('unslick');
+/* scroll event */
+
+$(window).scroll(function(){
+  let sct = $(this).scrollTop();
+  console.log(sct);
+  let oft = $('.fade_up').offset().top - 600;
+  console.log(oft);
+  if(sct > oft){
+    AOS.init();
   }
 })
+

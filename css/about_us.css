@@ -295,6 +295,12 @@ body{
 }
 .about_main .down_arrow{
   bottom: calc(var(--base-unit)*2);
+  animation: downArrow 1.4s infinite ease-out;
+}
+@keyframes downArrow{
+  0% {transform: translateY(-8px); opacity: 0.7;}
+  50% {transform: translateY(0px); opacity: 1;}
+  100% {transform: translateY(3px); opacity: 0;}
 }
 .main_image{
   width: 100%;
