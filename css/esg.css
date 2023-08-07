@@ -860,27 +860,16 @@ body{height:100%;}
 .esg_m1 .vision_tt{
     text-align: center;
     color: var(--MC-LGWhite);
-    /* width: 425px;
-    height: 425px; */
-    /* 
-    border: 2px solid rgba(255,255,255,.45);
-    border-radius: 50%; */
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-/* .esg_m1 .esg_main_tt{
-  position: absolute;
-  top:50%;
-  transform: translateY(-50%);
-} */
 .esg_main_tt h1{
     display: inline-block;
     font-size: calc(var(--font-size)*8.125);
     font-weight: 600;
     letter-spacing: 7.5px;
-
 }
 
 .esg_main_tt p{
@@ -891,7 +880,7 @@ body{height:100%;}
 }
 
 
-.scrolldown{
+.vision .scrolldown{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -902,7 +891,6 @@ body{height:100%;}
   transform: translateX(-50%);
   transition: opacity 0.4s ease-out;
 }
-
 .vision .scrolldown_btn{
   border: none;
   background:none;
@@ -912,7 +900,6 @@ body{height:100%;}
   /* bottom: calc(var(--base-unit)*1); */
   animation: downArrow 1.4s infinite ease-out;
 } 
-
 @keyframes downArrow{
   0% {transform: translateY(-8px); opacity: 0.7;}
   50% {transform: translateY(0px); opacity: 1;}
@@ -1183,7 +1170,7 @@ body{height:100%;}
 .esg_result .result_sales{
   flex-direction: column;
   margin-top: 104px;
-  width: 210px;
+  width: 215px;
 }
 .esg_result .result_sales h3{
   font-size: calc(var(--font-size)*1.375);
@@ -1193,6 +1180,7 @@ body{height:100%;}
 .esg_result .result_sales span{
   font-size: calc(var(--font-size)*3.125);
   color: var(--BC-Green1);
+  font-weight: 700;
 }
 .result_rating h2{
   font-size: calc(var(--font-size)*1.875);
@@ -1290,6 +1278,7 @@ body{height:100%;}
   box-shadow: 3px 5px 10px 0px rgba(0, 0, 0, 0.10);
   z-index: 10;
   position: relative;
+  transition: 0.15s linear;
 }
 
 .lisk_ad_header button{
@@ -1313,7 +1302,6 @@ margin-right: 83px;
 }
 
 .lisk_ad_header button.active i {
-  
   transform: rotate(45deg);
 }
 

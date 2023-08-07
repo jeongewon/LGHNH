@@ -96,6 +96,18 @@ $(window).resize(function(){
 
 
 /* ESG */
+/* ESG 아코디언 */
+$( ".lisk_accordion" ).accordion({
+  heightStyle: "content"
+});
+
+let liskBtn = $('.liskBox').find('button');
+
+liskBtn.click(function(){
+  $(this).toggleClass('active');
+  $(this).$('.lisk_content').css({display:block});
+})
+
 
 /* ESG 숫자 카운팅 */
 $('.result_sales').find('span').each(function(){
@@ -118,57 +130,4 @@ $('.result_sales').find('span').each(function(){
 })
 
 
-
-
-// let result = $('.result_sales');
-// let resultOST = result.offset().top;
-// let isActive = false;
-
-// $(window).scroll(function(){
-//     if($(this).scrollTop() > resultOST){
-//         if(!isActive){
-//             resultAnimation();
-//             isActive = ture;
-//         }
-//     }
-// });
-
-// function resultAnimation(){
-
-//   result.each(function(){
-//         let $this = $(this);
-//         let title = $this.find('h3 > span');
-//         let targetNum = title.attr('data-num');
-//         // let targetSVG = $this.find('circle');
-
-//         $({num:0}).animate({num:targetNum},{
-//             duration: 1500,
-//             progress: function(){
-//                 let now = Math.ceil(this.num);
-//                 title.text(now);
-//                 // let value = 628 - (628*now/100);
-//                 // targetSVG.css({strokeDashoffset: value});
-//             }
-//         });
-//     })
-// }
-
-
-
-/* ESG 아코디언 */
-let question = $('.liskBox').find('button'),
-answer = $('.lisk_content'),
-ac_header = $('.lisk_ad_header');
-/*
-question을 클릭하면 할일
-모든 question에서 active 제거
-클릭한 그 요소에 active 추가
-*/
-
-question.click(function(){
-    $(this).toggleClass('active');
-    // $(this).next().slideToggle();
-    answer.css({display:'flex'});
-    ac_header.css({background: '#409778'});
-})
 
