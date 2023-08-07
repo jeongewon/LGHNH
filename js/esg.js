@@ -92,3 +92,39 @@ $(window).resize(function(){
     $('.aside_menu_side').css({right: '-286px'})
   }
 })
+
+
+
+/* ESG */
+/* ESG 아코디언 */
+// $( ".lisk_accordion" ).accordion({
+//   heightStyle: "content"
+// });
+
+// let liskBtn = $('.liskBox').find('button');
+
+// liskBtn.click(function(){
+//   $(this).toggleClass('active');
+//   $(this).$('.lisk_content').css({display:block});
+// })
+
+
+/* ESG 숫자 카운팅 */
+$('.result_sales').find('span').each(function(){
+  let $this = $(this),
+  countTo = $this.attr('data-count');
+
+  $({countNum: $this.text()}).animate({
+    countNum: countTo
+  },{
+    duration: 1500,
+    easing:'linear',
+    step: function(){
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function(){
+      $this.text(this.countNum);
+    }
+  }
+  )
+})
