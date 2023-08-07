@@ -689,6 +689,7 @@ body{
     padding-bottom: calc(var(--base-unit)*2);
     border-bottom: 1px solid var(--MC-LGLGray);
   }
+  .contry_btn_list{gap: 20px;}
 } /* tablet end */
 
 
