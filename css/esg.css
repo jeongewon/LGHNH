@@ -847,7 +847,7 @@ svg:hover>* {
   color: var(--MC-DGray);
   position: relative;
 }
-.esg_tab ul li a:active{
+.esg_tab ul li a.active{
   color: var(--BC-Green2);
 }
 .esg_tabline svg{

@@ -1265,7 +1265,40 @@ body {height: 100%;}
 }
 
 /* 이원 aside */
-
+.aside{
+    position: fixed;
+    right: calc(50% - 675px);
+    bottom: 30%;
+    z-index: 1000;
+}
+.topBtn{
+  position: absolute;
+  left: 83%;
+  width: 65px;
+  height: 65px;
+  background: #363636;
+  border: 1px solid #363636;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.10));
+  transition: 0.2s ease-out;
+  /* visibility:hidden;
+  opacity: 0; */
+}
+/* .topBtn.active{
+  visibility: visible;
+  opacity: 1;
+} */
+.topBtn svg{
+  position: absolute;
+  left: 0;
+  top: 13px;
+  transform: translate(30px);
+}
+.topBtn:hover{
+  background: var(--BC-LGRed);
+  border: 1px solid var(--BC-LGRed);
+}
 
 /* 이원 footer */
 .footer {

@@ -162,10 +162,10 @@ $(window).resize(function(){
 
 
 /* ESG */
+
+
+
 /* direction slide */
-
-
-
 $('.direction_slide').slick({
   variableWidth: true,
   dotsClass:"slick-dots",
@@ -201,18 +201,9 @@ $('.direction_slide').slick({
   ]
 });
 
-
-
-
-		
-
-/* ESG 아코디언 */
-
-
-
 /* ESG 숫자 카운팅 */
 let result = $('.result_sales');
-let resultOST = result.offset().top - 500;
+let resultOST = result.offset().top - 600;
 let isActive = false;
 
 $(window).scroll(function(){
@@ -226,17 +217,6 @@ $(window).scroll(function(){
 
 function resultAnimation(){
   result.each(function(){
-    // let $this = $(this);
-    // let resultNum = result.find('span');
-    // let targetNum = resultNum.attr('data-num');
-    
-    // $({num:0}).animate({num:targetNum},{
-    //   duration:1000,
-    //   progress:function(){
-    //     let now = Math.ceil(this.num);
-    //     resultNum.text(now);
-    //   }
-    // });
     $('.result_sales').find('span').each(function(){
       let $this = $(this),
       countTo = $this.attr('data-num');
@@ -255,27 +235,31 @@ function resultAnimation(){
       }
       )
     })
-
-
   });
 }
 
+/* tabmenu */
+let tabContent = document.querySelector('#tab1'),
+tabmenu = document.querySelector('.esg_tab a');
 
-// $('.result_sales').find('span').each(function(){
-//   let $this = $(this),
-//   countTo = $this.attr('data-count');
+tabmenu.forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    for (let menu of tabmenu) {
+      menu.classList.remove('active');
+    }
+    e.currentTarget.classList.add('active');
+    for (let tab of tabContent) {
+      tab.style.display = 'none';
+    }
+    let target = e.currentTarget.getAttribute('href');
+    console.log(target);
+    document.querySelector(target).style.display = 'block';
+  })
+})
 
-//   $({countNum: $this.text()}).animate({
-//     countNum: countTo
-//   },{
-//     duration: 1500,
-//     easing:'linear',
-//     step: function(){
-//       $this.text(Math.floor(this.countNum));
-//     },
-//     complete: function(){
-//       $this.text(this.countNum);
-//     }
-//   }
-//   )
-// })
+
+
+
+
+

@@ -219,6 +219,7 @@ newstt.click(function(){
 })
 
 
+
 /* 박혜인 nav */
 const multipleSwiper = new Swiper(".multiple-slide", {
   slidesPerView: 4,
@@ -300,6 +301,36 @@ $('.new_slides').slick({
   ]
 });
 
+/* 정이원 aside */
+let scrollBtn = $('.topBtn');
+
+//   $(window).scroll(function(){
+//     if(($this).scrollTop()>400){
+//       scrollBtn.addClass('active');
+//     }
+//     else{
+//       scrollBtn.removeClass('active');
+//     }
+//   });
+
+//   scrollBtn.click(function(){
+//     window.scrollTo({top : 0, behavior: 'smooth'}); 
+//   });
 
 
-
+scrollBtn.hide(); // 탑 버튼 숨김 	
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() >= 400) { // 스크롤 내릴 표시
+				scrollBtn.fadeIn();
+			}else {
+				scrollBtn.fadeOut();
+			}
+		});     
+		scrollBtn.click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);  // 탑 이동 스크롤 속도
+				return false;
+		});
+	});
