@@ -162,38 +162,120 @@ $(window).resize(function(){
 
 
 /* ESG */
-/* ESG 아코디언 */
-$( ".lisk_accordion" ).accordion({
-  heightStyle: "content"
+/* direction slide */
+
+
+
+$('.direction_slide').slick({
+  variableWidth: true,
+  dotsClass:"slick-dots",
+  dots: true,
+  infinite: false,
+  speed: 100,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 1272,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });
 
-let liskBtn = $('.liskBox').find('button');
 
-liskBtn.click(function(){
-  $(this).toggleClass('active');
-  $(this).$('.lisk_content').css({display:block});
-})
+
+
+		
+
+/* ESG 아코디언 */
+
 
 
 /* ESG 숫자 카운팅 */
-$('.result_sales').find('span').each(function(){
-  let $this = $(this),
-  countTo = $this.attr('data-count');
+let result = $('.result_sales');
+let resultOST = result.offset().top - 500;
+let isActive = false;
 
-  $({countNum: $this.text()}).animate({
-    countNum: countTo
-  },{
-    duration: 1500,
-    easing:'linear',
-    step: function(){
-      $this.text(Math.floor(this.countNum));
-    },
-    complete: function(){
-      $this.text(this.countNum);
+$(window).scroll(function(){
+  if($(this).scrollTop() > resultOST){
+    if(!isActive){
+      resultAnimation();
+      isActive = true;
     }
   }
-  )
-})
+});
+
+function resultAnimation(){
+  result.each(function(){
+    // let $this = $(this);
+    // let resultNum = result.find('span');
+    // let targetNum = resultNum.attr('data-num');
+    
+    // $({num:0}).animate({num:targetNum},{
+    //   duration:1000,
+    //   progress:function(){
+    //     let now = Math.ceil(this.num);
+    //     resultNum.text(now);
+    //   }
+    // });
+    $('.result_sales').find('span').each(function(){
+      let $this = $(this),
+      countTo = $this.attr('data-num');
+    
+      $({countNum: $this.text()}).animate({
+        countNum: countTo
+      },{
+        duration: 1500,
+        easing:'linear',
+        step: function(){
+          $this.text(Math.floor(this.countNum));
+        },
+        complete: function(){
+          $this.text(this.countNum);
+        }
+      }
+      )
+    })
 
 
+  });
+}
 
+
+// $('.result_sales').find('span').each(function(){
+//   let $this = $(this),
+//   countTo = $this.attr('data-count');
+
+//   $({countNum: $this.text()}).animate({
+//     countNum: countTo
+//   },{
+//     duration: 1500,
+//     easing:'linear',
+//     step: function(){
+//       $this.text(Math.floor(this.countNum));
+//     },
+//     complete: function(){
+//       $this.text(this.countNum);
+//     }
+//   }
+//   )
+// })
