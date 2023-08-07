@@ -468,7 +468,7 @@ body{
   100% {  transform: translateY(0%); opacity: 1;}
 }
 .clickcircle{
-  animation: moveleft 3s 1s ease-in-out  infinite;
+  animation: moveup 3s 1s ease-in-out  infinite;
   opacity: 0.5;
 }
 @keyframes moveleft {
@@ -477,7 +477,7 @@ body{
   100% {transform: translateX(0%);}
 }
 .clickyear{
-  animation: moveup 2s 1s ease-in-out  infinite;
+  animation: moveleft 2s 1s ease-in-out  infinite;
   opacity: 0.5;
 }
 @keyframes moveup {
@@ -749,10 +749,6 @@ body{
 
 
 @media screen and (max-width: 768px){ /*tablet*/
-  .swiper {
-    width: 600px;
-    height: 100px;
-  }
   /* about us */
   .about_us {
     gap: calc(var(--base-unit)*4);
@@ -845,6 +841,7 @@ box-sizing: border-box;
   flex-direction: column;
   position:relative;
   margin-top: calc(var(--base-unit)*3);
+  border-radius: var(--mid-rd);
 }
 .year_list{
   display: flex;
@@ -1003,6 +1000,7 @@ box-sizing: border-box;
 .sec2 .contents {
   padding: calc(var(--base-unit)*3) calc(var(--base-unit)*1);
   gap: calc(var(--base-unit)*2);
+  border-radius: var(--sm-rd);
 }
 .summary.sec3 h3 {
   text-align: center;
@@ -1128,6 +1126,10 @@ box-sizing: border-box;
 }
 .award_list li {
   gap: 10px;
+}
+.list_card{
+  border-radius: var(--sm-rd);
+  padding: calc(var(--base-unit)*2);
 }
 
 
