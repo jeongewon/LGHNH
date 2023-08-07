@@ -249,6 +249,7 @@ body{
 .global_network{
   padding-top: calc(var(--base-unit)*11);
   width: 100%;
+  max-width: 1272px;
   flex-direction: column;
   gap: calc(var(--base-unit) * 4);
 }
