@@ -116,10 +116,11 @@ let smallNumcontainer = $('.small365_contents');
 smallNumcontainer.each(function () {
   let smallNum = $(this).find('.small_num');
   let smallData = smallNum.attr('data-num');
+  console.log(smallData);
   $({ num: 0 }).animate({ num: smallData }, {
     duration: 1500,
     progress: function () {
-      smallNum.text(smallData);
+      smallNum.text(Math.ceil(this.num));
     }
   })
 });
@@ -159,7 +160,7 @@ function loadPeriod(period){
   filterPData = perAllData.filter(pl => pl.period == period);
   $.each(filterPData,(i, item)=>{
     periodHTML += `
-    <li class="years" data-year="${item.year}"></li>
+    <li class="years" data-year="${item.year}"><span>${item.year}</span></li>
     `
   })
   yearBtnList.html(periodHTML);
@@ -172,12 +173,15 @@ function initHistory(data){
   loadHistory(2021);
 };
 
-periodBtn.click(function(){
+periodBtn.click(function () {
   let period = $(this).attr('data-period');
   loadPeriod(period);
   periodBtn.removeClass('active');
   $(this).addClass('active');
   yearBtnList.attr('data-period', period)
+  if ($(window).width() < 768) {
+    $('.slider').reInit();
+  }
   if(period < 2010){
     under2010(period);
     container.find('li').css({transform: 'translateY(150%)'});
@@ -308,6 +312,14 @@ function loadAward(val3){
   awardList.html(awardHTML);
 }
 console.log($(window).width());
-if($(window).width < 768){
-  $(".slider").bxSlider();
-  }
+
+// $(window).resize(function () {
+//   if ($(this).width() < 768) {
+//     $('.slider').slick({
+//       arrows: false,
+//       infinite: true,
+//       slidesToShow: 5,
+//       slidesToScroll: 3
+//     });
+//   }
+// })

@@ -94,6 +94,21 @@ $(window).resize(function(){
 
 /* global network */
 
+let cc = $('.count > div');
+console.log(cc);
+cc.each(function () {
+  let ccc = $(this).find('.counting')
+  let data = ccc.attr('data-num');
+  console.log(data);
+  $({ num: 0 }).animate({ num: data }, {
+    duration: 1500,
+    progress: function () {
+      ccc.text(Math.ceil(this.num));
+    }
+  })
+})
+
+
 
 let $count = $('.count'),
     btn = $('.contry_btn'),
