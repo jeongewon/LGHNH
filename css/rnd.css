@@ -703,6 +703,7 @@ svg:hover > * {
 
 .sec_1_slide {
   gap: 10px;
+  overflow-y: hidden;
 }
 
 .sec_1_slide > div {
@@ -772,6 +773,20 @@ svg:hover > * {
   text-align: end;
   position: absolute;
   right: 0;
+}
+
+.sec4_bg{
+  background: url('/images/rnd/package_bg.png') no-repeat;
+}
+
+.sec_4_cont{
+  text-align: center;
+  font-weight: 400;
+}
+
+.sec_4_cont > div p{
+  padding-top: 24px;
+  line-height: 30px;
 }
 
 .viewmore {

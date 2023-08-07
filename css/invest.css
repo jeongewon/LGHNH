@@ -161,13 +161,13 @@ form:hover #search_bar {
   display: none;
   text-indent: -9999rem;
 }
-svg {
+header svg {
   cursor: pointer;
 }
 .icon_menu svg * {
   transition: 0.3s ease-out;
 }
-svg:hover > * {
+header svg:hover > * {
   fill: var(--BC-LGRed);
 }
 .search_bar form label {
@@ -785,7 +785,7 @@ svg {
   width: 100%;
   height: 435px;
 
-  background: url("/images/invest-bg.png") no-repeat;
+  background: url("/images/invest/invest-bg.png") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
