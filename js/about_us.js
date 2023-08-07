@@ -134,13 +134,6 @@ summayMoreBtn.click(function () {
   $(this).toggleClass('close');
   $(this).parent('.arc_card').toggleClass('active');
 })
-$(window).resize(function () {
-  if ($(this).width() < 480) {
-    let target = $('.summary .arc_card');
-    target.addClass('active');
-    target.find('.more_btn').hide();
-  }
-})
 
 /* history */
 
@@ -192,16 +185,25 @@ periodBtn.click(function () {
     container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
   } else{
     if($(window).width() < 768){
-      let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>';
+      let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-up"></i><h5>상단의 년도를 클릭해보세요</h5></li>';
       container.html(clickcircle);
       container.find('li').css({transform: 'translateY(150%)'});
       container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
     }else{
-      let clickyear = '<li class="clickyear d-flex g-2 aic"><i class="fa-solid fa-arrow-up"></i><h5>상단의 년도를 클릭해보세요</h5></li>'
+      let clickyear = '<li class="clickyear d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>'
       container.html(clickyear);
       container.find('li').css({transform: 'translateY(150%)'});
       container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
     }
+  }
+  if($(window).width() < 768){
+    $('.slider1').slick('unslick');
+    $('.slider1').slick({
+      arrows: false,
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 3
+    });
   }
 });
 
@@ -317,18 +319,26 @@ function loadAward(val3){
 }
 console.log($(window).width());
 
-// $(window).resize(function () {
-//   if ($(this).width() < 768) {
-//     $('.slider').slick({
-//       arrows: false,
-//       infinite: true,
-//       slidesToShow: 5,
-//       slidesToScroll: 3
-//     });
-//   }
-// })
-
-
-// const multipleSwiper = new Swiper('.swiper', {
-//   slidesPerView: 5,
-// });
+$(window).resize(function () {
+  if ($(this).width() < 768) {
+    $('.slider1').slick({
+      arrows: false,
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 3
+    });
+    let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-up"></i><h5>상단의 년도를 클릭해보세요</h5></li>';
+    container.html(clickcircle);
+    $('.slider2').slick({
+      arrows: false,
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 2
+    });
+  }else{
+    $('.slider1').slick('unslick');
+    let clickyear = '<li class="clickyear d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>'
+    container.html(clickyear);
+    $('.slider2').slick('unslick');
+  }
+})
