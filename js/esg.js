@@ -98,38 +98,60 @@ $(window).resize(function(){
 /* ESG */
 
 /* ESG 숫자 카운팅 */
-let result = $('.result_sales');
-let resultOST = result.offset().top;
-let isActive = false;
+$('.result_sales').find('span').each(function(){
+  let $this = $(this),
+  countTo = $this.attr('data-count');
 
-$(window).scroll(function(){
-    if($(this).scrollTop() > resultOST){
-        if(!isActive){
-            resultAnimation();
-            isActive = ture;
-        }
+  $({countNum: $this.text()}).animate({
+    countNum: countTo
+  },{
+    duration: 1500,
+    easing:'linear',
+    step: function(){
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function(){
+      $this.text(this.countNum);
     }
-});
+  }
+  )
+})
 
-function resultAnimation(){
 
-  result.each(function(){
-        let $this = $(this);
-        let title = $this.find('h3 > span');
-        let targetNum = title.attr('data-num');
-        // let targetSVG = $this.find('circle');
 
-        $({num:0}).animate({num:targetNum},{
-            duration: 1500,
-            progress: function(){
-                let now = Math.ceil(this.num);
-                title.text(now);
-                // let value = 628 - (628*now/100);
-                // targetSVG.css({strokeDashoffset: value});
-            }
-        });
-    })
-}
+
+// let result = $('.result_sales');
+// let resultOST = result.offset().top;
+// let isActive = false;
+
+// $(window).scroll(function(){
+//     if($(this).scrollTop() > resultOST){
+//         if(!isActive){
+//             resultAnimation();
+//             isActive = ture;
+//         }
+//     }
+// });
+
+// function resultAnimation(){
+
+//   result.each(function(){
+//         let $this = $(this);
+//         let title = $this.find('h3 > span');
+//         let targetNum = title.attr('data-num');
+//         // let targetSVG = $this.find('circle');
+
+//         $({num:0}).animate({num:targetNum},{
+//             duration: 1500,
+//             progress: function(){
+//                 let now = Math.ceil(this.num);
+//                 title.text(now);
+//                 // let value = 628 - (628*now/100);
+//                 // targetSVG.css({strokeDashoffset: value});
+//             }
+//         });
+//     })
+// }
 
 
 

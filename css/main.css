@@ -1088,7 +1088,7 @@ body{height:100%;}
   }
 }
 
-/*mobile end */
+/* 이원 arrcodion */
 .m5 h2 {
   line-height: calc(var(--font-size)*2);
   margin-bottom: 96px
@@ -1186,11 +1186,10 @@ body{height:100%;}
   color: var(--BC-LGRed);
 }
 
+/* 이원 aside */
 
-/* 정이원 aside */
 
-
-/* 정이원 footer */
+/* 이원 footer */
 .footer {
   margin-top: 216px;
   padding: 48px 0;

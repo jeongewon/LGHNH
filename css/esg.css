@@ -1023,6 +1023,10 @@ body{height:100%;}
   color: #ffdfe9;
 }
 
+.animate__animated.animate__fadeInUp{
+  --animate-duration: 2s;
+}
+
 /* ESG section m3 */
 .esg_m3{
   width: 100vw;
@@ -1030,17 +1034,26 @@ body{height:100%;}
   background: url("../image/esg/wave_bg.jpg") no-repeat center;
   background-size: cover;
   position: relative;
+  padding-bottom: 453px;
 }
-/* .esg_m3:before{
+.esg_m3:before{
   content: '';
   position: absolute;
   left:0;
   right:0;
   top:0;
-  bottom: 0;
-  background: url("../image/esg/wave_bg_top.png") no-repeat;
-  background-size: 100%;
-} */
+  height: 160px;
+  background: url("../image/esg/wave_bg_top.png") no-repeat center top/100%;
+}
+.esg_m3:after{
+  content: '';
+  position: absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height: 160px;
+  background: url("../image/esg/wave_bg_bottom.png") no-repeat center bottom/100%;
+}
 
 /*
 .esg_mission .mission_tt h2{
@@ -1170,6 +1183,7 @@ body{height:100%;}
 .esg_result .result_sales{
   flex-direction: column;
   margin-top: 104px;
+  width: 210px;
 }
 .esg_result .result_sales h3{
   font-size: calc(var(--font-size)*1.375);
