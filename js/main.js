@@ -158,81 +158,6 @@ $(window).resize(function(){
     }
   }
 })
-/* 박혜인 nav */
-const multipleSwiper = new Swiper(".multiple-slide", {
-  slidesPerView: 4,
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    pauseOnMouseEnter: true,
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 2,
-    },
-    480: {
-      slidesPerView: 3,
-    },
-    768: {
-      slidesPerView: 4,
-    },
-  },
-});
-
-const bMenuSwiper = new Swiper(".b-menu-slide", {
-  slidesPerView: 3,
-  slidesToScroll: 1,
-  loop: true,
-  navigation: {
-    nextEl: ".control-next",
-    prevEl: ".control-prev",
-  },
-});
-//주석처리 된 거 풀었음
-
-bMenuSwiper.on("realIndexChange", function (a) {
-  let idx = (a.realIndex % 3) + 1;
-  console.log(idx);
-  $(".slidetext-wrapper").hide();
-  $("#business-" + idx).show();
-});
-
-$(".new_slides").slick({
-  centerMode: true,
-  centerPadding: 60,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  arrows: true,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-
-});
-
-  /*정이원*/
-  $( ".news_box" ).accordion({
-    heightStyle: "content"
-  });
-
-  let newstt = $('.news_tt');
-
-  newstt.click(function(){
-    $(this).toggleClass('active');
-    $(this).next().find('.news_content').slideUp();
-})
 
 
 /* 한수연 mainslide */
@@ -282,6 +207,99 @@ $('.m1_next').click(function(){
   m1Swiper.slideNext();
 }); 
 
+/*정이원*/
+$( ".news_box" ).accordion({
+  heightStyle: "content"
+});
+
+let newstt = $('.news_tt');
+
+newstt.click(function(){
+  $(this).toggleClass('active');
+  $(this).next().find('.news_content').slideUp();
+})
+
+
+/* 박혜인 nav */
+const multipleSwiper = new Swiper(".multiple-slide", {
+  slidesPerView: 4,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+    },
+    480: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+const bMenuSwiper = new Swiper(".b-menu-slide", {
+  slidesPerView: 3,
+  slidesToScroll: 1,
+  loop: true,
+  navigation: {
+    nextEl: ".control-next",
+    prevEl: ".control-prev",
+  },
+});
+
+bMenuSwiper.on("realIndexChange", function (a) {
+  let idx = (a.realIndex % 3) + 1;
+  $(".slidetext-wrapper").hide();
+  $("#business-" + idx).show();
+});
+
+$('.new_slides').slick({
+  // dots: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots:true,
+      }
+    },
+    {
+      breakpoint: 481,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots:true,
+      }
+    }
+  ]
+});
 
 
 

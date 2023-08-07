@@ -1,0 +1,137 @@
+[
+    {
+        "country": "china",
+        "city": "Shanghai",
+        "corporate": {
+            "title": "중국통합법인(상해법인)",
+            "address": "LG HOUSEHOLD & HEALTH CARE TRADING(Shanghai) CO.,LTD.5~7F Yong Feng Plaza No.98 South Wan Ping Road Shanghai, CHINA",
+            "tell": "86-21-5425-0011"
+        }
+    },
+    {
+        "country": "china",
+        "city": "Guangzhou",
+        "corporate": {
+            "title": "광주공장",
+            "address": "AVON Manufacturing (Guangzhou) LTDNo. 11 Industry Road, Conghua Economic Development Zone, Guangdong, CHINA",
+            "tell": "86-20-3799-2003"
+        }
+    },
+    {
+        "country": "china",
+        "city": "Beijing",
+        "corporate": {
+            "title": "북경J/V",
+            "address": "BEIJING LG HOUSEHOLD CHEMICAL CO., LTD. No.6 kechuangdong St.Tongzhou light Mechatronics Industrial Park. Tongzhou District,Beijing,CHINA",
+            "tell": "86-10-8082-2156"
+        }
+    },
+    {
+        "country": "usa",
+        "city": "New York",
+        "corporate": {
+            "title": "LG H&H USA, Inc.",
+            "address": "One Liberty Plaza 165 Broadway, 25th FL, New York, NY 10006",
+            "tell": "212 282 6080"
+        }
+    },
+    {
+        "country": "usa",
+        "city": "New York",
+        "corporate": {
+            "title": "The Avon Company",
+            "address": "165 Broadway, New York, NY 10006",
+            "tell": "212-282-6000"
+        }
+    },
+    {
+        "country": "viet",
+        "city": "Thanh pho Ho Chi Minh",
+        "corporate": {
+            "title": "LG VINA COSMETICS CO., LTD. (Head office)",
+            "address": "LG VINA COSMETICS CO., LTD - HCM City Branch 138 Hai Ba Trung, district 1, Ho Chi Minh City, Viet Nam",
+            "tell": "84-8-3925-1660"
+        }
+    },
+    {
+        "country": "viet",
+        "city": "Thanh pho Ho Chi Minh",
+        "corporate": {
+            "title": "LG VINA COSMETICS CO., LTD.(Factory)",
+            "address": "LG VINA COSMETICS CO., LTD. Nhon Trach Ⅱ Industrial Zone, Hiep Phuoc town, NhTrach district, Dong Nai Province, Viet Nam",
+            "tell": "84-2513-560-575"
+        }
+    },
+    {
+        "country": "japan",
+        "city": "Tokyo",
+        "corporate": {
+            "title": "GINZA STEFANY INC.",
+            "address": "1-5-1, Shimbashi, Minatoku, Tokyo 105-0004, Japan",
+            "tell": "81-3-3289-1133"
+        }
+    },
+    {
+        "country": "japan",
+        "city": "Tokyo",
+        "corporate": {
+            "title": "FMG & MISSION CO.,LTD",
+            "address": "1-5-1, Shimbashi, Minatoku, Tokyo 105-0004, Japan",
+            "tell": "81-3-6280-6149"
+        }
+    },
+    {
+        "country": "japan",
+        "city": "Fukuoka",
+        "corporate": {
+            "title": "EVERLIFE CO.,LTD",
+            "address": "9F, Urbannet Tenjin Bldg 2-5-55, Tenjin Chuo-ku, Fukuoka 810-0001, Japan",
+            "tell": "81-92-712-1311"
+        }
+    },
+    {
+        "country": "cing",
+        "city": "Singapore",
+        "corporate": {
+            "title": "LG H&H Singapore Private Limited",
+            "address": "10 Anson Road, #06-03 International Plaza, Singapore 079903",
+            "tell": "65-6287-3094"
+        }
+    },
+    {
+        "country": "cnd",
+        "city": "Pointe-Claire",
+        "corporate": {
+            "title": "The Avon Company Canada Limited",
+            "address": "5500, route Transcanadienne, Pointe-Claire, QC, H9R 1B6",
+            "tell": "514-694-0810"
+        }
+    },
+    {
+        "country": "tai",
+        "city": "Bangkok",
+        "corporate": {
+            "title": "LG Household & Health Care(Thailand) Ltd.",
+            "address": "Unit5,28th floor,CRC Tower, All Seasons Place, 87/2, Wireless Road, Lumpini, Pathumwan, Bangkok 10330",
+            "tell": "66(02)-019-6060 #121"
+        }
+    },
+    {
+        "country": "mal",
+        "city": "Kuala Lumpur",
+        "corporate": {
+            "title": "LG Household & Health Care Malaysia Sdn. Bhd.",
+            "address": "Lot 468-7B & 7C, 1st Floor, Block D, Rivercity, Jalan Sultan Azlan Shah, 51200, Kuala Lumpur, Malaysia",
+            "tell": "60-03-4044-9266"
+        }
+    },
+    {
+        "country": "brit",
+        "city": "Weybridge",
+        "corporate": {
+            "title": "H&H UK LTD",
+            "address": "LG H&H UK LTD Velocity 2, Brooklands Drive, Weybridge, Surrey KT13 0SL",
+            "tell": " +44 (0)1932331860"
+        }
+    }
+]

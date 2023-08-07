@@ -1,0 +1,48 @@
+[
+
+    {
+        "country": "china",
+        "img": "./image/global_network/china.png",
+        "img@2": "./image/global_network/china@2x.png"
+    },
+    {
+        "country": "usa",
+        "img": "./image/global_network/usa.png",
+        "img@2": "./image/global_network/usa@2x.png"
+    },
+    {
+        "country": "viet",
+        "img": "./image/global_network/viet.png",
+        "img@2": "./image/global_network/viet@2x.png"
+    },
+    {
+        "country": "japan",
+        "img": "./image/global_network/japan.png",
+        "img@2": "./image/global_network/japan@2x.png"
+    },
+    {
+        "country": "cing",
+        "img": "./image/global_network/cing.png",
+        "img@2": "./image/global_network/cing@2x.png"
+    },
+    {
+        "country": "cnd",
+        "img": "./image/global_network/cnd.png",
+        "img@2": "./image/global_network/cnd@2x.png"
+    },
+    {
+        "country": "tai",
+        "img": "./image/global_network/tai.png",
+        "img@2": "./image/global_network/tai@2x.png"
+    },
+    {
+        "country": "mal",
+        "img": "./image/global_network/mal.png",
+        "img@2": "./image/global_network/mal@2x.png"
+    },
+    {
+        "country": "brit",
+        "img": "./image/global_network/brit.png",
+        "img@2": "./image/global_network/brit@2x.png"
+    }
+]
