@@ -1,4 +1,3 @@
-/* 이은서 navigation bar */
 .aside{display: none;}
 header{
   position:fixed;
@@ -333,7 +332,9 @@ svg:hover>* {
   fill: var(--BC-LGRed);
 }
 
-/*tablet*/
+@media screen and (max-width: 768px) {
+
+  /*tablet*/
   /* 이은서 navigation bar */
   header {
     color: var(--MC-DGray);

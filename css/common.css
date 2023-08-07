@@ -490,10 +490,6 @@ button.year_btn span {
   margin: 0 28px 0 34px;
 }
 
-
-
-
-
 .footer_sns a {
   color: var(--MC-DGray);
 }
@@ -508,23 +504,33 @@ button.year_btn span {
 .youtube:hover {
   color: var(--BC-LGRed);
 }
-.footer_recruit {
+.footer_end .footer_recruit {
   width: 144px;
   height: 48px;
-  border: 1px solid var(--MC-DGray);
-  border-radius: 10px;
+  font-size: calc(var(--font-size)*1.375);
+  line-height: calc(var(--base-unit)*1.875);
   text-align: center;
+  color: var(--MC-DGray);
+  border: 1px solid var(--MC-DGray);
+  border-radius: calc(var(--sm-rd)*1.5);
+  margin-top: 23px;
+  transition: all 0.2s ease;
+}
+.footer_recruit:hover {
+  background: var(--BC-LGRed);
+  border: 1px solid var(--BC-LGRed);
+  color: var(--MC-LGWhite);
+  box-shadow:
+  -7px -7px 20px 0px #fff9,
+  -4px -4px 5px 0px #fff9,
+  7px 7px 20px 0px #0002,
+  4px 4px 5px 0px #0001;
 }
 .footer_recruit a {
   font-size: calc(var(--font-size) * 1.375);
   font-weight: 400;
   color: var(--MC-DGray);
   line-height: 48px;
-}
-.footer_recruit:hover {
-  border: none;
-  background: var(--BC-LGRed);
-  border: 1px solid var(--BC-LGRed);
 }
 .footer_recruit:hover a {
   color: var(--MC-LGWhite);
