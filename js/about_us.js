@@ -329,6 +329,6 @@ console.log($(window).width());
 // })
 
 
-const multipleSwiper = new Swiper('.swiper', {
-  slidesPerView: 5,
-});
+// const multipleSwiper = new Swiper('.swiper', {
+//   slidesPerView: 5,
+// });
