@@ -191,7 +191,7 @@ periodBtn.click(function () {
     container.find('li').css({transform: 'translateY(150%)'});
     container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
   } else{
-    if($(window).width() > 480){
+    if($(window).width() < 768){
       let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>';
       container.html(clickcircle);
       container.find('li').css({transform: 'translateY(150%)'});
@@ -327,3 +327,8 @@ console.log($(window).width());
 //     });
 //   }
 // })
+
+
+const multipleSwiper = new Swiper('.swiper', {
+  slidesPerView: 5,
+});
