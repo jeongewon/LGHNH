@@ -663,7 +663,7 @@ svg:hover > * {
 .inno_bg {
   width: 100%;
   height: 300px;
-  background: url("/images/rnd/innovation_bg.png") no-repeat;
+  background: url("/image/rnd/innovation_bg.png") no-repeat;
   margin-top: 96px;
 }
 
@@ -729,7 +729,7 @@ svg:hover > * {
 .sec2_bg {
   width: 100%;
   height: 840px;
-  background: url("/images/rnd/materials_bg_1.png") no-repeat;
+  background: url("/image/rnd/materials_bg_1.png") no-repeat;
   background-size: cover;
 }
 
@@ -760,7 +760,7 @@ svg:hover > * {
 #sec3_0 {
   height: 504px;
   width: 925px;
-  background: url("/images/rnd/example.png") no-repeat;
+  background: url("/image/rnd/example.png") no-repeat;
   background-size: cover;
   border-radius: 20px;
   position: relative;
@@ -776,7 +776,7 @@ svg:hover > * {
 }
 
 .sec4_bg{
-  background: url('/images/rnd/package_bg.png') no-repeat;
+  background: url('/image/rnd/package_bg.png') no-repeat;
 }
 
 .sec_4_cont{
