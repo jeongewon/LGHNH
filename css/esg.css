@@ -1,13 +1,10 @@
 /* 이은서 navigation bar */
-.aside {
-  display: none;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+.aside{display: none;}
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
   background-color: transparent;
   transition: 0.2s ease-out;
   z-index: 10;
@@ -179,15 +176,16 @@ form:hover #search_bar {
 }
 
 /* icon menu */
-.icon_menu{gap:25px;}
-.icon_menu span{display:none;text-indent: -9999rem;}
-header svg{cursor: pointer;}
-.icon_menu svg *{transition: 0.3s ease-out;}
-header svg:hover > *{fill: var(--BC-LGRed);}
-.search_bar form label{display: block;transition: 0.3s 0.2s ease-out;}
-/* lang list */
-.lang{position:relative;text-align: center;}
-.lang_list{
+.icon_menu {
+  gap: 25px;
+}
+
+.icon_menu span {
+  display: none;
+  text-indent: -9999rem;
+}
+
+svg {
   cursor: pointer;
 }
 
@@ -335,75 +333,7 @@ svg:hover>* {
   fill: var(--BC-LGRed);
 }
 
-/* 한수연 mainslide */
-
-/* html{height:100%;}
-body{height:100%;}
-.m1{
-  height:100%;
-  overflow:hidden;
-}
-.m1_slide{ 
-  height:100%; 
-  position:relative;
-  overflow:hidden;
-}
-.swiper-slide video{
-  position:absolute;
-  height:100%;
-}
-.m1_videodesc{
-  position:absolute; bottom:0; text-align:left; 
-  padding:0 0 5.5vh 4.2vw;  
-}
-.m1_videodesc p{
-  font-size:18px;
-  padding:30px 0 50px;
-}
-.m1_videodesc button{
-  border:1.5px solid var(--MC-LGWhite);
-  border-radius:7px; 
-  background-color:transparent;
-  padding:20px 50px;
-}
-.m1_videodesc button a{color:var(--MC-LGWhite);}
-.m1_videodesc button{box-shadow: var(--box-shadow);}
-.m1_videodesc button:hover{
-  background:var(--BC-LGRed);
-  border-color:var(--BC-LGRed);
-}
-.m1_controls{
-  position:absolute;
-  bottom:6.5vh;
-  right:4.2vw;
-  width:16.8vw;
-  height:4.6vh;
-}
-.swiper-button-prev::after,
-.swiper-button-next::after{
-  font-size:var(--font-size); 
-  font-weight:700;
-}
-.swiper-scrollbar.swiper-scrollbar-horizontal {
-  width:75%;
-  height:4px;
-  border-radius:0; 
-  margin:1.7vh 1.87vw;
-}
-.swiper-scrollbar-drag{
-  background:var(--MC-LGWhite);
-  height: 4px;
-  border-radius:0;
-}
-.m1_stock{
-  height:160px;
-  background:#f0f0f0; 
-  filter:drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.15));
-} */
-
-@media screen and (max-width: 768px) {
-
-  /*tablet*/
+/*tablet*/
   /* 이은서 navigation bar */
   header {
     color: var(--MC-DGray);
@@ -828,7 +758,7 @@ body{height:100%;}
   .aside_search_bar label {
     right: 20px;
   }
-}
+} /*mobile end */
 
 /* ESG */
 /* ESG section m1 */
