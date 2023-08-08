@@ -389,3 +389,19 @@ function slickActive(target) {
     slidesToScroll: 3
   });
 }
+
+/* 이원 aside */
+
+let goTop = $('#top');
+  $(window).on('scroll',function(){
+      let tct = $(this).scrollTop();
+      if(tct > 500){
+          goTop.addClass('active');
+      } else {
+          goTop.removeClass('active');
+      }
+  })
+  goTop.click(function(e){
+      e.preventDefault();
+      $('html,body').stop().animate({scrollTop:0},'easeInCubic');
+  });
