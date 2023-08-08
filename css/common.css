@@ -306,6 +306,11 @@ body {
 
 /* link button */
 
+input:focus{
+  outline: none !important;
+  box-shadow: 0 0 3px var(--BC-LGRed);
+}
+
 .more_btn{
   width: 40px;
   height: 40px;
@@ -399,7 +404,7 @@ button.year_btn span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 100%;
   max-width: 1052px;
   padding: 34px 94px;
   border-radius: 60px;
@@ -419,7 +424,7 @@ button.year_btn span {
 .arc_card.active {
   width: 80%;
   max-width: 1052px;
-  border-radius: 40px;
+  border-radius: var(--big-rd);
   flex-direction: column;
   gap: 44px;
   position: relative;
@@ -488,21 +493,51 @@ button.year_btn span {
   font-size: 24px;
   margin: 0 28px 0 34px;
 }
-
-.footer_sns a{
+.footer_sns a {
   color: var(--MC-DGray);
 }
-.footer_sns .facebook{
-  font-size: calc(var(--font-size)*1.875);
+.footer_sns .facebook {
+  font-size: calc(var(--font-size) * 1.875);
   margin-right: 26px;
 }
-.footer_sns .youtube{
-  font-size: calc(var(--font-size)*2.0625);
+.footer_sns .youtube {
+  font-size: calc(var(--font-size) * 2.0625);
 }
-.footer_sns .facebook:hover,.youtube:hover{
+.footer_sns .facebook:hover,
+.youtube:hover {
   color: var(--BC-LGRed);
 }
-
+.footer_end .footer_recruit {
+  width: 144px;
+  height: 48px;
+  font-size: calc(var(--font-size)*1.375);
+  line-height: calc(var(--base-unit)*1.875);
+  text-align: center;
+  color: var(--MC-DGray);
+  border: 1px solid var(--MC-DGray);
+  border-radius: calc(var(--sm-rd)*1.5);
+  margin-top: 23px;
+  transition: all 0.2s ease;
+}
+.footer_recruit:hover {
+  background: var(--BC-LGRed);
+  border: 1px solid var(--BC-LGRed);
+  color: var(--MC-LGWhite);
+  box-shadow:
+  -7px -7px 20px 0px #fff9,
+  -4px -4px 5px 0px #fff9,
+  7px 7px 20px 0px #0002,
+  4px 4px 5px 0px #0001;
+}
+.footer_recruit a {
+  font-size: calc(var(--font-size) * 1.375);
+  font-weight: 400;
+  color: var(--MC-DGray);
+  line-height: 48px;
+}
+.footer_recruit:hover a {
+  color: var(--MC-LGWhite);
+}
 
 /* 혜인추가 */
 .viewmore {
@@ -605,6 +640,7 @@ button.year_btn span {
     width: 100%;
     gap: 37.66px;
     padding: 45px 55px 60px 55px;
+    border-radius: var(--mid-rd);
   }
   .arc_card.active > .more_btn {
     position: absolute;
