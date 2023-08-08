@@ -1267,13 +1267,12 @@ body {height: 100%;}
 /* 이원 aside */
 .topBtn{
     position: fixed;
-    right: calc(60% - 840px);
-    bottom: 20%;
+    left: 88%;
+    bottom: 18%;
     z-index: 1000;
 }
 #top{
   position: absolute;
-  left: 85%;
   width: 65px;
   height: 65px;
   background: #363636;
@@ -1303,15 +1302,15 @@ body {height: 100%;}
 }
 
 @media screen and (max-width: 768px){
-  .topBtn{right: calc(80% - 500px);}
+  .topBtn{left:87%;}
   #top{width: 60px; height: 60px;}
-  #top svg{top: 10px; transform: translate(27px);}
+  #top svg{top: 10px;transform: translate(28px);}
 }
 @media screen and (max-width: 480px){
-  .topBtn{right: calc(80% - 300px);}
+  .topBtn{left:82%;}
   #top{width: 50px; height: 50px;}
-  #top svg{top: 8px; transform: translate(23px);}
-  #top line{scale: 90%;}
+  #top svg{top: 8px;transform: translate(23px);}
+  #top line{scale: 85%;}
 }
 
 /* 이원 footer */

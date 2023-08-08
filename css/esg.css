@@ -764,7 +764,7 @@ header svg:hover>* {
 /* ESG */
 /* ESG section m1 */
 .esg_m1{
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -806,7 +806,7 @@ header svg:hover>* {
     padding-top: 20px;
     font-size: calc(var(--font-size)*1.5);
     line-height: calc(var(--base-unit)*1.375);
-    font-weight: 400;
+    font-weight: 300;
 }
 
 
@@ -900,12 +900,11 @@ header svg:hover>* {
 }
 .propulsion .propulsion_card{
   margin-top: 30px;
-  width: 394px;
+  width: 385px;
   height: 360px;
   border-radius: 0px 40px;
   border: 2px solid var(--BC-Green2);
   box-shadow: var(--box-shadow);
-  transition: 0.2s ease-in-out;
   text-align: center;
 }
 .propulsion .propulsion_card h3{
@@ -929,9 +928,11 @@ header svg:hover>* {
 .propulsion .propulsion_card:nth-child(2){
   margin: 30px 45px 0 45px;
 }
-.propulsion .propulsion_card:hover{
+
+.propulsion .propulsion_card.aos-animate:hover{
   border: 2px solid var(--BC-Green1);
   background-color: var(--BC-Green1);
+  transition: 0.2s;
 }
 .propulsion .propulsion_card:hover h3{
   color: var(--MC-LGWhite);
@@ -942,20 +943,24 @@ header svg:hover>* {
 
 .animate__animated{
   opacity: 0;
-  --animate-duration: 1s;
+  --animate-duration: 0.7s;
 }
 .mission.animate__animated{
-  --animate-duration: 2s;
+  --animate-duration: 1.0s;
 }
+.esg_result.animate__animated{
+  --animate-duration: 1.0s;
+}
+
 
 /* ESG section m3 */
 .esg_m3{
-  width: 100vw;
+  width: 100%;
   height: 100%;
-  background: url("../image/esg/wave_bg.jpg") no-repeat center;
+  background: url("../image/esg/esg_bg2.jpg") no-repeat center fixed;
   background-size: cover;
   position: relative;
-  padding-bottom: 453px;
+  padding-bottom: 360px;
 }
 .esg_m3:before{
   content: '';
@@ -976,31 +981,6 @@ header svg:hover>* {
   background: url("../image/esg/wave_bg_bottom.png") no-repeat center bottom/100%;
 }
 
-/*
-.esg_mission .mission_tt h2{
-  padding-top: 283px;
-  font-family: 'DM Serif Display';
-  font-size: calc(var(--font-size)*11.25);
-  font-weight: 400;
-  letter-spacing: -3.6px;
-  color: var(--BC-Green2);
-  text-shadow: -1px -1px 0 var(--BC-Green2), 1px -1px 0 var(--BC-Green2), -1px 1px 0 var(--BC-Green2), 1px 1px 0 var(--BC-Green2);
-}
-.esg_mission .mission_tt p{
-  left: -8px;
-  top:15px;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  padding-top: 264px;
-  font-family: 'DM Serif Display';
-  font-size: calc(var(--font-size)*11.25);
-  font-weight: 400;
-  letter-spacing: -3.6px;
-  color: var(--MC-LGWhite);
-  text-shadow: -1px -1px 0 var(--BC-Green2), 1px -1px 0 var(--BC-Green2), -1px 1px 0 var(--BC-Green2), 1px 1px 0 var(--BC-Green2);
-} */
-
  .esg_mission {
   margin-top: 166px;
 }
@@ -1019,7 +999,6 @@ header svg:hover>* {
   flex-direction:column;
   margin-top: 83px;
 }
-
 
 .esg_mission .mission h3{
   font-size: calc(var(--font-size)*5);
@@ -1056,16 +1035,56 @@ header svg:hover>* {
   width: 100%;
   overflow: hidden;
   position: relative;
+  padding-bottom: 50px;
 }
 .direction_slide{
-  width: 3782px;
   margin-top: 96px;
   /* transform: translateX(-86px); */
 }
-.direction_wrapper .slick-dots{
+.slick-list .direction_li.slick-active,
+.slick-list .direction_li.slick-cloned{
+  width: 382px;
+}
+
+.slick-dots{
   display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.slick-dots li{
+  width: 22px;
+  height: 4px;
+  background: var(--MC-LGWhite);
+  margin: 0 3px;
+  transition: 0.3s;
+}
+
+.slick-dots li.slick-active{
+  background: var(--BC-Green1);
+  width: 70px;
+  cursor: pointer;
+}
+
+.slick-dots button{
+  display: none;
+}
+
+.slick-arrow{
   position: absolute;
-  transform: translateX(-50%);
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: var(--MC-LGWhite);
+  display: flex;
+  cursor: pointer;
+}
+.slick-arrow.slick-prev{
+  bottom: 383px;
+  left: 775px;
+}
+.slick-arrow.slick-next{
+  bottom: 383px;
+  right: 775px;
 }
 
 .direction_wrapper .direction_li{
@@ -1094,13 +1113,16 @@ header svg:hover>* {
   margin-top: 21px;
 }
 
-.direction_wrapper ul li:hover{
+.direction_wrapper ul li:hover,
+.direction_wrapper ul li.slick-current{
   background: var(--BC-Green1);
 }
-.direction_wrapper ul li:hover h2{
+.direction_wrapper ul li:hover h2,
+.direction_wrapper ul li.slick-current h2{
   color: #ffdfe9;
 }
-.direction_wrapper ul li:hover h3{
+.direction_wrapper ul li:hover h3,
+.direction_wrapper ul li.slick-current h3{
   color: var(--MC-LGWhite);
 }
 
@@ -1192,7 +1214,6 @@ header svg:hover>* {
   background: url("../image/esg/lisk_bg.jpg") no-repeat;
   background-size: auto;
   margin-top: 144px;
-
 }
 
 
@@ -1216,7 +1237,8 @@ header svg:hover>* {
   line-height: calc(var(--base-unit)*1.35);
   font-size: calc(var(--font-size)*1.375);
 }
-.lisk_ad_header{
+
+.liskBox{
   width: 1056px;
   height: 144px;
   background: #f0f0f0;
@@ -1225,105 +1247,208 @@ header svg:hover>* {
   z-index: 10;
   position: relative;
   transition: 0.15s linear;
-}
-
-.lisk_ad_header button{
-width: 45px;
-height: 45px;
-background: var(--BC-Green1);
-border: 1px solid var(--BC-Green1);
-border-radius: 50%;
-color: #fff;
-font-size: calc(var(--font-size)*1.375);
-margin-right: 83px;
-}
-.lisk_ad_header button i{
-  font-weight: 200;
-  transform: rotate(0deg);
-}
-
-.lisk_ad_header button.active{
-  background: var(--MC-DGray2);
-  border: 1px solid var(--MC-DGray2);
-}
-
-.lisk_ad_header button.active i {
-  transform: rotate(45deg);
-}
-
-.lisk_contt h3{
-  font-size: calc(var(--font-size)*1.625);
-  font-weight: 500;
-  color: var(--MC-DGray2);
-
-}
-.lisk_contt h4{
-  font-size: var(--font-size);
-  font-weight: 350;
-  color: var(--MC-DGray2);
-  text-transform: uppercase;
-}
-
-.lisk_content{
-  width: 1056px;
-  height: 0;
-  overflow: hidden;
-  /* height: 288px; */
-  border-radius: 0px 0px 40px 40px;
-  background: #DEF3E4;
-  box-shadow: 3px 5px 12px 0px rgba(0, 0, 0, 0.15);
-  transform: translateY(-72px);
-  position: relative;
-  transition: 0.5s;
-}
-
-.lisk_content p{
-  text-align: center;
-  font-size: calc(var(--font-size)*1.25);
-  line-height: calc(var(--base-unit)*3);
-  color: var(--BC-Green1);
-  width: 175px;
-  height: 72px;
-  background: var(--MC-LGWhite);
-  border-radius: 20px;
-  border: 1px solid var(--BC-Green1);
-  box-shadow: 3px 4px 8px 0px rgba(0, 0, 0, 0.15);
-  font-weight: 500;
-  letter-spacing: -0.4px;
-  transition: all 0.1s ease;
-}
-.lisk_content p:hover{
-  color: var(--MC-LGWhite);
-  font-weight: 500;
-  background: var(--BC-Green1);
-  border: 1px solid var(--BC-Green1);
-  box-shadow:
-  -7px -7px 20px 0px #fff9,
-  -4px -4px 5px 0px #fff9,
-  7px 7px 20px 0px #0002,
-  4px 4px 5px 0px #0001;
-  transform: scale(1.1);
-}
-
-
-
-.lisk_content .lisk_box{
-  width: 841px;
-  height: 72px;
-  margin-top: 144px;
-}
-.liskBox{
-  flex-direction: column;
   margin-bottom: 24px;
 }
+.liskBox:hover{
+  background: var(--BC-Green1);
+}
+.liskBox:hover .lisk_subtt h3,
+.liskBox:hover .lisk_subtt h4{
+  color: var(--MC-LGWhite);
+}
+
+.liskBox:hover .lisk_contt p{
+  color: var(--BC-Green1);
+}
+
+
+.lisk_subtt{
+  flex-direction: column;
+  margin-left: 50px;
+}
+.lisk_subtt h3{
+  font-size: calc(var(--font-size)*1.625);
+  font-weight: 500;
+  color: var(--MC-DGray);
+  margin-right: 70px;
+}
+.lisk_subtt h4{
+  font-size: var(--font-size);
+  font-weight: 350;
+  color: var(--MC-DGray);
+  text-transform: uppercase;
+}
+.lisk_contt{
+  width: 760px;
+}
+.lisk_contt p{
+  width: 175px;
+  height: 65px;
+  font-size: calc(var(--font-size)*1.25);
+  text-align: center;
+  line-height: calc(var(--base-unit)*2.708);
+  letter-spacing: -0.4px;
+  font-weight: 700;
+  color: var(--MC-DGray);
+  border-radius: var(--mid-rd);
+  border: 1px solid var(--MC-LGWhite);
+  background: var(--MC-LGWhite);
+  box-shadow: 3px 4px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
 .downloadLink{
-  margin-top: 72px;
+  margin-top: 48px;
 }
 .reportLink{
   margin-left: 90px;
 }
 
+@media screen and (max-width: 768px){
+  .esg_main_tt h1{
+    font-size: calc(var(--font-size)*6.25);
+    }
+    
+    .esg_main_tt p{
+    font-size: calc(var(--font-size)*1.5);
+    }
+    
+    .esg_tab ul li a{
+    font-size: calc(var(--font-size)*1.625);
+    }
+    
+    .esg_tabline svg{
+      margin-top: 20px;
+      padding: 0 40px;
+    }
+    
+    .esg_declaration{
+     margin-top: 96px;
+    }
+    
+    .esg_goals{
+     margin-top: 96px;
+    }
+    
+    .esg_goals .sub-tt{
+    font-size: calc(var(--font-size)*1.875);
+    }
+    
+    .esg_goals .goals_tt p{
+    width: 596px;
+    height: 96px;
+    font-size: calc(var(--font-size)*1.5);
+    }
+    
+    .esg_propulsion img{
+    margin-top:14px
+    scale: 70%
+    }
+    
+    .propulsion .propulsion_card p:first-of-type{
+    margin-top: 26px;
+    }
+    
+    .propulsion .propulsion_card p{
+    font-size: calc(var(--font-size)*1.25);
+    }
+    
+    .propulsion .propulsion_card h3{
+    font-size: calc(var(--font-size)*1.5);
+    }
+    
+    .esg_mission #mission_tt{
+    margin-top:144px;
+    transform:translateX(5%);
+    scale: 80%;
+    }
+    
+    .esg_mission .mission{
+    margin-top: 96px;
+    }
+    
+    .mission_ct img{
+    scale: 80%;
+    }
+    
+    .mission_ct .mission_num{
+    margin-left: 12.5px;
+    }
+    
+    .esg_mission .mission h3{
+    font-size: calc(var(--font-size)*3.125);
+    }
+    
+    .esg_direction img{
+    margin-top: 96px;
+    scale: 80%;
+    }
+    
+    .direction_slide{
+    margin-top: 72px;
+    }
+    
+    .slick-arrow.slick-prev{
+    left: 175px;
+    }
+    
+    .slick-arrow.slick-next{
+    right: 175px;
+    }
+    
+    .esg_m3{
+    padding-bottom: 168px;
+    }
+    
+    .esg_result{
+    margin-top: 120px;
+    }
+    
+    .esg_result .result_sales{
+    margin-top:72px;
+    }
+    
+    .esg_result .result_sales h3{
+    font-size: calc(var(--font-size)*1.625);
+    }
+    
+    .esg_result .result_sales span{
+    font-size: calc(var(--font-size)*2.8125);
+    }
+    
+    .result_rating h2{
+    margin: 96px 0 48px 0;
+    font-size: calc(var(--font-size)*1.625);
+    }
+    
+    .esg_m5{
+    margin-top: 96px;
+    }
+    
+    .lisk_management .lisk_tt h2{
+    margin-top: 72px;
+    }
+    
+    .lisk_tt .sub-tt{
+    font-size: calc(var(--font-size)*1.875);
+    }
+    
+    .lisk_management .lisk_tt p{
+    display: none;
+    }
+    
+    .liskBox{
+    width: 600px;
+    height: 110px;
+    }
+    
+    .lisk_subtt h3{
+    font-size: calc(var(--font-size)*1.375);
+    }
+}
 
+@media screen and (max-width: 480px){
+
+}
 
 
 

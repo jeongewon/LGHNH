@@ -304,15 +304,6 @@ $('.new_slides').slick({
 /* 정이원 aside */
 let goTop = $('#top');
 
-  /*
-  윈도우의 스크롤이 생기면 할 일
-  그 스크롤양이 300보다 크다면
-  goTop이 보인다.
-  아니라면 goTop이 안보인다.
-  
-  hint: $(window), scroll, scrollTop()
-  */
-  
   $(window).on('scroll',function(){
       let tct = $(this).scrollTop();
       if(tct > 500){
@@ -322,14 +313,6 @@ let goTop = $('#top');
       }
   })
   
-  /*
-  goTop을 클릭하면 할 일
-  링크의 기본 속성 막기
-  윈도우 스크롤양이 0으로 되는 과정이 보이도록
-  속도는 easeInCubic
-  
-  hint: animate, scrollTop -> 0
-   */
   goTop.click(function(e){
       e.preventDefault();
       $('html,body').stop().animate({scrollTop:0},'easeInCubic');

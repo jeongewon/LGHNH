@@ -160,21 +160,20 @@ $(window).resize(function(){
 })
 
 
-
 /* ESG */
-
-
-
 /* direction slide */
 $('.direction_slide').slick({
   variableWidth: true,
+  centerMode: true,
   dotsClass:"slick-dots",
   dots: true,
-  infinite: false,
-  speed: 100,
+  infinite: true,
+  speed: 1000,
   slidesToShow: 5,
   slidesToScroll: 1,
-  arrows: false,
+  prevArrow: $('.slick-prev'),
+  nextArrow: $('.slick-next'),
+  //arrows: true,
   responsive: [
     {
       breakpoint: 1272,
@@ -200,10 +199,11 @@ $('.direction_slide').slick({
     }
   ]
 });
+$('.direction_slide').slick('slickGoTo',2);
 
 /* ESG 숫자 카운팅 */
 let result = $('.result_sales');
-let resultOST = result.offset().top - 600;
+let resultOST = result.offset().top - 1000;
 let isActive = false;
 
 $(window).scroll(function(){
@@ -224,7 +224,7 @@ function resultAnimation(){
       $({countNum: $this.text()}).animate({
         countNum: countTo
       },{
-        duration: 1500,
+        duration: 1200,
         easing:'linear',
         step: function(){
           $this.text(Math.floor(this.countNum));
@@ -239,18 +239,44 @@ function resultAnimation(){
 }
 
 /* animate effect */
-let esgst1 = $('.esg_declaration'),
-esgstTarget = $('.animate__animated');
+AOS.init();
+
+let esgstTarget = attr('data-aos');
 
 $(window).scroll(function(){
     let esgsct = $(this).scrollTop();
     esgstTarget.each(function(){
-        if($(this).offset().top - 600 <= esgsct){
-            let effectName = $(this).attr('data-effect');
+        if($(this).offset().top - 500 <= esgsct){
+            let effectName = $(this).attr('data-aos');
             $(this).addClass(effectName);
         }
     })
 })
+
+/* animate effect(주요성과) */
+let esgreult = $('.esg_result');
+
+$(window).scroll(function(){
+  let esgsct = $(this).scrollTop();
+  esgstTarget.each(function(){
+      if($(this).offset().top - 700 <= esgsct){
+          let effectName = $(this).attr('data-effect');
+          $(this).addClass(effectName);
+      }
+  })
+})
+
+
+
+/* accordion */
+let esgad = $('.liskBox').find('button');
+let adcontent = $('.lisk_content');
+
+esgad.click(function(){
+  $(this).addClass('active');
+})
+
+
 
 /* tabmenu */
 let tabContent = document.querySelector('#tab1'),
@@ -271,4 +297,5 @@ tabmenu.forEach(item => {
     document.querySelector(target).style.display = 'block';
   })
 })
+
 
