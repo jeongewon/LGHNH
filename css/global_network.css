@@ -2,12 +2,6 @@
 body{
   background-color: var(--BG);
 }
-.about_us{
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap:144px;
-}
 .text_red{
   color: var(--BC-LGRed);
 }
@@ -239,7 +233,7 @@ body{
   /* global network */
   .global_network {
     gap: calc(var(--base-unit) * 3);
-    padding: 0 var(--base-unit);
+    padding:  calc(var(--base-unit) * 6) var(--base-unit) 0 var(--base-unit);
   }
 
 .contry_btn_list {
