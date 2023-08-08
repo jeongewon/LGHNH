@@ -203,7 +203,7 @@ $('.direction_slide').slick('slickGoTo',2);
 
 /* ESG 숫자 카운팅 */
 let result = $('.result_sales');
-let resultOST = result.offset().top - 1000;
+let resultOST = result.offset().top - 800;
 let isActive = false;
 
 $(window).scroll(function(){
@@ -224,7 +224,7 @@ function resultAnimation(){
       $({countNum: $this.text()}).animate({
         countNum: countTo
       },{
-        duration: 1200,
+        duration: 1300,
         easing:'linear',
         step: function(){
           $this.text(Math.floor(this.countNum));
