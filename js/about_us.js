@@ -217,7 +217,7 @@ function clickcircle() {
   container.html(clickcircle);
 }
 function clickyear() {
-  let clickyear = '<li class="clickyear d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>'
+  let clickyear = '<li class="clickyear d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>좌측의 년도를 클릭해보세요</h5></li>'
   container.html(clickyear);
 }
 
@@ -279,9 +279,9 @@ function loadHistory(val){
 
 $(window).resize(function () {
   if ($(this).width() <= 768) {
-    slickReactive('.slider1');
+    slickActive('.slider1');
     clickcircle();
-    slickReactive('.slider2');
+    slickActive('.slider2');
   }else{
     $('.slider1').slick('unslick');
     clickyear();
@@ -374,10 +374,6 @@ $(document).ready(function () {
     slickActive('.slider1');
     clickcircle();
     slickActive('.slider2');
-  }else{
-    $('.slider1').slick('unslick');
-    clickyear();
-    $('.slider2').slick('unslick');
   }
 })
 
