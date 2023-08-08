@@ -106,14 +106,14 @@
       <div class="aside_menu_side">
         <div class="aside_top">
           <div class="aside_sec1">
-            <div class="login_family">
+            <ul class="login_family">
               <li class="user">
                 <span>로그인</span>
               </li>
               <li class="family_mall">
                 <span>자사몰</span>
               </li>
-            </div>
+            </ul>
             <button class="close_btn">
               <svg width="15" height="15" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 17L16.5 2" stroke="#6B6B6B" stroke-width="3" stroke-linecap="round"/>
@@ -170,7 +170,6 @@
             <span>고객센터</span>
           </div>
         </div>
-        </ul>
       </div>
     </nav>
   </header>
@@ -188,35 +187,60 @@
         </div>
         <div class="tab_line">
           <ul class="inve_tab d-flex jcc cont-tt web_ct">
-            <li>주가그래프</li>
-            <li>공시정보</li>
+            <li class="active">주가그래프</li>
             <li>외국인지분</li>
           </ul>
-          <svg width="1272" height="14" viewBox="0 0 1437 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="svgline">
+            <svg width="1272" height="14" viewBox="0 0 1437 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 1L705 1L717.5 13L730 1H1437" stroke="#2C2C2C"/>
             </svg>
+          </div>
         </div>
         <div class="inve_table_0">
           <table>
+            <colgroup>
+              <col width="50%"/>
+              <col width="20%"/>
+              <col width="15%"/>
+              <col width="15%"/>
+            </colgroup>
             <tr>
-              <td rowspan="2" class="dhdl">
-                <h1 class="main-tt">종가 </h1>
-                <p>전일대비 </p>
+              <td rowspan="2" class="inveT1">
+                <h1 class="main-tt">LG생활건강</h1>
+                <p>체결날짜: </p>
               </td>
-              <td class="inve0_line dldl">고가 </td>
-              <td class="dhdh">거래량
-              </td>
+              <td class="sub-tt">보통주</td>
+              <td>전일주</td>
+              <td></td>
             </tr>
             <tr>
-              <td class="inve0_line dkdk">저가 </td>
-              <td class="d-flex jcc tntn">
-                <h1>시가총액</h1><br><p>(십억)</p>
-              </td>
+              <td class="sub-tt">우선주</td>
+              <td>전일주</td>
+              <td></td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>종류</td>
+              <td>고가(원)</td>
+              <td>저가(원)</td>
+              <td>총거래량(주)</td>
+              <td>시가총액(십억)</td>
             </tr>
             <tr>
-              <td>주가그래프</td>
+              <td>LG생활건강</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
-            
+            <tr>
+              <td>LG생활건강(우)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
           </table>
         </div>
       </section>
@@ -231,9 +255,11 @@
             <li class="active">연도별</li>
             <li>분기별</li>
           </ul>
-          <svg width="1272" height="14" viewBox="0 0 1437 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="svgline">
+            <svg width="1272" height="14" viewBox="0 0 1437 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 1L705 1L717.5 13L730 1H1437" stroke="#2C2C2C"/>
             </svg>
+          </div>
         </div>
         <div class="inve_table_1" id="in0">
           <table>
@@ -435,6 +461,9 @@
             </tr>
           </table>
         </div>
+        <div class="inve_info1">
+          <p>단위:억원</p>
+        </div>
       </section>
       <section class="inve_3">
         <div class="web_sec">
@@ -447,9 +476,11 @@
             <li class="active">2022~2018</li>
             <li>2017~2013</li>
           </ul>
-          <svg width="1272" height="14" viewBox="0 0 1437 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="svgline">
+            <svg width="1272" height="14" viewBox="0 0 1437 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 1L705 1L717.5 13L730 1H1437" stroke="#2C2C2C"/>
             </svg>
+          </div>
         </div>
         <div class="inve_table_2" id="al0">
           <table>
@@ -657,6 +688,15 @@
             </tr>
           </table>
         </div>
+        <div class="inve_info2 d-flex jcsb">
+          <div>
+            <p>* 연결배당성향은 상기 연결당기순이익(연결재무제표상 지배기업 소유주지분 해당분)에 대한 배당금 총액의 비율임</p>
+            <p>** 주당 액면가액은 5,000원이며, 시가배당률은 사업보고서 공시 기준임</p>
+          </div>
+          <div>
+            <p>단위 : 억원</p>
+          </div>
+          </div>
       </section>
     </div>
     <section class="inve_4 web_sec">
@@ -683,22 +723,27 @@
               <i class="fa-solid fa-download"></i>
             </div>
           </a>
-          <div class="cont2 d-flex">
-            <a href="" class="r_btn">
-              <div class="d-flex aic jcsb">
-                <h3>전자공고</h3>
-                <i class="fa-solid fa-angle-right"></i>
-                <i class="fa-solid fa-bullhorn"></i>
-              </div>
-            </a>
-            <a href="" class="r_btn">
-              <div class="d-flex aic jcsb">
-                <h3>행사일정</h3>
-                <i class="fa-solid fa-angle-right"></i>
-                <i class="fa-regular fa-calendar-check"></i>
-              </div>
-            </a>
-          </div>
+          <a href="" class="r_btn">
+            <div class="d-flex aic jcsb">
+              <h3>전자공고</h3>
+              <i class="fa-solid fa-angle-right"></i>
+              <i class="fa-solid fa-bullhorn"></i>
+            </div>
+          </a>
+          <a href="" class="r_btn">
+            <div class="d-flex aic jcsb">
+              <h3>행사일정</h3>
+              <i class="fa-solid fa-angle-right"></i>
+              <i class="fa-regular fa-calendar-check"></i>
+            </div>
+          </a>
+          <a href="" class="r_btn">
+            <div class="d-flex aic jcsb">
+              <h3>공시정보</h3>
+              <i class="fa-solid fa-angle-right"></i>
+              <i class="fa-regular fa-calendar-check"></i>
+            </div>
+          </a>
         </div>
       </div>  
     </section>
@@ -733,6 +778,7 @@
 </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/jquery.number.min.js"></script>
   <script src="js/invest_info.js"></script>
 </body>
 </html>
