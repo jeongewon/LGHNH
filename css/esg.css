@@ -184,7 +184,7 @@ form:hover #search_bar {
   text-indent: -9999rem;
 }
 
-svg {
+header svg {
   cursor: pointer;
 }
 
@@ -192,7 +192,7 @@ svg {
   transition: 0.3s ease-out;
 }
 
-svg:hover>* {
+header svg:hover>* {
   fill: var(--BC-LGRed);
 }
 
@@ -940,7 +940,11 @@ svg:hover>* {
   color: #ffdfe9;
 }
 
-.animate__animated.animate__fadeInUp{
+.animate__animated{
+  opacity: 0;
+  --animate-duration: 1s;
+}
+.mission.animate__animated{
   --animate-duration: 2s;
 }
 

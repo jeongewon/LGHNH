@@ -238,6 +238,20 @@ function resultAnimation(){
   });
 }
 
+/* animate effect */
+let esgst1 = $('.esg_declaration'),
+esgstTarget = $('.animate__animated');
+
+$(window).scroll(function(){
+    let esgsct = $(this).scrollTop();
+    esgstTarget.each(function(){
+        if($(this).offset().top - 600 <= esgsct){
+            let effectName = $(this).attr('data-effect');
+            $(this).addClass(effectName);
+        }
+    })
+})
+
 /* tabmenu */
 let tabContent = document.querySelector('#tab1'),
 tabmenu = document.querySelector('.esg_tab a');
@@ -257,9 +271,4 @@ tabmenu.forEach(item => {
     document.querySelector(target).style.display = 'block';
   })
 })
-
-
-
-
-
 

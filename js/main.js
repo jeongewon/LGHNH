@@ -302,35 +302,35 @@ $('.new_slides').slick({
 });
 
 /* 정이원 aside */
-let scrollBtn = $('.topBtn');
+let goTop = $('#top');
 
-//   $(window).scroll(function(){
-//     if(($this).scrollTop()>400){
-//       scrollBtn.addClass('active');
-//     }
-//     else{
-//       scrollBtn.removeClass('active');
-//     }
-//   });
-
-//   scrollBtn.click(function(){
-//     window.scrollTo({top : 0, behavior: 'smooth'}); 
-//   });
-
-
-scrollBtn.hide(); // 탑 버튼 숨김 	
-	$(function () {
-		$(window).scroll(function () {
-			if ($(this).scrollTop() >= 400) { // 스크롤 내릴 표시
-				scrollBtn.fadeIn();
-			}else {
-				scrollBtn.fadeOut();
-			}
-		});     
-		scrollBtn.click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 800);  // 탑 이동 스크롤 속도
-				return false;
-		});
-	});
+  /*
+  윈도우의 스크롤이 생기면 할 일
+  그 스크롤양이 300보다 크다면
+  goTop이 보인다.
+  아니라면 goTop이 안보인다.
+  
+  hint: $(window), scroll, scrollTop()
+  */
+  
+  $(window).on('scroll',function(){
+      let tct = $(this).scrollTop();
+      if(tct > 500){
+          goTop.addClass('active');
+      } else {
+          goTop.removeClass('active');
+      }
+  })
+  
+  /*
+  goTop을 클릭하면 할 일
+  링크의 기본 속성 막기
+  윈도우 스크롤양이 0으로 되는 과정이 보이도록
+  속도는 easeInCubic
+  
+  hint: animate, scrollTop -> 0
+   */
+  goTop.click(function(e){
+      e.preventDefault();
+      $('html,body').stop().animate({scrollTop:0},'easeInCubic');
+  });
