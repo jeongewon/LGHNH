@@ -63,6 +63,7 @@ body{
   flex-wrap: wrap;
 }
 .contry_btn{
+  cursor: pointer;
   width: auto;
   border-radius: 17.5px;
   border: 1px solid var(--MC-DGray);
@@ -154,6 +155,7 @@ body{
   width: 100%;
 }
 .corporate_list li{
+  cursor: pointer;
   white-space: wrap;
   display: flex;
   flex-direction: column;
