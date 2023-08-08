@@ -95,7 +95,6 @@ $(window).resize(function(){
 /* global network */
 
 let cc = $('.count > div');
-console.log(cc);
 cc.each(function () {
   let ccc = $(this).find('.counting')
   let data = ccc.attr('data-num');
@@ -108,8 +107,6 @@ cc.each(function () {
   })
 })
 
-
-
 let $count = $('.count'),
     btn = $('.contry_btn'),
     allData = [],
@@ -118,8 +115,8 @@ let $count = $('.count'),
     filteredFlag = [],
     container = $('.corporate_list'),
     flagcont = $('.contry_flag');
-    // counting = $('.counting'),
-    // dataNum = counting.attr('data-num');
+
+let ratio = window.devicePixelRatio;
 
 $.getJSON("./data/corporate.json", initCountry);
 $.getJSON("./data/flag.json", initFlag);
@@ -133,25 +130,29 @@ function initFlag(data){
   loadFlag('usa');
 }
 
-
 btn.click(function(){
   btn.removeClass('active');
   $(this).addClass('active');
   let val = $(this).attr('data-contry');
-  console.log(val);
   loadCountry(val);
   loadFlag(val);
-  container.find('li').css({transform: 'translateY(30%)'});
-  container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
-  flagcont.css({transform: 'translateY(10%)'});
-  flagcont.animate({transform: 'translateY(0%)'},800,'linear');
+  targetfade(container.find('li'), 30);
+  targetfade(flagcont, 10);
 })
+
+function targetfade(target, move) {
+  target.css({transform: `translateY(${move}%)`});
+  target.animate({transform: 'translateY(0%)'},800,'linear');
+}
 
 function loadFlag(val2){
   filteredFlag = allFlag.filter(fl => fl.country == val2);
-  console.log(filteredFlag);
-  $.each(filteredFlag,(i,item)=>{
-    flagcont.attr('src',`${item.img}`)
+  $.each(filteredFlag, (i, item) => {
+    if(ratio>=2){
+      flagcont.attr('src',`${item.img2}`)
+    }else{
+      flagcont.attr('src',`${item.img}`)
+    }
   })
 }
 
@@ -159,9 +160,8 @@ function loadCountry(val3){
   let corporateHTML = '';
   filteredData = allData.filter(cl => cl.country == val3);
   let first = filteredData[0];
-  loadWeather(first.city);
-  wcontainer.css({transform: 'translateY(10%)'});
-  wcontainer.animate({transform: 'translateY(0%)'},800,'linear');
+  loadWeather1(first.city);
+  targetfade(wcontainer, 10);
   $.each(filteredData,(i, item)=>{
     corporateHTML += `
     <li data-contry="${item.country}" data-city="${item.city}" class="city">
@@ -182,33 +182,36 @@ let wcontainer = $('.weather_icon');
 
 $(document).on('click', '.city', function() {
   let city = $(this).attr('data-city');
-  wcontainer.css({transform: 'translateY(10%)'});
-  wcontainer.animate({transform: 'translateY(0%)'},800,'linear');
-  loadWeather(city);
+  targetfade(wcontainer, 10);
+  loadWeather2(city);
 })
 
-loadWeather('New York');
+loadWeather1('New York');
 
-function loadWeather(val4){
+function loadWeather2(val4){
   $.getJSON(`https://api.openweathermap.org/data/2.5/weather?q=${val4}&appid=eaa34fc695456c14f8e7f8b0000a79c9`, function(data){
-  console.log(data);
-
-  //<img src="https://openweathermap.org/img/wn/04d@2x.png" alt="">
   let icon = data.weather[0].icon;
-  let alt = data.weather[0].main;
-  wcontainer.html(`<img src="https://openweathermap.org/img/wn/${icon}.png" alt="${alt}">`);
+    let alt = data.weather[0].main;
+    
+  wcontainer.html(`<img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${alt}">`);
   $('.weather_api p').text(alt);
+});
+}
+
+function loadWeather1(val4){
+  $.getJSON(`https://api.openweathermap.org/data/2.5/weather?q=${val4}&appid=eaa34fc695456c14f8e7f8b0000a79c9`, function(data){
+  let icon = data.weather[0].icon;
+    let alt = data.weather[0].main;
+    
+  wcontainer.html(`<img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${alt}">`);
 });
 }
 
 /* scroll events */
 
-
 $(window).scroll(function(){
   let sct = $(this).scrollTop();
-  console.log(sct);
   let oft = $('.fade_up').offset().top - 600;
-  console.log(oft);
   if(sct > oft){
     AOS.init();
   }

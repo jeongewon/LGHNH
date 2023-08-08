@@ -120,7 +120,6 @@ $(window).scroll(function(){
       smallNumcontainer.each(function () {
         let smallNum = $(this).find('.small_num');
         let smallData = smallNum.attr('data-num');
-        console.log(smallData);
         $({ num: 0 }).stop().animate({ num: smallData }, {
           duration: 500,
           progress: function () {
@@ -137,6 +136,15 @@ $(window).scroll(function(){
 
 let summaryCard = $('.sec3 .arc_card'),
   summayMoreBtn = summaryCard.find('.more_btn');
+
+
+$(window).resize(function () {
+  if ($(this).width() < 480) {
+    $('.sec3 .arc_card').addClass('active');
+  } else {
+    $('.sec3 .arc_card').removeClass('active');
+  }
+})
     
 summayMoreBtn.click(function () {
   $(this).toggleClass('close');
@@ -189,31 +197,44 @@ periodBtn.click(function () {
   yearBtnList.attr('data-period', period)
   if(period < 2010){
     under2010(period);
-    container.find('li').css({transform: 'translateY(150%)'});
-    container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
+    containerfade();
   } else{
-    if($(window).width() <= 768){
-      let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-up"></i><h5>상단의 년도를 클릭해보세요</h5></li>';
-      container.html(clickcircle);
-      container.find('li').css({transform: 'translateY(150%)'});
-      container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
-    }else{
-      let clickyear = '<li class="clickyear d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>'
-      container.html(clickyear);
-      container.find('li').css({transform: 'translateY(150%)'});
-      container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
+    if ($(window).width() <= 768) {
+      clickcircle();
+      containerfade();
+    } else {
+      clickyear();
+      containerfade();
     }
   }
-  if($(window).width() <= 768){
-    $('.slider1').slick('unslick');
-    $('.slider1').slick({
+  if ($(window).width() <= 768) {
+    slickReactive('.slider1');
+  }
+});
+
+function clickcircle() {
+  let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-up"></i><h5>상단의 년도를 클릭해보세요</h5></li>';
+  container.html(clickcircle);
+}
+function clickyear() {
+  let clickyear = '<li class="clickyear d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>'
+  container.html(clickyear);
+}
+
+function containerfade() {
+  container.find('li').css({transform: 'translateY(150%)'});
+  container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
+}
+
+function slickReactive(target) {
+  $(target).slick('unslick');
+    $(target).slick({
       arrows: false,
       infinite: true,
       slidesToShow: 5,
       slidesToScroll: 3
     });
-  }
-});
+}
 
 let filteredUnder = [];
 
@@ -235,9 +256,7 @@ $(document).on('click', '.versionh .years', function() {
   loadHistory(val);
   $(this).siblings().removeClass('active');
   $(this).addClass('active');
-  container.find('li').css({transform: 'translateY(150%)'});
-  container.find('li').stop().animate({transform: 'translateY(0%)'},800,'linear');
-
+  containerfade();
   if($(window).width() > 748){
     let historyTop = $('.history .list_card').offset().top;
     $('html,body').stop().animate({scrollTop: historyTop - 400},1000,'linear');
@@ -260,24 +279,12 @@ function loadHistory(val){
 
 $(window).resize(function () {
   if ($(this).width() <= 768) {
-    $('.slider1').slick({
-      arrows: false,
-      infinite: true,
-      slidesToShow: 5,
-      slidesToScroll: 3
-    });
-    let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-up"></i><h5>상단의 년도를 클릭해보세요</h5></li>';
-    container.html(clickcircle);
-    $('.slider2').slick({
-      arrows: false,
-      infinite: true,
-      slidesToShow: 5,
-      slidesToScroll: 2
-    });
+    slickReactive('.slider1');
+    clickcircle();
+    slickReactive('.slider2');
   }else{
     $('.slider1').slick('unslick');
-    let clickyear = '<li class="clickyear d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>'
-    container.html(clickyear);
+    clickyear();
     $('.slider2').slick('unslick');
   }
 })
@@ -291,16 +298,17 @@ let ciMoreBtn = $('.sec5 .more_btn'),
 
 ciMoreBtn.click(function () {
   $(this).toggleClass('close');
-  $(this).parent('.arc_card').toggleClass('hide');
-  if($(this).parent('.arc_card').hasClass('hide')){
-    $(this).parent('.arc_card').find('.card_info').fadeIn();
-    $(this).parent('.arc_card').find('.sep_line').fadeIn();
-    $(this).parent('.arc_card').find('.card_info').css({opacity:0, display: 'block'})
-    $(this).parent('.arc_card').find('.card_info').stop().animate({opacity: 1},2000,'swing')
+  let card = $(this).parent('.arc_card');
+  card.toggleClass('hide');
+  if(card.hasClass('hide')){
+    card.find('.card_info').fadeIn();
+    card.find('.sep_line').fadeIn();
+    card.find('.card_info').css({opacity:0, display: 'block'})
+    card.find('.card_info').stop().animate({opacity: 1},2000,'swing')
   }else{
-    $(this).parent('.arc_card').find('.card_info').fadeOut();
-    $(this).parent('.arc_card').find('.sep_line').fadeOut();
-    $(this).parent('.arc_card').find('.show').stop().animate({opacity: 1},2200,'swing')}
+    card.find('.card_info').fadeOut();
+    card.find('.sep_line').fadeOut();
+    card.stop().animate({opacity: 1},2200,'swing')}
 })
 
 
@@ -315,7 +323,6 @@ let AAData = [],
     aYearBtn = $('.versiona li'),
     awardList = $('.award_list');
 
-
 $.getJSON("./data/award.json", initAward);
 
 function initAward(adata){
@@ -325,7 +332,6 @@ function initAward(adata){
 
 aYearBtn.click(function(){
   let val3 = $(this).attr('data-year');
-  console.log(val3);
   loadAward(val3);
   $(this).siblings().removeClass('active');
   $(this).addClass('active');
@@ -355,56 +361,31 @@ function loadAward(val3){
 
 $(window).scroll(function(){
   let sct = $(this).scrollTop();
-  console.log(sct);
   let oft = $('.fade_up').offset().top - 600;
-  console.log(oft);
   if(sct > oft){
     AOS.init();
   }
 })
 
-/* mobile arc_card open */
-
-$(window).resize(function () {
-  if ($(this).width() < 480) {
-    $('.sec3 .arc_card').addClass('active');
-    $('.sec3 .arc_card').find('.more_btn').hide();
-  } else {
-    $('.sec3 .arc_card').removeClass('active');
-    $('.sec3 .arc_card').find('.more_btn').show();
-  }
-})
-
-if ($(window).width() < 480) {
-  $('.sec3 .arc_card').addClass('active');
-  $('.sec3 .arc_card').find('.more_btn').hide();
-} else {
-  $('.sec3 .arc_card').removeClass('active');
-  $('.sec3 .arc_card').find('.more_btn').show();
-}
-
 /* document load */
 
 $(document).ready(function () {
   if ($(this).width() <= 768) {
-    $('.slider1').slick({
-      arrows: false,
-      infinite: true,
-      slidesToShow: 5,
-      slidesToScroll: 3
-    });
-    let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-up"></i><h5>상단의 년도를 클릭해보세요</h5></li>';
-    container.html(clickcircle);
-    $('.slider2').slick({
-      arrows: false,
-      infinite: true,
-      slidesToShow: 5,
-      slidesToScroll: 2
-    });
+    slickActive('.slider1');
+    clickcircle();
+    slickActive('.slider2');
   }else{
     $('.slider1').slick('unslick');
-    let clickyear = '<li class="clickyear d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>'
-    container.html(clickyear);
+    clickyear();
     $('.slider2').slick('unslick');
   }
 })
+
+function slickActive(target) {
+  $(target).slick({
+    arrows: false,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 3
+  });
+}
