@@ -248,7 +248,7 @@ function under2010(val){
     <h5 class="history_title sm-tt">${item.history.title}</h5>
     <h5 class="history_contents sm-tt">${item.history.contents}</h5>
     </li>`
-  });
+  }); 
   container.html(underHTML);
 }
 

@@ -515,6 +515,7 @@ body{
 .years {
   width: calc(var(--base-unit)*3);
 }
+
 .year_list {
   margin-left: 80px;
 }
@@ -666,9 +667,6 @@ box-sizing: border-box;
 }
 .years:after{
   display: none;
-}
-.years:hover span{
-  color:var(--BC-LGRed);
 }
 .years span {
   font-weight: 400;
