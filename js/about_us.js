@@ -401,3 +401,7 @@ let goTop = $('#top');
       e.preventDefault();
       $('html,body').stop().animate({scrollTop:0},'easeInCubic');
   });
+
+/* retina js */
+  
+retinajs( $('img') );
