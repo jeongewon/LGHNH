@@ -1,5 +1,294 @@
-/* desktop width > 768px */
-/* 이은서 navigation bar */
+/* global network */
+body{
+  background-color: var(--BG);
+}
+.text_red{
+  color: var(--BC-LGRed);
+}
+.main-tt{
+  line-height: 58px;
+  text-align: center;
+}
+.global_network{
+  padding-top: calc(var(--base-unit)*11);
+  width: 100%;
+  max-width: 1272px;
+  flex-direction: column;
+  gap: calc(var(--base-unit) * 4);
+}
+.global_network .title{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  line-height: normal;
+}
+.global_network{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.global_network h1{
+  font-size: 54px;
+  font-weight: 700;
+}
+.count{
+  gap:200px;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+.count div{
+  justify-content: center;
+  align-items: center;
+  gap: var(--base-unit);
+}
+.count div:first-child{
+  position:relative;
+}
+.count div:first-child:after{
+  content:'';
+  display: block;
+  position:absolute;
+  width: 1px;
+  height: calc(var(--base-unit)*2);
+  background-color: var(--MC-LGGray);
+  right: -100px;
+}
+.count div p{
+  line-height: 96px;
+}
+.contry_btn_list{
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contry_btn{
+  width: auto;
+  border-radius: 17.5px;
+  border: 1px solid var(--MC-DGray);
+  background:none;
+  padding: 6.5px 20px 8.5px 20px;
+  transition: 0.5s;
+  white-space: nowrap;
+}
+.contry_btn:hover{
+  color:var(--BC-LGRed);
+  border-color: var(--BC-LGRed);
+}
+.contry_btn.active{
+  background: var(--BC-LGRed);
+  color: var(--MC-LGWhite);
+}
+.contry_corporate_card{
+  width: 100%;
+  max-width: 1272px;
+  flex-direction: column;
+  background-color: var(--MC-LGWhite);
+  padding: calc(var(--base-unit)*2) calc(var(--base-unit)*3) calc(var(--base-unit)*4) calc(var(--base-unit)*3);
+  border-radius: var(--big-rd);
+  box-shadow: var(--box-shadow-light);
+  box-sizing: border-box;
+  gap: var(--base-unit);
+}
+.contry_corporate_card img{
+  width: 100%;
+  height: 100%;
+  max-width: 565px;
+}
+.ccc_top{
+  align-items: center;
+}
+.ccc_bottom{gap:100px;}
+.weather_api{
+  align-items: center;
+}
+@keyframes movedown {
+  0%{top:-5%}
+  50%{top:-4%};
+  100%{top:-4%};
+}
+.weather_api:hover p{
+  opacity: 1;
+}
+.weather_api p{
+  color: var(--MC-LGWhite);
+  background-color: var(--BC-LGARed);
+  width:175px;
+  height: 60px;
+  box-sizing: border-box;
+  border-radius: var(--sm-rd);
+  text-align: center;
+  line-height: 60px;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+.weather_api p::after{
+  content:'';
+  display: block;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-left: 12px solid var(--BC-LGARed);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  right:0;
+  top:50%;
+  transform: translateX(100%) translateY(-50%);
+}
+.weather_icon{
+  display: block;
+  width: 82px;
+  height: 82px;
+}
+.weather_icon img{
+  width: 100%;
+  height: 100%;
+}
+.corporate_list{
+  padding: var(--base-unit);
+  flex-direction: column;
+  gap: var(--base-unit);
+  width: 100%;
+}
+.corporate_list li{
+  white-space: wrap;
+  display: flex;
+  flex-direction: column;
+  gap: var(--base-unit);
+  padding-bottom: calc(var(--base-unit)*2);
+  border-bottom: 1px solid var(--MC-LGLGray);
+}
+.corporate_info p{
+  line-height: normal;
+}
+
+
+@media screen and (max-width: 1272px){ /* desktop */
+  .container{max-width:1272px;  margin: 0 auto;}
+  .contry_corporate_card{
+    padding: calc(var(--base-unit)*2);
+    gap: calc(var(--base-unit)*2);
+    white-space: nowrap;
+  }
+  .ccc_top{
+    align-items: center;
+  }
+  .ccc_bottom{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--base-unit)*2);
+    width: auto;
+  }
+}
+
+
+@media screen and (max-width: 768px){ /*tablet*/
+  /* global network */
+  .global_network .title h1{
+    font-size: calc(var(--font-size)*1.875);
+    font-weight: 700;
+  }
+  .global_network .title p{
+    font-size: 20px;
+    font-weight: 350;
+  }
+  .contry_corporate_card{
+    padding: calc(var(--base-unit)*2);
+    border-radius: var(--mid-rd);
+    /* gap: calc(var(--base-unit)*2); */
+  }
+  .weather_icon{
+    width: calc(var(--base-unit)*2);
+    height: calc(var(--base-unit)*2);
+  }
+.weather_api p{
+  color: var(--MC-LGWhite);
+  background-color: var(--BC-LGARed);
+  width:120px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: var(--sm-rd);
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  opacity: 0;
+  transition: 0.6s ease-out;
+  }
+  .corporate_list li{
+    padding-bottom: calc(var(--base-unit)*2);
+    border-bottom: 1px solid var(--MC-LGLGray);
+  }
+  .contry_btn_list{gap: 20px;}
+} /* tablet end */
+
+
+@media screen and (max-width: 480px){ /* mobile */
+
+  /* global network */
+  .global_network {
+    gap: calc(var(--base-unit) * 3);
+    padding:  calc(var(--base-unit) * 6) var(--base-unit) 0 var(--base-unit);
+  }
+
+.contry_btn_list {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+  .global_network .title p{
+    font-size: 20px;
+  }
+  .count{
+    gap:100px;
+  }
+  .count div:first-child:after {
+    right: -50px;
+  }
+
+.contry_btn_list {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.contry_corporate_card{
+  max-width: 440px;
+  align-items: center;
+  border-radius: var(--sm-rd);
+}
+.ccc_bottom{
+  width: 80%;
+}
+.weather_api p{
+  display: none;
+}
+.ccc_bottom {
+  gap: var(--base-unit);
+}
+.ccc_top {
+  width: 100%;
+}
+.corporate_info p {
+  line-height: normal;
+  font-size: 14px;
+}
+.corporate_list li{
+  padding-bottom: var(--base-unit);
+}
+.contry_btn {
+  font-size: 14px;
+  padding: 6px 15px; 
+}
+
+}/*mobile end */
+
+/* 이은서 header */
+
 .aside{display: none;}
 header{
   position:fixed;
@@ -13,21 +302,11 @@ header{
   box-sizing: border-box;
   color: var(--MC-LGWhite)
 }
-.line{
-  position: absolute;
-  pointer-events: none;
-  top:150px;
-  display: block;
-  opacity: 0;
-  border-top: 1px solid var(--MC-LGWhite);
-  width: 100%;
-  content: '';
-  transition: 0.3s 0.1s ease-out;
-}
 /* logo */
 .logo a{
   display: block;
-  background: url('../image/main/nav/logo_white.png') no-repeat;
+  background-image: url('../image/main/nav/logo_white.png');
+  background-repeat: no-repeat;
   width: 135px;
   height: 25px;
   text-indent: -9999rem;
@@ -182,7 +461,8 @@ svg{cursor: pointer;}
 }
 .header-clone a{color: var(--MC-DGray);}
 /* logo */
-.header-clone .logo a{background: url('../image/main/nav/logo_black.png') no-repeat;}
+.header-clone .logo a{background-image: url('../image/main/nav/logo_black.png');
+  background-repeat: no-repeat;}
 /* main menu */
 .header-clone .main_menu > li > a > span{position: relative;}
 .header-clone .main_menu > li > a > span:after{
@@ -226,193 +506,15 @@ svg{cursor: pointer;}
 }
 .header-clone svg:hover > *{fill: var(--BC-LGRed);}
 
-/* global network */
-
-body{
-  background-color: var(--BG);
-}
-
-.about_us{
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap:144px;
-}
-.text_red{
-  color: var(--BC-LGRed);
-}
-.main-tt{
-  line-height: 58px;
-  text-align: center;
-}
-
-.global_network{
-  padding-top: calc(var(--base-unit)*11);
-  width: 100%;
-  flex-direction: column;
-  gap: calc(var(--base-unit) * 4);
-}
-.global_network .title{
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  line-height: normal;
-}
-.global_network{
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.global_network h1{
-  font-size: 54px;
-  font-weight: 700;
-}
-.count{
-  gap:200px;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-}
-.count div{
-  justify-content: center;
-  align-items: center;
-  gap: var(--base-unit);
-}
-.count div:first-child{
-  position:relative;
-}
-.count div:first-child:after{
-  content:'';
-  display: block;
-  position:absolute;
-  width: 1px;
-  height: calc(var(--base-unit)*2);
-  background-color: var(--MC-LGGray);
-  right: -100px;
-}
-.count div p{
-  line-height: 96px;
-}
-.contry_btn_list{
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.contry_btn{
-  width: auto;
-  border-radius: 17.5px;
-  border: 1px solid var(--MC-DGray);
-  background:none;
-  padding: 6.5px 20px 8.5px 20px;
-  transition: 0.5s;
-  white-space: nowrap;
-}
-.contry_btn:hover{
-  color:var(--BC-LGRed);
-  border-color: var(--BC-LGRed);
-}
-.contry_btn.active{
-  background: var(--BC-LGRed);
-  color: var(--MC-LGWhite);
-}
-.contry_corporate_card{
-  width: 100%;
-  max-width: 1272px;
-  flex-direction: column;
-  background-color: var(--MC-LGWhite);
-  padding: calc(var(--base-unit)*4) calc(var(--base-unit)*3);
-  border-radius: var(--big-rd);
-  box-shadow: var(--box-shadow-light);
-  box-sizing: border-box;
-  gap: calc(var(--base-unit)*3);
-}
-.contry_corporate_card img{
-  width: 100%;
-  max-width: 565px;
-  object-fit: cover;
-}
-.ccc_bottom{gap:100px;}
-.weather_api{
-  align-items: center;
-}
-@keyframes movedown {
-  0%{top:-5%}
-  50%{top:-4%};
-  100%{top:-4%};
-}
-.weather_api:hover p{
-  opacity: 1;
-}
-.weather_api p{
-  color: var(--MC-LGWhite);
-  background-color: var(--BC-LGARed);
-  width:175px;
-  height: 60px;
-  box-sizing: border-box;
-  border-radius: var(--sm-rd);
-  text-align: center;
-  line-height: 60px;
-  font-size: 14px;
-  font-weight: bold;
-  position: relative;
-  opacity: 0;
-  transition: 0.6s ease-out;
-}
-.weather_api p::after{
-  content:'';
-  display: block;
-  position: absolute;
-  width: 0px;
-  height: 0px;
-  border-left: 12px solid var(--BC-LGARed);
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  right:0;
-  top:50%;
-  transform: translateX(100%) translateY(-50%);
-}
-.weather_icon{
-  display: block;
-  width: 82px;
-  height: 82px;
-}
-.weather_icon img{
-  width: 100%;
-  height: 100%;
-}
-.corporate_list{
-  padding: var(--base-unit);
-  flex-direction: column;
-  gap: var(--base-unit);
-  width: 100%;
-}
-.corporate_list li{
-  white-space: wrap;
-  display: flex;
-  flex-direction: column;
-  gap: var(--base-unit);
-  height: 164px;
-  border-bottom: 1px solid var(--MC-LGLGray);
-}
-.corporate_info p{
-  line-height: normal;
-}
-@media screen and (max-width: 1272px){ /* desktop */
-  .container{max-width:1272px;  margin: 0 auto;}
-  .contry_corporate_card{
-    padding: calc(var(--base-unit)*2);
-    gap: calc(var(--base-unit)*2);
-    white-space: nowrap;
+@media screen and (max-width: 1272px){ /*web*/
+  .main_menu > li {
+    width: 80%;
   }
-  .ccc_top{
-    align-items: center;
+  .about_list:before {
+    height: 90%;
   }
-  .ccc_bottom{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: calc(var(--base-unit)*2);
-    width: auto;
+  .header-clone .about_list:before {
+    height: 90%;
   }
 }
 
@@ -632,7 +734,7 @@ body{
     width: 135px;
     height: 25px;
     text-indent: -9999rem;
-    background-image: url(../image/main/nav/logo_black@2x.png);
+    background-image: url(../image/main/nav/logo_black.png);
   }
   header.white .aside_btn svg *{stroke: var(--MC-DGray);}
   header.white .aside_menu_top{
@@ -645,40 +747,6 @@ body{
     width: 100%;
   }
   header.white .menu:after{border-left: 1px solid var(--MC-LGGray);}
-
-  /* global network */
-  .global_network .title h1{
-    font-size: calc(var(--font-size)*1.875);
-    font-weight: 700;
-  }
-  .global_network .title p{
-    font-size: 24px;
-    font-weight: 350;
-  }
-  .contry_corporate_card{
-    padding: calc(var(--base-unit)*2);
-    border-radius: var(--mid-rd);
-    /* gap: calc(var(--base-unit)*2); */
-  }
-  .weather_icon{
-    width: calc(var(--base-unit)*2);
-    height: calc(var(--base-unit)*2);
-  }
-.weather_api p{
-  color: var(--MC-LGWhite);
-  background-color: var(--BC-LGARed);
-  width:175px;
-  height: 40px;
-  box-sizing: border-box;
-  border-radius: var(--sm-rd);
-  text-align: center;
-  line-height: 40px;
-  font-size: 14px;
-  font-weight: bold;
-  position: relative;
-  opacity: 0;
-  transition: 0.6s ease-out;
-}
 } /* tablet end */
 
 @media screen and (max-width: 480px){ /* mobile */
@@ -694,7 +762,8 @@ body{
   /* logo */
   .aside_menu .logo a{
     display: block;
-    background: url('../image/main/nav/logo_white@2x.png') no-repeat;
+    background-image: url('../image/main/nav/logo_white.png');
+    background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 108px;
     height: 20px;
@@ -706,7 +775,8 @@ body{
     width: 108px;
     height: 20px;
     text-indent: -9999rem;
-    background-image: url('../image/main/nav/logo_black@2x.png');
+    background-image: url('../image/main/nav/logo_black.png');
+    background-repeat: no-repeat;
   }
   .aside_menu_side{
     box-sizing: border-box;
@@ -744,56 +814,31 @@ body{
   .aside_search_bar label {
     right: 20px;
   }
+} /*mobile end */
 
-  /* global network */
-  .global_network {
-    gap: calc(var(--base-unit) * 3);
-    padding: 0 var(--base-unit);
+
+@media screen and (min-resolution: 2dppx){
+  .logo a{
+    background-image: url('../image/main/nav/logo_white@2x.png');
+    background-size: 100%;
   }
-
-.contry_btn_list {
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-  .global_network .title p{
-    font-size: 20px;
+  .header-clone .logo a{
+    background-image: url('../image/main/nav/logo_black@2x.png');
+    background-size: 100%;
   }
-  .count{
-    gap:100px;
+  header.white .logo a{background-image: url('../image/main/nav/logo_black@2x.png');
+    background-size: 100%;
   }
-  .count div:first-child:after {
-    right: -50px;
+  .aside_menu .logo a{
+    background-image: url('../image/main/nav/logo_white@2x.png');
+    background-size: 100%;
   }
-
-.contry_btn_list {
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.contry_corporate_card{
-  max-width: 440px;
-  align-items: center;
-  border-radius: var(--sm-rd);
-}
-.ccc_bottom{
-  width: 80%;
-}
-.weather_api p{
-  display: none;
-}
-.corporate_list li {
-  height: 160px;
-} 
-.ccc_bottom {
-  gap: var(--base-unit);
-}
-.ccc_top {
-  width: 100%;
+  header.white .logo a{
+    background-image: url('../image/main/nav/logo_black@2x.png');
+    background-size: 100%;}
 }
 
-
-}/*mobile end */
+/* 이은서 header end */
 
 
 /* 정이원 footer - web */
