@@ -201,9 +201,10 @@ body{
   width: calc(var(--base-unit)*5);
   height: calc(var(--base-unit)*5);
   color: var(--MC-DGray2);
-  cursor: pointer;
   border-left: 1px solid  var(--MC-Gray3);
-  /* content: attr(data-year); */
+}
+.years span{
+  cursor: pointer;
 }
 .years:last-child{
   border:none;
