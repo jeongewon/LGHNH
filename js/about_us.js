@@ -162,7 +162,8 @@ let allData = [],
     yearContainer = $('.year_list_container'),
     periodBtn = $('.year_btn'),
     perAllData = [],
-    filterPData = [];
+    filterPData = [],
+    slickSwitch = false;
 
 $.getJSON("./data/period.json", initPeriod);
 
@@ -384,6 +385,7 @@ function slickActive(target) {
     slidesToShow: 5,
     slidesToScroll: 3
   });
+  slickSwitch = true;
 }
 
 /* 이원 aside */
