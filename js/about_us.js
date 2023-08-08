@@ -251,11 +251,11 @@ function under2010(val){
   container.html(underHTML);
 }
 
-$(document).on('click', '.versionh .years', function() {
-  let val = $(this).attr('data-year');
+$(document).on('click', '.versionh .years span', function() {
+  let val = $(this).parent('.years').attr('data-year');
   loadHistory(val);
-  $(this).siblings().removeClass('active');
-  $(this).addClass('active');
+  $(this).parent('.years').siblings().removeClass('active');
+  $(this).parent('.years').addClass('active');
   containerfade();
   if($(window).width() > 748){
     let historyTop = $('.history .list_card').offset().top;
@@ -330,11 +330,11 @@ function initAward(adata){
   loadAward(2020);
 };
 
-aYearBtn.click(function(){
-  let val3 = $(this).attr('data-year');
+aYearBtn.find('span').click(function(){
+  let val3 = $(this).parent('.years').attr('data-year');
   loadAward(val3);
-  $(this).siblings().removeClass('active');
-  $(this).addClass('active');
+  $(this).parent('.years').siblings().removeClass('active');
+  $(this).parent('.years').addClass('active');
   awardList.css({transform: 'translateY(10%)'});
   awardList.animate({transform: 'translateY(0%)'},1000,'linear');
   if($(window).width() > 748){

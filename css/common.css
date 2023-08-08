@@ -424,7 +424,7 @@ button.year_btn span {
 .arc_card.active {
   width: 80%;
   max-width: 1052px;
-  border-radius: 40px;
+  border-radius: var(--big-rd);
   flex-direction: column;
   gap: 44px;
   position: relative;
@@ -640,6 +640,7 @@ button.year_btn span {
     width: 100%;
     gap: 37.66px;
     padding: 45px 55px 60px 55px;
+    border-radius: var(--mid-rd);
   }
   .arc_card.active > .more_btn {
     position: absolute;

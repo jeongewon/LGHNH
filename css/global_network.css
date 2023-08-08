@@ -506,6 +506,18 @@ svg{cursor: pointer;}
 }
 .header-clone svg:hover > *{fill: var(--BC-LGRed);}
 
+@media screen and (max-width: 1272px){ /*web*/
+  .main_menu > li {
+    width: 80%;
+  }
+  .about_list:before {
+    height: 90%;
+  }
+  .header-clone .about_list:before {
+    height: 90%;
+  }
+}
+
 
 @media screen and (max-width: 768px){ /*tablet*/
   /* 이은서 navigation bar */
@@ -808,14 +820,22 @@ svg{cursor: pointer;}
 @media screen and (min-resolution: 2dppx){
   .logo a{
     background-image: url('../image/main/nav/logo_white@2x.png');
+    background-size: 100%;
   }
-  .header-clone .logo a{background-image: url('../image/main/nav/logo_black@2x.png')}
+  .header-clone .logo a{
+    background-image: url('../image/main/nav/logo_black@2x.png');
+    background-size: 100%;
+  }
   header.white .logo a{background-image: url('../image/main/nav/logo_black@2x.png');
+    background-size: 100%;
   }
   .aside_menu .logo a{
     background-image: url('../image/main/nav/logo_white@2x.png');
+    background-size: 100%;
   }
-  header.white .logo a{background-image: url('../image/main/nav/logo_black@2x.png');}
+  header.white .logo a{
+    background-image: url('../image/main/nav/logo_black@2x.png');
+    background-size: 100%;}
 }
 
 /* 이은서 header end */

@@ -474,6 +474,23 @@ body{
   font-size: 150px;
   line-height: 100%;
 }
+.slick-arrow{
+  transform: translateY(70%);
+}
+.slick-prev{
+  left:-20px;
+}
+.slick-next{
+  right:-20px;
+}
+.slick-next:before, .slick-prev:before {
+  font-size: 20px;
+  line-height: 1;
+  opacity: 1;
+  color: var(--MC-LGGray);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 @media screen and (max-width: 1272px){ /*web about us*/
 
@@ -569,7 +586,6 @@ box-sizing: border-box;
 }
 .arc_card {
   padding: 34px 56px;
-  border-radius: 60px;
   min-width: 90%;
   flex-wrap: wrap;
   gap: 24px;
