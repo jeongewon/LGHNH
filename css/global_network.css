@@ -638,7 +638,7 @@ body{
     width: 135px;
     height: 25px;
     text-indent: -9999rem;
-    background-image: url(../image/main/nav/logo_black@2x.png);
+    background-image: url(../image/main/nav/logo_black.png);
   }
   header.white .aside_btn svg *{stroke: var(--MC-DGray);}
   header.white .aside_menu_top{
@@ -708,7 +708,7 @@ body{
   /* logo */
   .aside_menu .logo a{
     display: block;
-    background: url('../image/main/nav/logo_white@2x.png') no-repeat;
+    background: url('../image/main/nav/logo_white.png') no-repeat;
     background-size: 100% 100%;
     width: 108px;
     height: 20px;
@@ -720,7 +720,7 @@ body{
     width: 108px;
     height: 20px;
     text-indent: -9999rem;
-    background-image: url('../image/main/nav/logo_black@2x.png');
+    background-image: url('../image/main/nav/logo_black.png');
   }
   .aside_menu_side{
     box-sizing: border-box;
