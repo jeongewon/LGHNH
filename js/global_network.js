@@ -196,7 +196,7 @@ function loadWeather(val4){
   //<img src="https://openweathermap.org/img/wn/04d@2x.png" alt="">
   let icon = data.weather[0].icon;
   let alt = data.weather[0].main;
-  wcontainer.html(`<img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${alt}">`);
+  wcontainer.html(`<img src="https://openweathermap.org/img/wn/${icon}.png" alt="${alt}">`);
   $('.weather_api p').text(alt);
 });
 }

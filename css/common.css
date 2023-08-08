@@ -404,8 +404,7 @@ button.year_btn span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  max-width: 1052px;
+  width: 90%;
   padding: 34px 94px;
   border-radius: 60px;
   background: #fff;

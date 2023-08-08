@@ -192,7 +192,7 @@ periodBtn.click(function () {
     container.find('li').css({transform: 'translateY(150%)'});
     container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
   } else{
-    if($(window).width() < 768){
+    if($(window).width() <= 768){
       let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-up"></i><h5>상단의 년도를 클릭해보세요</h5></li>';
       container.html(clickcircle);
       container.find('li').css({transform: 'translateY(150%)'});
@@ -204,7 +204,7 @@ periodBtn.click(function () {
       container.find('li').animate({transform: 'translateY(0%)'},800,'linear');
     }
   }
-  if($(window).width() < 768){
+  if($(window).width() <= 768){
     $('.slider1').slick('unslick');
     $('.slider1').slick({
       arrows: false,
@@ -259,7 +259,7 @@ function loadHistory(val){
 
 
 $(window).resize(function () {
-  if ($(this).width() < 768) {
+  if ($(this).width() <= 768) {
     $('.slider1').slick({
       arrows: false,
       infinite: true,
@@ -363,3 +363,48 @@ $(window).scroll(function(){
   }
 })
 
+/* mobile arc_card open */
+
+$(window).resize(function () {
+  if ($(this).width() < 480) {
+    $('.sec3 .arc_card').addClass('active');
+    $('.sec3 .arc_card').find('.more_btn').hide();
+  } else {
+    $('.sec3 .arc_card').removeClass('active');
+    $('.sec3 .arc_card').find('.more_btn').show();
+  }
+})
+
+if ($(window).width() < 480) {
+  $('.sec3 .arc_card').addClass('active');
+  $('.sec3 .arc_card').find('.more_btn').hide();
+} else {
+  $('.sec3 .arc_card').removeClass('active');
+  $('.sec3 .arc_card').find('.more_btn').show();
+}
+
+/* document load */
+
+$(document).ready(function () {
+  if ($(this).width() <= 768) {
+    $('.slider1').slick({
+      arrows: false,
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 3
+    });
+    let clickcircle = '<li class="clickcircle d-flex g-2 aic"><i class="fa-solid fa-arrow-up"></i><h5>상단의 년도를 클릭해보세요</h5></li>';
+    container.html(clickcircle);
+    $('.slider2').slick({
+      arrows: false,
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 2
+    });
+  }else{
+    $('.slider1').slick('unslick');
+    let clickyear = '<li class="clickyear d-flex g-2 aic"><i class="fa-solid fa-arrow-left"></i><h5>왼쪽의 원형 버튼을 클릭해보세요</h5></li>'
+    container.html(clickyear);
+    $('.slider2').slick('unslick');
+  }
+})
