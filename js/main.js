@@ -159,7 +159,6 @@ $(window).resize(function(){
   }
 })
 
-
 /* 한수연 mainslide */
 $(function(){
   let m1VideoContainer = $('.m1_fullbg');  
@@ -218,6 +217,7 @@ newstt.click(function(){
   $(this).toggleClass('active');
   $(this).next().find('.news_content').slideUp();
 })
+
 
 
 /* 박혜인 nav */
@@ -301,6 +301,19 @@ $('.new_slides').slick({
   ]
 });
 
+/* 정이원 aside */
+let goTop = $('#top');
 
-
-
+  $(window).on('scroll',function(){
+      let tct = $(this).scrollTop();
+      if(tct > 500){
+          goTop.addClass('active');
+      } else {
+          goTop.removeClass('active');
+      }
+  })
+  
+  goTop.click(function(e){
+      e.preventDefault();
+      $('html,body').stop().animate({scrollTop:0},'easeInCubic');
+  });
