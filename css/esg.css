@@ -1651,7 +1651,7 @@ header svg:hover>* {
 
 @media screen and (max-width: 480px) {
   .esg_main_tt {
-    width: 375px;
+    width: 300px;
   }
 
   .esg_main_tt h1 {
