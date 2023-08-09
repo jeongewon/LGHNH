@@ -1,4 +1,4 @@
-/* 이은서 nav */
+/* Header */
 let mainMenu = $('.origin .main_menu > li'),
     twodebth = $('.main_menu li ul'),
     formLabel = $('.search_bar label'),
@@ -159,161 +159,71 @@ $(window).resize(function(){
   }
 })
 
-/* 한수연 mainslide */
-$(function(){
-  let m1VideoContainer = $('.m1_fullbg');  
-  let m1VideoRatio = 1920/1080;
+/* Beauty */
+$(function(){  
 
-  $(window).resize(function(){
-    let winWidth = $(window).width();
-    let winHeight = $(window).height();
-    let browserRatio = winWidth/winHeight;
-    if(browserRatio < m1VideoRatio){
-      m1VideoContainer.css({
-        height: '100%', 
-        width: winHeight * m1VideoRatio,
-        top: 0,
-        left: (winWidth - (winHeight * m1VideoRatio))/2
-      });
-    } else{
-      m1VideoContainer.css({
-        width: '100%', 
-        height: winWidth/m1VideoRatio,
-        left: 0,
-        top: (winHeight - winWidth / m1VideoRatio)/2
-      });
+  let intro_h3 = $('.beauty_intro h3'),  //사업분야
+      intro_h2 = $('.beauty_intro h2'),  //글로벌 명품 BEAUTY
+      intro_p = $('.beauty_intro p'),  
+      introDivision = $('.beauty_division');
+
+  //Beauty S3 Swiper Slide
+  const beautySwiper = new Swiper('.beauty_s3_multiple', {
+    slidesPerView: 5,
+    spaceBetween: 50,
+
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      // dragSize: 500
+    },
+    breakpoints: {
+      1900 : {  
+        slidesPerView: 4.6,
+        spaceBetween: 50
+      },
+      1600: {  
+        slidesPerView: 4,
+        spaceBetween: 40
+      },
+      1100: {
+        slidesPerView: 4,
+        spaceBetween: 30
+      },
+      771: {
+        slidesPerView: 3.5,
+        spaceBetween: 25,
+      },
+      10: {
+        slidesPerView: 6,
+        draggable: false
+      }
     }
   });
-
-  $(window).trigger('resize');
-}); 
-
-const m1Swiper = new Swiper('.m1_video_slide', {
-  slidesPerView: 1,
-
-  direction: 'horizontal',
-  loop: true,
-
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});  
-
-$('.m1_prev').click(function(){
-  m1Swiper.slidePrev();
-});
-$('.m1_next').click(function(){
-  m1Swiper.slideNext();
-}); 
-
-/*정이원*/
-$( ".news_box" ).accordion({
-  heightStyle: "content"
 });
 
-let newstt = $('.news_tt');
 
-newstt.click(function(){
-  $(this).toggleClass('active');
-  $(this).next().find('.news_content').slideUp();
+
+
+/*
+$(window).on('scroll', function(){
+  $(window).scrollTop();
 })
+*/
 
-
-
-/* 박혜인 nav */
-const multipleSwiper = new Swiper(".multiple-slide", {
-  slidesPerView: 4,
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    pauseOnMouseEnter: true,
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 2,
-    },
-    480: {
-      slidesPerView: 3,
-    },
-    768: {
-      slidesPerView: 4,
-    },
-  },
-});
-
-const bMenuSwiper = new Swiper(".b-menu-slide", {
-  slidesPerView: 3,
-  slidesToScroll: 1,
-  loop: true,
-  navigation: {
-    nextEl: ".control-next",
-    prevEl: ".control-prev",
-  },
-});
-
-bMenuSwiper.on("realIndexChange", function (a) {
-  let idx = (a.realIndex % 3) + 1;
-  $(".slidetext-wrapper").hide();
-  $("#business-" + idx).show();
-});
-
-$('.new_slides').slick({
-  // dots: true,
-  speed: 300,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-      }
-    },
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        arrows: false,
-        adaptiveHeight: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        dots:true,
-      }
-    },
-    {
-      breakpoint: 481,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        adaptiveHeight: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        dots:true,
-      }
-    }
-  ]
-});
-
-/* 정이원 aside */
-let goTop = $('#top');
-
-  $(window).on('scroll',function(){
-      let tct = $(this).scrollTop();
-      if(tct > 500){
-          goTop.addClass('active');
-      } else {
-          goTop.removeClass('active');
-      }
-  })
+/* line-up 페이드인 애니메이션
+$(window).on('scroll', function(){
+  let windowScrollNum = $(window).scrollTop();
+  let bizCate = $('.beauty_intro h3');
+  let introTitle = $('.beauty_intro h2');
+  let introDesc = $('.beauty_intro p');
+  let division1 = $('.beauty_intro + .beauty_division');
   
-  goTop.click(function(e){
-      e.preventDefault();
-      $('html,body').stop().animate({scrollTop:0},'easeInCubic');
-  });
+  if(windowScrollNum >= 0){
+    bizCate.addClass('beauty_lineup');
+    introTitle.addClass('beauty_lineup');
+    introDesc.addClass('beauty_lineup');
+    division1.addClass('beauty_lineup');
+  }
+});
+*/

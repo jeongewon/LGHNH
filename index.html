@@ -1,8 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
+  <!--meta-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- style load -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <!--favicon-->
-  <link rel ="shortcut icon" href="image/favicon/favicon.ico">
+  <link rel ="shortcut_icon" href="image/favicon/favicon.ico">
   <link rel="apple-touch-icon" sizes="57x57" href="image/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="image/favicon/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="image/favicon/apple-icon-72x72.png">
@@ -20,24 +38,6 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="image/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <!--meta-->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- style load -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-    integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
   <title>LG생활건강</title>
@@ -240,7 +240,7 @@
           <div class="m1_videodesc t-LGWhite"> 
             <h3 class="main-tt">[Beauty] 더 나은, 더 특별한</h3>
             <p>Global Lifebeauty Innovator</p>
-            <button type="button"><a href="">자세히 보기</a></button>
+            <div class="beauty_btn"><a href="#">자세히 보기</a></div>
           </div>
         </div>
         <div class="swiper-slide">  
@@ -248,7 +248,7 @@
           <div class="m1_videodesc t-LGWhite">
             <h3 class="main-tt">[Healthy] 더 나은, 더 특별한</h3>
             <p>Global Lifestyle Creating Company</p>
-            <button type="button"><a href="">자세히 보기</a></button>
+            <div class="beauty_btn"><a href="#">자세히 보기</a></div>
           </div>
         </div>
         <div class="swiper-slide">  
@@ -256,7 +256,7 @@
           <div class="m1_videodesc t-LGWhite">
             <h3>[Refresh] 더 나은, 더 특별한</h3>
             <p>Feel Refresh, Lively Every moments</p>
-            <button type="button"><a href="" class="sub-cont-tt">자세히 보기</a></button>
+            <div class="beauty_btn"><a href="#" class="sub-cont-tt">자세히 보기</a></div>
           </div>
         </div>
       </div>
@@ -283,10 +283,10 @@
             <div class="swiper-slide b-menuli">BEVERAGE</div>
           </div>
           <div class="control-prev">
-            <img src="image/main/left-arrow.png" alt="" />
+            <img src="image/main/left-arrow.png" alt="왼쪽" />
           </div>
           <div class="control-next">
-            <img src="image/main/right-arrow.png" alt="" />
+            <img src="image/main/right-arrow.png" alt="오른쪽" />
           </div>
         </div>
       </div>
@@ -303,31 +303,31 @@
             ></a>
           </div>
         </div>
-        <div class="swiper multiple-slide" id="swiper-slide">
+        <div class="swiper multiple-slide">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="image/main/homecare1.png" alt="" />
+              <img src="image/main/homecare1.png" alt="아우라" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/homecare2.png" alt="" />
+              <img src="image/main/homecare2.png" alt="닥터그루트" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/homecare3.png" alt="" />
+              <img src="image/main/homecare3.png" alt="페리오" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/homecare4.png" alt="" />
+              <img src="image/main/homecare4.png" alt="자연퐁" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/homecare5.png" alt="" />
+              <img src="image/main/homecare5.png" alt="홈스타" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/homecare6.png" alt="" />
+              <img src="image/main/homecare6.png" alt="리치치실" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/homecare7.png" alt="" />
+              <img src="image/main/homecare7.png" alt="비욘드바디워시" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/homecare8.png" alt="" />
+              <img src="image/main/homecare8.png" alt="바이오실크" />
             </div>
           </div>
         </div>
@@ -347,31 +347,31 @@
             ></a>
           </div>
         </div>
-        <div class="swiper multiple-slide" id="swiper-slide">
+        <div class="swiper multiple-slide">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="image/main/beauty1.png" alt="" />
+              <img src="image/main/beauty1.png" alt="수려한" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beauty2.png" alt="" />
+              <img src="image/main/beauty2.png" alt="예화담" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beauty3.png" alt="" />
+              <img src="image/main/beauty3.png" alt="피지오겔" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beauty4.png" alt="" />
+              <img src="image/main/beauty4.png" alt="빌리프" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beauty5.png" alt="" />
+              <img src="image/main/beauty5.png" alt="케어존" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beauty6.png" alt="" />
+              <img src="image/main/beauty6.png" alt="브이디엘" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beauty7.png" alt="" />
+              <img src="image/main/beauty7.png" alt="퓨어" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beauty8.png" alt="" />
+              <img src="image/main/beauty8.png" alt="코드" />
             </div>
           </div>
         </div>
@@ -389,31 +389,31 @@
             ></a>
           </div>
         </div>
-        <div class="swiper multiple-slide" id="swiper-slide">
+        <div class="swiper multiple-slide">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="image/main/beverage1.png" alt="" />
+              <img src="image/main/beverage1.png" alt="코카콜라" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beverage2.png" alt="" />
+              <img src="image/main/beverage2.png" alt="캐나다드라이" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beverage3.png" alt="" />
+              <img src="image/main/beverage3.png" alt="평창수" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beverage4.png" alt="" />
+              <img src="image/main/beverage4.png" alt="환타" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beverage5.png" alt="" />
+              <img src="image/main/beverage5.png" alt="스프라이트" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beverage6.png" alt="" />
+              <img src="image/main/beverage6.png" alt="미닛메이드" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beverage7.png" alt="" />
+              <img src="image/main/beverage7.png" alt="토레타" />
             </div>
             <div class="swiper-slide">
-              <img src="image/main/beverage8.png" alt="" />
+              <img src="image/main/beverage8.png" alt="파워에이드" />
             </div>
           </div>
         </div>
@@ -430,7 +430,7 @@
         <div class="e_des d-flex">
           <div class="e_circle">
             <div class="circle">
-              <img src="image/main/esg_icon1.png" alt="" />
+              <img src="image/main/esg_icon1.png" alt="환경" />
             </div>
               <div class="e_title">
                 <h4 class="sub-tt mob_ft">Enviroment</h4>
@@ -439,7 +439,7 @@
           </div>
           <div class="e_circle">
             <div class="circle">
-              <img src="image/main/esg_icon2.png" alt="" />
+              <img src="image/main/esg_icon2.png" alt="사회" />
             </div>
             <div class="e_title">
               <h4 class="sub-tt mob_ft">Social</h4>
@@ -448,7 +448,7 @@
           </div>
           <div class="e_circle">
             <div class="circle">
-              <img src="image/main/esg_icon3.png" alt="" />
+              <img src="image/main/esg_icon3.png" alt="조직" />
             </div>
             <div class="e_title">
               <h4 class="sub-tt mob_ft">Governance</h4>
@@ -464,10 +464,10 @@
         <div class="new_item main-tt web_sec">
           <h1>New Arrivals</h1>
         </div>   
-        <div class="new-wrapper web_sec">
+        <div class="new-wrapper web_ct">
           <ul class="new_slides">
             <li>
-              <img src="image/main/newitem1.png" alt="" />
+              <img src="image/main/newitem1.png" alt="피지오겔" />
               <div class="new_hover">
                 <div class="new_h_tt">
                   <h1 class="sub-tt">피지오겔</h1>
@@ -476,7 +476,7 @@
               </div>
             </li>
             <li>
-              <img src="image/main/newitem2.png" alt="" />
+              <img src="image/main/newitem2.png" alt="벨먼" />
               <div class="new_hover">
                 <div class="new_h_tt">
                   <h1 class="sub-tt">벨먼</h1>
@@ -485,7 +485,7 @@
               </div>
             </li>
             <li>
-              <img src="image/main/newitem3.png" alt="" />
+              <img src="image/main/newitem3.png" alt="페리오" />
               <div class="new_hover">
                 <div class="new_h_tt">
                   <h1 class="sub-tt">페리오</h1>
@@ -494,7 +494,7 @@
               </div>
             </li>
             <li>
-              <img src="image/main/newitem4.png" alt="" />
+              <img src="image/main/newitem4.png" alt="닥터그루트" />
               <div class="new_hover">
                 <div class="new_h_tt">
                   <h1 class="sub-tt">닥터그루트</h1>
@@ -505,7 +505,7 @@
               </div>
             </li>
             <li>
-              <img src="image/main/newitem5.png" alt="" />
+              <img src="image/main/newitem5.png" alt="벨먼" />
               <div class="new_hover">
                 <div class="new_h_tt">
                   <h1 class="sub-tt">벨먼</h1>
@@ -516,7 +516,7 @@
               </div>
             </li>
             <li>
-              <img src="image/main/newitem6.png" alt="" />
+              <img src="image/main/newitem6.png" alt="베비언스" />
               <div class="new_hover">
                 <div class="new_h_tt">
                   <h1 class="sub-tt">베비언스</h1>
@@ -619,8 +619,15 @@
     </div>
   </section>
 
-  <!-- 정이원 aisde -->
-
+  <!-- 이원 aisde -->
+  <aside class="topBtn">
+    <a href="#top" id="top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="40" viewBox="0 0 14 40" fill="none">
+        <line x1="1.36011" y1="0.866699" x2="1.36011" y2="39.1334" stroke="#F0F0F0" stroke-width="2"/>
+        <path d="M12.7708 15.6909L1.73892 1.90113" stroke="#F0F0F0" stroke-width="2"/>
+        </svg>
+    </a>
+  </aside>
 
   <!-- 정이원 footer-->
   <footer class="footer">
@@ -649,7 +656,7 @@
       </div>
     </div>
   </footer>
-    <!-- script load -->
+  <!-- script load -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>   
