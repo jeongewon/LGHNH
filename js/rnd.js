@@ -115,8 +115,8 @@ $(".slider5").slick({
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2,
+        slidesToScroll: 2,
       },
     },
     {
@@ -157,7 +157,7 @@ section3Tab.click(function () {
   $("#sec3_" + idx).show();
 });
 
-$(".d_contents").slick({
+$(".d_cont_wrapper").slick({
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 4,
@@ -165,8 +165,10 @@ $(".d_contents").slick({
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: false,
+        dots: true,
       },
     },
     {
@@ -184,8 +186,8 @@ $(".d_contents").slick({
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         arrows: false,
         adaptiveHeight: true,
         dots: true,
@@ -195,3 +197,18 @@ $(".d_contents").slick({
     },
   ],
 });
+
+/* 이원 aside */
+let goTop = $('#top');
+  $(window).on('scroll',function(){
+      let tct = $(this).scrollTop();
+      if(tct > 500){
+          goTop.addClass('active');
+      } else {
+          goTop.removeClass('active');
+      }
+  })
+  goTop.click(function(e){
+      e.preventDefault();
+      $('html,body').stop().animate({scrollTop:0},'easeInCubic');
+  });

@@ -341,7 +341,7 @@ svg {
     padding: 0;
     transition: 0.3s ease-out;
   }
-  svg * {
+  header svg * {
     fill: var(--MC-LGGray);
   }
   .aside_menu span {
@@ -691,7 +691,8 @@ h1 {
   color: var(--MC-DGray);
 }
 
-ul li {
+.sec2-list li,
+.sec3-list li {
   font-size: 20px;
 }
 
@@ -708,8 +709,10 @@ ul li {
 
 .inno_bg {
   width: 100%;
-  height: 300px;
-  background: url("/image/rnd/innovation_bg.png") no-repeat;
+  height: 325px;
+  background-image: url("/image/rnd/innovation_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-top: 96px;
 }
 
@@ -757,7 +760,7 @@ ul li {
 
 .slidewrapper {
   width: 100%;
-  height: 352px;
+  height: 360px;
   margin-left: 300px;
   padding-top: 72px;
   overflow: hidden;
@@ -771,11 +774,19 @@ ul li {
 .slider5 .slide {
   border-radius: 20px;
   position: relative;
+  padding: 0;
 }
 
 .slick-slide {
   width: 30px;
 }
+
+.slick-slide img{
+  width:100%;
+  height: 100%;
+}
+
+
 
 .slider5 .slide:hover {
   box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.3);
@@ -977,12 +988,17 @@ ul li {
 
 .d_content {
   width: 250px;
-  height: 180px;
-  border: 1px solid var(--MC-LGGray);
+  height: 200px;
+  border: 1.5px solid var(--MC-LGGray);
   border-radius: 20px;
   padding: 20px;
   box-sizing: border-box;
   position: relative;
+}
+
+.d_content:hover{
+  background-color:var(--BC-LGRed);
+  border:none
 }
 
 .d_content h1 {
@@ -994,9 +1010,16 @@ ul li {
   padding-top: 10px;
 }
 
+.d_content:hover h1, 
+.d_content:hover p{
+  color:#fff;
+  font-weight: 400;
+}
+
 .d_content img {
   position: absolute;
   right: 20px;
+  bottom: 20px;
   width: 60px;
   height: 60px;
   object-fit: cover;
@@ -1008,17 +1031,17 @@ ul li {
   height: 30px;
   background-size: cover;
   background-repeat: no-repeat;
-  top: 60%;
+  top: 50%;
 }
 
 .d_contents .slick-prev {
   background-image: url("/image/main/left-arrow.png");
-  left: -50px;
+  left: -40px;
 }
 
 .d_contents .slick-next {
   background-image: url("/image/main/right-arrow.png");
-  right: -50px;
+  right: -40px;
 }
 
 .d_contents .slick-prev:before,
@@ -1040,11 +1063,13 @@ ul li {
 
   .inno_bg {
     width: 100%;
-    height: 70px;
-    background: url("/image/rnd/innovation_bg.png") no-repeat;
+    height: 100%;
+    background-image: url("/image/rnd/innovation_bg.png");
     background-size: cover;
+    background-repeat: no-repeat;
     margin-top: 72px;
   }
+
   .inno_content {
     width: 100%;
     flex-wrap: wrap;
@@ -1111,6 +1136,175 @@ ul li {
 }
 
 @media screen and (max-width: 480px) {
+  .sec2-list li,
+  .sec3-list li {
+  font-size: 16px;
+  }
+  .subtitle{
+    font-size: 18px;
+  }
+  .rdn_title {
+    text-align: center;
+    width: 100%;
+    font-weight: 40; 
+  }
+  
+  .svgline svg{
+    fill: #fff;
+  }
+
+  .rdn_title > div p {
+    width: 435px;
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+
+  .inno_bg {
+    width: 100%;
+    height: 100%;
+    background-image: url("/image/rnd/innovation_bg@2x.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 72px;
+  }
+
+  .inno_content {
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .inno_content div {
+    justify-content: space-between;
+    width: 330px;
+  }
+
+  .section1{
+    width: 100%;
+    height: 480px;
+  }
+
+  .slidewrapper {
+    margin-left: 20px;
+    padding: 30px 0;
+  }
+
+  .slider5 .slide > p{
+    font-size: 12px;
+  }
+
+  .sec_2_contt{
+    width:100%;
+  }
+
+  .sec2_bg {
+    width: 480px;
+    height: 1100px;
+    background-position: 35%;
+  }
+
+  .sec_3_contt {
+    width: 100%;
+    height: 500px;
+    background-position: 5%;
+  }
+  .sec3_text {
+    width: 80%;
+  }
+
+  .sec2-tab {
+    flex-direction: column;
+  }
+
+  .sec3-tab {
+    flex-direction: column;
+  }
+  .sec3_list {
+    padding: 0;
+  }
+
+  .sec3_text > h2 {
+    padding-top: 0;
+  }
+
+  .section4 {
+    height: 1875px;
+  }
+
+  .sec4_bg {
+    width: 100%;
+    height: 1000px;
+    background-size: cover;
+  }
+
+  .sec_4_cont {
+    flex-wrap: wrap;
+    height: 1100px;
+    justify-content: center;
+  }
+
+  .slick-list {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-resolution: 2dppx){
+  .inno_bg {
+    width: 100%;
+    height: 100%;
+    background-image: url("/image/rnd/innovation_bg@2x.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 72px;
+  }
+}
+
+/* 이원 aside */
+.topBtn{
+  position: fixed;
+  left: 88%;
+  bottom: 18%;
+  z-index: 1000;
+}
+#top{
+position: absolute;
+width: 65px;
+height: 65px;
+background: #363636;
+border: 1px solid #363636;
+border-radius: 50%;
+cursor: pointer;
+box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.30);
+transition: opacity 0.5s;
+visibility:hidden;
+opacity: 0;
+}
+#top.active{
+visibility: visible;
+opacity: 1;
+}
+#top svg{
+position: absolute;
+left: 0;
+top: 13px;
+transform: translate(30px);
+box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.10);
+}
+#top:hover{
+transition: 0.2s ease-out;
+background: var(--BC-LGRed);
+border: 1px solid var(--BC-LGRed);
+}
+@media screen and (max-width: 768px){
+.topBtn{left:87%;}
+#top{width: 60px; height: 60px;}
+#top svg{top: 10px;transform: translate(28px);}
+}
+@media screen and (max-width: 480px){
+.topBtn{left:82%;}
+#top{width: 50px; height: 50px;}
+#top svg{top: 8px;transform: translate(23px);}
+#top line{scale: 85%;}
 }
 
 /* 정이원 footer - web */
