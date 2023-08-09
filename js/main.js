@@ -1,4 +1,4 @@
-/* popup */
+/* 이은서, 정이원 popup */
 
 let popup = document.querySelector(".popup");
 let pCloseBtn = popup.querySelector("#close");
@@ -21,6 +21,8 @@ function cookieCheck(name) {
   }
   if (!visited) {
     popup.setAttribute("open", "");
+  } else {
+    popup.removeAttribute("open");
   }
 }
 cookieCheck("team");

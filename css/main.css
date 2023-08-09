@@ -23,6 +23,9 @@
 .popup .sub-tt{
   padding: 20px 0;
 }
+.popup div{
+  padding: 10px 0;
+}
 .popup div+div{
   padding-top: 24px;
   border-top: 1px dashed var(--MC-LGGray);
