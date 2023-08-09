@@ -643,12 +643,14 @@ background-repeat: no-repeat;}
 @media screen and (min-resolution: 2dppx){
   .logo a{
     background-image: url('../image/main/nav/logo_white@2x.png');
+    background-size: cover;
   }
   .header-clone .logo a{background-image: url('../image/main/nav/logo_black@2x.png')}
   header.white .logo a{background-image: url('../image/main/nav/logo_black@2x.png');
   }
   .aside_menu .logo a{
     background-image: url('../image/main/nav/logo_white@2x.png');
+    background-size: cover;
   }
   header.white .logo a{background-image: url('../image/main/nav/logo_black@2x.png');}
 }
@@ -663,21 +665,21 @@ body {height: 100%;}
 .m1_fullbg {position: absolute;} 
 .swiper-slide video {position: absolute; height: 100%; }
 .m1_videodesc {
-  position: absolute; left: 0; bottom: 0; width: 50vw; 
-  /* padding: 0 0 50px 50px; */
+  position: absolute; left: 0; bottom: 0; 
   padding: 0 calc((100vw - 1272px)/2) 50px calc((100vw - 1272px)/2);
   text-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.15);
 }
 .m1_videodesc h3 {font-size: 40px; font-weight: 700;}
 .m1_videodesc p {font-size: 24px; padding: 30px 0 42px;}
-.m1_videodesc button a {font-size: 16px;}
-.m1_videodesc button {
+.m1_videodesc .beauty_btn a {font-size: 16px;}
+.m1_videodesc .beauty_btn {
   background-color: transparent; border: 2px solid var(--MC-LGWhite);
   border-radius: 7px; padding: var(--base-unit) 65px;
   box-shadow: var(--box-shadow);
   transition: 0.3s ease-out;
+  width: 32%; text-align: center; padding: 10px 25px;
 }
-.m1_videodesc button:hover {  
+.m1_videodesc .beauty_btn:hover {  
   background:var(--BC-LGRed);
   border-color:var(--BC-LGRed);
   cursor: pointer;
@@ -702,14 +704,14 @@ body {height: 100%;}
 
 /* 한수연 mainslide 반응형 */
 @media screen and (max-width: 1600px){
-  .m1_videodesc {width: 100%; padding: 0 0 40px 40px;}
+  .m1_videodesc {padding: 0 0 40px 40px;}
   .m1_videodesc h3 {font-size: 36px; font-weight: 500;}
   .m1_videodesc p {font-size: 20px;  padding: 24px 0 38px; font-weight: 300;}  
   .swiper-scrollbar.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
     width: var(--swiper-scrollbar-size,200px); margin: 10px 5px; height: 4px;
   }
-  .m1_videodesc button {padding: 20px 52px;}  
-  .m1_videodesc button a {font-size: 16px; font-weight: 300;}
+  /* .m1_videodesc .beauty_btn {padding: 20px 52px; width: 32%; text-align: center; padding: 15px 25px;}   */
+  .m1_videodesc .beauty_btn a {font-size: 16px; font-weight: 300;}
   .m1_prev, .m1_next {font-size: 20px;}
   .m1_controls {
     /* bottom: 41px; padding: 0 40px; */
@@ -717,14 +719,14 @@ body {height: 100%;}
   }
 }
 @media screen and (max-width: 1272px){
-  .m1_videodesc {width: 100%; padding: 0 0 40px 40px;}
+  .m1_videodesc {padding: 0 0 40px 40px;}
   .m1_videodesc h3 {font-size: 26px; font-weight: 500;}
   .m1_videodesc p {font-size: 16px;  padding: 12px 0 28px; font-weight: 300;}  
   .swiper-scrollbar.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
     width: var(--swiper-scrollbar-size,170px); margin: 12px 5px; height: 3px;
   }
-  .m1_videodesc button {padding: 14px 38px; border-width: 1.5px;}  
-  .m1_videodesc button a {font-size: 14px; font-weight: 300;}
+  /* .m1_videodesc .beauty_btn {padding: 14px 38px; border-width: 1.5px; width: 32%; text-align: center; padding: 15px 25px;}   */
+  .m1_videodesc .beauty_btn a {font-size: 14px; font-weight: 300;}
   .m1_prev, .m1_next {font-size: 16px;}
   .m1_controls {
     /* bottom: 36px; padding: 0 40px; */
@@ -732,14 +734,14 @@ body {height: 100%;}
   }
 }
 @media screen and (max-width: 768px){
-  .m1_videodesc {width: 100%; padding: 0 0 40px 30px;}
+  .m1_videodesc {padding: 0 0 40px 30px;}
   .m1_videodesc h3 {font-size: 24px; font-weight: 500;}
   .m1_videodesc p {font-size: 16px;  font-weight: 100; padding: 8px 0 24px}  
   .swiper-scrollbar.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
     width: var(--swiper-scrollbar-size,140px); margin: 12px 5px; height: 3px;
   }
-  .m1_videodesc button {padding: 12px 30px; border-width: 1.5px;}  
-  .m1_videodesc button a {font-size: 14px; color: var(--MC-LGWhite); font-weight: 100;}
+  /* .m1_videodesc .beauty_btn {padding: 12px 30px; border-width: 1.5px; width: 32%; text-align: center; padding: 15px 25px;}   */
+  .m1_videodesc .beauty_btn a {font-size: 14px; color: var(--MC-LGWhite); font-weight: 100;}
   .m1_prev, .m1_next {font-size: 14px;}
   .m1_controls {
     /* bottom: 36px; padding: 0 30px; */
@@ -754,8 +756,8 @@ body {height: 100%;}
   .swiper-scrollbar.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
     width: var(--swiper-scrollbar-size,120px); margin: 12px 5px; height: 3px;
   }
-  .m1_videodesc button {padding: 8px 24px 12px; border-width: 1.5px;} 
-  .m1_videodesc button a {font-size: 12px; color: var(--MC-LGWhite); font-weight: 100;}
+  /* .m1_videodesc .beauty_btn {padding: 8px 24px 12px; border-width: 1.5px; width: 32%; text-align: center; padding: 15px 25px;}  */
+  .m1_videodesc .beauty_btn a {font-size: 12px; color: var(--MC-LGWhite); font-weight: 100;}
   .m1_controls {
     /* bottom: 40px; padding: 0 20px; */
     bottom: 40px; padding: 0 calc((100vw - 1272px)/2) 0 20px;
