@@ -328,7 +328,9 @@ body{
   position:relative;
 }
 .arc_card.active img{
+  height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 .download{
   padding: 15px 20px;
