@@ -820,13 +820,12 @@ box-sizing: border-box;
 .arc_card {
   width: 100%;
   padding: 24px 24px;
-  border-radius: var(--sm-rd);
+  border-radius: 60px;
   min-width: 300px;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: nowrap;
+  /* justify-content: center; */
   text-align: center;
-  gap: 24px;
+  /* gap: 24px; */
 }
 .arc_card.active {
   border-radius: var(--sm-rd);
@@ -873,9 +872,9 @@ box-sizing: border-box;
   font-weight: 350;
 }
 .download {
-  padding: 10px;
+  padding: 10px 15px;
   flex-shrink: 1;
-  border-radius: 10px;
+  border-radius: 20px;
   font-size: 14px;
 }
 .color {
@@ -1458,14 +1457,23 @@ svg{cursor: pointer;}
 @media screen and (min-resolution: 2dppx){
   .logo a{
     background-image: url('../image/main/nav/logo_white@2x.png');
+    background-size: cover;
   }
-  .header-clone .logo a{background-image: url('../image/main/nav/logo_black@2x.png')}
-  header.white .logo a{background-image: url('../image/main/nav/logo_black@2x.png');
+  .header-clone .logo a{
+    background-image: url('../image/main/nav/logo_black@2x.png');
+    background-size: cover;
+  }
+  header.white .logo a{
+    background-image: url('../image/main/nav/logo_black@2x.png');
+    background-size: cover;
   }
   .aside_menu .logo a{
     background-image: url('../image/main/nav/logo_white@2x.png');
+    background-size: cover;
   }
-  header.white .logo a{background-image: url('../image/main/nav/logo_black@2x.png');}
+  header.white .logo a{
+    background-image: url('../image/main/nav/logo_black@2x.png');
+    background-size: cover;}
 }
 
 /* 이은서 header end */

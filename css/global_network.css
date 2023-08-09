@@ -268,7 +268,7 @@ body{
   width: 80%;
 }
 .weather_api p{
-  display: none;
+  /* display: none; */
 }
 .ccc_bottom {
   gap: var(--base-unit);
