@@ -876,7 +876,7 @@ header svg:hover>* {
   position: relative;
 }
 
-.esg_tab ul li a.active {
+.esg_tab ul li.active a {
   color: var(--BC-Green2);
 }
 
@@ -1387,6 +1387,7 @@ header svg:hover>* {
 
 .downloadLink {
   margin-top: 48px;
+  position: relative;
 }
 
 .reportLink {
