@@ -1478,8 +1478,6 @@ svg{cursor: pointer;}
   padding: 80px 0;
 }
 
-
-
 .invest_page {
   text-align: center;
 }
@@ -1517,6 +1515,10 @@ svg{cursor: pointer;}
 
 .inve_tab li.active{
   color: var(--BC-LGRed);
+}
+
+.inve_table_0 .ss-tt{
+  color:var(--MC-LGGray);
 }
 
 .svgline svg{
@@ -1678,9 +1680,26 @@ svg{cursor: pointer;}
   background-color: var(--MC-LGWhite);
   color: var(--BC-LGRed);
   font-weight: 700;
+  box-shadow:
+  -7px -7px 20px 0px #A50034,
+  -4px -4px 5px 0px #A50034,
+  7px 7px 20px 0px #A50034,
+  4px 4px 5px 0px #A50034;
+}
+
+.r_btn .span{
+  width: 30px;
+  height: 30px;
+}
+
+.material-symbols-outlined{
+  font-size: 40px;
 }
 
 @media screen and (max-width: 768px){
+  .material-symbols-outlined{
+    font-size: 25px;
+  }
   .inve_table_0 h1{
     line-height: 1.5em;
   }
@@ -1737,13 +1756,28 @@ svg{cursor: pointer;}
 }  
 
 @media screen and (max-width: 480px){
+  .material-symbols-outlined{
+    font-size: 20px;
+  }
 
-  .inveT1 h1{
-    font-size: 24px;
+  .inve_tab{
+    gap: 70px;
+  }
+
+  .inve_table_0 > table:first-child .inveT1 {
+    padding: 0;
+  }
+
+  .inve_table_0 .sub-tt{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .inve_table_0 .ss-tt{
+    font-size: 14px;
+    font-weight: 500;
   }
 
 
-  
   .inve_table_0 table:last-child td,
   .inve_table_1 td,
   .inve_table_2 td{
@@ -1769,6 +1803,20 @@ svg{cursor: pointer;}
     height: 56px;
     color:#fff;
     padding-top: 15px;
+  }
+
+  .inve_info2{
+    flex-direction:column-reverse;
+  }
+  .inve_info2 div:first-child{
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+
+  }
+  .inve_info2 div:last-child{
+    width: 100%;
+    text-align: right;
   }
 
 }

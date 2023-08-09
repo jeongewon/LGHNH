@@ -134,7 +134,7 @@ $.getJSON(
     let naNum = 1000000000;
     console.log(inveTable1)
   
-    inveTable1.find('td p').append(LGhnh.basDt)
+    inveTable1.find('td p').append(LGhnh.basDt.slice(0,4)+'-'+LGhnh.basDt.slice(4,6)+'-'+LGhnh.basDt.slice(6,8))
     inveTable1.find('tr:first td:last').append($.number(LGhnh.clpr))
     inveTable1.find('tr:last td:last').append($.number(LGhnhWu.clpr))
     inveTable2Top.find('td:nth-child(2)').append($.number(LGhnh.hipr))

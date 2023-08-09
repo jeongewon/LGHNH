@@ -109,14 +109,14 @@ $(window).resize(function () {
 
 $(".slider5").slick({
   speed: 300,
-  slidesToShow: 5,
+  slidesToShow: 4,
   slidesToScroll: 4,
   responsive: [
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 3,
+        slidesToScroll: 3,
       },
     },
     {
@@ -165,8 +165,8 @@ $(".d_cont_wrapper").slick({
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         arrows: false,
         dots: true,
       },
