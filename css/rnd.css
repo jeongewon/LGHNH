@@ -709,7 +709,7 @@ h1 {
 
 .inno_bg {
   width: 100%;
-  height: 325px;
+  height: 230px;
   background-image: url("/image/rnd/innovation_bg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -780,12 +780,10 @@ h1 {
   width: 30px;
 }
 
-.slick-slide img{
-  width:100%;
+.slick-slide img {
+  width: 100%;
   height: 100%;
 }
-
-
 
 .slider5 .slide:hover {
   box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.3);
@@ -848,11 +846,14 @@ h1 {
 }
 
 /* section3 */
+.sec3-tab {
+  margin-top: 96px;
+}
 
 .sec3-list {
   flex-direction: column;
   gap: 30px;
-  padding: 60px 0;
+  padding: 159px 0;
   font-weight: 500;
 }
 
@@ -995,9 +996,9 @@ h1 {
   position: relative;
 }
 
-.d_content:hover{
-  background-color:var(--BC-LGRed);
-  border:none
+.d_content:hover {
+  background-color: var(--BC-LGRed);
+  border: none;
 }
 
 .d_content h1 {
@@ -1009,9 +1010,9 @@ h1 {
   padding-top: 10px;
 }
 
-.d_content:hover h1, 
-.d_content:hover p{
-  color:#fff;
+.d_content:hover h1,
+.d_content:hover p {
+  color: #fff;
   font-weight: 400;
 }
 
@@ -1062,7 +1063,7 @@ h1 {
 
   .inno_bg {
     width: 100%;
-    height: 100%;
+    height: 58px;
     background-image: url("/image/rnd/innovation_bg.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -1072,6 +1073,7 @@ h1 {
   .inno_content {
     width: 100%;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .inno_content div {
     justify-content: space-between;
@@ -1079,10 +1081,22 @@ h1 {
     height: 615px;
   }
 
+  .section1 {
+    width: 100%;
+    height: 596px;
+  }
+
+  .slick-slide {
+    margin: 5px;
+  }
+
+  .slider5 .slide > p {
+    font-size: 20px;
+  }
+
   .slidewrapper {
     height: 350px;
     margin-left: 40px;
-    padding: 48px 0;
     overflow: hidden;
   }
 
@@ -1101,15 +1115,17 @@ h1 {
     width: 60%;
   }
 
-  .sec2-tab {
-    flex-direction: column;
-  }
-
+  .sec2-tab,
   .sec3-tab {
     flex-direction: column;
+    margin-top: 0;
   }
-  .sec3_list {
-    padding: 0;
+
+  .sec3-list {
+    flex-direction: column;
+    gap: 30px;
+    padding: 72px 0;
+    font-weight: 500;
   }
 
   .sec3_text > h2 {
@@ -1139,18 +1155,18 @@ h1 {
 @media screen and (max-width: 480px) {
   .sec2-list li,
   .sec3-list li {
-  font-size: 16px;
+    font-size: 16px;
   }
-  .subtitle{
+  .subtitle {
     font-size: 18px;
   }
   .rdn_title {
     text-align: center;
     width: 100%;
-    font-weight: 40; 
+    font-weight: 40;
   }
-  
-  .svgline svg{
+
+  .svgline svg {
     fill: #fff;
   }
 
@@ -1180,7 +1196,7 @@ h1 {
     width: 330px;
   }
 
-  .section1{
+  .section1 {
     width: 100%;
     height: 480px;
   }
@@ -1190,12 +1206,16 @@ h1 {
     padding: 30px 0;
   }
 
-  .slider5 .slide > p{
-    font-size: 12px;
+  .slick-slide {
+    margin: 3px;
   }
 
-  .sec_2_contt{
-    width:100%;
+  .slider5 .slide > p {
+    font-size: 14px;
+  }
+
+  .sec_2_contt {
+    width: 100%;
   }
 
   .sec2_bg {
@@ -1220,16 +1240,13 @@ h1 {
   .sec3-tab {
     flex-direction: column;
   }
-  .sec3_list {
-    padding: 0;
-  }
 
   .sec3_text > h2 {
     padding-top: 0;
   }
 
   .section4 {
-    height: 1875px;
+    height: 2000px;
   }
 
   .sec4_bg {
@@ -1242,6 +1259,7 @@ h1 {
     flex-wrap: wrap;
     height: 1100px;
     justify-content: center;
+    gap: 48px;
   }
 
   .slick-list {
@@ -1249,7 +1267,7 @@ h1 {
   }
 }
 
-@media screen and (min-resolution: 2dppx){
+@media screen and (min-resolution: 2dppx) {
   .inno_bg {
     width: 100%;
     height: 100%;
@@ -1261,51 +1279,69 @@ h1 {
 }
 
 /* 이원 aside */
-.topBtn{
+.topBtn {
   position: fixed;
   left: 88%;
   bottom: 18%;
   z-index: 1000;
 }
-#top{
-position: absolute;
-width: 65px;
-height: 65px;
-background: #363636;
-border: 1px solid #363636;
-border-radius: 50%;
-cursor: pointer;
-box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.30);
-transition: opacity 0.5s;
-visibility:hidden;
-opacity: 0;
+#top {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: #363636;
+  border: 1px solid #363636;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.5s;
+  visibility: hidden;
+  opacity: 0;
 }
-#top.active{
-visibility: visible;
-opacity: 1;
+#top.active {
+  visibility: visible;
+  opacity: 1;
 }
-#top svg{
-position: absolute;
-left: 0;
-top: 13px;
-transform: translate(30px);
-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.10);
+#top svg {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  transform: translate(30px);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1);
 }
-#top:hover{
-transition: 0.2s ease-out;
-background: var(--BC-LGRed);
-border: 1px solid var(--BC-LGRed);
+#top:hover {
+  transition: 0.2s ease-out;
+  background: var(--BC-LGRed);
+  border: 1px solid var(--BC-LGRed);
 }
-@media screen and (max-width: 768px){
-.topBtn{left:87%;}
-#top{width: 60px; height: 60px;}
-#top svg{top: 10px;transform: translate(28px);}
+@media screen and (max-width: 768px) {
+  .topBtn {
+    left: 87%;
+  }
+  #top {
+    width: 60px;
+    height: 60px;
+  }
+  #top svg {
+    top: 10px;
+    transform: translate(28px);
+  }
 }
-@media screen and (max-width: 480px){
-.topBtn{left:82%;}
-#top{width: 50px; height: 50px;}
-#top svg{top: 8px;transform: translate(23px);}
-#top line{scale: 85%;}
+@media screen and (max-width: 480px) {
+  .topBtn {
+    left: 82%;
+  }
+  #top {
+    width: 50px;
+    height: 50px;
+  }
+  #top svg {
+    top: 8px;
+    transform: translate(23px);
+  }
+  #top line {
+    scale: 85%;
+  }
 }
 
 /* 정이원 footer - web */
