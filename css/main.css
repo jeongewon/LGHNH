@@ -659,7 +659,7 @@ background-repeat: no-repeat;}
     box-sizing: border-box;
     position:fixed;
     background-color: var(--MC-LGWhite);
-    right:0;
+    right:-286;
     top:0;
     bottom:0;
     width: 286px;
