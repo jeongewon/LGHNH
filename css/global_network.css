@@ -147,6 +147,7 @@ body{
 .weather_icon img{
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .corporate_list{
   padding: var(--base-unit);
@@ -201,11 +202,6 @@ body{
   .contry_corporate_card{
     padding: calc(var(--base-unit)*2);
     border-radius: var(--mid-rd);
-    /* gap: calc(var(--base-unit)*2); */
-  }
-  .weather_icon{
-    width: 100%;
-    height: calc(var(--base-unit)*2);
   }
 .weather_api p{
   color: var(--MC-LGWhite);
@@ -238,7 +234,11 @@ body{
     gap: calc(var(--base-unit) * 3);
     padding:  calc(var(--base-unit) * 6) var(--base-unit) 0 var(--base-unit);
   }
-
+  .weather_icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
 .contry_btn_list {
     justify-content: center;
     flex-wrap: wrap;
@@ -268,7 +268,7 @@ body{
   width: 80%;
 }
 .weather_api p{
-  /* display: none; */
+  display: none;
 }
 .ccc_bottom {
   gap: var(--base-unit);
