@@ -162,7 +162,8 @@ let allData = [],
     yearContainer = $('.year_list_container'),
     periodBtn = $('.year_btn'),
     perAllData = [],
-    filterPData = [];
+    filterPData = [],
+    slickSwitch = false;
 
 $.getJSON("./data/period.json", initPeriod);
 
@@ -247,7 +248,7 @@ function under2010(val){
     <h5 class="history_title sm-tt">${item.history.title}</h5>
     <h5 class="history_contents sm-tt">${item.history.contents}</h5>
     </li>`
-  });
+  }); 
   container.html(underHTML);
 }
 
@@ -384,6 +385,7 @@ function slickActive(target) {
     slidesToShow: 5,
     slidesToScroll: 3
   });
+  slickSwitch = true;
 }
 
 /* 이원 aside */
