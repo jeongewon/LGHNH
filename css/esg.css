@@ -390,7 +390,7 @@ header svg:hover>* {
     transition: 0.3s ease-out;
   }
 
-  svg * {
+  header svg * {
     fill: var(--MC-LGGray);
   }
 
@@ -1130,10 +1130,6 @@ header svg:hover>* {
   color: var(--MC-LGWhite);
 }
 
-
-
-
-
 .esg_result{
   margin-top: 144px;
   flex-direction: column;
@@ -1211,7 +1207,6 @@ header svg:hover>* {
   margin-top: 15px;
 }
 
-
 .esg_m5{
   width: 100%;
   height: 100%;
@@ -1219,7 +1214,6 @@ header svg:hover>* {
   background-size: auto;
   margin-top: 144px;
 }
-
 
 .lisk_management .lisk_tt{
   flex-direction: column;
@@ -1264,7 +1258,6 @@ header svg:hover>* {
 .liskBox:hover .lisk_contt p{
   color: var(--BC-Green1);
 }
-
 
 .lisk_subtt{
   flex-direction: column;
@@ -1349,14 +1342,12 @@ header svg:hover>* {
     
     .esg_propulsion img{
     margin-top:-120px;
-    scale: 50%;
     }
     .propulsion{flex-direction: column;}
 
     .propulsion .propulsion_card{
       height: 257px;
       margin-top: 24px;
-
     }
     .propulsion .propulsion_card p:first-of-type{
       margin-top: 22px;
@@ -1365,7 +1356,7 @@ header svg:hover>* {
       margin-bottom: 0;
     }
     .propulsion .propulsion_card:nth-child(1){
-      margin-top: -130px;
+      margin-top: 24px;
     }
     .propulsion .propulsion_card:nth-child(2){
       margin: 24px 0 0 0;
@@ -1380,21 +1371,21 @@ header svg:hover>* {
     line-height:calc(var(--base-unit)*1.2);
     margin: 24px;
     }
+    .esg_propulsion picture img{
+      width:266px; 
+      height: auto;
+      margin-top: 24px;}
     .esg_mission{
       margin-top: 144px;
     }
     .esg_mission #mission_tt{
     margin-top:144px;
-    transform:translateX(5%);
-    scale: 80%;
+    transform:translateX(50px);
+    width: 506px;
     }
     
     .esg_mission .mission{
     margin-top: 24px;
-    }
-    
-    .mission_ct img{
-    scale: 80%;
     }
     
     .mission_ct .mission_num{
@@ -1409,7 +1400,7 @@ header svg:hover>* {
     
     .esg_direction img{
     margin-top: 96px;
-    scale: 80%;
+      width: 506px;
     }
     
     .mission_svg{margin: -15px 0;}
@@ -1516,8 +1507,6 @@ header svg:hover>* {
     .policyLink a{margin-left: 18px;}
 }
 
-
-
 @media screen and (max-width: 480px){
   .esg_main_tt{width:375px;}
   .esg_main_tt h1{
@@ -1551,13 +1540,13 @@ header svg:hover>* {
     font-size: calc(var(--font-size)*1.125);
     line-height: calc(var(--base-unit)*4);
     }
-    .esg_propulsion img{
-    margin-top:-160px;
-    scale: 40%;
+    .esg_declaration{width: 360px; margin: 0 auto; padding: 96px 0 0 0;}
+    .esg_propulsion picture{
+      margin-top: 0;
     }
     .esg_propulsion{margin-top: 96px;}
     .propulsion .propulsion_card:nth-child(1){
-      margin-top: -160px;
+      margin-top: 24px;
     }
     .esg_m3{padding-bottom: 128px;}
     .esg_mission{
@@ -1566,8 +1555,8 @@ header svg:hover>* {
     .esg_mission .mission{margin-top: 0;}
     .esg_mission #mission_tt{
     margin-top:96px;
-    transform:translateX(-140px);
-    scale: 60%;
+    transform:translateX(50px);
+    width: 328px;
     }
     .mission_ct img{
     scale: 65%;
@@ -1575,12 +1564,15 @@ header svg:hover>* {
     .mission_ct .mission_num{
     margin-left: -5px;
     }
-    
     .esg_direction img{
     margin-top: 48px;
-    scale: 60%;
+    width: 385px;
+    height: auto;
     }
-    
+
+    .direction_tt img{
+      transform: translateX(0px);
+    }
     .mission_svg{margin: -25px 0;}
 
     .direction_slide{
@@ -1611,9 +1603,6 @@ header svg:hover>* {
 
     .reportLink{margin-left:35px;}
 
-
-
-
     .esg_m5{
     margin-top: 96px;
     }
@@ -1637,14 +1626,59 @@ header svg:hover>* {
       display: none;
     }
 
-
-
     .downloadLink{
       margin-top: 24px;
     }
+  }
 
+  /* 이원 aside */
+.topBtn{
+  position: fixed;
+  left: 88%;
+  bottom: 18%;
+  z-index: 1000;
+}
+#top{
+position: absolute;
+width: 65px;
+height: 65px;
+background: #363636;
+border: 1px solid #363636;
+border-radius: 50%;
+cursor: pointer;
+box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.30);
+transition: opacity 0.5s;
+visibility:hidden;
+opacity: 0;
+}
+#top.active{
+visibility: visible;
+opacity: 1;
+}
+#top svg{
+position: absolute;
+left: 0;
+top: 13px;
+transform: translate(30px);
+box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.10);
+}
+#top:hover{
+transition: 0.2s ease-out;
+background: var(--BC-LGRed);
+border: 1px solid var(--BC-LGRed);
+}
 
-
+@media screen and (max-width: 768px){
+.topBtn{left:87%;}
+#top{width: 60px; height: 60px;}
+#top svg{top: 10px;transform: translate(28px);}
+}
+@media screen and (max-width: 480px){
+.topBtn{left:82%;}
+#top{width: 50px; height: 50px;}
+#top svg{top: 8px;transform: translate(23px);}
+#top line{scale: 85%;}
+}
 
 /* 정이원 footer - web */
 /* 이원 footer */

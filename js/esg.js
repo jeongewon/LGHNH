@@ -1,21 +1,21 @@
 /* 이은서 nav */
 let mainMenu = $('.origin .main_menu > li'),
-    twodebth = $('.main_menu li ul'),
-    formLabel = $('.search_bar label'),
-    header = $('header'),
-    headerClone = $('.origin').contents().clone(),
-    headerCloneContainer = $('<div class="header-clone"></div>'),
-    width = $(window).width(),
-    close_aside = $('.close_btn'),
-    open_aside = $('.aside_btn'),
-    title = $('.title > a');
+  twodebth = $('.main_menu li ul'),
+  formLabel = $('.search_bar label'),
+  header = $('header'),
+  headerClone = $('.origin').contents().clone(),
+  headerCloneContainer = $('<div class="header-clone"></div>'),
+  width = $(window).width(),
+  close_aside = $('.close_btn'),
+  open_aside = $('.aside_btn'),
+  title = $('.title > a');
 
 headerClone.appendTo(headerCloneContainer);
 $('body').append(headerCloneContainer);
 
 let clone = $('.header-clone'),
-    c_mainmenu = clone.find('.main_menu > li'),
-    c_twodebth = clone.find('.main_menu li ul');
+  c_mainmenu = clone.find('.main_menu > li'),
+  c_twodebth = clone.find('.main_menu li ul');
 
 $(window).scroll(function () {
   width = $(window).width();
@@ -39,33 +39,33 @@ $(window).scroll(function () {
 
 mainMenu.hover(function () {
   $('.origin').css({
-    height: '600px',
-    backgroundColor: 'rgba(0,0,0,.7)'
-  }),
-  twodebth.css({
-    display: 'flex'
-  }),
+      height: '600px',
+      backgroundColor: 'rgba(0,0,0,.7)'
+    }),
+    twodebth.css({
+      display: 'flex'
+    }),
     $('.line').css({
-    opacity: 1
-  })
+      opacity: 1
+    })
 }, function () {
   $('.origin').css({
-    height: '150px',
-    backgroundColor: 'transparent'
-  }),
-  twodebth.css({
-    display: 'none'
-  }),
-  $('.line').css({
-    opacity: 0
-  })
+      height: '150px',
+      backgroundColor: 'transparent'
+    }),
+    twodebth.css({
+      display: 'none'
+    }),
+    $('.line').css({
+      opacity: 0
+    })
 });
 c_mainmenu.hover(function () {
   let width = $(window).width();
   if (width > 768) {
     clone.css({
-      paddingBottom: '54px'
-    }),
+        paddingBottom: '54px'
+      }),
       c_twodebth.css({
         display: 'flex'
       }),
@@ -77,48 +77,48 @@ c_mainmenu.hover(function () {
   let width = $(window).width();
   if (width > 768) {
     $('.line').css({
-      opacity: 0
-    }),
-    clone.css({
-      paddingBottom: '47px'
-    }),
-    c_twodebth.css({
-      display: 'none'
-    })
+        opacity: 0
+      }),
+      clone.css({
+        paddingBottom: '47px'
+      }),
+      c_twodebth.css({
+        display: 'none'
+      })
   }
 });
 
 $('label').mouseenter(function () {
-  if(clone.hasClass('visible')){
+  if (clone.hasClass('visible')) {
     clone.find('.menu .main_menu').css({
       visibility: 'hidden'
     })
-  }else{
+  } else {
     $('.menu .main_menu').css({
       visibility: 'hidden'
     })
   }
 });
 $('form').mouseleave(function () {
-  if(clone.hasClass('visible')){
+  if (clone.hasClass('visible')) {
     clone.find('.main_menu').css({
       visibility: 'visible'
-  })
+    })
   } else {
     $('.main_menu').css({
       visibility: 'visible',
     })
   }
 })
-$('.lang').mouseenter(function(){
-    $('.lang_list').css({
-      display: 'block'
-      })
+$('.lang').mouseenter(function () {
+  $('.lang_list').css({
+    display: 'block'
+  })
 });
-$('.lang_list').mouseleave(function(){
-    $('.lang_list').css({
-      display: 'none'
-      })
+$('.lang_list').mouseleave(function () {
+  $('.lang_list').css({
+    display: 'none'
+  })
 })
 
 /* aside */
@@ -126,25 +126,29 @@ title.on('click', function (e) {
   e.preventDefault();
   $(this).parent().siblings('li').find('> ul').slideUp();
   $(this).parent().find('> ul').slideToggle();
-  
+
   $(this).toggleClass('active');
   if ($(this).hasClass('active')) {
     $(this).parent().find('> ul > ul').slideDown();
   }
 });
 
-open_aside.click(function(){
-  $('.aside_menu_side').css({right: '0'})
+open_aside.click(function () {
+  $('.aside_menu_side').css({
+    right: '0'
+  })
 })
-close_aside.click(function(){
-  $('.aside_menu_side').css({right: '-286px'})
+close_aside.click(function () {
+  $('.aside_menu_side').css({
+    right: '-286px'
+  })
   open_aside.show();
   $(this).removeClass('active');
   title.parent().find('> ul').slideUp();
 });
 
 /* resize */
-$(window).resize(function(){
+$(window).resize(function () {
   width = $(window).width();
   if (width > 768) {
     if ($(window).scrollTop() > 0) {
@@ -159,13 +163,31 @@ $(window).resize(function(){
   }
 })
 
+/* aside */
+let goTop = $('#top');
+
+$(window).on('scroll', function () {
+  let tct = $(this).scrollTop();
+  if (tct > 500) {
+    goTop.addClass('active');
+  } else {
+    goTop.removeClass('active');
+  }
+})
+
+goTop.click(function (e) {
+  e.preventDefault();
+  $('html,body').stop().animate({
+    scrollTop: 0
+  }, 'easeInCubic');
+});
 
 /* ESG */
 /* direction slide */
 $('.direction_slide').slick({
   variableWidth: true,
   centerMode: true,
-  dotsClass:"slick-dots",
+  dotsClass: "slick-dots",
   dots: true,
   infinite: true,
   speed: 1000,
@@ -174,8 +196,7 @@ $('.direction_slide').slick({
   prevArrow: $('.slick-prev'),
   nextArrow: $('.slick-next'),
   //arrows: true,
-  responsive: [
-    {
+  responsive: [{
       breakpoint: 1272,
       settings: {
         slidesToShow: 5,
@@ -199,41 +220,42 @@ $('.direction_slide').slick({
     }
   ]
 });
-$('.direction_slide').slick('slickGoTo',2);
+$('.direction_slide').slick('slickGoTo', 2);
 
 /* ESG 숫자 카운팅 */
 let result = $('.result_sales');
-let resultOST = result.offset().top - 800;
+let resultOST = result.offset().top - 1000;
 let isActive = false;
 
-$(window).scroll(function(){
-  if($(this).scrollTop() > resultOST){
-    if(!isActive){
+$(window).scroll(function () {
+  if ($(this).scrollTop() > resultOST) {
+    if (!isActive) {
       resultAnimation();
       isActive = true;
     }
   }
 });
 
-function resultAnimation(){
-  result.each(function(){
-    $('.result_sales').find('span').each(function(){
+function resultAnimation() {
+  result.each(function () {
+    $('.result_sales').find('span').each(function () {
       let $this = $(this),
-      countTo = $this.attr('data-num');
-    
-      $({countNum: $this.text()}).animate({
+        countTo = $this.attr('data-num');
+
+      $({
+        countNum: $this.text()
+      }).animate({
         countNum: countTo
-      },{
-        duration: 1300,
-        easing:'linear',
-        step: function(){
+      }, {
+        duration: 1200,
+        easing: 'linear',
+        step: function () {
           $this.text(Math.floor(this.countNum));
         },
-        complete: function(){
+        complete: function () {
           $this.text(this.countNum);
         }
-      }
-      )
+      })
     })
   });
 }
@@ -243,44 +265,35 @@ AOS.init();
 
 let esgstTarget = attr('data-aos');
 
-$(window).scroll(function(){
-    let esgsct = $(this).scrollTop();
-    esgstTarget.each(function(){
-        if($(this).offset().top - 500 <= esgsct){
-            let effectName = $(this).attr('data-aos');
-            $(this).addClass(effectName);
-        }
-    })
+$(window).scroll(function () {
+  let esgsct = $(this).scrollTop();
+  esgstTarget.each(function () {
+    if ($(this).offset().top - 500 <= esgsct) {
+      let effectName = $(this).attr('data-aos');
+      $(this).addClass(effectName);
+    }
+  })
 })
 
 /* animate effect(주요성과) */
 let esgreult = $('.esg_result');
 
-$(window).scroll(function(){
+$(window).scroll(function () {
   let esgsct = $(this).scrollTop();
-  esgstTarget.each(function(){
-      if($(this).offset().top - 700 <= esgsct){
-          let effectName = $(this).attr('data-effect');
-          $(this).addClass(effectName);
-      }
+  esgstTarget.each(function () {
+    if ($(this).offset().top - 700 <= esgsct) {
+      let effectName = $(this).attr('data-effect');
+      $(this).addClass(effectName);
+    }
   })
 })
 
 
 
-/* accordion */
-let esgad = $('.liskBox').find('button');
-let adcontent = $('.lisk_content');
-
-esgad.click(function(){
-  $(this).addClass('active');
-})
-
-
 
 /* tabmenu */
 let tabContent = document.querySelector('#tab1'),
-tabmenu = document.querySelector('.esg_tab a');
+  tabmenu = document.querySelector('.esg_tab a');
 
 tabmenu.forEach(item => {
   item.addEventListener('click', (e) => {
@@ -297,5 +310,3 @@ tabmenu.forEach(item => {
     document.querySelector(target).style.display = 'block';
   })
 })
-
-
