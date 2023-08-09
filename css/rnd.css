@@ -859,7 +859,7 @@ h1 {
 
 .sec_3_contt {
   width: 925px;
-  height: 504px;
+  background: url("/image/rnd/example.png") no-repeat;
   background-size: cover;
   border-radius: 20px;
   position: relative;
