@@ -232,16 +232,17 @@ body {height: 100%;}
 .m1_fullbg {position: absolute;} 
 .swiper-slide video {position: absolute; height: 100%; }
 .m1_videodesc {
-  position: absolute; left: 0; bottom: 0;
-  width: 50vw; padding: 0 0 50px 50px;
+  position: absolute; left: 0; bottom: 0; width: 50vw; 
+  /* padding: 0 0 50px 50px; */
+  padding: 0 calc((100vw - 1272px)/2) 50px calc((100vw - 1272px)/2);
   text-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.15);
 }
 .m1_videodesc h3 {font-size: 40px; font-weight: 700;}
 .m1_videodesc p {font-size: 24px; padding: 30px 0 42px;}
 .m1_videodesc button a {font-size: 16px;}
 .m1_videodesc button {
-  background-color: transparent; border: 2px solid #fff;
-  border-radius: 7px; padding: 24px 65px;
+  background-color: transparent; border: 2px solid var(--MC-LGWhite);
+  border-radius: 7px; padding: var(--base-unit) 65px;
   box-shadow: var(--box-shadow);
   transition: 0.3s ease-out;
 }
@@ -256,15 +257,16 @@ body {height: 100%;}
   position: static; margin: 12px 5px;
   box-shadow: var(--box-shadow);
 }
-.swiper-scrollbar-drag {background: #fff; border-radius: 0; }  
+.swiper-scrollbar-drag {background: var(--MC-LGWhite); border-radius: 0; }  
 .m1_prev, .m1_next {  
   cursor: pointer; position: relative; left:0; bottom:0;
-  z-index: 1; font-size: 24px;
+  z-index: 1; font-size: calc(var(--font-size) * 1.5);
   text-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.15);
 }
 .m1_controls {
   position: absolute; display: flex;  bottom: 50px; right: 0;
-  padding: 0 50px; 
+  padding: 0 calc((100vw - 1272px)/2) 0 50px;
+  /* padding: 0 50px;  */
 }
 
 /* 한수연 mainslide 반응형 */
@@ -278,7 +280,10 @@ body {height: 100%;}
   .m1_videodesc button {padding: 20px 52px;}  
   .m1_videodesc button a {font-size: 16px; font-weight: 300;}
   .m1_prev, .m1_next {font-size: 20px;}
-  .m1_controls {bottom: 41px; padding: 0 40px;}
+  .m1_controls {
+    /* bottom: 41px; padding: 0 40px; */
+    bottom: 41px; padding: 0 calc((100vw - 1272px)/2) 0 40px;
+  }
 }
 @media screen and (max-width: 1272px){
   .m1_videodesc {width: 100%; padding: 0 0 40px 40px;}
@@ -290,7 +295,10 @@ body {height: 100%;}
   .m1_videodesc button {padding: 14px 38px; border-width: 1.5px;}  
   .m1_videodesc button a {font-size: 14px; font-weight: 300;}
   .m1_prev, .m1_next {font-size: 16px;}
-  .m1_controls {bottom: 36px; padding: 0 40px;}
+  .m1_controls {
+    /* bottom: 36px; padding: 0 40px; */
+    padding: 0 calc((100vw - 1272px)/2) 0 40px;
+  }
 }
 @media screen and (max-width: 768px){
   .m1_videodesc {width: 100%; padding: 0 0 40px 30px;}
@@ -300,9 +308,13 @@ body {height: 100%;}
     width: var(--swiper-scrollbar-size,140px); margin: 12px 5px; height: 3px;
   }
   .m1_videodesc button {padding: 12px 30px; border-width: 1.5px;}  
-  .m1_videodesc button a {font-size: 14px; color: #fff; font-weight: 100;}
+  .m1_videodesc button a {font-size: 14px; color: var(--MC-LGWhite); font-weight: 100;}
   .m1_prev, .m1_next {font-size: 14px;}
-  .m1_controls {bottom: 36px; padding: 0 30px;}
+  .m1_controls {
+    /* bottom: 36px; padding: 0 30px; */
+    bottom: 40px; padding: 0 calc((100vw - 1272px)/2) 0 30px;
+    margin-right: 40px;
+  }
 }
 @media screen and (max-width: 480px){
   .m1_videodesc {padding: 0 0 40px 20px;}
@@ -312,8 +324,11 @@ body {height: 100%;}
     width: var(--swiper-scrollbar-size,120px); margin: 12px 5px; height: 3px;
   }
   .m1_videodesc button {padding: 8px 24px 12px; border-width: 1.5px;} 
-  .m1_videodesc button a {font-size: 12px; color: #fff; font-weight: 100;}
-  .m1_controls {bottom: 40px; padding: 0 20px;}
+  .m1_videodesc button a {font-size: 12px; color: var(--MC-LGWhite); font-weight: 100;}
+  .m1_controls {
+    /* bottom: 40px; padding: 0 20px; */
+    bottom: 40px; padding: 0 calc((100vw - 1272px)/2) 0 20px;
+  }
 }
 
 /* 박혜인 business */
