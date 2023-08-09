@@ -1,3 +1,41 @@
+/* 이은서, 정이원 popup */
+
+let popup = document.querySelector(".popup");
+let pCloseBtn = popup.querySelector("#close");
+let dayCheck = popup.querySelector("#daycheck");
+
+function setCookie(name, value, day) {
+  let date = new Date();
+  date.setDate(date.getDate() + day);
+  document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
+}
+
+function cookieCheck(name) {
+  let cookieArr = document.cookie.split(";");
+  let visited = false;
+  for (let cookie of cookieArr) {
+    if (cookie.search(name) > -1) {
+      visited = true;
+      break;
+    }
+  }
+  if (!visited) {
+    popup.setAttribute("open", "");
+  } else {
+    popup.removeAttribute("open");
+  }
+}
+cookieCheck("team");
+
+pCloseBtn.addEventListener("click", () => {
+  popup.removeAttribute("open");
+  if (dayCheck.checked) {
+    setCookie("team", "ottugi", 1);
+  } else {
+    setCookie("team", "ottugi", -1);
+  }
+});
+
 /* 이은서 nav */
 let mainMenu = $('.origin .main_menu > li'),
     twodebth = $('.main_menu li ul'),

@@ -204,13 +204,14 @@ body{
     /* gap: calc(var(--base-unit)*2); */
   }
   .weather_icon{
-    width: calc(var(--base-unit)*2);
+    width: 100%;
     height: calc(var(--base-unit)*2);
   }
 .weather_api p{
   color: var(--MC-LGWhite);
   background-color: var(--BC-LGARed);
-  width:120px;
+  width: 100%;
+  padding: 0 10px;
   height: 40px;
   box-sizing: border-box;
   border-radius: var(--sm-rd);
@@ -267,7 +268,7 @@ body{
   width: 80%;
 }
 .weather_api p{
-  display: none;
+  /* display: none; */
 }
 .ccc_bottom {
   gap: var(--base-unit);
@@ -284,7 +285,7 @@ body{
 }
 .contry_btn {
   font-size: 14px;
-  padding: 6px 15px; 
+  padding:6px 15px 8px 15px;
 }
 
 }/*mobile end */
@@ -784,7 +785,6 @@ svg{cursor: pointer;}
     box-sizing: border-box;
     position:fixed;
     background-color: var(--MC-LGWhite);
-    right:0;
     top:0;
     bottom:0;
     width: 286px;
