@@ -164,10 +164,12 @@ title.on('click', function (e) {
   e.preventDefault();
   $(this).parent().siblings('li').find('> ul').slideUp();
   $(this).parent().find('> ul').slideToggle();
-  
+  $(this).parent().siblings('.title').find('a').removeClass('active');
   $(this).toggleClass('active');
   if ($(this).hasClass('active')) {
     $(this).parent().find('> ul > ul').slideDown();
+  }else{
+    $(this).parent().find('> ul > ul').slideUp();
   }
 });
 
@@ -178,6 +180,7 @@ close_aside.click(function(){
   $('.aside_menu_side').css({right: '-286px'})
   open_aside.show();
   $(this).removeClass('active');
+  title.removeClass('active');
   title.parent().find('> ul').slideUp();
 });
 

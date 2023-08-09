@@ -785,6 +785,7 @@ svg{cursor: pointer;}
     box-sizing: border-box;
     position:fixed;
     background-color: var(--MC-LGWhite);
+    right:-286px;
     top:0;
     bottom:0;
     width: 286px;
