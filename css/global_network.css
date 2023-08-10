@@ -191,6 +191,9 @@ body{
 
 @media screen and (max-width: 768px){ /*tablet*/
   /* global network */
+  .weather_icon {
+    width: 100%;
+}
   .global_network .title h1{
     font-size: calc(var(--font-size)*1.875);
     font-weight: 700;
