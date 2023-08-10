@@ -183,6 +183,15 @@ goTop.click(function (e) {
 });
 
 /* ESG */
+/* tabmenu */
+let tabmenu =$('.esg_tab li')
+
+tabmenu.click(function(e){
+  e.preventDefault();
+  tabmenu.removeClass('active');
+  $(this).addClass('active');
+})
+
 /* direction slide */
 $('.direction_slide').slick({
   variableWidth: true,
@@ -220,7 +229,7 @@ $('.direction_slide').slick({
     }
   ]
 });
-$('.direction_slide').slick('slickGoTo', 2);
+// $('.direction_slide').slick('slickGoTo', 2);
 
 /* ESG 숫자 카운팅 */
 let result = $('.result_sales');
@@ -263,50 +272,27 @@ function resultAnimation() {
 /* animate effect */
 AOS.init();
 
-let esgstTarget = attr('data-aos');
+// let esgstTarget = attr('data-aos');
 
-$(window).scroll(function () {
-  let esgsct = $(this).scrollTop();
-  esgstTarget.each(function () {
-    if ($(this).offset().top - 500 <= esgsct) {
-      let effectName = $(this).attr('data-aos');
-      $(this).addClass(effectName);
-    }
-  })
-})
+// $(window).scroll(function () {
+//   let esgsct = $(this).scrollTop();
+//   esgstTarget.each(function () {
+//     if ($(this).offset().top - 500 <= esgsct) {
+//       let effectName = $(this).attr('data-aos');
+//       $(this).addClass(effectName);
+//     }
+//   })
+// })
 
 /* animate effect(주요성과) */
 let esgreult = $('.esg_result');
 
 $(window).scroll(function () {
   let esgsct = $(this).scrollTop();
-  esgstTarget.each(function () {
+  esgreult.each(function () {
     if ($(this).offset().top - 700 <= esgsct) {
       let effectName = $(this).attr('data-effect');
       $(this).addClass(effectName);
     }
-  })
-})
-
-
-
-
-/* tabmenu */
-let tabContent = document.querySelector('#tab1'),
-  tabmenu = document.querySelector('.esg_tab a');
-
-tabmenu.forEach(item => {
-  item.addEventListener('click', (e) => {
-    e.preventDefault();
-    for (let menu of tabmenu) {
-      menu.classList.remove('active');
-    }
-    e.currentTarget.classList.add('active');
-    for (let tab of tabContent) {
-      tab.style.display = 'none';
-    }
-    let target = e.currentTarget.getAttribute('href');
-    console.log(target);
-    document.querySelector(target).style.display = 'block';
   })
 })
