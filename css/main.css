@@ -1071,6 +1071,11 @@ body {height: 100%;}
     margin: 0 auto;
   }
 
+  #business-1 .slidetext2{
+    width:450px;
+
+  }
+
   .new_slides .slick-slide {
     width: 340px;
     height: 494px;
