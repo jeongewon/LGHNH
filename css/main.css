@@ -912,7 +912,7 @@ body {height: 100%;}
 /* 박혜인 esg */
 
 .esg_bg {
-  background: url("/image/main/esg_bg.png") no-repeat;
+  background: url("../image/main/esg_bg.png") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   height: 600px;
