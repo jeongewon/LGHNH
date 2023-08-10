@@ -1099,6 +1099,13 @@ body {height: 100%;}
   .slick-dots li button {
     padding: -200px;
   }
+
+  .swiper-slide img {
+    height: 275px;
+    width: 275px;
+    object-fit: cover;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 480px) {

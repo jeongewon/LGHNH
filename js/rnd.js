@@ -70,12 +70,17 @@ title.on('click', function (e) {
   $(this).parent().find('> ul').slideToggle();
   $(this).parent().siblings('.title').find('a').removeClass('active');
   $(this).toggleClass('active');
-  if ($(this).hasClass('active')) {
-    $(this).parent().find('> ul > ul').slideDown();
-  }else{
-    $(this).parent().find('> ul > ul').slideUp();
-  }
+  // if ($(this).hasClass('active')) {
+  //   $(this).parent().find('> ul > ul').slideDown();
+  // }else{
+  //   $(this).parent().find('> ul > ul').slideUp();
+  // }
 });
+if (title.hasClass('active')) {
+  title.parent().find('> ul > ul').slideDown();
+}else{
+  title.parent().find('> ul > ul').slideUp();
+}
 
 open_aside.click(function () {
   $(".aside_menu_side").css({ right: "0" });

@@ -166,13 +166,17 @@ title.on('click', function (e) {
   $(this).parent().find('> ul').slideToggle();
   $(this).parent().siblings('.title').find('a').removeClass('active');
   $(this).toggleClass('active');
-  if ($(this).hasClass('active')) {
-    $(this).parent().find('> ul > ul').slideDown();
-  }else{
-    $(this).parent().find('> ul > ul').slideUp();
-  }
+  // if ($(this).hasClass('active')) {
+  //   $(this).parent().find('> ul > ul').slideDown();
+  // }else{
+  //   $(this).parent().find('> ul > ul').slideUp();
+  // }
 });
-
+if (title.hasClass('active')) {
+  title.parent().find('> ul > ul').slideDown();
+}else{
+  title.parent().find('> ul > ul').slideUp();
+}
 open_aside.click(function(){
   $('.aside_menu_side').css({right: '0'})
 })
@@ -273,12 +277,19 @@ const multipleSwiper = new Swiper(".multiple-slide", {
   breakpoints: {
     0: {
       slidesPerView: 2,
+      spaceBetween: 0
     },
     480: {
       slidesPerView: 2,
+      spaceBetween: 0
     },
-    768: {
+    767: {
       slidesPerView: 3,
+      spaceBetween: 0
+    },
+    1100: {
+      slidesPerView: 4,
+      spaceBetween: 0
     },
   },
 });
