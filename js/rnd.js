@@ -95,21 +95,9 @@ $(window).resize(function () {
   }
 });
 
-// $(document).ready(function () {
-//   $(".slider5").bxSlider({
-//     slideWidth: 339,
-//     minSlides: 3,
-//     maxSlides: 6,
-//     moveSlides: 4,
-//     slideMargin: 10,
-//     controls: false,
-//     pager: false,
-//   });
-// });
-
 $(".slider5").slick({
   speed: 300,
-  slidesToShow: 5,
+  slidesToShow: 4,
   slidesToScroll: 4,
   responsive: [
     {
@@ -139,6 +127,7 @@ $(".slider5").slick({
 let section2Tab = $(".sec2-list li");
 let section3Tab = $(".sec3-list li");
 
+section2Tab.css({ cursor: "pointer" });
 section2Tab.click(function () {
   section2Tab.removeClass("active");
   $(this).addClass("active");
@@ -147,6 +136,7 @@ section2Tab.click(function () {
   $("#sec2_" + idx).show();
 });
 
+section3Tab.css({ cursor: "pointer" });
 $(".sec_3_contt").hide();
 $("#sec3_0").show();
 section3Tab.click(function () {
@@ -165,8 +155,8 @@ $(".d_cont_wrapper").slick({
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         arrows: false,
         dots: true,
       },
@@ -199,16 +189,16 @@ $(".d_cont_wrapper").slick({
 });
 
 /* 이원 aside */
-let goTop = $('#top');
-  $(window).on('scroll',function(){
-      let tct = $(this).scrollTop();
-      if(tct > 500){
-          goTop.addClass('active');
-      } else {
-          goTop.removeClass('active');
-      }
-  })
-  goTop.click(function(e){
-      e.preventDefault();
-      $('html,body').stop().animate({scrollTop:0},'easeInCubic');
-  });
+let goTop = $("#top");
+$(window).on("scroll", function () {
+  let tct = $(this).scrollTop();
+  if (tct > 500) {
+    goTop.addClass("active");
+  } else {
+    goTop.removeClass("active");
+  }
+});
+goTop.click(function (e) {
+  e.preventDefault();
+  $("html,body").stop().animate({ scrollTop: 0 }, "easeInCubic");
+});
