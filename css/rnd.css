@@ -693,6 +693,7 @@ h1 {
   color: var(--MC-DGray);
 }
 
+
 .sec2-list li,
 .sec3-list li {
   font-size: 20px;
@@ -709,14 +710,9 @@ h1 {
   line-height: 48px;
 }
 
-/* .inno_bg {
-  width: 100%;
-  height: 230px;
-  background-image: url("/image/rnd/innovation_bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-top: 96px;
-} */
+.inno_bg {
+overflow: hidden;
+}
 
 .inno_content {
   text-align: center;
@@ -732,6 +728,11 @@ h1 {
   margin: 0 auto;
   position: relative;
 }
+
+.inno_content div img{
+  width: 100%;
+}
+
 .inno_content div > p::before {
   content: "";
   width: 7px;
@@ -758,6 +759,7 @@ h1 {
 .section1 {
   height: 700px;
   width: 100%;
+  overflow: hidden;
 }
 
 .slidewrapper {
@@ -802,12 +804,7 @@ h1 {
   font-size: 20px;
 }
 
-/* .section2 {
-  margin-top: 96px;
-} */
-
 .sec2_bg {
-  width: 100%;
   height: 840px;
   background: url("../image/rnd/materials_bg_1.png") no-repeat;
   background-size: cover;
@@ -1150,6 +1147,10 @@ h1 {
 }
 
 @media screen and (max-width: 480px) {
+  .rdn_title{
+    margin-top: 72px;
+  }
+
   .sec2-list li,
   .sec3-list li {
     font-size: 16px;
