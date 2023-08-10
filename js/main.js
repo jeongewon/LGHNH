@@ -201,6 +201,7 @@ $(window).resize(function(){
 })
 
 /* 한수연 mainslide */
+
 $(function(){
   let m1VideoContainer = $('.m1_fullbg');  
   let m1VideoRatio = 1920/1080;
