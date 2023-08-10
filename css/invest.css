@@ -1836,7 +1836,7 @@ svg {
 .inve_4_bg {
   width: 100%;
   height: 435px;
-  background: url("/image/invest/invest-bg.png") no-repeat;
+  background: url("../image/invest/invest-bg.png") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   position: relative;

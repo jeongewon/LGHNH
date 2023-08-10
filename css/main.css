@@ -1030,12 +1030,12 @@ body {height: 100%;}
 }
 
 .new_slides .slick-prev {
-  background-image: url("/image/main/left-arrow.png");
+  background-image: url("../image/main/left-arrow.png");
   left: -80px;
 }
 
 .new_slides .slick-next {
-  background-image: url("/image/main/right-arrow.png");
+  background-image: url("../image/main/right-arrow.png");
   right: -80px;
 }
 
