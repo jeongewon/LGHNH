@@ -707,14 +707,14 @@ h1 {
   line-height: 48px;
 }
 
-.inno_bg {
+/* .inno_bg {
   width: 100%;
   height: 230px;
   background-image: url("/image/rnd/innovation_bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 96px;
-}
+} */
 
 .inno_content {
   text-align: center;
@@ -1061,13 +1061,8 @@ h1 {
     width: 620px;
   }
 
-  .inno_bg {
+  .inno_bg img{
     width: 100%;
-    height: 58px;
-    background-image: url("/image/rnd/innovation_bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 72px;
   }
 
   .inno_content {
@@ -1176,13 +1171,8 @@ h1 {
     line-height: 1.5em;
   }
 
-  .inno_bg {
-    width: 100%;
-    height: 100%;
-    background-image: url("/image/rnd/innovation_bg@2x.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 72px;
+  .inno_bg img{
+    display:none;
   }
 
   .inno_content {
@@ -1267,7 +1257,7 @@ h1 {
   }
 }
 
-@media screen and (min-resolution: 2dppx) {
+/* @media screen and (min-resolution: 2dppx) {
   .inno_bg {
     width: 100%;
     height: 100%;
@@ -1276,7 +1266,7 @@ h1 {
     background-repeat: no-repeat;
     margin-top: 72px;
   }
-}
+} */
 
 /* 이원 aside */
 .topBtn {
