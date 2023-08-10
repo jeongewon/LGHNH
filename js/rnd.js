@@ -71,9 +71,9 @@ title.on('click', function (e) {
   $(this).parent().siblings('.title').find('a').removeClass('active');
   $(this).toggleClass('active');
   if ($(this).hasClass('active')) {
-    $(this).parent().find('> ul ul').slideDown();
+    $(this).siblings('ul').find('li > ul').slideDown();
   }else{
-    $(this).parent().find('> ul ul').slideUp();
+    $(this).siblings('ul').find('li > ul').slideUp();
   }
 });
 

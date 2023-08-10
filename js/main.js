@@ -59,12 +59,9 @@ $(window).scroll(function () {
   width = $(window).width();
   if (width > 768) {
     if ($(this).scrollTop() > 0) {
-      $('.origin').hide();
       headerCloneContainer.addClass('visible');
-      // $('.header-clone.visible .desktop_menu').show();
     } else {
       headerCloneContainer.removeClass('visible');
-      $('.origin').show();
     }
   } else {
     if ($(this).scrollTop() > 0) {
@@ -167,9 +164,9 @@ title.on('click', function (e) {
   $(this).parent().siblings('.title').find('a').removeClass('active');
   $(this).toggleClass('active');
   if ($(this).hasClass('active')) {
-    $(this).parent().find('> ul ul').slideDown();
+    $(this).siblings('ul').find('li > ul').slideDown();
   }else{
-    $(this).parent().find('> ul ul').slideUp();
+    $(this).siblings('ul').find('li > ul').slideUp();
   }
 });
 

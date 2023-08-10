@@ -926,10 +926,12 @@ box-sizing: border-box;
 
 
 /* 이은서 header */
-
+.unclick{
+  opacity: 0.5;
+}
 .aside{display: none;}
 header{
-  position:fixed;
+  position: absolute;
   top:0;
   left:0;
   right:0;
@@ -978,7 +980,7 @@ nav .menu > ul > li{
   bottom: -63px;
   left: 0;
   width: 0%;
-  transition: width 300ms cubic-bezier(0.86, 0, 0.07, 1);
+  transition: width 200ms cubic-bezier(0.86, 0, 0.07, 1);
   display: block;
 }
 .main_menu > li > a > span:hover:after{width: 100%;}
@@ -1078,7 +1080,7 @@ svg{cursor: pointer;}
 .header-clone{
   padding: 47px 0;
   position: fixed;
-  top:-9999em;
+  top:-120px;
   width: 100%;
   color: var(--MC-DGray);
   background-color: var(--MC-LGWhite);
@@ -1110,7 +1112,7 @@ svg{cursor: pointer;}
   border-bottom: 4px solid var(--BC-LGRed);
   left: 0;
   width: 0%;
-  transition: width 0.3s 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: width 0.3s cubic-bezier(0.86, 0, 0.07, 1);
   display: block;
 }
 .main_menu > li > a > span:hover:after{width: 100%;}
