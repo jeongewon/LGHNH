@@ -3,7 +3,7 @@
 📆 프로젝트 기간<br>
 2023.07.19 ~ 2023.08.10
 
-🧡 [오뚝이의 기획 및 디자인](https://www.naver.com/)
+🧡 [오뚝이의 기획 및 디자인](https://www.figma.com/file/TNBsevMR0ciHeeCHr8fkSF/%EC%98%A4%EB%9A%9D%EC%9D%B4?type=design&node-id=0%3A1&mode=design&t=chHdkmTiOqB1xt4J-1)
 
 👩 팀원 및 담당파트
 
