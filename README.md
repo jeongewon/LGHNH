@@ -30,7 +30,7 @@
 
 |서브 - About us|
 |------|
-![about us_LG생활건강 - Chrome 2023-09-26 17-28-32](https://github.com/triallife/LGHNH/assets/114334209/073ce9fb-db15-470f-a0be-b1783d802290)
+![ezgif com-video-to-gif](https://github.com/triallife/LGHNH/assets/114334209/cece512a-bcc7-47ad-9eed-b924cfd017f2)
 
 |서브 - Global network|
 |------|
