@@ -1,11 +1,11 @@
 ## LG생활건강 리뉴얼 프로젝트
 
-📆 프로젝트 기간<br>
+📆 **프로젝트 기간**<br>
 2023.07.19 ~ 2023.08.10
 
-🧡 [오뚝이의 기획 및 디자인](https://www.figma.com/file/TNBsevMR0ciHeeCHr8fkSF/%EC%98%A4%EB%9A%9D%EC%9D%B4?type=design&node-id=0%3A1&mode=design&t=chHdkmTiOqB1xt4J-1)
+🧡 **[오뚝이의 기획 및 디자인](https://www.figma.com/file/TNBsevMR0ciHeeCHr8fkSF/%EC%98%A4%EB%9A%9D%EC%9D%B4?type=design&node-id=0%3A1&mode=design&t=chHdkmTiOqB1xt4J-1)**
 
-👩 팀원 및 담당파트
+👩 **팀원 및 담당파트**
 
 
 |담당자|메인페이지|서브페이지|퍼센트|
@@ -16,13 +16,13 @@
 |[한수연](https://github.com/SOOSLOANE)| main video slide |beauty|100%|
 
 
-🌏 사용언어<br>
+🌏 **사용언어**<br>
 <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white">
 <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white">
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 <img src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
 
-💶 사이트 미리보기
+💶 **사이트 미리보기**
 
 |메인페이지|
 |------|
