@@ -26,7 +26,7 @@
 
 |메인페이지|
 |------|
-![LG생활건강 - Chrome 2023-09-26 17-18-54](https://github.com/triallife/LGHNH/assets/114334209/378dceef-fb69-476d-9b6d-6e8787fc3d10)
+![ezgif com-gif-maker](https://github.com/triallife/LGHNH/assets/114334209/e22e01be-3ad4-4336-be03-7d670956dc45)
 
 |서브 - About us|
 |------|
