@@ -34,21 +34,21 @@
 
 |서브 - Global network|
 |------|
-![global network_LG생활건강 - Chrome 2023-09-26 17-29-45](https://github.com/triallife/LGHNH/assets/114334209/fefd6f94-5142-4461-bfbe-19d065993051)
+![ezgif com-gif-maker](https://github.com/triallife/LGHNH/assets/114334209/c0f64868-4841-4002-81aa-92e1082dc847)
 
 |서브 - 투자정보|
 |------|
-![투자정보_LG생활건강 - Chrome 2023-09-26 17-42-09](https://github.com/triallife/LGHNH/assets/114334209/f204d94b-fb92-4df3-b8b0-8a10d7bbed2d)
+![ezgif com-video-to-gif (1)](https://github.com/triallife/LGHNH/assets/114334209/878119a9-22aa-4f88-bfa2-67f3d351abaf)
 
 |서브 - R&D|
 |------|
-![R D_LG생활건강 - Chrome 2023-09-26 17-42-50](https://github.com/triallife/LGHNH/assets/114334209/aa2cb9be-b95a-430e-925f-1442b939aefb)
+![ezgif com-video-to-gif](https://github.com/triallife/LGHNH/assets/114334209/fda3fcee-f38c-41e4-81f1-e060eaf6f208)
 
 |서브 - Beauty|
 |------|
-![beauty_LG생활건강 - Chrome 2023-09-26 17-43-50](https://github.com/triallife/LGHNH/assets/114334209/78444e87-af93-4689-9d23-7e4da1da5c15)
+![ezgif com-video-to-gif (2)](https://github.com/triallife/LGHNH/assets/114334209/46a7fcda-9c78-404d-8ed0-b868c674928d)
 
 |서브 - ESG|
 |------|
-![esg_LG생활건강 - Chrome 2023-09-26 17-46-14](https://github.com/triallife/LGHNH/assets/114334209/ae0ef29c-6257-4abf-945f-98ea1c55fa7e)
+![ezgif com-video-to-gif (3)](https://github.com/triallife/LGHNH/assets/114334209/b179e70d-0cbe-4728-9ac5-5b0fd8186b02)
 
