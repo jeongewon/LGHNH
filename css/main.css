@@ -60,6 +60,10 @@ input[type="checkbox"] {
   color: var(--BC-LGRed);
   cursor: pointer;
 }
+.pp-team .popupFigma {
+  color: #000;
+  font-weight: 600;
+}
 
 /* 이은서 header */
 .unclick{
